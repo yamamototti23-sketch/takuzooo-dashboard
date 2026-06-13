@@ -66,6 +66,7 @@ def main():
     for i in range(0, len(ids), 50):
         r = data_api(token, "videos", part="statistics,snippet,contentDetails", id=",".join(ids[i:i+50]), maxResults=50)
         for it in r["items"]:
+            if it["contentDetails"]["duration"] == "P0D": continue  # skip live broadcasts (3 known)
             s = it.get("statistics", {})
             vids.append({"id":it["id"], "title":it["snippet"]["title"],
                 "publishedAt":it["snippet"]["publishedAt"], "date":it["snippet"]["publishedAt"][:10],
