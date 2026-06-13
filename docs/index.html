@@ -2,186 +2,304 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<title>Takuzooo YouTube Dashboard</title>
+<title>Takuzooo Dashboard</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 <style>
-  :root { color-scheme: light dark; }
+  :root {
+    --bg: #0a0a0a;
+    --bg-card: #141414;
+    --bg-card-hover: #1a1a1a;
+    --line: #222;
+    --text: #f4f4f4;
+    --muted: #8a8a8a;
+    --accent: #ef4444;
+    --accent-soft: rgba(239, 68, 68, .15);
+  }
   * { box-sizing: border-box; }
-  body { font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic UI", sans-serif;
-         margin: 0; padding: 24px; max-width: 1100px; margin-inline: auto;
-         background: #fafafa; color: #222; }
-  @media (prefers-color-scheme: dark) {
-    body { background: #111; color: #eee; }
-    .card { background: #1c1c1c; border-color: #333; }
-    .video { background: #1c1c1c; border-color: #333; }
-    a { color: #6cf; }
+  html, body { background: var(--bg); color: var(--text); }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic UI", system-ui, sans-serif;
+    font-feature-settings: "palt";
+    padding: 28px 20px 60px;
+    max-width: 1100px;
+    margin-inline: auto;
+    letter-spacing: .01em;
   }
-  header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
-  header img { width: 44px; height: 44px; border-radius: 50%; }
-  h1 { font-size: 20px; margin: 0; }
-  .meta { color: #888; font-size: 12px; margin-bottom: 24px; }
-  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-          gap: 12px; margin-bottom: 24px; }
-  .card { background: white; border: 1px solid #eee; border-radius: 8px;
-          padding: 14px 16px; }
-  .card .label { font-size: 12px; color: #888; }
-  .card .value { font-size: 22px; font-weight: 600; margin-top: 4px; }
-  .card .sub { font-size: 11px; color: #999; margin-top: 2px; }
-  section { margin-bottom: 32px; }
-  h2 { font-size: 15px; color: #666; border-bottom: 1px solid #eee; padding-bottom: 6px; }
-  .chart-wrap { background: white; border: 1px solid #eee; border-radius: 8px; padding: 12px; }
-  @media (prefers-color-scheme: dark) {
-    .chart-wrap { background: #1c1c1c; border-color: #333; }
+  a { color: inherit; text-decoration: none; }
+
+  header { display: flex; align-items: center; gap: 14px; margin-bottom: 6px; }
+  header img.avatar { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; }
+  header h1 { font-size: 18px; font-weight: 600; margin: 0; }
+  .meta { color: var(--muted); font-size: 11px; margin-top: 4px; letter-spacing: .04em; }
+
+  .err { background: #2a1212; color: #f3a1a1; border-radius: 6px; padding: 10px 14px; margin: 16px 0; font-size: 13px; }
+
+  /* Goal */
+  .goal {
+    margin: 28px 0 18px;
+    padding: 18px 20px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--bg-card);
   }
-  .videos { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; }
-  .video { background: white; border: 1px solid #eee; border-radius: 8px; overflow: hidden;
-           display: flex; flex-direction: column; }
-  .video img { width: 100%; aspect-ratio: 16/9; object-fit: cover; background: #000; }
-  .video .body { padding: 10px 12px; flex: 1; display: flex; flex-direction: column; }
-  .video .title { font-size: 13px; font-weight: 500; line-height: 1.4; margin-bottom: 6px; }
-  .video .stats { font-size: 11px; color: #888; margin-top: auto; }
-  .video a { text-decoration: none; color: inherit; }
-  .error { color: #c33; padding: 12px; background: #fee; border-radius: 8px; }
-  .goal { background: white; border: 1px solid #eee; border-radius: 8px; padding: 14px 16px; margin-bottom: 24px; }
-  .goal .row { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
-  .goal .label { font-size: 12px; color: #888; }
-  .goal .progress { font-size: 14px; font-weight: 600; }
-  .goal .bar { height: 10px; background: #eee; border-radius: 5px; overflow: hidden; }
-  .goal .bar > div { height: 100%; background: linear-gradient(90deg, #4caf50, #8bc34a); transition: width .6s ease; }
-  @media (prefers-color-scheme: dark) {
-    .goal { background: #1c1c1c; border-color: #333; }
-    .goal .bar { background: #333; }
+  .goal .row { display: flex; justify-content: space-between; align-items: baseline; }
+  .goal .lbl { color: var(--muted); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; }
+  .goal .val { font-size: 22px; font-weight: 600; letter-spacing: -.01em; }
+  .goal .bar { margin-top: 12px; height: 6px; background: #232323; border-radius: 3px; overflow: hidden; }
+  .goal .bar > div { height: 100%; background: var(--accent); transition: width .6s ease; }
+  .goal .sub { color: var(--muted); font-size: 12px; margin-top: 8px; }
+
+  /* KPIs */
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-bottom: 24px; }
+  .kpi { background: var(--bg-card); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; }
+  .kpi .l { color: var(--muted); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; }
+  .kpi .v { font-size: 20px; font-weight: 600; margin-top: 4px; letter-spacing: -.01em; }
+  .kpi .s { color: var(--muted); font-size: 11px; margin-top: 2px; }
+
+  /* Period tabs */
+  .tabs { display: flex; flex-wrap: wrap; gap: 4px; margin: 12px 0 18px; border-bottom: 1px solid var(--line); }
+  .tab {
+    padding: 8px 14px; font-size: 12px; cursor: pointer;
+    color: var(--muted); border: 0; background: transparent;
+    border-bottom: 2px solid transparent; margin-bottom: -1px;
+    letter-spacing: .04em;
+  }
+  .tab:hover { color: var(--text); }
+  .tab.active { color: var(--text); border-bottom-color: var(--accent); }
+
+  /* Chart */
+  .chart-wrap {
+    background: var(--bg-card); border: 1px solid var(--line); border-radius: 10px;
+    padding: 16px 14px 10px; margin-bottom: 28px;
+  }
+  .chart-head { display: flex; justify-content: space-between; align-items: baseline; padding: 0 4px 10px; }
+  .chart-head .ttl { font-size: 13px; color: var(--muted); letter-spacing: .12em; text-transform: uppercase; }
+  .chart-head .rng { font-size: 11px; color: var(--muted); }
+
+  /* Ranking */
+  h2 {
+    font-size: 12px; color: var(--muted); letter-spacing: .14em; text-transform: uppercase;
+    margin: 32px 0 12px; font-weight: 600;
+  }
+  .rank-list { display: flex; flex-direction: column; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+  .rank {
+    display: grid; grid-template-columns: 40px 160px 1fr 120px;
+    gap: 14px; align-items: center;
+    background: var(--bg-card); padding: 10px 14px;
+    transition: background .15s;
+  }
+  .rank:hover { background: var(--bg-card-hover); }
+  .rank .no { font-size: 22px; font-weight: 700; color: var(--muted); letter-spacing: -.02em; text-align: center; }
+  .rank.top1 .no { color: var(--accent); }
+  .rank img { width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 4px; background: #000; }
+  .rank .ttl { font-size: 13px; line-height: 1.45; }
+  .rank .ttl .date { display: block; color: var(--muted); font-size: 11px; margin-top: 4px; }
+  .rank .views { text-align: right; }
+  .rank .views .n { font-size: 16px; font-weight: 600; letter-spacing: -.01em; }
+  .rank .views .u { color: var(--muted); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; }
+  @media (max-width: 640px) {
+    .rank { grid-template-columns: 30px 100px 1fr; }
+    .rank .views { grid-column: 2 / 4; text-align: left; padding-top: 4px; }
+    .rank .views .n { font-size: 14px; }
   }
 </style>
 </head>
 <body>
+
 <header>
-  <img id="ch-thumb" alt="">
+  <img class="avatar" id="ch-thumb" alt="">
   <div>
     <h1 id="ch-title">Loading…</h1>
     <div class="meta" id="ch-meta"></div>
   </div>
 </header>
 
-<div id="err" class="error" hidden></div>
+<div id="err" class="err" hidden></div>
 
-<section id="goal-section" hidden>
-  <div class="goal">
-    <div class="row">
-      <span class="label">登録者ゴール</span>
-      <span class="progress" id="goal-progress"></span>
-    </div>
-    <div class="bar"><div id="goal-bar" style="width:0%"></div></div>
-    <div class="label" id="goal-remaining" style="margin-top:6px"></div>
+<div id="goal-section" class="goal" hidden>
+  <div class="row">
+    <span class="lbl">Subscribers / Goal</span>
+    <span class="val" id="goal-val"></span>
   </div>
-</section>
+  <div class="bar"><div id="goal-bar" style="width:0%"></div></div>
+  <div class="sub" id="goal-sub"></div>
+</div>
 
-<section>
-  <div class="kpis" id="kpis"></div>
-</section>
+<div class="tabs" id="tabs"></div>
 
-<section>
-  <h2>過去28日 日次推移</h2>
-  <div class="chart-wrap"><canvas id="chart-daily" height="120"></canvas></div>
-</section>
+<div class="kpis" id="kpis"></div>
 
-<section>
-  <h2>過去28日 トップ10動画（再生数）</h2>
-  <div class="videos" id="top-videos"></div>
-</section>
+<div class="chart-wrap">
+  <div class="chart-head">
+    <span class="ttl">Views</span>
+    <span class="rng" id="chart-range"></span>
+  </div>
+  <canvas id="chart" height="110"></canvas>
+</div>
 
-<section>
-  <h2>最新アップロード</h2>
-  <div class="videos" id="recent"></div>
-</section>
+<h2>視聴数ランキング</h2>
+<div class="rank-list" id="ranking"></div>
 
 <script>
 const fmt = n => (n ?? 0).toLocaleString("ja-JP");
-const fmtSec = s => {
-  if (!s) return "0:00";
-  const m = Math.floor(s / 60), r = s % 60;
-  return m + ":" + String(r).padStart(2, "0");
-};
-const kpi = (label, value, sub="") => `
-  <div class="card">
-    <div class="label">${label}</div>
-    <div class="value">${value}</div>
-    ${sub ? `<div class="sub">${sub}</div>` : ""}
-  </div>`;
-const videoCard = v => `
-  <a class="video" href="https://www.youtube.com/watch?v=${v.video_id}" target="_blank" rel="noopener">
-    <img src="${v.thumbnail || ""}" alt="" loading="lazy">
-    <div class="body">
-      <div class="title">${escapeHtml(v.title || "(no title)")}</div>
-      <div class="stats">
-        ${v.views_period != null ? `期間 ${fmt(v.views_period)} 再生` : ""}
-        ${v.views_total != null ? `累計 ${fmt(v.views_total)} 再生` : ""}
-        ${v.likes_total != null ? ` / ♥ ${fmt(v.likes_total)}` : ""}
-      </div>
-    </div>
-  </a>`;
-function escapeHtml(s){return s.replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+const esc = s => (s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+let DATA = null;
+let CHART = null;
+let CURRENT = null;
+
+function renderTabs() {
+  const root = document.getElementById("tabs");
+  root.innerHTML = "";
+  DATA.period_order.forEach(key => {
+    const p = DATA.periods[key];
+    if (!p) return;
+    const b = document.createElement("button");
+    b.className = "tab" + (key === CURRENT ? " active" : "");
+    b.textContent = p.label;
+    b.onclick = () => { CURRENT = key; renderTabs(); renderPeriod(); };
+    root.appendChild(b);
+  });
+}
+
+function renderKpis(p) {
+  const ch = DATA.channel;
+  const t = p.totals;
+  const rows = [
+    ["登録者(累計)", fmt(ch.subscribers)],
+    ["再生数(累計)", fmt(ch.total_views)],
+    ["動画本数",     fmt(ch.total_videos)],
+    [`期間再生 (${p.label})`, fmt(t.views)],
+    [`登録者 純増 (${p.label})`,
+      (t.subs_net >= 0 ? "+" : "") + fmt(t.subs_net),
+      `増 ${fmt(t.subs_gained)} / 減 ${fmt(t.subs_lost)}`],
+  ];
+  document.getElementById("kpis").innerHTML = rows.map(r => `
+    <div class="kpi">
+      <div class="l">${esc(r[0])}</div>
+      <div class="v">${r[1]}</div>
+      ${r[2] ? `<div class="s">${esc(r[2])}</div>` : ""}
+    </div>`).join("");
+}
+
+function renderChart(p) {
+  document.getElementById("chart-range").textContent = `${p.start} 〜 ${p.end}`;
+  const labels = p.chart.map(r => r.day);
+  const views  = p.chart.map(r => r.views);
+
+  if (CHART) CHART.destroy();
+  const ctx = document.getElementById("chart").getContext("2d");
+  const grad = ctx.createLinearGradient(0, 0, 0, 260);
+  grad.addColorStop(0, "rgba(239,68,68,.35)");
+  grad.addColorStop(1, "rgba(239,68,68,0)");
+
+  CHART = new Chart(ctx, {
+    type: "line",
+    data: {
+      labels,
+      datasets: [{
+        label: "再生数",
+        data: views,
+        borderColor: "#ef4444",
+        backgroundColor: grad,
+        borderWidth: 2,
+        pointRadius: 0,
+        pointHoverRadius: 4,
+        pointHoverBackgroundColor: "#ef4444",
+        tension: .3,
+        fill: true,
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { intersect: false, mode: "index" },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: "#000",
+          borderColor: "#333", borderWidth: 1,
+          padding: 10, titleColor: "#fff", bodyColor: "#eee",
+          callbacks: { label: c => " " + fmt(c.parsed.y) + " 再生" },
+        },
+      },
+      scales: {
+        x: {
+          ticks: { color: "#666", font: { size: 10 }, maxTicksLimit: 8 },
+          grid:  { color: "rgba(255,255,255,.04)" },
+        },
+        y: {
+          beginAtZero: true,
+          ticks: { color: "#666", font: { size: 10 }, callback: v => fmt(v) },
+          grid:  { color: "rgba(255,255,255,.04)" },
+        },
+      },
+    },
+  });
+  document.getElementById("chart").parentNode.style.height = "260px";
+}
+
+function renderRanking(p) {
+  const root = document.getElementById("ranking");
+  if (!p.top_videos.length) {
+    root.innerHTML = `<div class="rank"><div class="no">—</div><div></div><div class="ttl">データなし</div><div></div></div>`;
+    return;
+  }
+  root.innerHTML = p.top_videos.map((v, i) => {
+    const date = v.published_at ? v.published_at.slice(0, 10) : "";
+    return `
+      <a class="rank ${i === 0 ? "top1" : ""}" href="https://www.youtube.com/watch?v=${v.video_id}" target="_blank" rel="noopener">
+        <div class="no">${i + 1}</div>
+        <img src="${v.thumbnail}" alt="" loading="lazy">
+        <div class="ttl">${esc(v.title)}<span class="date">${date}</span></div>
+        <div class="views"><div class="n">${fmt(v.views)}</div><div class="u">views</div></div>
+      </a>`;
+  }).join("");
+}
+
+function renderPeriod() {
+  const p = DATA.periods[CURRENT];
+  if (!p) return;
+  renderKpis(p);
+  renderChart(p);
+  renderRanking(p);
+}
+
+function renderGoal() {
+  const g = DATA.goal;
+  if (!g) return;
+  document.getElementById("goal-section").hidden = false;
+  document.getElementById("goal-val").textContent = `${fmt(g.current)} / ${fmt(g.target)}`;
+  document.getElementById("goal-bar").style.width = Math.min(100, g.progress_pct) + "%";
+  document.getElementById("goal-sub").textContent =
+    g.remaining > 0
+      ? `${g.progress_pct}% — あと ${fmt(g.remaining)} 人で目標達成`
+      : `🎉 目標達成 (${g.progress_pct}%)`;
+}
+
+function renderHeader() {
+  document.getElementById("ch-thumb").src = DATA.channel.thumbnail;
+  document.getElementById("ch-title").textContent = DATA.channel.title;
+  document.getElementById("ch-meta").textContent =
+    `${DATA.channel_id} · UPDATED ${DATA.generated_at.replace("+00:00", "Z")}`;
+}
 
 (async () => {
   try {
     const res = await fetch("data.json?_=" + Date.now());
-    if (!res.ok) throw new Error("data.json not found yet ("+res.status+")");
-    const d = await res.json();
-
-    document.getElementById("ch-thumb").src = d.channel.thumbnail;
-    document.getElementById("ch-title").textContent = d.channel.title;
-    document.getElementById("ch-meta").textContent =
-      `集計期間: ${d.period.start} 〜 ${d.period.end} (28日) / 更新: ${d.generated_at}`;
-
-    if (d.goal) {
-      document.getElementById("goal-section").hidden = false;
-      document.getElementById("goal-progress").textContent =
-        `${fmt(d.goal.current)} / ${fmt(d.goal.target)} (${d.goal.progress_pct}%)`;
-      document.getElementById("goal-bar").style.width = Math.min(100, d.goal.progress_pct) + "%";
-      document.getElementById("goal-remaining").textContent =
-        d.goal.remaining > 0 ? `あと ${fmt(d.goal.remaining)} 人で目標達成` : "🎉 目標達成！";
-    }
-
-    const t = d.analytics_28d.totals;
-    document.getElementById("kpis").innerHTML = [
-      kpi("登録者数 (累計)", fmt(d.channel.subscribers)),
-      kpi("総再生数 (累計)", fmt(d.channel.total_views)),
-      kpi("動画本数 (累計)", fmt(d.channel.total_videos)),
-      kpi("再生数 (28日)", fmt(t.views)),
-      kpi("総再生時間 (28日)", fmt(t.watch_minutes) + " 分"),
-      kpi("登録者 純増 (28日)", (t.subs_net >= 0 ? "+" : "") + fmt(t.subs_net),
-          `増 ${fmt(t.subs_gained)} / 減 ${fmt(t.subs_lost)}`),
-      kpi("平均視聴時間 (28日)", fmtSec(t.avg_view_duration_sec)),
-    ].join("");
-
-    const daily = d.analytics_28d.daily;
-    new Chart(document.getElementById("chart-daily"), {
-      type: "line",
-      data: {
-        labels: daily.map(r => r.day),
-        datasets: [
-          { label: "再生数", data: daily.map(r => r.views), yAxisID: "y", tension: .3 },
-          { label: "総再生時間(分)", data: daily.map(r => r.estimatedMinutesWatched), yAxisID: "y1", tension: .3 },
-        ],
-      },
-      options: {
-        responsive: true,
-        interaction: { intersect: false, mode: "index" },
-        scales: {
-          y:  { position: "left",  beginAtZero: true, title: { display: true, text: "再生数" } },
-          y1: { position: "right", beginAtZero: true, grid: { drawOnChartArea: false },
-                title: { display: true, text: "総再生時間(分)" } },
-        },
-      },
-    });
-
-    document.getElementById("top-videos").innerHTML = d.top_videos_28d.map(videoCard).join("");
-    document.getElementById("recent").innerHTML = d.recent_uploads.map(videoCard).join("");
+    if (!res.ok) throw new Error("data.json not found (" + res.status + ")");
+    DATA = await res.json();
+    CURRENT = DATA.period_order.find(k => DATA.periods[k]) || "1m";
+    renderHeader();
+    renderGoal();
+    renderTabs();
+    renderPeriod();
   } catch (e) {
     const el = document.getElementById("err");
     el.hidden = false;
-    el.textContent = "読み込みエラー: " + e.message + " （初回の GitHub Actions 実行待ちの可能性）";
+    el.textContent = "読み込みエラー: " + e.message + "（初回更新待ちの可能性）";
     console.error(e);
   }
 })();
