@@ -20,6 +20,7 @@ from pathlib import Path
 import requests
 
 CHANNEL_ID = os.environ.get("YT_CHANNEL_ID", "UCjSeXbXh2BS-ErZO7a6ienQ")
+GOAL_TARGET = 300000  # 登録者ゴール
 CLIENT_ID = os.environ["YT_CLIENT_ID"]
 CLIENT_SECRET = os.environ["YT_CLIENT_SECRET"]
 REFRESH_TOKEN = os.environ["YT_REFRESH_TOKEN"]
@@ -215,6 +216,12 @@ def main() -> int:
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "channel_id": CHANNEL_ID,
         "channel": snapshot,
+        "goal": {
+            "target": GOAL_TARGET,
+            "current": snapshot["subscribers"],
+            "remaining": max(0, GOAL_TARGET - snapshot["subscribers"]),
+            "progress_pct": round(snapshot["subscribers"] / GOAL_TARGET * 100, 2) if GOAL_TARGET else None,
+        },
         "period": {"start": start_28.isoformat(), "end": end.isoformat(), "days": 28},
         "analytics_28d": analytics_28,
         "top_videos_28d": top_videos,
