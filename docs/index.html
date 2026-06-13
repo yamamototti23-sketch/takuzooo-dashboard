@@ -1,308 +1,389 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="utf-8">
-<title>Takuzooo Dashboard</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>REALTIME ANALYTICS — Takuzooo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg: #0a0a0a;
-    --bg-card: #141414;
-    --bg-card-hover: #1a1a1a;
-    --line: #222;
-    --text: #f4f4f4;
-    --muted: #8a8a8a;
-    --accent: #ef4444;
-    --accent-soft: rgba(239, 68, 68, .15);
+  :root{
+    --bg:#08201d; --panel:#0e2522; --card:#0f2926;
+    --line:rgba(255,255,255,.06); --line2:rgba(255,255,255,.11);
+    --tx:#eef5f2; --mut:#84958f; --mut2:#5d6e68;
+    --red:#ff4d3d; --teal:#34e6d6; --gold:#e8c468; --green:#3ad96c;
+    --blue:#5b8cff; --amber:#f2c24a; --cyan:#33c7bd; --purple:#9a7bff;
   }
-  * { box-sizing: border-box; }
-  html, body { background: var(--bg); color: var(--text); }
-  body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic UI", system-ui, sans-serif;
-    font-feature-settings: "palt";
-    padding: 28px 20px 60px;
-    max-width: 1100px;
-    margin-inline: auto;
-    letter-spacing: .01em;
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{
+    background:
+      radial-gradient(1100px 700px at 80% -10%, #1a1d14 0%, transparent 55%),
+      radial-gradient(1000px 800px at -10% 110%, #0a201d 0%, transparent 60%),
+      #06120f;
+    font-family:"Inter","Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic",
+      -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    color:var(--tx); -webkit-font-smoothing:antialiased; padding:26px;
   }
-  a { color: inherit; text-decoration: none; }
-
-  header { display: flex; align-items: center; gap: 14px; margin-bottom: 6px; }
-  header img.avatar { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; }
-  header h1 { font-size: 18px; font-weight: 600; margin: 0; }
-  .meta { color: var(--muted); font-size: 11px; margin-top: 4px; letter-spacing: .04em; }
-
-  .err { background: #2a1212; color: #f3a1a1; border-radius: 6px; padding: 10px 14px; margin: 16px 0; font-size: 13px; }
-
-  /* Goal */
-  .goal {
-    margin: 28px 0 18px;
-    padding: 18px 20px;
-    border: 1px solid var(--line);
-    border-radius: 10px;
-    background: var(--bg-card);
+  .num{font-variant-numeric:tabular-nums; letter-spacing:-.01em}
+  .dash{
+    max-width:1520px; margin:0 auto; background:linear-gradient(180deg,#16332f 0%,#0c2522 55%,#081e1b 100%);
+    border:1px solid var(--line2); border-radius:24px; padding:22px 22px 16px;
+    box-shadow:0 0 0 1px rgba(52,224,212,.05),0 40px 120px -40px rgba(0,0,0,.8),
+      inset 0 1px 0 rgba(255,255,255,.04);
   }
-  .goal .row { display: flex; justify-content: space-between; align-items: baseline; }
-  .goal .lbl { color: var(--muted); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; }
-  .goal .val { font-size: 22px; font-weight: 600; letter-spacing: -.01em; }
-  .goal .bar { margin-top: 12px; height: 6px; background: #232323; border-radius: 3px; overflow: hidden; }
-  .goal .bar > div { height: 100%; background: var(--accent); transition: width .6s ease; }
-  .goal .sub { color: var(--muted); font-size: 12px; margin-top: 8px; }
+  .top{display:flex; align-items:center; gap:18px; flex-wrap:wrap; margin-bottom:18px}
+  .id{display:flex; align-items:center; gap:13px; min-width:200px}
+  .avatar{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,#3a3f45,#1b1f22);
+    border:2px solid var(--red); box-shadow:0 0 0 3px rgba(255,73,58,.12);
+    background-size:cover; background-position:center}
+  .eyebrow{font-size:10px; letter-spacing:.32em; color:var(--mut); font-weight:700}
+  .title{font-size:20px; font-weight:800; letter-spacing:.02em; margin-top:1px}
+  .seg{display:flex; gap:4px; background:rgba(255,255,255,.03); border:1px solid var(--line);
+    border-radius:11px; padding:4px}
+  .seg button{all:unset; cursor:pointer; font-size:12px; color:var(--mut); padding:6px 11px;
+    border-radius:8px; font-weight:600; white-space:nowrap}
+  .seg button:hover{color:var(--tx)}
+  .seg button.on{background:#1e463f; color:#cfeef0; box-shadow:inset 0 0 0 1px rgba(52,224,212,.25)}
+  .spacer{flex:1}
+  .pill{display:inline-flex; align-items:center; gap:7px; font-size:12px; font-weight:700;
+    padding:7px 12px; border-radius:999px; border:1px solid var(--line2); color:var(--mut); cursor:pointer}
+  .pill .dot{width:7px;height:7px;border-radius:50%;background:var(--red);
+    box-shadow:0 0 8px var(--red); animation:pulse 2s infinite}
+  @keyframes pulse{50%{opacity:.35}}
+  .gear{width:32px;height:32px;display:grid;place-items:center;border-radius:9px;
+    border:1px solid var(--line); color:var(--mut); cursor:pointer; font-size:15px}
 
-  /* KPIs */
-  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-bottom: 24px; }
-  .kpi { background: var(--bg-card); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; }
-  .kpi .l { color: var(--muted); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; }
-  .kpi .v { font-size: 20px; font-weight: 600; margin-top: 4px; letter-spacing: -.01em; }
-  .kpi .s { color: var(--muted); font-size: 11px; margin-top: 2px; }
+  .kpis{display:grid; grid-template-columns:repeat(5,1fr); gap:12px; margin-bottom:14px}
+  .kpi{background:var(--card); border:1px solid var(--line); border-radius:15px; padding:15px 16px}
+  .kpi .h{display:flex; align-items:center; gap:9px; color:var(--mut); font-size:12px; font-weight:600}
+  .kpi .ic{width:26px;height:26px;border-radius:8px;display:grid;place-items:center;font-size:13px}
+  .kpi .v{font-size:30px; font-weight:800; margin-top:9px; line-height:1; transition:color .2s}
+  .kpi .s{font-size:11px; color:var(--mut2); margin-top:7px; min-height:14px}
+  .kpi .s b{color:var(--green); font-weight:700}
 
-  /* Period tabs */
-  .tabs { display: flex; flex-wrap: wrap; gap: 4px; margin: 12px 0 18px; border-bottom: 1px solid var(--line); }
-  .tab {
-    padding: 8px 14px; font-size: 12px; cursor: pointer;
-    color: var(--muted); border: 0; background: transparent;
-    border-bottom: 2px solid transparent; margin-bottom: -1px;
-    letter-spacing: .04em;
-  }
-  .tab:hover { color: var(--text); }
-  .tab.active { color: var(--text); border-bottom-color: var(--accent); }
+  .panel{background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:16px}
+  .panel .ph{display:flex; align-items:center; justify-content:space-between; margin-bottom:6px}
+  .panel .pt{font-size:13px; font-weight:700; color:#c8d4d7; display:flex; align-items:center; gap:8px}
+  .panel .pr{font-size:11px; color:var(--mut)}
 
-  /* Chart */
-  .chart-wrap {
-    background: var(--bg-card); border: 1px solid var(--line); border-radius: 10px;
-    padding: 16px 14px 10px; margin-bottom: 28px;
-  }
-  .chart-head { display: flex; justify-content: space-between; align-items: baseline; padding: 0 4px 10px; }
-  .chart-head .ttl { font-size: 13px; color: var(--muted); letter-spacing: .12em; text-transform: uppercase; }
-  .chart-head .rng { font-size: 11px; color: var(--muted); }
+  .chart-wrap{margin-bottom:14px}
+  .chart{position:relative; height:300px; margin-top:14px}
+  .chart svg{position:absolute; inset:0; width:100%; height:100%; overflow:visible}
+  .yl{position:absolute; left:0; font-size:10px; color:var(--mut2); transform:translateY(-50%)}
+  .xl{position:absolute; bottom:-20px; font-size:10px; color:var(--mut2); transform:translateX(-50%)}
+  .tile{position:absolute; transform:translate(-50%,-118%); width:58px; text-align:center; pointer-events:none}
+  .tile .img{position:relative; width:58px;height:34px;border-radius:5px; background-size:cover;
+    background-position:center; border:1px solid rgba(255,255,255,.18);
+    box-shadow:0 4px 10px -4px rgba(0,0,0,.7); overflow:hidden}
+  .tile .c{font-size:10px; font-weight:800; margin-top:3px; text-shadow:0 1px 3px #000}
+  .node{fill:#0a1418; stroke:var(--red); stroke-width:2.5}
+  .play{position:absolute; inset:0; display:grid; place-items:center; color:rgba(255,255,255,.85)}
+  .play svg{position:static; width:auto; height:auto}
 
-  /* Ranking */
-  h2 {
-    font-size: 12px; color: var(--muted); letter-spacing: .14em; text-transform: uppercase;
-    margin: 32px 0 12px; font-weight: 600;
-  }
-  .rank-list { display: flex; flex-direction: column; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
-  .rank {
-    display: grid; grid-template-columns: 40px 160px 1fr 120px;
-    gap: 14px; align-items: center;
-    background: var(--bg-card); padding: 10px 14px;
-    transition: background .15s;
-  }
-  .rank:hover { background: var(--bg-card-hover); }
-  .rank .no { font-size: 22px; font-weight: 700; color: var(--muted); letter-spacing: -.02em; text-align: center; }
-  .rank.top1 .no { color: var(--accent); }
-  .rank img { width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 4px; background: #000; }
-  .rank .ttl { font-size: 13px; line-height: 1.45; }
-  .rank .ttl .date { display: block; color: var(--muted); font-size: 11px; margin-top: 4px; }
-  .rank .views { text-align: right; }
-  .rank .views .n { font-size: 16px; font-weight: 600; letter-spacing: -.01em; }
-  .rank .views .u { color: var(--muted); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; }
-  @media (max-width: 640px) {
-    .rank { grid-template-columns: 30px 100px 1fr; }
-    .rank .views { grid-column: 2 / 4; text-align: left; padding-top: 4px; }
-    .rank .views .n { font-size: 14px; }
+  .grid3{display:grid; grid-template-columns:1fr 1fr 1.25fr; gap:14px}
+  .goal-big{font-size:13px; color:var(--mut); margin:14px 0 2px}
+  .goal-num{font-size:52px; font-weight:800; color:var(--teal); line-height:1; display:flex;
+    align-items:baseline; gap:8px}
+  .goal-num small{font-size:20px; color:var(--teal)}
+  .goal-pct{font-size:22px; font-weight:800; float:right; margin-top:-30px}
+  .bar{height:8px; border-radius:99px; background:rgba(255,255,255,.07); margin:18px 0 12px; overflow:hidden}
+  .bar i{display:block; height:100%; border-radius:99px;
+    background:linear-gradient(90deg,#27a35a,#4ade80); box-shadow:0 0 14px rgba(74,222,128,.5)}
+  .goal-sub{font-size:12px; color:var(--mut)}
+  .goal-note{font-size:11px; color:var(--mut2); margin-top:14px; padding-top:12px;
+    border-top:1px solid var(--line); display:flex; align-items:center; gap:7px}
+
+  .lt-thumb{position:relative; width:100%; aspect-ratio:16/9; border-radius:11px; margin:12px 0 12px;
+    background-size:cover; background-position:center; border:1px solid var(--line2); overflow:hidden}
+  .lt-thumb .play{color:rgba(255,255,255,.9)}
+  .lt-views{font-size:46px; font-weight:800; line-height:1}
+  .lt-views small{font-size:18px; color:var(--mut); font-weight:700; margin-left:4px}
+  .lt-meta{font-size:12px; color:var(--mut); margin-top:10px; display:flex; gap:12px; flex-wrap:wrap}
+  .lt-speed{font-size:11px; color:var(--mut); margin-top:6px}
+  .lt-speed b{color:#cfeef0}
+  .badge{display:inline-flex; align-items:center; gap:5px; font-size:11px; font-weight:800;
+    padding:5px 10px; border-radius:999px; color:#1a1206;
+    background:linear-gradient(180deg,#f3cf72,#e0a93b); box-shadow:0 2px 8px -2px rgba(231,184,77,.6)}
+
+  .rk{display:flex; flex-direction:column; gap:2px; margin-top:8px; max-height:300px; overflow:auto}
+  .rk::-webkit-scrollbar{width:5px} .rk::-webkit-scrollbar-thumb{background:var(--line2);border-radius:9px}
+  .row{display:flex; align-items:center; gap:11px; padding:7px 4px; border-bottom:1px solid rgba(255,255,255,.04)}
+  .rank{font-size:14px; font-weight:800; width:18px; text-align:center; color:var(--mut)}
+  .rank.t1{color:#f3cf72} .rank.t2{color:#cdd6da} .rank.t3{color:#d8975a}
+  .row .th{position:relative; width:48px;height:28px;border-radius:5px;flex:none;background-size:cover;
+    background-position:center; border:1px solid var(--line); overflow:hidden}
+  .row .tt{flex:1; min-width:0}
+  .row .tt .n{font-size:12px; color:#d6dee0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+  .row .tt .m{font-size:10px; color:var(--mut2); margin-top:2px}
+  .row .vw{font-size:13px; font-weight:800; flex:none}
+
+  .foot{display:flex; justify-content:space-between; align-items:center; margin-top:14px;
+    padding-top:12px; border-top:1px solid var(--line); font-size:11px; color:var(--mut2)}
+  .foot .mid{color:var(--mut)}
+  .foot a{color:var(--mut); cursor:pointer}
+
+  @media(max-width:1100px){ .kpis{grid-template-columns:repeat(3,1fr)} .grid3{grid-template-columns:1fr} }
+  @media(max-width:640px){
+    body{padding:12px} .dash{padding:16px 14px}
+    .kpis{grid-template-columns:repeat(2,1fr)}
+    .kpi .v{font-size:24px} .goal-num{font-size:40px}
+    .top{gap:10px} .seg{order:3} .title{font-size:18px}
   }
 </style>
 </head>
 <body>
-
-<header>
-  <img class="avatar" id="ch-thumb" alt="">
-  <div>
-    <h1 id="ch-title">Loading…</h1>
-    <div class="meta" id="ch-meta"></div>
+<div class="dash">
+  <div class="top">
+    <div class="id">
+      <div class="avatar" id="avatar"></div>
+      <div><div class="eyebrow">REALTIME ANALYTICS</div><div class="title" id="chName">TAKUZOOO</div></div>
+    </div>
+    <div class="seg" id="periodSeg">
+      <button data-p="1週間">1週間</button><button data-p="2週間">2週間</button>
+      <button data-p="1ヶ月">1ヶ月</button><button data-p="3ヶ月">3ヶ月</button>
+      <button data-p="6ヶ月">6ヶ月</button><button data-p="1年">1年</button>
+      <button data-p="全期間">全期間</button>
+    </div>
+    <div class="seg" id="typeSeg">
+      <button data-t="all" class="on">全て</button>
+      <button data-t="long">ロング</button>
+      <button data-t="short">ショート</button>
+    </div>
+    <div class="spacer"></div>
+    <div class="gear">⚙︎</div>
+    <div class="pill"><span class="dot"></span><span id="liveLbl">LIVE・60分</span></div>
   </div>
-</header>
 
-<div id="err" class="err" hidden></div>
+  <div class="kpis" id="kpis"></div>
 
-<div id="goal-section" class="goal" hidden>
-  <div class="row">
-    <span class="lbl">Subscribers / Goal</span>
-    <span class="val" id="goal-val"></span>
+  <div class="panel chart-wrap">
+    <div class="ph">
+      <div class="pt" id="chartTitle">📈 直近1ヶ月の動画パフォーマンス</div>
+      <div class="pr" id="chartMeta"></div>
+    </div>
+    <div class="chart" id="chart"></div>
   </div>
-  <div class="bar"><div id="goal-bar" style="width:0%"></div></div>
-  <div class="sub" id="goal-sub"></div>
+
+  <div class="grid3">
+    <div class="panel">
+      <div class="ph"><div class="pt">🎯 目標達成度</div><div class="pr" style="cursor:pointer">編集</div></div>
+      <div class="goal-pct num" id="goalPct"></div>
+      <div class="goal-big">あと</div>
+      <div class="goal-num num"><span id="goalRemain"></span><small>人</small></div>
+      <div class="bar"><i id="goalBar"></i></div>
+      <div class="goal-sub num" id="goalSub"></div>
+      <div class="goal-note">📊 28日の増減は YouTube アナリティクスから算出</div>
+    </div>
+
+    <div class="panel">
+      <div class="ph"><div class="pt">最新動画</div><div class="badge" id="ltBadge">⚡ 速度—</div></div>
+      <div class="lt-thumb" id="ltThumb"></div>
+      <div class="lt-views num"><span id="ltViews"></span><small>回</small></div>
+      <div class="lt-meta">
+        <span>👍 <b class="num" id="ltLikes"></b></span>
+        <span>💬 <span class="num" id="ltComments"></span></span>
+        <span id="ltAgo"></span>
+      </div>
+      <div class="lt-speed">再生速度: <b class="num" id="ltSpeed"></b> 回/日（生涯平均）</div>
+    </div>
+
+    <div class="panel">
+      <div class="ph"><div class="pt" id="rankTitle">🏆 直近1ヶ月 視聴数ランキング</div><div class="pr">（20本）</div></div>
+      <div class="rk" id="ranking"></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>最終更新: <span id="updatedAt" class="num">—</span></span>
+    <span class="mid" id="modeLbl">通常モード・60分間隔</span>
+    <a>設定リセット</a>
+  </div>
 </div>
-
-<div class="tabs" id="tabs"></div>
-
-<div class="kpis" id="kpis"></div>
-
-<div class="chart-wrap">
-  <div class="chart-head">
-    <span class="ttl">Views</span>
-    <span class="rng" id="chart-range"></span>
-  </div>
-  <canvas id="chart" height="110"></canvas>
-</div>
-
-<h2>視聴数ランキング</h2>
-<div class="rank-list" id="ranking"></div>
 
 <script>
-const fmt = n => (n ?? 0).toLocaleString("ja-JP");
-const esc = s => (s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const fmtMan = n => n>=10000 ? (n/10000).toFixed(1).replace(/\.0$/,'')+'万' : n.toLocaleString('ja-JP');
+const fmtFull = n => n.toLocaleString('ja-JP');
+const PLAY = '<div class="play"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>';
+const grad = i => {
+  const a=[['#1f3a4d','#0e1d27'],['#3a2440','#16101e'],['#143a32','#0b1f1b'],
+           ['#3d2a14','#1d140a'],['#24304d','#11161f'],['#3a1620','#1a0d11']];
+  const [x,y]=a[i%a.length]; return `linear-gradient(135deg,${x},${y})`;
+};
+// real thumb -> <img>; otherwise gradient + play glyph so it reads as a video, not empty
+const thumbBG = (t,i) => t ? `background-image:url('${t}')` : `background-image:${grad(i)}`;
+const thumbInner = t => t ? '' : PLAY;
 
-let DATA = null;
-let CHART = null;
-let CURRENT = null;
+function genSample(){
+  const today=new Date('2026-06-12T16:45:00+09:00');
+  const titles=['【保存版】Made in Japanのアパレルが高い理由を本気で解説','革小物の経年変化を3年使って比較',
+    '30代からの服選び｜失敗しない定番ジャケット','なぜ国産にこだわるのか？工場に密着取材',
+    'Claude Codeで仕事を自動化した話','愛用カメラ機材を全部見せます','デニムの育て方 完全ガイド',
+    'バイクで巡る国産レザー工房','筋トレ3年で体はどう変わったか','東京出張ルーティン｜出来る男の持ち物',
+    'EC年商を伸ばした施策トップ5','ポロシャツ徹底比較｜国産 vs 海外','スーツの正しい手入れ方法',
+    '朝のルーティンで人生が変わる','本物の革とは何か？プロが解説'];
+  const vids=[];
+  for(let i=0;i<72;i++){
+    const d=new Date(today); d.setDate(d.getDate()-Math.round(i*5.05));
+    const base=9000+Math.round(Math.abs(Math.sin(i*0.9))*46000);
+    const spike=(i===3)?120000:(i===7)?64000:0;
+    vids.push({date:d.toISOString().slice(0,10), publishedAt:d.toISOString(),
+      title:titles[i%titles.length]+(i?` #${72-i}`:''), thumb:null,
+      type:i%5===0?'short':'long',
+      views:Math.max(4000,base+spike), likes:0, comments:0});
+  }
+  vids.forEach(v=>{v.likes=Math.round(v.views*0.022); v.comments=Math.round(v.views*0.0014);});
+  const daysAgo=iso=>Math.floor((today-new Date(iso))/864e5);
+  const WIN={'1週間':7,'2週間':14,'1ヶ月':30,'3ヶ月':90,'6ヶ月':180,'1年':365,'全期間':1e6};
+  const LIFE={views:4280000, likes:94300, comments:6120, videos:418};
+  const periods={};
+  for(const [k,w] of Object.entries(WIN)){
+    const sel=vids.filter(v=>daysAgo(v.publishedAt)<=w);
+    const kp = k==='全期間'
+      ? {...LIFE, subscribersDelta:null}
+      : {views:sel.reduce((s,v)=>s+v.views,0), likes:sel.reduce((s,v)=>s+v.likes,0),
+         comments:sel.reduce((s,v)=>s+v.comments,0), videos:sel.length,
+                    "subscribersDelta":Math.round(1240*w/28)};
+    const points=[...sel].sort((a,b)=>new Date(a.date)-new Date(b.date));
+    const ranking=[...sel].filter(v=>v.type==='long').sort((a,b)=>b.views-a.views).slice(0,20);
+    periods[k]={...kp, chart:{points:points.map(slim)}, ranking:ranking.map((v,i)=>rk(v,i))};
+  }
+  const longs=vids.filter(v=>v.type==='long').sort((a,b)=>new Date(b.publishedAt)-new Date(a.publishedAt));
+  const latest={...longs[0], views:24181, likes:440, comments:29};
+  return {
+    channel:{name:'TAKUZOOO', channelId:'UCjSeXbXh2BS-ErZO7a6ienQ', avatar:null},
+    updatedAt:'2026-06-12T16:45:00+09:00', refreshMinutes:60, defaultPeriod:'1ヶ月',
+    subscribers:106000, subscribersDelta28d:1240,
+    goal:{target:200000, current:106000},
+    latestLong:{...slim(latest), likes:latest.likes, comments:latest.comments,
+      publishedDaysAgo:2, viewsPerDay:12000, speedRank:1, speedTotal:10},
+    periods
+  };
+  function slim(v){return {date:v.date, views:v.views, title:v.title, thumb:v.thumb, type:v.type};}
+  function rk(v,i){return {rank:i+1, title:v.title, thumb:v.thumb, likes:v.likes,
+    comments:v.comments, views:v.views, type:v.type};}
+}
+const SAMPLE_DATA=genSample();
 
-function renderTabs() {
-  const root = document.getElementById("tabs");
-  root.innerHTML = "";
-  DATA.period_order.forEach(key => {
-    const p = DATA.periods[key];
-    if (!p) return;
-    const b = document.createElement("button");
-    b.className = "tab" + (key === CURRENT ? " active" : "");
-    b.textContent = p.label;
-    b.onclick = () => { CURRENT = key; renderTabs(); renderPeriod(); };
-    root.appendChild(b);
+let DATA=null, period='1ヶ月', typeFilter='all';
+
+function kpiCard(ic,bg,label,val,sub){
+  return `<div class="kpi"><div class="h"><div class="ic" style="background:${bg}33;color:${bg}">${ic}</div>${label}</div>
+    <div class="v num">${val}</div><div class="s">${sub||'—'}</div></div>`;
+}
+
+function renderStatic(){
+  const d=DATA;
+  document.getElementById('chName').textContent=(d.channel.name||'TAKUZOOO').toUpperCase();
+  if(d.channel.avatar) document.getElementById('avatar').style.backgroundImage=`url('${d.channel.avatar}')`;
+  const mins=d.refreshMinutes||60;
+  document.getElementById('liveLbl').textContent=`LIVE・${mins}分`;
+  document.getElementById('modeLbl').textContent=`通常モード・${mins}分間隔`;
+  document.getElementById('updatedAt').textContent=
+    new Date(d.updatedAt).toLocaleTimeString('ja-JP',{hour:'2-digit',minute:'2-digit',second:'2-digit'});
+
+  const g=d.goal, pct=Math.min(100,g.current/g.target*100), remain=Math.max(0,g.target-g.current);
+  document.getElementById('goalPct').textContent=pct.toFixed(1)+'%';
+  document.getElementById('goalRemain').textContent=fmtFull(remain);
+  document.getElementById('goalBar').style.width=pct+'%';
+  document.getElementById('goalSub').innerHTML=`→ 目標 ${fmtMan(g.target)}人 ・ 現在 ${fmtFull(g.current)}人`;
+
+  const l=d.latestLong, lt=document.getElementById('ltThumb');
+  lt.style.cssText=thumbBG(l.thumb,99); lt.innerHTML=thumbInner(l.thumb);
+  document.getElementById('ltViews').textContent=fmtFull(l.views);
+  document.getElementById('ltLikes').textContent=fmtFull(l.likes);
+  document.getElementById('ltComments').textContent=fmtFull(l.comments);
+  document.getElementById('ltAgo').textContent=`公開 ${l.publishedDaysAgo}日前`;
+  document.getElementById('ltSpeed').textContent=fmtMan(l.viewsPerDay);
+  document.getElementById('ltBadge').textContent=`⚡ 速度${l.speedRank}位/${l.speedTotal}`;
+}
+
+function renderPeriod(){
+  const d=DATA, p=d.periods[period]||d.periods[d.defaultPeriod];
+  // 全KPIが期間で変化。登録者数: 全期間=現在総数 / それ以外=その期間の増減
+  const delta=p.subscribersDelta;
+  const lifeSub = period==='全期間' ? 'チャンネル累計' : `${period}に公開した動画の合計`;
+  let subVal, subSub;
+  if(period==='全期間'){ subVal=fmtFull(d.subscribers)+'人'; subSub='累計（現在値）'; }
+  else if(delta==null){ subVal=fmtFull(d.subscribers)+'人'; subSub='期間増減は蓄積中…'; }
+  else { subVal=(delta>=0?'+':'')+fmtFull(delta)+'人'; subSub=`現在 ${fmtFull(d.subscribers)}人`; }
+  document.getElementById('kpis').innerHTML=
+    kpiCard('▶','var(--red)','視聴回数',fmtFull(p.views),lifeSub)+
+    kpiCard('👥','var(--blue)','登録者数',subVal,subSub)+
+    kpiCard('👍','var(--amber)','高評価合算',fmtFull(p.likes),lifeSub)+
+    kpiCard('💬','var(--cyan)','コメント合算',fmtFull(p.comments),lifeSub)+
+    kpiCard('🎞','var(--purple)','投稿本数',fmtFull(p.videos),period==='全期間'?'Total Videos':`${period}の投稿`);
+
+  document.getElementById('chartTitle').textContent=`📈 直近${period}の動画パフォーマンス`;
+  document.getElementById('rankTitle').textContent=`🏆 直近${period} 視聴数ランキング`;
+  renderChart(); renderRanking();
+}
+
+function renderChart(){
+  const wrap=document.getElementById('chart');
+  let pts=DATA.periods[period].chart.points.slice();
+  if(typeFilter!=='all') pts=pts.filter(p=>p.type===typeFilter);
+  pts.sort((a,b)=>new Date(a.date)-new Date(b.date));
+  document.getElementById('chartMeta').textContent=
+    `${pts.length}本・累計 ${fmtFull(pts.reduce((s,p)=>s+p.views,0))} 回再生`;
+  if(!pts.length){wrap.innerHTML='<div style="color:var(--mut2);font-size:12px">該当データなし</div>';return;}
+  const t0=new Date(pts[0].date).getTime(), t1=new Date(pts[pts.length-1].date).getTime();
+  const span=Math.max(1,t1-t0), maxV=Math.max(...pts.map(p=>p.views))*1.12;
+  const padL=8,padR=4,padT=12,padB=10;
+  const X=p=>padL+((new Date(p.date).getTime()-t0)/span)*(100-padL-padR);
+  const Y=v=>padT+(1-v/maxV)*(100-padT-padB);
+  let g='';
+  for(let i=0;i<=3;i++){const y=Y(maxV*i/3);
+    g+=`<line x1="${padL}%" x2="100%" y1="${y}%" y2="${y}%" stroke="rgba(255,255,255,.05)"/>`;}
+  const path=pts.map((p,i)=>`${i?'L':'M'} ${X(p)} ${Y(p.views)}`).join(' ');
+  let html=`<svg viewBox="0 0 100 100" preserveAspectRatio="none">${g}
+    <path d="${path}" fill="none" stroke="var(--red)" stroke-width="0.7" vector-effect="non-scaling-stroke"
+      stroke-linejoin="round" stroke-linecap="round"/></svg>
+  <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+    ${pts.map(p=>`<circle class="node" cx="${X(p)}" cy="${Y(p.views)}" r="0.9" vector-effect="non-scaling-stroke"/>`).join('')}
+  </svg>`;
+  for(let i=0;i<=3;i++){const v=maxV*i/3; html+=`<div class="yl" style="top:${Y(v)}%">${i?fmtMan(Math.round(v)):'0'}</div>`;}
+  const step=Math.max(1,Math.ceil(pts.length/6));
+  pts.forEach((p,i)=>{ if(i%step===0||i===pts.length-1)
+    html+=`<div class="xl" style="left:${X(p)}%">${p.date.slice(5).replace('-','/')}</div>`; });
+  pts.forEach((p,i)=>{ html+=`<div class="tile" style="left:${X(p)}%; top:${Y(p.views)}%">
+    <div class="img" style="${thumbBG(p.thumb,i)}">${thumbInner(p.thumb)}</div>
+    <div class="c">${fmtMan(p.views)}</div></div>`; });
+  wrap.innerHTML=html;
+}
+
+function renderRanking(){
+  let r=DATA.periods[period].ranking.slice();
+  if(typeFilter!=='all') r=r.filter(x=>(x.type||'long')===typeFilter);
+  document.getElementById('ranking').innerHTML=r.map((x,i)=>{
+    const rk=i+1, cls=rk<=3?`t${rk}`:'';
+    return `<div class="row"><div class="rank ${cls}">${rk}</div>
+      <div class="th" style="${thumbBG(x.thumb,i)}">${thumbInner(x.thumb)}</div>
+      <div class="tt"><div class="n">${x.title}</div>
+        <div class="m">👍 ${fmtMan(x.likes)} ・ 💬 ${fmtFull(x.comments)}</div></div>
+      <div class="vw num">${fmtMan(x.views)}</div></div>`;
+  }).join('') || '<div style="color:var(--mut2);font-size:12px;padding:8px">該当なし</div>';
+}
+
+function setPeriodButtons(){
+  document.querySelectorAll('#periodSeg button').forEach(b=>{
+    b.classList.toggle('on', b.dataset.p===period);
+    b.onclick=()=>{ period=b.dataset.p; setPeriodButtons(); renderPeriod(); };
   });
 }
+document.querySelectorAll('#typeSeg button').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('#typeSeg button').forEach(x=>x.classList.remove('on'));
+  b.classList.add('on'); typeFilter=b.dataset.t; renderChart(); renderRanking();
+});
 
-function renderKpis(p) {
-  const ch = DATA.channel;
-  const t = p.totals;
-  const rows = [
-    ["登録者(累計)", fmt(ch.subscribers)],
-    ["再生数(累計)", fmt(ch.total_views)],
-    ["動画本数",     fmt(ch.total_videos)],
-    [`期間再生 (${p.label})`, fmt(t.views)],
-    [`登録者 純増 (${p.label})`,
-      (t.subs_net >= 0 ? "+" : "") + fmt(t.subs_net),
-      `増 ${fmt(t.subs_gained)} / 減 ${fmt(t.subs_lost)}`],
-  ];
-  document.getElementById("kpis").innerHTML = rows.map(r => `
-    <div class="kpi">
-      <div class="l">${esc(r[0])}</div>
-      <div class="v">${r[1]}</div>
-      ${r[2] ? `<div class="s">${esc(r[2])}</div>` : ""}
-    </div>`).join("");
-}
+function boot(j){ DATA=j; period=DATA.defaultPeriod||'1ヶ月';
+  setPeriodButtons(); renderStatic(); renderPeriod(); }
 
-function renderChart(p) {
-  document.getElementById("chart-range").textContent = `${p.start} 〜 ${p.end}`;
-  const labels = p.chart.map(r => r.day);
-  const views  = p.chart.map(r => r.views);
-
-  if (CHART) CHART.destroy();
-  const ctx = document.getElementById("chart").getContext("2d");
-  const grad = ctx.createLinearGradient(0, 0, 0, 260);
-  grad.addColorStop(0, "rgba(239,68,68,.35)");
-  grad.addColorStop(1, "rgba(239,68,68,0)");
-
-  CHART = new Chart(ctx, {
-    type: "line",
-    data: {
-      labels,
-      datasets: [{
-        label: "再生数",
-        data: views,
-        borderColor: "#ef4444",
-        backgroundColor: grad,
-        borderWidth: 2,
-        pointRadius: 0,
-        pointHoverRadius: 4,
-        pointHoverBackgroundColor: "#ef4444",
-        tension: .3,
-        fill: true,
-      }]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      interaction: { intersect: false, mode: "index" },
-      plugins: {
-        legend: { display: false },
-        tooltip: {
-          backgroundColor: "#000",
-          borderColor: "#333", borderWidth: 1,
-          padding: 10, titleColor: "#fff", bodyColor: "#eee",
-          callbacks: { label: c => " " + fmt(c.parsed.y) + " 再生" },
-        },
-      },
-      scales: {
-        x: {
-          ticks: { color: "#666", font: { size: 10 }, maxTicksLimit: 8 },
-          grid:  { color: "rgba(255,255,255,.04)" },
-        },
-        y: {
-          beginAtZero: true,
-          ticks: { color: "#666", font: { size: 10 }, callback: v => fmt(v) },
-          grid:  { color: "rgba(255,255,255,.04)" },
-        },
-      },
-    },
-  });
-  document.getElementById("chart").parentNode.style.height = "260px";
-}
-
-function renderRanking(p) {
-  const root = document.getElementById("ranking");
-  if (!p.top_videos.length) {
-    root.innerHTML = `<div class="rank"><div class="no">—</div><div></div><div class="ttl">データなし</div><div></div></div>`;
-    return;
-  }
-  root.innerHTML = p.top_videos.map((v, i) => {
-    const date = v.published_at ? v.published_at.slice(0, 10) : "";
-    return `
-      <a class="rank ${i === 0 ? "top1" : ""}" href="https://www.youtube.com/watch?v=${v.video_id}" target="_blank" rel="noopener">
-        <div class="no">${i + 1}</div>
-        <img src="${v.thumbnail}" alt="" loading="lazy">
-        <div class="ttl">${esc(v.title)}<span class="date">${date}</span></div>
-        <div class="views"><div class="n">${fmt(v.views)}</div><div class="u">views</div></div>
-      </a>`;
-  }).join("");
-}
-
-function renderPeriod() {
-  const p = DATA.periods[CURRENT];
-  if (!p) return;
-  renderKpis(p);
-  renderChart(p);
-  renderRanking(p);
-}
-
-function renderGoal() {
-  const g = DATA.goal;
-  if (!g) return;
-  document.getElementById("goal-section").hidden = false;
-  document.getElementById("goal-val").textContent = `${fmt(g.current)} / ${fmt(g.target)}`;
-  document.getElementById("goal-bar").style.width = Math.min(100, g.progress_pct) + "%";
-  document.getElementById("goal-sub").textContent =
-    g.remaining > 0
-      ? `${g.progress_pct}% — あと ${fmt(g.remaining)} 人で目標達成`
-      : `🎉 目標達成 (${g.progress_pct}%)`;
-}
-
-function renderHeader() {
-  document.getElementById("ch-thumb").src = DATA.channel.thumbnail;
-  document.getElementById("ch-title").textContent = DATA.channel.title;
-  document.getElementById("ch-meta").textContent =
-    `${DATA.channel_id} · UPDATED ${DATA.generated_at.replace("+00:00", "Z")}`;
-}
-
-(async () => {
-  try {
-    const res = await fetch("data.json?_=" + Date.now());
-    if (!res.ok) throw new Error("data.json not found (" + res.status + ")");
-    DATA = await res.json();
-    CURRENT = DATA.period_order.find(k => DATA.periods[k]) || "1m";
-    renderHeader();
-    renderGoal();
-    renderTabs();
-    renderPeriod();
-  } catch (e) {
-    const el = document.getElementById("err");
-    el.hidden = false;
-    el.textContent = "読み込みエラー: " + e.message + "（初回更新待ちの可能性）";
-    console.error(e);
-  }
-})();
+fetch('./data.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.json();})
+  .then(boot).catch(()=>boot(SAMPLE_DATA));
+setInterval(()=>fetch('./data.json',{cache:'no-store'}).then(r=>r.ok?r.json():null)
+  .then(j=>{if(j)boot(j);}).catch(()=>{}), 60*60*1000);
 </script>
 </body>
 </html>
