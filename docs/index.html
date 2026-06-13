@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Takuzooo YouTube Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic UI", sans-serif;
+         margin: 0; padding: 24px; max-width: 1100px; margin-inline: auto;
+         background: #fafafa; color: #222; }
+  @media (prefers-color-scheme: dark) {
+    body { background: #111; color: #eee; }
+    .card { background: #1c1c1c; border-color: #333; }
+    .video { background: #1c1c1c; border-color: #333; }
+    a { color: #6cf; }
+  }
+  header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+  header img { width: 44px; height: 44px; border-radius: 50%; }
+  h1 { font-size: 20px; margin: 0; }
+  .meta { color: #888; font-size: 12px; margin-bottom: 24px; }
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+          gap: 12px; margin-bottom: 24px; }
+  .card { background: white; border: 1px solid #eee; border-radius: 8px;
+          padding: 14px 16px; }
+  .card .label { font-size: 12px; color: #888; }
+  .card .value { font-size: 22px; font-weight: 600; margin-top: 4px; }
+  .card .sub { font-size: 11px; color: #999; margin-top: 2px; }
+  section { margin-bottom: 32px; }
+  h2 { font-size: 15px; color: #666; border-bottom: 1px solid #eee; padding-bottom: 6px; }
+  .chart-wrap { background: white; border: 1px solid #eee; border-radius: 8px; padding: 12px; }
+  @media (prefers-color-scheme: dark) {
+    .chart-wrap { background: #1c1c1c; border-color: #333; }
+  }
+  .videos { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; }
+  .video { background: white; border: 1px solid #eee; border-radius: 8px; overflow: hidden;
+           display: flex; flex-direction: column; }
+  .video img { width: 100%; aspect-ratio: 16/9; object-fit: cover; background: #000; }
+  .video .body { padding: 10px 12px; flex: 1; display: flex; flex-direction: column; }
+  .video .title { font-size: 13px; font-weight: 500; line-height: 1.4; margin-bottom: 6px; }
+  .video .stats { font-size: 11px; color: #888; margin-top: auto; }
+  .video a { text-decoration: none; color: inherit; }
+  .error { color: #c33; padding: 12px; background: #fee; border-radius: 8px; }
+</style>
+</head>
+<body>
+<header>
+  <img id="ch-thumb" alt="">
+  <div>
+    <h1 id="ch-title">Loading…</h1>
+    <div class="meta" id="ch-meta"></div>
+  </div>
+</header>
+
+<div id="err" class="error" hidden></div>
+
+<section>
+  <div class="kpis" id="kpis"></div>
+</section>
+
+<section>
+  <h2>過去28日 日次推移</h2>
+  <div class="chart-wrap"><canvas id="chart-daily" height="120"></canvas></div>
+</section>
+
+<section>
+  <h2>過去28日 トップ10動画（再生数）</h2>
+  <div class="videos" id="top-videos"></div>
+</section>
+
+<section>
+  <h2>最新アップロード</h2>
+  <div class="videos" id="recent"></div>
+</section>
+
+<script>
+const fmt = n => (n ?? 0).toLocaleString("ja-JP");
+const fmtSec = s => {
+  if (!s) return "0:00";
+  const m = Math.floor(s / 60), r = s % 60;
+  return m + ":" + String(r).padStart(2, "0");
+};
+const kpi = (label, value, sub="") => `
+  <div class="card">
+    <div class="label">${label}</div>
+    <div class="value">${value}</div>
+    ${sub ? `<div class="sub">${sub}</div>` : ""}
+  </div>`;
+const videoCard = v => `
+  <a class="video" href="https://www.youtube.com/watch?v=${v.video_id}" target="_blank" rel="noopener">
+    <img src="${v.thumbnail || ""}" alt="" loading="lazy">
+    <div class="body">
+      <div class="title">${escapeHtml(v.title || "(no title)")}</div>
+      <div class="stats">
+        ${v.views_period != null ? `期間 ${fmt(v.views_period)} 再生` : ""}
+        ${v.views_total != null ? `累計 ${fmt(v.views_total)} 再生` : ""}
+        ${v.likes_total != null ? ` / ♥ ${fmt(v.likes_total)}` : ""}
+      </div>
+    </div>
+  </a>`;
+function escapeHtml(s){return s.replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+
+(async () => {
+  try {
+    const res = await fetch("data.json?_=" + Date.now());
+    if (!res.ok) throw new Error("data.json not found yet ("+res.status+")");
+    const d = await res.json();
+
+    document.getElementById("ch-thumb").src = d.channel.thumbnail;
+    document.getElementById("ch-title").textContent = d.channel.title;
+    document.getElementById("ch-meta").textContent =
+      `集計期間: ${d.period.start} 〜 ${d.period.end} (28日) / 更新: ${d.generated_at}`;
+
+    const t = d.analytics_28d.totals;
+    document.getElementById("kpis").innerHTML = [
+      kpi("登録者数 (累計)", fmt(d.channel.subscribers)),
+      kpi("総再生数 (累計)", fmt(d.channel.total_views)),
+      kpi("動画本数 (累計)", fmt(d.channel.total_videos)),
+      kpi("再生数 (28日)", fmt(t.views)),
+      kpi("総再生時間 (28日)", fmt(t.watch_minutes) + " 分"),
+      kpi("登録者 純増 (28日)", (t.subs_net >= 0 ? "+" : "") + fmt(t.subs_net),
+          `増 ${fmt(t.subs_gained)} / 減 ${fmt(t.subs_lost)}`),
+      kpi("平均視聴時間 (28日)", fmtSec(t.avg_view_duration_sec)),
+    ].join("");
+
+    const daily = d.analytics_28d.daily;
+    new Chart(document.getElementById("chart-daily"), {
+      type: "line",
+      data: {
+        labels: daily.map(r => r.day),
+        datasets: [
+          { label: "再生数", data: daily.map(r => r.views), yAxisID: "y", tension: .3 },
+          { label: "総再生時間(分)", data: daily.map(r => r.estimatedMinutesWatched), yAxisID: "y1", tension: .3 },
+        ],
+      },
+      options: {
+        responsive: true,
+        interaction: { intersect: false, mode: "index" },
+        scales: {
+          y:  { position: "left",  beginAtZero: true, title: { display: true, text: "再生数" } },
+          y1: { position: "right", beginAtZero: true, grid: { drawOnChartArea: false },
+                title: { display: true, text: "総再生時間(分)" } },
+        },
+      },
+    });
+
+    document.getElementById("top-videos").innerHTML = d.top_videos_28d.map(videoCard).join("");
+    document.getElementById("recent").innerHTML = d.recent_uploads.map(videoCard).join("");
+  } catch (e) {
+    const el = document.getElementById("err");
+    el.hidden = false;
+    el.textContent = "読み込みエラー: " + e.message + " （初回の GitHub Actions 実行待ちの可能性）";
+    console.error(e);
+  }
+})();
+</script>
+</body>
+</html>
