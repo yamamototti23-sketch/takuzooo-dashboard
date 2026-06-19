@@ -33,8 +33,8 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if ! git diff --quiet -- docs/jm-data.json; then
-            git add docs/jm-data.json
+          git add docs/jm-data.json
+          if ! git diff --cached --quiet -- docs/jm-data.json; then
             git commit -m "chore: update jm-data.json [skip ci]"
             git push
           else
