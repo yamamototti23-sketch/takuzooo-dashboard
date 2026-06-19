@@ -1,0 +1,139 @@
+{
+  "shop": "Japan Made屋",
+  "updatedAt": "2026-06-19T20:24:47+09:00",
+  "refreshMinutes": 15,
+  "term": {
+    "sinceLabel": "6/1〜",
+    "sales": 9248932,
+    "orders": 349,
+    "aov": 26501
+  },
+  "month": {
+    "salesTotal": 9248932,
+    "unitsTotal": 472,
+    "days": 19
+  },
+  "trend": {
+    "points": [
+      {
+        "date": "2026-06-01",
+        "sales": 182622
+      },
+      {
+        "date": "2026-06-02",
+        "sales": 404466
+      },
+      {
+        "date": "2026-06-03",
+        "sales": 481637
+      },
+      {
+        "date": "2026-06-04",
+        "sales": 426426
+      },
+      {
+        "date": "2026-06-05",
+        "sales": 850745
+      },
+      {
+        "date": "2026-06-06",
+        "sales": 667468
+      },
+      {
+        "date": "2026-06-07",
+        "sales": 116375
+      },
+      {
+        "date": "2026-06-08",
+        "sales": 465963
+      },
+      {
+        "date": "2026-06-09",
+        "sales": 453338
+      },
+      {
+        "date": "2026-06-10",
+        "sales": 342519
+      },
+      {
+        "date": "2026-06-11",
+        "sales": 308908
+      },
+      {
+        "date": "2026-06-12",
+        "sales": 338136
+      },
+      {
+        "date": "2026-06-13",
+        "sales": 246109
+      },
+      {
+        "date": "2026-06-14",
+        "sales": 345671
+      },
+      {
+        "date": "2026-06-15",
+        "sales": 399438
+      },
+      {
+        "date": "2026-06-16",
+        "sales": 726867
+      },
+      {
+        "date": "2026-06-17",
+        "sales": 385505
+      },
+      {
+        "date": "2026-06-18",
+        "sales": 557805
+      },
+      {
+        "date": "2026-06-19",
+        "sales": 1548934
+      }
+    ]
+  },
+  "daily": {
+    "todayUnits": 30,
+    "yesterdayUnits": 38,
+    "todaySales": 1548934,
+    "yesterdaySales": 557805
+  },
+  "top5": [
+    {
+      "rank": 1,
+      "title": "『ネックレス』（Silver925）",
+      "units": 118,
+      "handle": "silver-necklace",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1L4A6061_1_7ca50b37-5a29-4124-955e-90d35a5e89af.jpg?v=1780952166"
+    },
+    {
+      "rank": 2,
+      "title": "『ブレスレット』(Silver925)",
+      "units": 51,
+      "handle": "silver-bracelet",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394"
+    },
+    {
+      "rank": 3,
+      "title": "「\"COOL\"イージーパンツ」~RELAXシリーズ",
+      "units": 33,
+      "handle": "cool-material-easy-pants",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/a54cbdbd0433c15cd65b962f12f7afff.jpg?v=1773756986"
+    },
+    {
+      "rank": 4,
+      "title": "【夏モデル】「7oz Tシャツ」気温20〜30℃〜透けない万能型",
+      "units": 31,
+      "handle": "7oz-t-shirt",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/11_89fb2c50-ea69-408c-af05-993aac825213.jpg?v=1781283847"
+    },
+    {
+      "rank": 5,
+      "title": "「\"ラグジュアリー\"サマーニット」~SMARTシリーズ",
+      "units": 28,
+      "handle": "a-luxurious-knit-that-looks-great-on-its-own",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/235A1114_2048x_d160f13f-43cb-46aa-bfed-bfb397cea821.webp?v=1779444675"
+    }
+  ]
+}
