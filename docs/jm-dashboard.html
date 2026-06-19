@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>REALTIME SALES — Japan Made屋</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f4f1ec; --paper:#ffffff; --card:#ffffff;
+    --line:rgba(20,18,16,.08); --line2:rgba(20,18,16,.14);
+    --ink:#1d1b18; --mut:#6f6a62; --mut2:#9a948b;
+    --red:#c1121f; --redsoft:rgba(193,18,31,.10);
+    --gold:#a9842f; --green:#2f8f57; --navy:#2b4a73; --plum:#7a4f86; --teal:#1f8a82;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{
+    background:
+      radial-gradient(1100px 700px at 82% -12%, #fbece9 0%, transparent 55%),
+      radial-gradient(1000px 800px at -10% 112%, #eef2f4 0%, transparent 60%),
+      #f1ede6;
+    font-family:"Inter","Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic",
+      -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    color:var(--ink); -webkit-font-smoothing:antialiased; padding:26px;
+  }
+  .num{font-variant-numeric:tabular-nums; letter-spacing:-.01em}
+  .dash{
+    max-width:1520px; margin:0 auto;
+    background:linear-gradient(180deg,#ffffff 0%,#fdfbf7 60%,#fbf8f2 100%);
+    border:1px solid var(--line2); border-radius:24px; padding:22px 22px 16px;
+    box-shadow:0 1px 0 rgba(255,255,255,.9) inset,
+      0 30px 90px -40px rgba(60,40,30,.28), 0 0 0 1px rgba(193,18,31,.03);
+  }
+  .top{display:flex; align-items:center; gap:18px; flex-wrap:wrap; margin-bottom:18px}
+  .id{display:flex; align-items:center; gap:13px; min-width:200px}
+  .avatar{width:46px;height:46px;border-radius:50%;
+    background:linear-gradient(135deg,#fff,#f0ece3);
+    border:2px solid var(--red); box-shadow:0 0 0 3px rgba(193,18,31,.10);
+    display:grid; place-items:center; font-weight:800; font-size:14px; color:var(--red);
+    letter-spacing:.02em}
+  .eyebrow{font-size:10px; letter-spacing:.32em; color:var(--mut); font-weight:700}
+  .title{font-size:20px; font-weight:800; letter-spacing:.02em; margin-top:1px}
+  .spacer{flex:1}
+  .meta-period{font-size:12px; color:var(--mut); font-weight:600;
+    border:1px solid var(--line); border-radius:11px; padding:7px 13px; background:#fff}
+  .meta-period b{color:var(--ink)}
+  .pill{display:inline-flex; align-items:center; gap:7px; font-size:12px; font-weight:700;
+    padding:7px 12px; border-radius:999px; border:1px solid var(--line2); color:var(--mut); background:#fff}
+  .pill .dot{width:7px;height:7px;border-radius:50%;background:var(--red);
+    box-shadow:0 0 8px var(--red); animation:pulse 2s infinite}
+  @keyframes pulse{50%{opacity:.35}}
+
+  .kpis{display:grid; grid-template-columns:repeat(5,1fr); gap:12px; margin-bottom:14px}
+  .kpi{background:var(--card); border:1px solid var(--line); border-radius:15px; padding:15px 16px;
+    box-shadow:0 1px 2px rgba(60,40,30,.04)}
+  .kpi .h{display:flex; align-items:center; gap:9px; color:var(--mut); font-size:12px; font-weight:700}
+  .kpi .ic{width:26px;height:26px;border-radius:8px;display:grid;place-items:center;font-size:13px}
+  .kpi .v{font-size:28px; font-weight:800; margin-top:9px; line-height:1.05}
+  .kpi .v small{font-size:15px; font-weight:800; color:var(--mut); margin-left:1px}
+  .kpi .s{font-size:11px; color:var(--mut2); margin-top:7px; min-height:14px}
+  .kpi.lead{background:linear-gradient(160deg,#fff,#fff5f5);
+    border-color:rgba(193,18,31,.20); box-shadow:0 6px 18px -10px rgba(193,18,31,.35)}
+  .kpi.lead .v{color:var(--red)}
+
+  .panel{background:var(--paper); border:1px solid var(--line); border-radius:16px; padding:16px;
+    box-shadow:0 1px 2px rgba(60,40,30,.04)}
+  .panel .ph{display:flex; align-items:center; justify-content:space-between; margin-bottom:6px}
+  .panel .pt{font-size:13px; font-weight:800; color:#403b34; display:flex; align-items:center; gap:8px}
+  .panel .pr{font-size:11px; color:var(--mut)}
+
+  .chart-wrap{margin-bottom:14px}
+  .chart{position:relative; height:300px; margin-top:18px}
+  .chart svg{position:absolute; inset:0; width:100%; height:100%; overflow:visible}
+  .yl{position:absolute; left:0; font-size:10px; color:var(--mut2); transform:translateY(-50%)}
+  .xl{position:absolute; bottom:-20px; font-size:10px; color:var(--mut2); transform:translateX(-50%)}
+  .pt-lbl{position:absolute; transform:translate(-50%,-150%); font-size:10px; font-weight:800;
+    color:var(--red); text-shadow:0 1px 2px #fff; pointer-events:none; white-space:nowrap}
+  .node{fill:#fff; stroke:var(--red); stroke-width:2.5}
+  .node.hi{fill:var(--red)}
+
+  .grid3{display:grid; grid-template-columns:1fr 1fr 1.25fr; gap:14px}
+
+  .big-row{display:flex; align-items:flex-end; gap:18px; margin:16px 0 4px}
+  .big-cell .lbl{font-size:12px; color:var(--mut); font-weight:700; margin-bottom:4px}
+  .big-cell .val{font-size:50px; font-weight:800; line-height:1; color:var(--ink)}
+  .big-cell .val small{font-size:18px; color:var(--mut); font-weight:800; margin-left:3px}
+  .big-cell.sub .val{font-size:30px; color:var(--mut)}
+  .big-cell.sub .val small{font-size:13px}
+  .delta{display:inline-flex; align-items:center; gap:5px; font-size:12px; font-weight:800;
+    padding:4px 9px; border-radius:999px; margin-top:10px}
+  .delta.up{color:var(--green); background:rgba(47,143,87,.10)}
+  .delta.down{color:var(--red); background:var(--redsoft)}
+  .note{font-size:11px; color:var(--mut2); margin-top:14px; padding-top:12px;
+    border-top:1px solid var(--line); display:flex; align-items:center; gap:7px}
+  .cum{font-size:12px; color:var(--mut); margin-top:14px; padding-top:12px;
+    border-top:1px solid var(--line)}
+  .cum b{color:var(--ink); font-weight:800}
+
+  .rk{display:flex; flex-direction:column; gap:2px; margin-top:8px}
+  .row{display:flex; align-items:center; gap:11px; padding:9px 4px; border-bottom:1px solid rgba(20,18,16,.05)}
+  .row:last-child{border-bottom:none}
+  .rank{font-size:15px; font-weight:800; width:18px; text-align:center; color:var(--mut)}
+  .rank.t1{color:var(--gold)} .rank.t2{color:#9aa0a6} .rank.t3{color:#bd7b43}
+  .row .th{position:relative; width:52px;height:38px;border-radius:7px;flex:none;background-size:cover;
+    background-position:center; border:1px solid var(--line2); overflow:hidden;
+    box-shadow:0 2px 6px -3px rgba(60,40,30,.4)}
+  .row .tt{flex:1; min-width:0}
+  .row .tt .n{font-size:12px; color:#37322c; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; font-weight:600}
+  .row .tt .m{font-size:10px; color:var(--mut2); margin-top:2px}
+  .row .vw{font-size:14px; font-weight:800; flex:none; text-align:right}
+  .row .vw small{font-size:11px; color:var(--mut); font-weight:700; margin-left:1px}
+  .row .barlet{height:4px; border-radius:99px; background:var(--redsoft); margin-top:5px; overflow:hidden}
+  .row .barlet i{display:block; height:100%; background:linear-gradient(90deg,#e0556b,var(--red)); border-radius:99px}
+
+  .foot{display:flex; justify-content:space-between; align-items:center; margin-top:14px;
+    padding-top:12px; border-top:1px solid var(--line); font-size:11px; color:var(--mut2)}
+  .foot .mid{color:var(--mut)}
+
+  @media(max-width:1100px){ .kpis{grid-template-columns:repeat(3,1fr)} .grid3{grid-template-columns:1fr} }
+  @media(max-width:640px){
+    body{padding:12px} .dash{padding:16px 14px}
+    .kpis{grid-template-columns:repeat(2,1fr)}
+    .kpi .v{font-size:23px} .big-cell .val{font-size:38px}
+    .title{font-size:18px}
+  }
+  @media (prefers-reduced-motion: reduce){ *{animation:none !important} }
+</style>
+</head>
+<body>
+<div class="dash">
+  <div class="top">
+    <div class="id">
+      <div class="avatar">JM</div>
+      <div><div class="eyebrow">REALTIME SALES</div><div class="title" id="shopName">JAPAN MADE屋</div></div>
+    </div>
+    <div class="spacer"></div>
+    <div class="meta-period" id="periodLbl">今期 <b>5/1〜</b> ・ 今月の推移</div>
+    <div class="pill"><span class="dot"></span><span id="liveLbl">LIVE・60分</span></div>
+  </div>
+
+  <div class="kpis" id="kpis"></div>
+
+  <div class="panel chart-wrap">
+    <div class="ph">
+      <div class="pt">📈 今月の売上推移</div>
+      <div class="pr" id="chartMeta"></div>
+    </div>
+    <div class="chart" id="chart"></div>
+  </div>
+
+  <div class="grid3">
+    <div class="panel">
+      <div class="ph"><div class="pt">📦 販売点数</div><div class="pr">本日 / 昨日</div></div>
+      <div class="big-row">
+        <div class="big-cell">
+          <div class="lbl">本日</div>
+          <div class="val num"><span id="todayUnits"></span><small>点</small></div>
+        </div>
+        <div class="big-cell sub">
+          <div class="lbl">昨日</div>
+          <div class="val num"><span id="ydayUnits"></span><small>点</small></div>
+        </div>
+      </div>
+      <div id="unitsDelta"></div>
+      <div class="cum">今月累計 <b class="num" id="monthUnits"></b> 点</div>
+    </div>
+
+    <div class="panel">
+      <div class="ph"><div class="pt">💴 本日の売上</div><div class="pr">本日 / 昨日</div></div>
+      <div class="big-row">
+        <div class="big-cell">
+          <div class="lbl">本日</div>
+          <div class="val num" id="todaySales"></div>
+        </div>
+      </div>
+      <div class="big-cell sub" style="margin-top:8px">
+        <div class="lbl">昨日</div>
+        <div class="val num" id="ydaySales"></div>
+      </div>
+      <div class="cum">今月累計 <b class="num" id="monthSales"></b></div>
+    </div>
+
+    <div class="panel">
+      <div class="ph"><div class="pt">🏆 今月の人気アイテム TOP5</div><div class="pr">販売点数</div></div>
+      <div class="rk" id="ranking"></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>最終更新: <span id="updatedAt" class="num">—</span></span>
+    <span class="mid" id="modeLbl">通常モード・60分間隔</span>
+    <span>Japan Made屋 ・ japanmadeya.com</span>
+  </div>
+</div>
+
+<script>
+const yen   = n => '¥' + Math.round(n).toLocaleString('ja-JP');
+const yenSm = n => { const v=Math.round(n);
+  return v>=10000 ? '¥'+(v/10000).toFixed(v%10000?1:0).replace(/\.0$/,'')+'<small>万</small>' : '¥'+v.toLocaleString('ja-JP'); };
+const man   = v => v>=10000 ? (v/10000).toFixed(v>=100000?0:1).replace(/\.0$/,'')+'万' : v.toLocaleString('ja-JP');
+const full  = n => n.toLocaleString('ja-JP');
+
+// ---- baked real data (2026-06-19 15:36 JST) — auto-replaced by ./jm-data.json when present ----
+function genSample(){
+  // 今月の売上推移 = 6/1〜本日 の日別売上
+  const td = ['06-01','06-02','06-03','06-04','06-05','06-06','06-07','06-08','06-09','06-10',
+              '06-11','06-12','06-13','06-14','06-15','06-16','06-17','06-18','06-19'];
+  const ts = [182622,404466,481637,426426,850745,667468,116375,465963,453338,342519,
+              308908,338136,246109,345671,399438,726867,385505,557805,147760];
+  const trend = td.map((d,i)=>({date:'2026-'+d, sales:ts[i]}));
+  return {
+    shop:'Japan Made屋', updatedAt:'2026-06-19T15:36:00+09:00', refreshMinutes:15,
+    term:{ sinceLabel:'6/1〜', sales:7847758, orders:333, aov:23567 },
+    month:{ salesTotal:7847758, unitsTotal:449, days:19 },
+    trend:{ points:trend },
+    daily:{ todayUnits:7, yesterdayUnits:38, todaySales:147760, yesterdaySales:557805 },
+    top5:[
+      {rank:1, title:'『ネックレス』（Silver925）', units:118, handle:'silver-necklace',
+        thumb:'https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1L4A6061_1_7ca50b37-5a29-4124-955e-90d35a5e89af.jpg?v=1780952166'},
+      {rank:2, title:'『ブレスレット』(Silver925)', units:51, handle:'silver-bracelet',
+        thumb:'https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394'},
+      {rank:3, title:'「"COOL"イージーパンツ」~RELAXシリーズ', units:32, handle:'cool-material-easy-pants',
+        thumb:'https://cdn.shopify.com/s/files/1/0712/3805/8283/files/a54cbdbd0433c15cd65b962f12f7afff.jpg?v=1773756986'},
+      {rank:4, title:'【夏モデル】「7oz Tシャツ」気温20〜30℃〜透けない万能型', units:29, handle:'7oz-t-shirt',
+        thumb:'https://cdn.shopify.com/s/files/1/0712/3805/8283/files/11_89fb2c50-ea69-408c-af05-993aac825213.jpg?v=1781283847'},
+      {rank:5, title:'「"ラグジュアリー"サマーニット」~SMARTシリーズ', units:28, handle:'a-luxurious-knit-that-looks-great-on-its-own',
+        thumb:'https://cdn.shopify.com/s/files/1/0712/3805/8283/files/235A1114_2048x_d160f13f-43cb-46aa-bfed-bfb397cea821.webp?v=1779444675'},
+    ]
+  };
+}
+const SAMPLE_DATA = genSample();
+let DATA = null;
+
+function render(){
+  const d = DATA;
+  document.getElementById('shopName').textContent = (d.shop||'JAPAN MADE屋').toUpperCase();
+  const mins = d.refreshMinutes||60;
+  document.getElementById('liveLbl').textContent = `LIVE・${mins}分`;
+  document.getElementById('modeLbl').textContent = `通常モード・${mins}分間隔`;
+  document.getElementById('periodLbl').innerHTML = `今期 <b>${d.term.sinceLabel}</b> ・ 今月の推移`;
+  document.getElementById('updatedAt').textContent =
+    new Date(d.updatedAt).toLocaleTimeString('ja-JP',{hour:'2-digit',minute:'2-digit'});
+
+  // KPIs
+  const kpi=(ic,color,label,val,sub,lead)=>`<div class="kpi ${lead?'lead':''}">
+    <div class="h"><div class="ic" style="background:${color}1a;color:${color}">${ic}</div>${label}</div>
+    <div class="v num">${val}</div><div class="s">${sub||'—'}</div></div>`;
+  const avgDaily = Math.round(d.month.salesTotal / Math.max(1, d.month.days));
+  document.getElementById('kpis').innerHTML =
+    kpi('💰','var(--red)','今期売上（'+d.term.sinceLabel+'）', yen(d.term.sales), '注文 '+full(d.term.orders)+'件', true) +
+    kpi('📦','var(--teal)','今月販売点数', full(d.month.unitsTotal)+'<small>点</small>', '6月 累計') +
+    kpi('🧾','var(--navy)','今期注文数', full(d.term.orders)+'<small>件</small>', d.term.sinceLabel+' 累計') +
+    kpi('🎫','var(--gold)','平均客単価', yen(d.term.aov), '今期 AOV') +
+    kpi('📈','var(--plum)','平均1日売上', yen(avgDaily), '今月 1日あたり');
+
+  // daily numbers
+  document.getElementById('todayUnits').textContent = full(d.daily.todayUnits);
+  document.getElementById('ydayUnits').textContent  = full(d.daily.yesterdayUnits);
+  document.getElementById('monthUnits').textContent = full(d.month.unitsTotal);
+  document.getElementById('todaySales').innerHTML   = yenSm(d.daily.todaySales);
+  document.getElementById('ydaySales').innerHTML    = yenSm(d.daily.yesterdaySales);
+  document.getElementById('monthSales').textContent = yen(d.month.salesTotal);
+
+  const diff = d.daily.todayUnits - d.daily.yesterdayUnits;
+  const de = document.getElementById('unitsDelta');
+  if(diff===0){ de.innerHTML=`<span class="delta">±0 点（昨日と同じ）</span>`; }
+  else{ const up=diff>0; de.innerHTML=`<span class="delta ${up?'up':'down'}">${up?'▲':'▼'} ${Math.abs(diff)}点 ${up?'増':'減'}（前日比）</span>`; }
+
+  renderChart(d.trend.points);
+  renderRanking(d.top5);
+}
+
+function renderChart(pts){
+  const wrap=document.getElementById('chart');
+  const total=pts.reduce((s,p)=>s+p.sales,0);
+  const peak=pts.reduce((m,p)=>p.sales>m.sales?p:m,pts[0]);
+  const md=d=>d.slice(5).replace('-','/').replace(/^0/,'').replace('/0','/');
+  document.getElementById('chartMeta').textContent =
+    `${md(pts[0].date)}〜${md(pts[pts.length-1].date)} ・ 累計 ${yen(total)} ・ 最高 ${man(peak.sales)}（${md(peak.date)}）`;
+  const maxV=Math.max(...pts.map(p=>p.sales))*1.15;
+  const padL=8,padR=4,padT=14,padB=10, n=pts.length;
+  const X=i=> padL + (n<=1?0:(i/(n-1)))*(100-padL-padR);
+  const Y=v=> padT + (1-v/maxV)*(100-padT-padB);
+  let grid='';
+  for(let i=0;i<=3;i++){ const y=Y(maxV*i/3);
+    grid+=`<line x1="${padL}%" x2="100%" y1="${y}%" y2="${y}%" stroke="rgba(20,18,16,.07)"/>`; }
+  const line=pts.map((p,i)=>`${i?'L':'M'} ${X(i)} ${Y(p.sales)}`).join(' ');
+  const area=`M ${X(0)} ${Y(0)} `+pts.map((p,i)=>`L ${X(i)} ${Y(p.sales)}`).join(' ')+` L ${X(n-1)} ${Y(0)} Z`;
+  let html=`<svg viewBox="0 0 100 100" preserveAspectRatio="none">${grid}
+    <defs><linearGradient id="fill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(193,18,31,.16)"/>
+      <stop offset="100%" stop-color="rgba(193,18,31,0)"/></linearGradient></defs>
+    <path d="${area}" fill="url(#fill)" stroke="none"/>
+    <path d="${line}" fill="none" stroke="var(--red)" stroke-width="0.8"
+      vector-effect="non-scaling-stroke" stroke-linejoin="round" stroke-linecap="round"/></svg>
+  <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+    ${pts.map((p,i)=>`<circle class="node ${i===n-1?'hi':''}" cx="${X(i)}" cy="${Y(p.sales)}" r="${i===n-1?1.2:0.85}" vector-effect="non-scaling-stroke"/>`).join('')}
+  </svg>`;
+  for(let i=0;i<=3;i++){ const v=maxV*i/3; html+=`<div class="yl" style="top:${Y(v)}%">${i?man(Math.round(v)):'0'}</div>`; }
+  const step=Math.max(1,Math.ceil(n/9));
+  pts.forEach((p,i)=>{ if(i%step===0||i===n-1)
+    html+=`<div class="xl" style="left:${X(i)}%">${md(p.date)}</div>`; });
+  [peak, pts[n-1]].forEach(p=>{ const i=pts.indexOf(p);
+    html+=`<div class="pt-lbl" style="left:${X(i)}%; top:${Y(p.sales)}%">${man(p.sales)}</div>`; });
+  wrap.innerHTML=html;
+}
+
+function renderRanking(top){
+  const max=Math.max(...top.map(t=>t.units));
+  document.getElementById('ranking').innerHTML = top.map((x,i)=>{
+    const rk=i+1, cls=rk<=3?`t${rk}`:'';
+    return `<div class="row">
+      <div class="rank ${cls}">${rk}</div>
+      <div class="th" style="${x.thumb?`background-image:url('${x.thumb}')`:'background:linear-gradient(135deg,#ece7df,#d9d2c6)'}"></div>
+      <div class="tt"><div class="n">${x.title}</div>
+        <div class="barlet"><i style="width:${Math.round(x.units/max*100)}%"></i></div></div>
+      <div class="vw num">${full(x.units)}<small>点</small></div></div>`;
+  }).join('');
+}
+
+function boot(j){ DATA=j; render(); }
+
+// まず焼き込みデータで即描画（fetchが使えない環境でも必ず表示される）
+boot(SAMPLE_DATA);
+
+// jm-data.json があれば上書き（将来のライブ更新用）。無ければ焼き込みのまま。
+function tryLive(){
+  fetch('./jm-data.json?t='+Date.now(),{cache:'no-store'})
+    .then(r=>r.ok?r.json():null).then(j=>{ if(j) boot(j); }).catch(()=>{});
+}
+tryLive();
+setInterval(tryLive, 90*1000); // 90秒ごとに jm-data.json を再読込（CDNキャッシュ回避のため ?t= 付き）
+</script>
+</body>
+</html>

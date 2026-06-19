@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>OFFICE KIOSK — Takuzooo × Japan Made屋</title>
+<style>
+  html,body{margin:0;height:100%;background:#000;overflow:hidden;font-family:system-ui,sans-serif}
+  .stage{position:fixed;inset:0}
+  iframe{position:absolute;inset:0;width:100%;height:100%;border:0;
+    opacity:0;transition:opacity .6s ease;pointer-events:none}
+  iframe.on{opacity:1;pointer-events:auto}
+  .hud{position:fixed;top:14px;left:50%;transform:translateX(-50%);
+    display:flex;align-items:center;gap:10px;z-index:10;
+    background:rgba(0,0,0,.55);color:#fff;font-size:12px;font-weight:700;
+    padding:7px 14px;border-radius:999px;backdrop-filter:blur(6px);letter-spacing:.04em}
+  .hud .dot{width:7px;height:7px;border-radius:50%;background:#ff4d3d;box-shadow:0 0 8px #ff4d3d}
+</style>
+</head>
+<body>
+<div class="hud"><span class="dot"></span><span id="label">YouTube</span></div>
+<div class="stage">
+  <iframe id="f0" class="on" referrerpolicy="no-referrer"></iframe>
+  <iframe id="f1" referrerpolicy="no-referrer"></iframe>
+</div>
+<script>
+  /* ====== 設定（ここだけ触ればOK） ====== */
+  const INTERVAL    = 7000;       // 切替間隔（ミリ秒）= 7秒
+  const LOCK_PERIOD = '1ヶ月';     // YouTube側を固定する期間。'1週間''2週間''1ヶ月''3ヶ月''6ヶ月''1年''全期間'
+  const SLIDES = [
+    { name:'YouTube',      url:'https://yamamototti23-sketch.github.io/takuzooo-dashboard/', lock:true  },
+    { name:'Japan Made屋',  url:'./jm-dashboard.html',                                        lock:false },
+  ];
+  /* ===================================== */
+
+  const fr=[document.getElementById('f0'),document.getElementById('f1')];
+  const label=document.getElementById('label');
+  let cur=0;
+
+  // YouTubeダッシュボードを開いた瞬間に指定期間タブを自動クリックして固定
+  // （同一オリジンの場合のみ作用。別オリジンなら既定期間のまま安全に表示）
+  function applyLock(iframe){
+    let tries=0;
+    const timer=setInterval(()=>{
+      tries++;
+      try{
+        const doc=iframe.contentDocument;
+        if(doc){
+          const btn=doc.querySelector('#periodSeg button[data-p="'+LOCK_PERIOD+'"]');
+          if(btn && doc.querySelector('#periodSeg button.on')){
+            if(!btn.classList.contains('on')) btn.click();
+            clearInterval(timer); return;
+          }
+        }
+      }catch(e){ clearInterval(timer); return; } // クロスオリジン：何もしない
+      if(tries>=20) clearInterval(timer); // 約6秒で諦める
+    },300);
+  }
+
+  function load(i){
+    const f=fr[i], s=SLIDES[i];
+    f.onload = s.lock ? ()=>applyLock(f) : null;
+    f.src=s.url;
+  }
+
+  function show(i){
+    fr[cur].classList.remove('on'); fr[i].classList.add('on');
+    cur=i; label.textContent=SLIDES[i].name;
+    load(i); // 表示するたびに最新データで読み直し（lock付きなら再固定）
+  }
+
+  load(0); load(1);
+  label.textContent=SLIDES[0].name;
+  setInterval(()=>show((cur+1)%SLIDES.length), INTERVAL);
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+name: JM Sales data.json
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'   # 15分ごと（UTC基準。GitHubの仕様で実際は数分〜十数分ずれる場合あり）
+  workflow_dispatch:          # 手動実行も可
+
+concurrency:
+  group: jm-sales
+  cancel-in-progress: false
+
+permissions:
+  contents: write             # data.json をコミットするため
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Generate jm-data.json
+        env:
+          SHOPIFY_STORE: ${{ secrets.SHOPIFY_STORE }}
+          SHOPIFY_CLIENT_ID: ${{ secrets.SHOPIFY_CLIENT_ID }}
+          SHOPIFY_CLIENT_SECRET: ${{ secrets.SHOPIFY_CLIENT_SECRET }}
+        run: python scripts/fetch_sales.py
+
+      - name: Commit if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if ! git diff --quiet -- docs/jm-data.json; then
+            git add docs/jm-data.json
+            git commit -m "chore: update jm-data.json [skip ci]"
+            git push
+          else
+            echo "no change in jm-data.json"
+          fi
