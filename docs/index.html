@@ -16,7 +16,7 @@
     --blue:#5b8cff; --amber:#f2c24a; --cyan:#33c7bd; --purple:#9a7bff;
   }
   *{box-sizing:border-box}
-  html,body{margin:0}
+  html,body{margin:0;height:100%}
   body{
     background:
       radial-gradient(1100px 700px at 80% -10%, #1a1d14 0%, transparent 55%),
@@ -24,7 +24,9 @@
       #06120f;
     font-family:"Inter","Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic",
       -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-    color:var(--tx); -webkit-font-smoothing:antialiased; padding:26px;
+    color:var(--tx); -webkit-font-smoothing:antialiased; padding:14px;
+    overflow:hidden;
+    display:flex; align-items:center; justify-content:center;
   }
   .num{font-variant-numeric:tabular-nums; letter-spacing:-.01em}
   .dash{
@@ -392,21 +394,36 @@ function renderRanking(){
 function setPeriodButtons(){
   document.querySelectorAll('#periodSeg button').forEach(b=>{
     b.classList.toggle('on', b.dataset.p===period);
-    b.onclick=()=>{ period=b.dataset.p; setPeriodButtons(); renderPeriod(); };
+    b.onclick=()=>{ period=b.dataset.p; setPeriodButtons(); renderPeriod(); fitDash(); };
   });
 }
 document.querySelectorAll('#typeSeg button').forEach(b=>b.onclick=()=>{
   document.querySelectorAll('#typeSeg button').forEach(x=>x.classList.remove('on'));
-  b.classList.add('on'); typeFilter=b.dataset.t; renderChart(); renderRanking();
+  b.classList.add('on'); typeFilter=b.dataset.t; renderChart(); renderRanking(); fitDash();
 });
 
 function boot(j){ DATA=j; period=DATA.defaultPeriod||'1ヶ月';
-  setPeriodButtons(); renderStatic(); renderPeriod(); }
+  setPeriodButtons(); renderStatic(); renderPeriod(); fitDash(); }
 
 fetch('./data.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.json();})
   .then(boot).catch(()=>boot(SAMPLE_DATA));
 setInterval(()=>fetch('./data.json',{cache:'no-store'}).then(r=>r.ok?r.json():null)
   .then(j=>{if(j)boot(j);}).catch(()=>{}), 60*60*1000);
+
+let _fitting=false;
+function fitDash(){
+  if(_fitting) return; _fitting=true;
+  const d=document.querySelector('.dash');
+  if(d){
+    d.style.zoom=1;
+    const z=Math.min(1,(window.innerHeight-16)/d.offsetHeight,(window.innerWidth-16)/d.offsetWidth);
+    d.style.zoom = z>0 ? z : 1;
+  }
+  requestAnimationFrame(()=>{ _fitting=false; });
+}
+window.addEventListener('resize',fitDash);
+if(document.fonts&&document.fonts.ready) document.fonts.ready.then(fitDash);
+setTimeout(fitDash,300); setTimeout(fitDash,1000); setTimeout(fitDash,2000);
 </script>
 </body>
 </html>
