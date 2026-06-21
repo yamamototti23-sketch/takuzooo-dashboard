@@ -94,7 +94,7 @@ def main():
 
     vids = []
     for i in range(0, len(ids), 50):
-        r = data_api(token, "videos", part="statistics,snippet,contentDetails", id=",".join(ids[i:i+50]), maxResults=50)
+        r = data_api(token, "videos", part="statistics,snippet,contentDetails,status", id=",".join(ids[i:i+50]), maxResults=50)
         for it in r["items"]:
             if it["contentDetails"]["duration"] == "P0D": continue  # skip live broadcasts (3 known)
             s = it.get("statistics", {})
@@ -103,6 +103,7 @@ def main():
                 "thumb":it["snippet"]["thumbnails"].get("medium",{}).get("url"),
                 "views":int(s.get("viewCount",0)), "likes":int(s.get("likeCount",0)),
                 "comments":int(s.get("commentCount",0)),
+                "privacyStatus":it.get("status",{}).get("privacyStatus",""),
                 "type":"short" if dur_sec(it["contentDetails"]["duration"])<=SHORT_MAX_SEC else "long"})
 
     now = dt.datetime.now(dt.timezone.utc)
@@ -134,7 +135,20 @@ def main():
                       "ranking":[rankrow(v,i) for i,v in enumerate(rnk)]}
 
     longs = sorted([v for v in vids if v["type"]=="long"], key=lambda v:v["publishedAt"], reverse=True)
-    latest = longs[0]; dd = max(1, days_ago(latest["publishedAt"])); last10 = longs[:10]
+    # latestLong: public-only (unlisted/private/members-only are excluded).
+    # Optional manual exclude list at config/excluded_video_ids.txt (one ID per line).
+    excluded = set()
+    try:
+        with open("config/excluded_video_ids.txt") as f:
+            excluded = {ln.strip() for ln in f if ln.strip() and not ln.startswith("#")}
+    except FileNotFoundError:
+        pass
+    longs_public = [v for v in longs if v.get("privacyStatus")=="public" and v["id"] not in excluded]
+    pre_id  = longs[0]["id"] if longs else None
+    post_id = longs_public[0]["id"] if longs_public else None
+    print(f"latestLong filter: pre(any)={pre_id} -> post(public)={post_id} "
+          f"(longs={len(longs)} public={len(longs_public)} excluded={len(excluded)})")
+    latest = longs_public[0]; dd = max(1, days_ago(latest["publishedAt"])); last10 = longs_public[:10]
     speed = sorted(last10, key=lambda v:-(v["views"]/max(1,days_ago(v["publishedAt"]))))
     latestLong = {**slim(latest), "likes":latest["likes"], "comments":latest["comments"],
                   "publishedDaysAgo":days_ago(latest["publishedAt"]),
