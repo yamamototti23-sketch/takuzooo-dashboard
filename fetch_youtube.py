@@ -12,6 +12,7 @@ CLIENT_SECRET = os.environ["YT_CLIENT_SECRET"]
 REFRESH_TOKEN = os.environ["YT_REFRESH_TOKEN"]
 CHANNEL_ID = "UCjSeXbXh2BS-ErZO7a6ienQ"
 GOAL_TARGET, SHORT_MAX_SEC, REFRESH_MIN, CHART_CAP = 300000, 60, 60, 60
+HISTORY_KEEP = 25  # 24 bars need 25 snapshots (N+1 → N diffs)
 OUT = "docs/data.json"
 JST = dt.timezone(dt.timedelta(hours=9))
 DATA_API  = "https://www.googleapis.com/youtube/v3/"
@@ -47,13 +48,42 @@ def slim(v): return {"date":v["date"],"views":v["views"],"title":v["title"],
 def rankrow(v,i): return {"rank":i+1,"title":v["title"],"thumb":v["thumb"],
                           "likes":v["likes"],"comments":v["comments"],"views":v["views"],"type":v["type"]}
 
+def viewers24h_compute(prev_history, current_total, now_jst):
+    """Append a snapshot, keep last HISTORY_KEEP points, return (history, viewers24h).
+    bars = consecutive diffs (max 0). label = ending-hour of each bar in JST."""
+    history = list(prev_history or [])
+    history.append({"ts": now_jst.isoformat(timespec="seconds"), "total": int(current_total)})
+    history = history[-HISTORY_KEEP:]
+    bars = []
+    for i in range(1, len(history)):
+        a = int(history[i-1]["total"]); b = int(history[i]["total"])
+        try:
+            ts = dt.datetime.fromisoformat(history[i]["ts"])
+        except Exception:
+            ts = now_jst
+        bars.append({"label": f"{ts.hour}時", "v": max(0, b - a)})
+    bars = bars[-24:]
+    total = sum(b["v"] for b in bars)
+    return history, {"total": total, "bars": bars,
+                     "note": "毎時の累計差分（YouTubeはバッチ更新のため0や急増が混在）"}
+
 def main():
     token = access_token()
     ch = data_api(token, "channels", part="statistics,contentDetails,snippet", id=CHANNEL_ID)["items"][0]
     st = ch["statistics"]; uploads = ch["contentDetails"]["relatedPlaylists"]["uploads"]
     total_videos = int(st["videoCount"]); subs_rounded = int(st["subscriberCount"])
+    total_views_now = int(st.get("viewCount", 0))
     avatar = ch["snippet"]["thumbnails"]["high"]["url"]; name = ch["snippet"]["title"]
     ch_start = ch["snippet"]["publishedAt"][:10]
+
+    prev_history = []
+    try:
+        with open(OUT) as f:
+            prev_history = json.load(f).get("viewers24h_history", []) or []
+    except (FileNotFoundError, json.JSONDecodeError):
+        pass
+    now_jst = dt.datetime.now(JST)
+    history, viewers24h = viewers24h_compute(prev_history, total_views_now, now_jst)
 
     ids, pg = [], None
     while True:
@@ -117,6 +147,7 @@ def main():
            "subscribers":subs_exact,
            "subscribersDelta28d": w_(28)["subscribersDelta"] if daily else None,
            "goal":{"target":GOAL_TARGET,"current":subs_exact},
+           "viewers24h":viewers24h, "viewers24h_history":history,
            "latestLong":latestLong, "periods":periods}
     os.makedirs("docs", exist_ok=True)
     json.dump(out, open(OUT,"w"), ensure_ascii=False)

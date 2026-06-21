@@ -16,7 +16,7 @@
     --gold:#a9842f; --green:#2f8f57; --navy:#2b4a73; --plum:#7a4f86; --teal:#1f8a82;
   }
   *{box-sizing:border-box}
-  html,body{margin:0}
+  html,body{margin:0;height:100%}
   body{
     background:
       radial-gradient(1100px 700px at 82% -12%, #fbece9 0%, transparent 55%),
@@ -24,7 +24,9 @@
       #f1ede6;
     font-family:"Inter","Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic",
       -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-    color:var(--ink); -webkit-font-smoothing:antialiased; padding:26px;
+    color:var(--ink); -webkit-font-smoothing:antialiased; padding:14px;
+    overflow:hidden;
+    display:flex; align-items:center; justify-content:center;
   }
   .num{font-variant-numeric:tabular-nums; letter-spacing:-.01em}
   .dash{
@@ -271,7 +273,17 @@ function render(){
 
   renderChart(d.trend.points);
   renderRanking(d.top5);
+  fitDash();
 }
+
+function fitDash(){
+  const d=document.querySelector('.dash'); if(!d) return;
+  d.style.zoom=1;
+  const z=Math.min(1,(window.innerHeight-16)/d.offsetHeight,(window.innerWidth-16)/d.offsetWidth);
+  d.style.zoom = z>0 ? z : 1;
+}
+window.addEventListener('resize',fitDash);
+if(document.fonts&&document.fonts.ready) document.fonts.ready.then(fitDash);
 
 function renderChart(pts){
   const wrap=document.getElementById('chart');

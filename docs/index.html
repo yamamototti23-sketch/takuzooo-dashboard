@@ -83,16 +83,19 @@
   .play svg{position:static; width:auto; height:auto}
 
   .grid3{display:grid; grid-template-columns:1fr 1fr 1.25fr; gap:14px}
-  .goal-big{font-size:13px; color:var(--mut); margin:14px 0 2px}
-  .goal-num{font-size:52px; font-weight:800; color:var(--teal); line-height:1; display:flex;
-    align-items:baseline; gap:8px}
-  .goal-num small{font-size:20px; color:var(--teal)}
-  .goal-pct{font-size:22px; font-weight:800; float:right; margin-top:-30px}
-  .bar{height:8px; border-radius:99px; background:rgba(255,255,255,.07); margin:18px 0 12px; overflow:hidden}
-  .bar i{display:block; height:100%; border-radius:99px;
-    background:linear-gradient(90deg,#27a35a,#4ade80); box-shadow:0 0 14px rgba(74,222,128,.5)}
-  .goal-sub{font-size:12px; color:var(--mut)}
-  .goal-note{font-size:11px; color:var(--mut2); margin-top:14px; padding-top:12px;
+
+  .v24-big{font-size:13px; color:var(--mut); margin:14px 0 2px}
+  .v24-num{font-size:46px; font-weight:800; color:var(--red); line-height:1; display:flex;
+    align-items:baseline; gap:6px}
+  .v24-num small{font-size:18px; color:var(--red)}
+  .v24-bars{position:relative; height:90px; margin:18px 0 22px;
+    display:flex; align-items:flex-end; gap:3px}
+  .v24-bar{flex:1; min-width:0; background:linear-gradient(180deg,#ff6a5d,#c1322a);
+    border-radius:3px 3px 0 0; box-shadow:0 0 6px rgba(255,77,61,.35); min-height:1px}
+  .v24-bar.zero{background:rgba(255,255,255,.06); box-shadow:none}
+  .v24-xlbls{display:flex; justify-content:space-between; font-size:10px; color:var(--mut2);
+    margin-top:6px; padding:0 2px}
+  .v24-note{font-size:11px; color:var(--mut2); margin-top:14px; padding-top:12px;
     border-top:1px solid var(--line); display:flex; align-items:center; gap:7px}
 
   .lt-thumb{position:relative; width:100%; aspect-ratio:16/9; border-radius:11px; margin:12px 0 12px;
@@ -128,7 +131,7 @@
   @media(max-width:640px){
     body{padding:12px} .dash{padding:16px 14px}
     .kpis{grid-template-columns:repeat(2,1fr)}
-    .kpi .v{font-size:24px} .goal-num{font-size:40px}
+    .kpi .v{font-size:24px} .v24-num{font-size:36px}
     .top{gap:10px} .seg{order:3} .title{font-size:18px}
   }
 </style>
@@ -168,13 +171,12 @@
 
   <div class="grid3">
     <div class="panel">
-      <div class="ph"><div class="pt">🎯 目標達成度</div><div class="pr" style="cursor:pointer">編集</div></div>
-      <div class="goal-pct num" id="goalPct"></div>
-      <div class="goal-big">あと</div>
-      <div class="goal-num num"><span id="goalRemain"></span><small>人</small></div>
-      <div class="bar"><i id="goalBar"></i></div>
-      <div class="goal-sub num" id="goalSub"></div>
-      <div class="goal-note">📊 28日の増減は YouTube アナリティクスから算出</div>
+      <div class="ph"><div class="pt">👀 24h視聴者数</div><div class="pr">直近24時間</div></div>
+      <div class="v24-big">直近24時間の視聴回数</div>
+      <div class="v24-num num"><span id="v24Total">—</span><small>回</small></div>
+      <div class="v24-bars" id="v24Bars"></div>
+      <div class="v24-xlbls" id="v24Xlbls"></div>
+      <div class="v24-note">📊 毎時の累計差分（YouTubeはバッチ更新のため0や急増が混在）</div>
     </div>
 
     <div class="panel">
@@ -283,11 +285,7 @@ function renderStatic(){
   document.getElementById('updatedAt').textContent=
     new Date(d.updatedAt).toLocaleTimeString('ja-JP',{hour:'2-digit',minute:'2-digit',second:'2-digit'});
 
-  const g=d.goal, pct=Math.min(100,g.current/g.target*100), remain=Math.max(0,g.target-g.current);
-  document.getElementById('goalPct').textContent=pct.toFixed(1)+'%';
-  document.getElementById('goalRemain').textContent=fmtFull(remain);
-  document.getElementById('goalBar').style.width=pct+'%';
-  document.getElementById('goalSub').innerHTML=`→ 目標 ${fmtMan(g.target)}人 ・ 現在 ${fmtFull(g.current)}人`;
+  render24h();
 
   const l=d.latestLong, lt=document.getElementById('ltThumb');
   lt.style.cssText=thumbBG(l.thumb,99); lt.innerHTML=thumbInner(l.thumb);
@@ -297,6 +295,31 @@ function renderStatic(){
   document.getElementById('ltAgo').textContent=`公開 ${l.publishedDaysAgo}日前`;
   document.getElementById('ltSpeed').textContent=fmtMan(l.viewsPerDay);
   document.getElementById('ltBadge').textContent=`⚡ 速度${l.speedRank}位/${l.speedTotal}`;
+}
+
+function render24h(){
+  const v = DATA && DATA.viewers24h;
+  const elTotal = document.getElementById('v24Total');
+  const elBars  = document.getElementById('v24Bars');
+  const elXl    = document.getElementById('v24Xlbls');
+  if(!v || !Array.isArray(v.bars) || v.bars.length===0){
+    elTotal.textContent = '—';
+    elBars.innerHTML = '<div style="color:var(--mut2);font-size:11px;align-self:center;margin:0 auto">蓄積中（次のcron発火から順次表示）</div>';
+    elXl.innerHTML = '';
+    return;
+  }
+  elTotal.textContent = fmtFull(v.total||0);
+  const max = Math.max(1, ...v.bars.map(b=>b.v||0));
+  elBars.innerHTML = v.bars.map(b=>{
+    const h = Math.max(1, Math.round((b.v||0)/max*100));
+    const zero = (b.v||0)===0 ? ' zero' : '';
+    return `<div class="v24-bar${zero}" style="height:${h}%" title="${b.label}: ${fmtFull(b.v||0)}回"></div>`;
+  }).join('');
+  const step = Math.max(1, Math.floor(v.bars.length/8));
+  elXl.innerHTML = v.bars.map((b,i)=>{
+    const show = (i%step===0) || (i===v.bars.length-1);
+    return `<span style="visibility:${show?'visible':'hidden'};flex:1;text-align:center">${b.label}</span>`;
+  }).join('');
 }
 
 function renderPeriod(){
