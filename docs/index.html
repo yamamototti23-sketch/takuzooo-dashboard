@@ -173,12 +173,12 @@
 
   <div class="grid3">
     <div class="panel">
-      <div class="ph"><div class="pt">👀 24h視聴者数</div><div class="pr">直近24時間</div></div>
-      <div class="v24-big">直近24時間の視聴回数</div>
-      <div class="v24-num num"><span id="v24Total">—</span><small>回</small></div>
-      <div class="v24-bars" id="v24Bars"></div>
-      <div class="v24-xlbls" id="v24Xlbls"></div>
-      <div class="v24-note">📊 毎時の累計差分（YouTubeはバッチ更新のため0や急増が混在）</div>
+      <div class="ph"><div class="pt">📈 直近7日の視聴回数</div><div class="pr">過去7日間</div></div>
+      <div class="v24-big">7日合計</div>
+      <div class="v24-num num"><span id="v7dTotal">—</span><small>回</small></div>
+      <div class="v24-bars" id="v7dBars"></div>
+      <div class="v24-xlbls" id="v7dXlbls"></div>
+      <div class="v24-note">📊 直近7日の視聴回数（集計確定分）</div>
     </div>
 
     <div class="panel">
@@ -287,7 +287,7 @@ function renderStatic(){
   document.getElementById('updatedAt').textContent=
     new Date(d.updatedAt).toLocaleTimeString('ja-JP',{hour:'2-digit',minute:'2-digit',second:'2-digit'});
 
-  render24h();
+  renderViews7d();
 
   const l=d.latestLong, lt=document.getElementById('ltThumb');
   lt.style.cssText=thumbBG(l.thumb,99); lt.innerHTML=thumbInner(l.thumb);
@@ -299,29 +299,27 @@ function renderStatic(){
   document.getElementById('ltBadge').textContent=`⚡ 速度${l.speedRank}位/${l.speedTotal}`;
 }
 
-function render24h(){
-  const v = DATA && DATA.viewers24h;
-  const elTotal = document.getElementById('v24Total');
-  const elBars  = document.getElementById('v24Bars');
-  const elXl    = document.getElementById('v24Xlbls');
-  if(!v || !Array.isArray(v.bars) || v.bars.length===0){
+function renderViews7d(){
+  const arr = DATA && DATA.views7d;
+  const total = DATA && DATA.views7d_total;
+  const elTotal = document.getElementById('v7dTotal');
+  const elBars  = document.getElementById('v7dBars');
+  const elXl    = document.getElementById('v7dXlbls');
+  if(!Array.isArray(arr) || arr.length===0){
     elTotal.textContent = '—';
-    elBars.innerHTML = '<div style="color:var(--mut2);font-size:11px;align-self:center;margin:0 auto">蓄積中（次のcron発火から順次表示）</div>';
+    elBars.innerHTML = '<div style="color:var(--mut2);font-size:11px;align-self:center;margin:0 auto">取得中</div>';
     elXl.innerHTML = '';
     return;
   }
-  elTotal.textContent = fmtFull(v.total||0);
-  const max = Math.max(1, ...v.bars.map(b=>b.v||0));
-  elBars.innerHTML = v.bars.map(b=>{
-    const h = Math.max(1, Math.round((b.v||0)/max*100));
-    const zero = (b.v||0)===0 ? ' zero' : '';
-    return `<div class="v24-bar${zero}" style="height:${h}%" title="${b.label}: ${fmtFull(b.v||0)}回"></div>`;
+  const fmtDate = s => { const m = s.match(/-(\d{2})-(\d{2})$/); return m ? `${+m[1]}/${+m[2]}` : s; };
+  elTotal.textContent = fmtFull(total||0);
+  const max = Math.max(1, ...arr.map(b=>b.views||0));
+  elBars.innerHTML = arr.map(b=>{
+    const h = Math.max(1, Math.round((b.views||0)/max*100));
+    const zero = (b.views||0)===0 ? ' zero' : '';
+    return `<div class="v24-bar${zero}" style="height:${h}%" title="${fmtDate(b.date)}: ${fmtFull(b.views||0)}回"></div>`;
   }).join('');
-  const step = Math.max(1, Math.floor(v.bars.length/8));
-  elXl.innerHTML = v.bars.map((b,i)=>{
-    const show = (i%step===0) || (i===v.bars.length-1);
-    return `<span style="visibility:${show?'visible':'hidden'};flex:1;text-align:center">${b.label}</span>`;
-  }).join('');
+  elXl.innerHTML = arr.map(b=>`<span style="flex:1;text-align:center">${fmtDate(b.date)}</span>`).join('');
 }
 
 function renderPeriod(){
