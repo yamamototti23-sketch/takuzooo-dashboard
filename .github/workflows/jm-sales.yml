@@ -2,7 +2,7 @@ name: JM Sales data.json
 
 on:
   schedule:
-    - cron: '*/15 * * * *'   # 15分ごと（UTC基準。GitHubの仕様で実際は数分〜十数分ずれる場合あり）
+    - cron: '0,30 * * * *'   # 30分ごと（UTC基準。短間隔cronのGH Actions throttling回避のため*/15から緩和）
   workflow_dispatch:          # 手動実行も可
 
 concurrency:

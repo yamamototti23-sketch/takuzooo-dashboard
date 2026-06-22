@@ -31,7 +31,7 @@ import urllib.parse
 API_VERSION = "2026-01"          # publicApiVersions で supported を確認済み（必要なら更新）
 JST = ZoneInfo("Asia/Tokyo")     # Shopify ストアのタイムゾーンに合わせる
 SHOP_NAME = "Japan Made屋"
-REFRESH_MIN = 15
+REFRESH_MIN = 30
 OUT_PATH = os.environ.get("OUT_PATH", "docs/jm-data.json")
 
 STORE = os.environ["SHOPIFY_STORE"].strip()
