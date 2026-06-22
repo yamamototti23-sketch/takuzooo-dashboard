@@ -1,7 +1,7 @@
 {
   "shop": "Japan Made屋",
   "updatedAt": "2026-06-22T14:51:54+09:00",
-  "refreshMinutes": 30,
+  "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
     "sales": 10892787,

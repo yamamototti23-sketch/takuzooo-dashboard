@@ -5,7 +5,7 @@ Japan Made屋 売上ダッシュボード用 jm-data.json 生成スクリプト
 
 Shopify Admin GraphQL の ShopifyQL（shopifyqlQuery）を使い、Shopify Analytics と
 「完全に同じ数字」で当日の売上指標を取得し docs/jm-data.json を出力する。
-GitHub Actions から15分ごとに実行する想定（PC不要）。
+GitHub Actions から毎時実行する想定（PC不要）。
 
 必要な環境変数:
   SHOPIFY_STORE          例: 9a6736-3.myshopify.com
@@ -31,7 +31,7 @@ import urllib.parse
 API_VERSION = "2026-01"          # publicApiVersions で supported を確認済み（必要なら更新）
 JST = ZoneInfo("Asia/Tokyo")     # Shopify ストアのタイムゾーンに合わせる
 SHOP_NAME = "Japan Made屋"
-REFRESH_MIN = 30
+REFRESH_MIN = 60
 OUT_PATH = os.environ.get("OUT_PATH", "docs/jm-data.json")
 
 STORE = os.environ["SHOPIFY_STORE"].strip()
