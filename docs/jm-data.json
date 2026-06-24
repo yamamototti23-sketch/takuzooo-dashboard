@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-06-24T11:49:36+09:00",
+  "updatedAt": "2026-06-24T15:44:03+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 11477015,
-    "orders": 432,
-    "aov": 26567
+    "sales": 11526460,
+    "orders": 434,
+    "aov": 26559
   },
   "month": {
-    "salesTotal": 11477015,
-    "unitsTotal": 586,
+    "salesTotal": 11526460,
+    "unitsTotal": 589,
     "days": 24
   },
   "trend": {
@@ -109,14 +109,14 @@
       },
       {
         "date": "2026-06-24",
-        "sales": 109769
+        "sales": 159214
       }
     ]
   },
   "daily": {
-    "todayUnits": 6,
+    "todayUnits": 9,
     "yesterdayUnits": 14,
-    "todaySales": 109769,
+    "todaySales": 159214,
     "yesterdaySales": 384659
   },
   "top5": [
@@ -137,7 +137,7 @@
     {
       "rank": 3,
       "title": "【夏モデル】「7oz Tシャツ」気温20〜30℃〜透けない万能型",
-      "units": 43,
+      "units": 44,
       "handle": "7oz-t-shirt",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/11_89fb2c50-ea69-408c-af05-993aac825213.jpg?v=1781283847"
     },
@@ -151,7 +151,7 @@
     {
       "rank": 5,
       "title": "「\"ラグジュアリー\"サマーニット」~SMARTシリーズ",
-      "units": 33,
+      "units": 34,
       "handle": "a-luxurious-knit-that-looks-great-on-its-own",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/235A1114_2048x_d160f13f-43cb-46aa-bfed-bfb397cea821.webp?v=1779444675"
     }
