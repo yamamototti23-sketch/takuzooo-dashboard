@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-06-24T19:19:07+09:00",
+  "updatedAt": "2026-06-24T22:17:21+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 11602360,
-    "orders": 437,
-    "aov": 26550
+    "sales": 11646745,
+    "orders": 439,
+    "aov": 26530
   },
   "month": {
-    "salesTotal": 11602360,
-    "unitsTotal": 593,
+    "salesTotal": 11646745,
+    "unitsTotal": 595,
     "days": 24
   },
   "trend": {
@@ -109,21 +109,21 @@
       },
       {
         "date": "2026-06-24",
-        "sales": 235114
+        "sales": 279499
       }
     ]
   },
   "daily": {
-    "todayUnits": 13,
+    "todayUnits": 15,
     "yesterdayUnits": 14,
-    "todaySales": 235114,
+    "todaySales": 279499,
     "yesterdaySales": 384659
   },
   "top5": [
     {
       "rank": 1,
       "title": "『ネックレス』（Silver925）",
-      "units": 139,
+      "units": 140,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1L4A6061_1_7ca50b37-5a29-4124-955e-90d35a5e89af.jpg?v=1780952166"
     },
@@ -144,7 +144,7 @@
     {
       "rank": 4,
       "title": "「\"COOL\"イージーパンツ」~RELAXシリーズ",
-      "units": 39,
+      "units": 40,
       "handle": "cool-material-easy-pants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/a54cbdbd0433c15cd65b962f12f7afff.jpg?v=1773756986"
     },
