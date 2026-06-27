@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-06-28T01:01:25+09:00",
+  "updatedAt": "2026-06-28T02:58:29+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 13105991,
-    "orders": 496,
-    "aov": 26423
+    "sales": 13124933,
+    "orders": 497,
+    "aov": 26408
   },
   "month": {
-    "salesTotal": 13105991,
-    "unitsTotal": 669,
+    "salesTotal": 13124933,
+    "unitsTotal": 670,
     "days": 28
   },
   "trend": {
@@ -125,14 +125,14 @@
       },
       {
         "date": "2026-06-28",
-        "sales": 0
+        "sales": 18942
       }
     ]
   },
   "daily": {
-    "todayUnits": 0,
+    "todayUnits": 1,
     "yesterdayUnits": 29,
-    "todaySales": 0,
+    "todaySales": 18942,
     "yesterdaySales": 726684
   },
   "top5": [
