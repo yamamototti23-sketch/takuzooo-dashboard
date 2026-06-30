@@ -1,183 +1,67 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-06-30T23:09:26+09:00",
+  "updatedAt": "2026-07-01T02:02:54+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 14454457,
-    "orders": 546,
-    "aov": 26473
+    "sales": 14464632,
+    "orders": 547,
+    "aov": 26444
   },
   "month": {
-    "salesTotal": 14454457,
-    "unitsTotal": 741,
-    "days": 30
+    "salesTotal": 10175,
+    "unitsTotal": 1,
+    "days": 1
   },
   "trend": {
     "points": [
       {
-        "date": "2026-06-01",
-        "sales": 182622
-      },
-      {
-        "date": "2026-06-02",
-        "sales": 404466
-      },
-      {
-        "date": "2026-06-03",
-        "sales": 481637
-      },
-      {
-        "date": "2026-06-04",
-        "sales": 426426
-      },
-      {
-        "date": "2026-06-05",
-        "sales": 850745
-      },
-      {
-        "date": "2026-06-06",
-        "sales": 667468
-      },
-      {
-        "date": "2026-06-07",
-        "sales": 116375
-      },
-      {
-        "date": "2026-06-08",
-        "sales": 465963
-      },
-      {
-        "date": "2026-06-09",
-        "sales": 453338
-      },
-      {
-        "date": "2026-06-10",
-        "sales": 342519
-      },
-      {
-        "date": "2026-06-11",
-        "sales": 308908
-      },
-      {
-        "date": "2026-06-12",
-        "sales": 338136
-      },
-      {
-        "date": "2026-06-13",
-        "sales": 246109
-      },
-      {
-        "date": "2026-06-14",
-        "sales": 345671
-      },
-      {
-        "date": "2026-06-15",
-        "sales": 399438
-      },
-      {
-        "date": "2026-06-16",
-        "sales": 726867
-      },
-      {
-        "date": "2026-06-17",
-        "sales": 385505
-      },
-      {
-        "date": "2026-06-18",
-        "sales": 557805
-      },
-      {
-        "date": "2026-06-19",
-        "sales": 1955378
-      },
-      {
-        "date": "2026-06-20",
-        "sales": 443488
-      },
-      {
-        "date": "2026-06-21",
-        "sales": 679468
-      },
-      {
-        "date": "2026-06-22",
-        "sales": 204255
-      },
-      {
-        "date": "2026-06-23",
-        "sales": 384659
-      },
-      {
-        "date": "2026-06-24",
-        "sales": 343849
-      },
-      {
-        "date": "2026-06-25",
-        "sales": 306332
-      },
-      {
-        "date": "2026-06-26",
-        "sales": 361880
-      },
-      {
-        "date": "2026-06-27",
-        "sales": 726684
-      },
-      {
-        "date": "2026-06-28",
-        "sales": 613165
-      },
-      {
-        "date": "2026-06-29",
-        "sales": 329135
-      },
-      {
-        "date": "2026-06-30",
-        "sales": 406166
+        "date": "2026-07-01",
+        "sales": 10175
       }
     ]
   },
   "daily": {
-    "todayUnits": 22,
-    "yesterdayUnits": 19,
-    "todaySales": 406166,
-    "yesterdaySales": 329135
+    "todayUnits": 1,
+    "yesterdayUnits": 22,
+    "todaySales": 10175,
+    "yesterdaySales": 406166
   },
   "top5": [
     {
       "rank": 1,
-      "title": "『ネックレス』（Silver925）",
-      "units": 178,
-      "handle": "silver-necklace",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1L4A6061_1_7ca50b37-5a29-4124-955e-90d35a5e89af.jpg?v=1780952166"
-    },
-    {
-      "rank": 2,
-      "title": "『ブレスレット』(Silver925)",
-      "units": 74,
-      "handle": "silver-bracelet",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394"
-    },
-    {
-      "rank": 3,
       "title": "【夏モデル】「7oz Tシャツ」気温20〜30℃〜透けない万能型",
-      "units": 61,
+      "units": 1,
       "handle": "7oz-t-shirt",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/11_89fb2c50-ea69-408c-af05-993aac825213.jpg?v=1781283847"
     },
     {
+      "rank": 2,
+      "title": "k18『Goldブレスレット』18㎝",
+      "units": 0,
+      "handle": "k18-gold-bracelet-18",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/b3475111af2fc4c976a982fb9a2340c6.jpg?v=1776451690"
+    },
+    {
+      "rank": 3,
+      "title": "【VIP】センス光る「レザーかけ時計」（ヌメ革）",
+      "units": 0,
+      "handle": "leather-wall-clock",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/0e4c2d4b3bbe4a7b5b6347c4afb48a20.jpg?v=1768441710"
+    },
+    {
       "rank": 4,
-      "title": "「\"COOL\"イージーパンツ」~RELAXシリーズ",
-      "units": 46,
-      "handle": "cool-material-easy-pants",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/a54cbdbd0433c15cd65b962f12f7afff.jpg?v=1773756986"
+      "title": "【2026/9予定】「シングルディアレザー」~SMARTシリーズ",
+      "units": 0,
+      "handle": "single-deer-leather",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/77d74b6514998160288b87c694db8c52.jpg?v=1731116591"
     },
     {
       "rank": 5,
-      "title": "「\"ラグジュアリー\"サマーニット」~SMARTシリーズ",
-      "units": 40,
-      "handle": "a-luxurious-knit-that-looks-great-on-its-own",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/235A1114_2048x_d160f13f-43cb-46aa-bfed-bfb397cea821.webp?v=1779444675"
+      "title": "「\"リラックス\"タンクトップ」（30番手コーマ天竺）",
+      "units": 0,
+      "handle": "tank-top",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/37a2bdff473de104a9946693d33335ad.jpg?v=1776451513"
     }
   ]
 }
