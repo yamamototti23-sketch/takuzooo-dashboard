@@ -1,46 +1,46 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-07-01T12:23:24+09:00",
+  "updatedAt": "2026-07-01T17:07:15+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 14531149,
-    "orders": 552,
-    "aov": 26325
+    "sales": 14568549,
+    "orders": 554,
+    "aov": 26297
   },
   "month": {
-    "salesTotal": 108042,
-    "unitsTotal": 7,
+    "salesTotal": 145442,
+    "unitsTotal": 9,
     "days": 1
   },
   "trend": {
     "points": [
       {
         "date": "2026-07-01",
-        "sales": 108042
+        "sales": 145442
       }
     ]
   },
   "daily": {
-    "todayUnits": 7,
+    "todayUnits": 9,
     "yesterdayUnits": 22,
-    "todaySales": 108042,
+    "todaySales": 145442,
     "yesterdaySales": 374816
   },
   "top5": [
     {
       "rank": 1,
+      "title": "『ネックレス』（Silver925）",
+      "units": 4,
+      "handle": "silver-necklace",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1L4A6061_1_7ca50b37-5a29-4124-955e-90d35a5e89af.jpg?v=1780952166"
+    },
+    {
+      "rank": 2,
       "title": "【夏モデル】「7oz Tシャツ」気温20〜30℃〜透けない万能型",
       "units": 3,
       "handle": "7oz-t-shirt",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/11_89fb2c50-ea69-408c-af05-993aac825213.jpg?v=1781283847"
-    },
-    {
-      "rank": 2,
-      "title": "『ネックレス』（Silver925）",
-      "units": 2,
-      "handle": "silver-necklace",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1L4A6061_1_7ca50b37-5a29-4124-955e-90d35a5e89af.jpg?v=1780952166"
     },
     {
       "rank": 3,
@@ -58,10 +58,10 @@
     },
     {
       "rank": 5,
-      "title": "30代以上の上品な『防水レザーリュック』",
+      "title": "「\"リラックス\"タンクトップ」（30番手コーマ天竺）",
       "units": 0,
-      "handle": "waterproof-leather-backpack",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/be0035e128c2f6ba37ae54588690bd0b.jpg?v=1774175579"
+      "handle": "tank-top",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/37a2bdff473de104a9946693d33335ad.jpg?v=1776451513"
     }
   ]
 }
