@@ -1,37 +1,37 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-07-01T20:57:22+09:00",
+  "updatedAt": "2026-07-01T23:39:58+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 14687674,
-    "orders": 558,
-    "aov": 26322
+    "sales": 14857316,
+    "orders": 565,
+    "aov": 26296
   },
   "month": {
-    "salesTotal": 264567,
-    "unitsTotal": 18,
+    "salesTotal": 434209,
+    "unitsTotal": 25,
     "days": 1
   },
   "trend": {
     "points": [
       {
         "date": "2026-07-01",
-        "sales": 264567
+        "sales": 434209
       }
     ]
   },
   "daily": {
-    "todayUnits": 18,
+    "todayUnits": 25,
     "yesterdayUnits": 22,
-    "todaySales": 264567,
+    "todaySales": 434209,
     "yesterdaySales": 374816
   },
   "top5": [
     {
       "rank": 1,
       "title": "『ネックレス』（Silver925）",
-      "units": 6,
+      "units": 9,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1L4A6061_1_7ca50b37-5a29-4124-955e-90d35a5e89af.jpg?v=1780952166"
     },
@@ -51,17 +51,17 @@
     },
     {
       "rank": 4,
-      "title": "『ブレスレット』(Silver925)",
-      "units": 1,
-      "handle": "silver-bracelet",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394"
+      "title": "『本革ボディーバッグ』（姫路レザー）",
+      "units": 2,
+      "handle": "stylish-genuine-leather-large-body-bag",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/65fac3698a30db8ea401e7be02ec86e1.jpg?v=1776449381"
     },
     {
       "rank": 5,
-      "title": "ノースリーブ（30番手コーマ天竺）",
+      "title": "「ウェリントン型サングラス」（鯖江産）",
       "units": 1,
-      "handle": "sleeveless",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/20260610__9522.jpg?v=1781366658"
+      "handle": "sunglasses-that-flatter-japanese-faces",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/64e74348416cf523d32b6de9687af1bf.jpg?v=1776451750"
     }
   ]
 }
