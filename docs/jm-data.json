@@ -1,6 +1,6 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-07-01T23:39:58+09:00",
+  "updatedAt": "2026-07-02T02:10:40+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
@@ -11,21 +11,25 @@
   "month": {
     "salesTotal": 434209,
     "unitsTotal": 25,
-    "days": 1
+    "days": 2
   },
   "trend": {
     "points": [
       {
         "date": "2026-07-01",
         "sales": 434209
+      },
+      {
+        "date": "2026-07-02",
+        "sales": 0
       }
     ]
   },
   "daily": {
-    "todayUnits": 25,
-    "yesterdayUnits": 22,
-    "todaySales": 434209,
-    "yesterdaySales": 374816
+    "todayUnits": 0,
+    "yesterdayUnits": 25,
+    "todaySales": 0,
+    "yesterdaySales": 434209
   },
   "top5": [
     {
@@ -58,10 +62,10 @@
     },
     {
       "rank": 5,
-      "title": "「ウェリントン型サングラス」（鯖江産）",
+      "title": "『ブレスレット』(Silver925)",
       "units": 1,
-      "handle": "sunglasses-that-flatter-japanese-faces",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/64e74348416cf523d32b6de9687af1bf.jpg?v=1776451750"
+      "handle": "silver-bracelet",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394"
     }
   ]
 }
