@@ -1,67 +1,67 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-07-01T17:07:15+09:00",
+  "updatedAt": "2026-07-01T20:57:22+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 14568549,
-    "orders": 554,
-    "aov": 26297
+    "sales": 14687674,
+    "orders": 558,
+    "aov": 26322
   },
   "month": {
-    "salesTotal": 145442,
-    "unitsTotal": 9,
+    "salesTotal": 264567,
+    "unitsTotal": 18,
     "days": 1
   },
   "trend": {
     "points": [
       {
         "date": "2026-07-01",
-        "sales": 145442
+        "sales": 264567
       }
     ]
   },
   "daily": {
-    "todayUnits": 9,
+    "todayUnits": 18,
     "yesterdayUnits": 22,
-    "todaySales": 145442,
+    "todaySales": 264567,
     "yesterdaySales": 374816
   },
   "top5": [
     {
       "rank": 1,
       "title": "『ネックレス』（Silver925）",
-      "units": 4,
+      "units": 6,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1L4A6061_1_7ca50b37-5a29-4124-955e-90d35a5e89af.jpg?v=1780952166"
     },
     {
       "rank": 2,
       "title": "【夏モデル】「7oz Tシャツ」気温20〜30℃〜透けない万能型",
-      "units": 3,
+      "units": 5,
       "handle": "7oz-t-shirt",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/11_89fb2c50-ea69-408c-af05-993aac825213.jpg?v=1781283847"
     },
     {
       "rank": 3,
-      "title": "『本革ボディーバッグ』（姫路レザー）",
-      "units": 1,
-      "handle": "stylish-genuine-leather-large-body-bag",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/65fac3698a30db8ea401e7be02ec86e1.jpg?v=1776449381"
+      "title": "【真夏モデル】「5oz Tシャツ」気温25〜35℃~シーアイランド種",
+      "units": 3,
+      "handle": "5oz-t-shirt",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/5_260c3521-643f-410b-8d82-432f9230325c.jpg?v=1779610389"
     },
     {
       "rank": 4,
-      "title": "「\"COOL\"イージーパンツ」~RELAXシリーズ",
+      "title": "『ブレスレット』(Silver925)",
       "units": 1,
-      "handle": "cool-material-easy-pants",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/a54cbdbd0433c15cd65b962f12f7afff.jpg?v=1773756986"
+      "handle": "silver-bracelet",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394"
     },
     {
       "rank": 5,
-      "title": "「\"リラックス\"タンクトップ」（30番手コーマ天竺）",
-      "units": 0,
-      "handle": "tank-top",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/37a2bdff473de104a9946693d33335ad.jpg?v=1776451513"
+      "title": "ノースリーブ（30番手コーマ天竺）",
+      "units": 1,
+      "handle": "sleeveless",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/20260610__9522.jpg?v=1781366658"
     }
   ]
 }
