@@ -1,41 +1,41 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-07-02T11:49:52+09:00",
+  "updatedAt": "2026-07-02T15:37:27+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 14921501,
-    "orders": 568,
-    "aov": 26270
+    "sales": 15039531,
+    "orders": 575,
+    "aov": 26156
   },
   "month": {
-    "salesTotal": 498394,
-    "unitsTotal": 29,
+    "salesTotal": 616424,
+    "unitsTotal": 37,
     "days": 2
   },
   "trend": {
     "points": [
       {
         "date": "2026-07-01",
-        "sales": 434209
+        "sales": 395709
       },
       {
         "date": "2026-07-02",
-        "sales": 64185
+        "sales": 220715
       }
     ]
   },
   "daily": {
-    "todayUnits": 4,
+    "todayUnits": 12,
     "yesterdayUnits": 25,
-    "todaySales": 64185,
-    "yesterdaySales": 434209
+    "todaySales": 220715,
+    "yesterdaySales": 395709
   },
   "top5": [
     {
       "rank": 1,
       "title": "『ネックレス』（Silver925）",
-      "units": 10,
+      "units": 14,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1L4A6061_1_7ca50b37-5a29-4124-955e-90d35a5e89af.jpg?v=1780952166"
     },
@@ -48,17 +48,17 @@
     },
     {
       "rank": 3,
+      "title": "『ブレスレット』(Silver925)",
+      "units": 3,
+      "handle": "silver-bracelet",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394"
+    },
+    {
+      "rank": 4,
       "title": "【真夏モデル】「5oz Tシャツ」気温25〜35℃~シーアイランド種",
       "units": 3,
       "handle": "5oz-t-shirt",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/5_260c3521-643f-410b-8d82-432f9230325c.jpg?v=1779610389"
-    },
-    {
-      "rank": 4,
-      "title": "『本革ボディーバッグ』（姫路レザー）",
-      "units": 2,
-      "handle": "stylish-genuine-leather-large-body-bag",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/65fac3698a30db8ea401e7be02ec86e1.jpg?v=1776449381"
     },
     {
       "rank": 5,
