@@ -2,7 +2,7 @@ name: JM Sales data.json
 
 on:
   schedule:
-    - cron: '0 * * * *'      # 毎時0分（update.ymlと同方式。0,30も throttling されたため1時間ごとに統一）
+    - cron: '17,47 * * * *'  # 30min, off-the-hour (skip-trigger対策・YouTube側 7,37 と分散)
   workflow_dispatch:          # 手動実行も可
 
 concurrency:

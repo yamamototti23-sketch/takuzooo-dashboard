@@ -403,9 +403,9 @@ document.querySelectorAll('#typeSeg button').forEach(b=>b.onclick=()=>{
 function boot(j){ DATA=j; period=DATA.defaultPeriod||'1ヶ月';
   setPeriodButtons(); renderStatic(); renderPeriod(); fitDash(); }
 
-fetch('./data.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.json();})
+fetch('./data.json?t='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.json();})
   .then(boot).catch(()=>boot(SAMPLE_DATA));
-setInterval(()=>fetch('./data.json',{cache:'no-store'}).then(r=>r.ok?r.json():null)
+setInterval(()=>fetch('./data.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():null)
   .then(j=>{if(j)boot(j);}).catch(()=>{}), 60*60*1000);
 
 let _fitting=false;

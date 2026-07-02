@@ -2,7 +2,7 @@ name: update-youtube-data
 
 on:
   schedule:
-    - cron: "0 * * * *"   # hourly
+    - cron: "7,37 * * * *"   # 30min, off-the-hour (skip-trigger対策・JM側とも分散)
   workflow_dispatch:
 
 permissions:
