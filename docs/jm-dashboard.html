@@ -205,31 +205,29 @@ const yenSm = n => { const v=Math.round(n);
 const man   = v => v>=10000 ? (v/10000).toFixed(v>=100000?0:1).replace(/\.0$/,'')+'万' : v.toLocaleString('ja-JP');
 const full  = n => n.toLocaleString('ja-JP');
 
-// ---- baked real data (2026-06-19 15:36 JST) — auto-replaced by ./jm-data.json when present ----
+// ---- baked real data (2026-07-03 06:00 JST) — auto-replaced by ./jm-data.json when present ----
 function genSample(){
-  // 今月の売上推移 = 6/1〜本日 の日別売上
-  const td = ['06-01','06-02','06-03','06-04','06-05','06-06','06-07','06-08','06-09','06-10',
-              '06-11','06-12','06-13','06-14','06-15','06-16','06-17','06-18','06-19'];
-  const ts = [182622,404466,481637,426426,850745,667468,116375,465963,453338,342519,
-              308908,338136,246109,345671,399438,726867,385505,557805,147760];
+  // 今月の売上推移 = 今月1日〜本日 の日別売上
+  const td = ['07-01','07-02','07-03'];
+  const ts = [395709,417615,143055];
   const trend = td.map((d,i)=>({date:'2026-'+d, sales:ts[i]}));
   return {
-    shop:'Japan Made屋', updatedAt:'2026-06-19T15:36:00+09:00', refreshMinutes:60,
-    term:{ sinceLabel:'6/1〜', sales:7847758, orders:333, aov:23567 },
-    month:{ salesTotal:7847758, unitsTotal:449, days:19 },
+    shop:'Japan Made屋', updatedAt:'2026-07-03T06:00:42+09:00', refreshMinutes:60,
+    term:{ sinceLabel:'6/1〜', sales:15379486, orders:586, aov:26245 },
+    month:{ salesTotal:956379, unitsTotal:52, days:3 },
     trend:{ points:trend },
-    daily:{ todayUnits:7, yesterdayUnits:38, todaySales:147760, yesterdaySales:557805 },
+    daily:{ todayUnits:3, yesterdayUnits:24, todaySales:143055, yesterdaySales:417615 },
     top5:[
-      {rank:1, title:'『ネックレス』（Silver925）', units:118, handle:'silver-necklace',
+      {rank:1, title:'『ネックレス』（Silver925）', units:17, handle:'silver-necklace',
         thumb:'https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1L4A6061_1_7ca50b37-5a29-4124-955e-90d35a5e89af.jpg?v=1780952166'},
-      {rank:2, title:'『ブレスレット』(Silver925)', units:51, handle:'silver-bracelet',
-        thumb:'https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394'},
-      {rank:3, title:'「"COOL"イージーパンツ」~RELAXシリーズ', units:32, handle:'cool-material-easy-pants',
-        thumb:'https://cdn.shopify.com/s/files/1/0712/3805/8283/files/a54cbdbd0433c15cd65b962f12f7afff.jpg?v=1773756986'},
-      {rank:4, title:'【夏モデル】「7oz Tシャツ」気温20〜30℃〜透けない万能型', units:29, handle:'7oz-t-shirt',
+      {rank:2, title:'【夏モデル】「7oz Tシャツ」気温20〜30℃〜透けない万能型', units:11, handle:'7oz-t-shirt',
         thumb:'https://cdn.shopify.com/s/files/1/0712/3805/8283/files/11_89fb2c50-ea69-408c-af05-993aac825213.jpg?v=1781283847'},
-      {rank:5, title:'「"ラグジュアリー"サマーニット」~SMARTシリーズ', units:28, handle:'a-luxurious-knit-that-looks-great-on-its-own',
-        thumb:'https://cdn.shopify.com/s/files/1/0712/3805/8283/files/235A1114_2048x_d160f13f-43cb-46aa-bfed-bfb397cea821.webp?v=1779444675'},
+      {rank:3, title:'『ブレスレット』(Silver925)', units:5, handle:'silver-bracelet',
+        thumb:'https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394'},
+      {rank:4, title:'『本革ボディーバッグ』（姫路レザー）', units:3, handle:'stylish-genuine-leather-large-body-bag',
+        thumb:'https://cdn.shopify.com/s/files/1/0712/3805/8283/files/65fac3698a30db8ea401e7be02ec86e1.jpg?v=1776449381'},
+      {rank:5, title:'いつかは、究極の黒パン~SMARTシリーズ', units:3, handle:'the-ultimate-black-pants',
+        thumb:'https://cdn.shopify.com/s/files/1/0712/3805/8283/files/5d689a44fc3188e82bde8cab5678d9e1.jpg?v=1776451751'},
     ]
   };
 }
@@ -242,7 +240,14 @@ function render(){
   const mins = d.refreshMinutes||60;
   document.getElementById('liveLbl').textContent = `LIVE・${mins}分`;
   document.getElementById('modeLbl').textContent = `通常モード・${mins}分間隔`;
-  document.getElementById('periodLbl').innerHTML = `今期 <b>${d.term.sinceLabel}</b> ・ 今月の推移`;
+  const upd = new Date(d.updatedAt);
+  const mm = upd.getMonth()+1, dd = upd.getDate();
+  const fyStartY = mm>=6 ? upd.getFullYear() : upd.getFullYear()-1;
+  const fyEndY = fyStartY+1;
+  const monthLabel = `${mm}月`;
+  const monthPeriod = `${mm}/1〜${mm}/${dd} MTD`;
+  const fyPeriod = `${fyStartY}/6/1〜${fyEndY}/5/31`;
+  document.getElementById('periodLbl').innerHTML = `今月 <b>${mm}/1〜${mm}/${dd}</b> ・ 今期 <b>${fyStartY}/6/1〜</b>`;
   document.getElementById('updatedAt').textContent =
     new Date(d.updatedAt).toLocaleTimeString('ja-JP',{hour:'2-digit',minute:'2-digit'});
 
@@ -252,9 +257,9 @@ function render(){
     <div class="v num">${val}</div><div class="s">${sub||'—'}</div></div>`;
   const avgDaily = Math.round(d.month.salesTotal / Math.max(1, d.month.days));
   document.getElementById('kpis').innerHTML =
-    kpi('💰','var(--red)','今期売上（'+d.term.sinceLabel+'）', yen(d.term.sales), '注文 '+full(d.term.orders)+'件', true) +
-    kpi('📦','var(--teal)','今月販売点数', full(d.month.unitsTotal)+'<small>点</small>', '6月 累計') +
-    kpi('🧾','var(--navy)','今期注文数', full(d.term.orders)+'<small>件</small>', d.term.sinceLabel+' 累計') +
+    kpi('💰','var(--red)',`今月売上（${monthLabel}）`, yen(d.month.salesTotal), monthPeriod, true) +
+    kpi('📦','var(--teal)','今月販売点数', full(d.month.unitsTotal)+'<small>点</small>', `${monthLabel} 累計`) +
+    kpi('🧾','var(--navy)','今期売上', yen(d.term.sales), `${fyPeriod}・注文 ${full(d.term.orders)}件`) +
     kpi('🎫','var(--gold)','平均客単価', yen(d.term.aov), '今期 AOV') +
     kpi('📈','var(--plum)','平均1日売上', yen(avgDaily), '今月 1日あたり');
 
