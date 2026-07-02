@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-07-02T15:37:27+09:00",
+  "updatedAt": "2026-07-02T18:58:28+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 15039531,
-    "orders": 575,
-    "aov": 26156
+    "sales": 15100801,
+    "orders": 578,
+    "aov": 26126
   },
   "month": {
-    "salesTotal": 616424,
-    "unitsTotal": 37,
+    "salesTotal": 677694,
+    "unitsTotal": 40,
     "days": 2
   },
   "trend": {
@@ -21,21 +21,21 @@
       },
       {
         "date": "2026-07-02",
-        "sales": 220715
+        "sales": 281985
       }
     ]
   },
   "daily": {
-    "todayUnits": 12,
+    "todayUnits": 15,
     "yesterdayUnits": 25,
-    "todaySales": 220715,
+    "todaySales": 281985,
     "yesterdaySales": 395709
   },
   "top5": [
     {
       "rank": 1,
       "title": "『ネックレス』（Silver925）",
-      "units": 14,
+      "units": 15,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1L4A6061_1_7ca50b37-5a29-4124-955e-90d35a5e89af.jpg?v=1780952166"
     },
@@ -49,23 +49,23 @@
     {
       "rank": 3,
       "title": "『ブレスレット』(Silver925)",
-      "units": 3,
+      "units": 4,
       "handle": "silver-bracelet",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394"
     },
     {
       "rank": 4,
+      "title": "いつかは、究極の黒パン~SMARTシリーズ",
+      "units": 3,
+      "handle": "the-ultimate-black-pants",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/5d689a44fc3188e82bde8cab5678d9e1.jpg?v=1776451751"
+    },
+    {
+      "rank": 5,
       "title": "【真夏モデル】「5oz Tシャツ」気温25〜35℃~シーアイランド種",
       "units": 3,
       "handle": "5oz-t-shirt",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/5_260c3521-643f-410b-8d82-432f9230325c.jpg?v=1779610389"
-    },
-    {
-      "rank": 5,
-      "title": "「\"COOL\"イージーパンツ」~RELAXシリーズ",
-      "units": 2,
-      "handle": "cool-material-easy-pants",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/a54cbdbd0433c15cd65b962f12f7afff.jpg?v=1773756986"
     }
   ]
 }
