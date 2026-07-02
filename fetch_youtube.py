@@ -42,6 +42,27 @@ def dur_sec(s):
     m = re.match(r"PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?", s or "")
     h, mi, se = (int(x) if x else 0 for x in m.groups()); return h*3600+mi*60+se
 
+_UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+       "(KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36")
+
+def is_members_only(video_id):
+    """Detect members-only gated content.
+    Data API returns privacyStatus='public' for members-only videos, so /watch page scraping
+    is the only reliable signal. Look for playabilityStatus.status=UNPLAYABLE + membership hint.
+    Simple Mozilla/5.0 UA gets a JS-fallback stub page — need a full browser UA + Accept-Language.
+    Fail-safe: return False on any error (fallback to excluded_video_ids.txt).
+    """
+    try:
+        req = urllib.request.Request(f"https://www.youtube.com/watch?v={video_id}",
+                                     headers={"User-Agent": _UA, "Accept-Language": "ja,en;q=0.5"})
+        with urllib.request.urlopen(req, timeout=15) as r:
+            html = r.read().decode("utf-8", errors="ignore")
+        if '"status":"UNPLAYABLE"' in html and ('メンバー' in html or 'members-only' in html.lower()):
+            return True
+    except Exception as e:
+        print(f"is_members_only({video_id}) fail-soft: {e}")
+    return False
+
 def slim(v): return {"date":v["date"],"views":v["views"],"title":v["title"],
                      "thumb":v["thumb"],"type":v["type"],"videoId":v["id"]}
 def rankrow(v,i): return {"rank":i+1,"title":v["title"],"thumb":v["thumb"],
@@ -127,12 +148,26 @@ def main():
             excluded = {ln.strip() for ln in f if ln.strip() and not ln.startswith("#")}
     except FileNotFoundError:
         pass
+    # Step1: privacyStatus + manual excluded list を弾く (公開動画のみ・unlisted/private 除外)
     longs_public = [v for v in longs if v.get("privacyStatus")=="public" and v["id"] not in excluded]
-    pre_id  = longs[0]["id"] if longs else None
-    post_id = longs_public[0]["id"] if longs_public else None
+    # Step2: 先頭から members-only 自動検知して打ち切る (通常1-2リクエストで確定)
+    latest = None
+    scanned = 0
+    for v in longs_public:
+        scanned += 1
+        if is_members_only(v["id"]):
+            print(f"  [members-only detected] skip {v['id']} '{v['title'][:40]}'")
+            continue
+        latest = v; break
+    pre_id = longs[0]["id"] if longs else None
+    post_id = latest["id"] if latest else None
     print(f"latestLong filter: pre(any)={pre_id} -> post(public)={post_id} "
-          f"(longs={len(longs)} public={len(longs_public)} excluded={len(excluded)})")
-    latest = longs_public[0]; dd = max(1, days_ago(latest["publishedAt"])); last10 = longs_public[:10]
+          f"(longs={len(longs)} public={len(longs_public)} excluded={len(excluded)} scanned={scanned})")
+    if latest is None:
+        raise RuntimeError("No non-members public long video found (all filtered out)")
+    dd = max(1, days_ago(latest["publishedAt"]))
+    last10 = [v for v in longs_public if v["id"] != latest["id"]][:9]
+    last10 = [latest] + last10
     speed = sorted(last10, key=lambda v:-(v["views"]/max(1,days_ago(v["publishedAt"]))))
     latestLong = {**slim(latest), "likes":latest["likes"], "comments":latest["comments"],
                   "publishedDaysAgo":days_ago(latest["publishedAt"]),

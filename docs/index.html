@@ -406,7 +406,7 @@ function boot(j){ DATA=j; period=DATA.defaultPeriod||'1ヶ月';
 fetch('./data.json?t='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.json();})
   .then(boot).catch(()=>boot(SAMPLE_DATA));
 setInterval(()=>fetch('./data.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():null)
-  .then(j=>{if(j)boot(j);}).catch(()=>{}), 60*60*1000);
+  .then(j=>{if(j)boot(j);}).catch(()=>{}), 90*1000); // 90秒ごとに data.json を再読込 (GHA 30分間隔更新を最短90秒で画面反映・jm-dashboard.html と同手法)
 
 let _fitting=false;
 function fitDash(){
