@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-07-02T21:11:09+09:00",
+  "updatedAt": "2026-07-03T00:11:37+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 15164051,
-    "orders": 580,
-    "aov": 26145
+    "sales": 15236431,
+    "orders": 584,
+    "aov": 26090
   },
   "month": {
-    "salesTotal": 740944,
-    "unitsTotal": 43,
-    "days": 2
+    "salesTotal": 813324,
+    "unitsTotal": 49,
+    "days": 3
   },
   "trend": {
     "points": [
@@ -21,35 +21,39 @@
       },
       {
         "date": "2026-07-02",
-        "sales": 345235
+        "sales": 417615
+      },
+      {
+        "date": "2026-07-03",
+        "sales": 0
       }
     ]
   },
   "daily": {
-    "todayUnits": 18,
-    "yesterdayUnits": 25,
-    "todaySales": 345235,
-    "yesterdaySales": 395709
+    "todayUnits": 0,
+    "yesterdayUnits": 24,
+    "todaySales": 0,
+    "yesterdaySales": 417615
   },
   "top5": [
     {
       "rank": 1,
       "title": "『ネックレス』（Silver925）",
-      "units": 15,
+      "units": 16,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1L4A6061_1_7ca50b37-5a29-4124-955e-90d35a5e89af.jpg?v=1780952166"
     },
     {
       "rank": 2,
       "title": "【夏モデル】「7oz Tシャツ」気温20〜30℃〜透けない万能型",
-      "units": 7,
+      "units": 11,
       "handle": "7oz-t-shirt",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/11_89fb2c50-ea69-408c-af05-993aac825213.jpg?v=1781283847"
     },
     {
       "rank": 3,
       "title": "『ブレスレット』(Silver925)",
-      "units": 4,
+      "units": 5,
       "handle": "silver-bracelet",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394"
     },
