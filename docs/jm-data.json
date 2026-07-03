@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-07-04T02:03:30+09:00",
+  "updatedAt": "2026-07-04T03:38:30+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 15509033,
-    "orders": 592,
-    "aov": 26198
+    "sales": 15590967,
+    "orders": 594,
+    "aov": 26247
   },
   "month": {
-    "salesTotal": 1085926,
-    "unitsTotal": 60,
+    "salesTotal": 1167860,
+    "unitsTotal": 65,
     "days": 4
   },
   "trend": {
@@ -29,44 +29,44 @@
       },
       {
         "date": "2026-07-04",
-        "sales": 31350
+        "sales": 113284
       }
     ]
   },
   "daily": {
-    "todayUnits": 2,
+    "todayUnits": 7,
     "yesterdayUnits": 9,
-    "todaySales": 31350,
+    "todaySales": 113284,
     "yesterdaySales": 241252
   },
   "top5": [
     {
       "rank": 1,
       "title": "『ネックレス』（Silver925）",
-      "units": 19,
+      "units": 20,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1L4A6061_1_7ca50b37-5a29-4124-955e-90d35a5e89af.jpg?v=1780952166"
     },
     {
       "rank": 2,
       "title": "【夏モデル】「7oz Tシャツ」気温20〜30℃〜透けない万能型",
-      "units": 13,
+      "units": 14,
       "handle": "7oz-t-shirt",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/11_89fb2c50-ea69-408c-af05-993aac825213.jpg?v=1781283847"
     },
     {
       "rank": 3,
       "title": "『ブレスレット』(Silver925)",
-      "units": 7,
+      "units": 8,
       "handle": "silver-bracelet",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394"
     },
     {
       "rank": 4,
-      "title": "『本革ボディーバッグ』（姫路レザー）",
-      "units": 3,
-      "handle": "stylish-genuine-leather-large-body-bag",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/65fac3698a30db8ea401e7be02ec86e1.jpg?v=1776449381"
+      "title": "「\"COOL\"イージーパンツ」~RELAXシリーズ",
+      "units": 4,
+      "handle": "cool-material-easy-pants",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/a54cbdbd0433c15cd65b962f12f7afff.jpg?v=1773756986"
     },
     {
       "rank": 5,
