@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-07-05T07:11:00+09:00",
+  "updatedAt": "2026-07-05T08:12:23+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 16061609,
-    "orders": 613,
-    "aov": 26202
+    "sales": 16141733,
+    "orders": 616,
+    "aov": 26204
   },
   "month": {
-    "salesTotal": 1638502,
-    "unitsTotal": 89,
+    "salesTotal": 1718626,
+    "unitsTotal": 94,
     "days": 5
   },
   "trend": {
@@ -33,21 +33,21 @@
       },
       {
         "date": "2026-07-05",
-        "sales": 144877
+        "sales": 225001
       }
     ]
   },
   "daily": {
-    "todayUnits": 6,
+    "todayUnits": 11,
     "yesterdayUnits": 25,
-    "todaySales": 144877,
+    "todaySales": 225001,
     "yesterdaySales": 439049
   },
   "top5": [
     {
       "rank": 1,
       "title": "『ネックレス』（Silver925）",
-      "units": 26,
+      "units": 28,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1L4A6061_1_7ca50b37-5a29-4124-955e-90d35a5e89af.jpg?v=1780952166"
     },
@@ -61,23 +61,23 @@
     {
       "rank": 3,
       "title": "『ブレスレット』(Silver925)",
-      "units": 10,
+      "units": 11,
       "handle": "silver-bracelet",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394"
     },
     {
       "rank": 4,
+      "title": "『本革ボディーバッグ』（姫路レザー）",
+      "units": 7,
+      "handle": "stylish-genuine-leather-large-body-bag",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/65fac3698a30db8ea401e7be02ec86e1.jpg?v=1776449381"
+    },
+    {
+      "rank": 5,
       "title": "「\"COOL\"イージーパンツ」~RELAXシリーズ",
       "units": 5,
       "handle": "cool-material-easy-pants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/a54cbdbd0433c15cd65b962f12f7afff.jpg?v=1773756986"
-    },
-    {
-      "rank": 5,
-      "title": "『本革ボディーバッグ』（姫路レザー）",
-      "units": 5,
-      "handle": "stylish-genuine-leather-large-body-bag",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/65fac3698a30db8ea401e7be02ec86e1.jpg?v=1776449381"
     }
   ]
 }
