@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-07-05T23:08:22+09:00",
+  "updatedAt": "2026-07-06T00:37:37+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 16380488,
-    "orders": 630,
-    "aov": 26001
+    "sales": 16429823,
+    "orders": 633,
+    "aov": 25955
   },
   "month": {
-    "salesTotal": 1957381,
-    "unitsTotal": 109,
-    "days": 5
+    "salesTotal": 2006716,
+    "unitsTotal": 112,
+    "days": 6
   },
   "trend": {
     "points": [
@@ -33,21 +33,25 @@
       },
       {
         "date": "2026-07-05",
-        "sales": 463756
+        "sales": 494556
+      },
+      {
+        "date": "2026-07-06",
+        "sales": 18535
       }
     ]
   },
   "daily": {
-    "todayUnits": 26,
-    "yesterdayUnits": 25,
-    "todaySales": 463756,
-    "yesterdaySales": 439049
+    "todayUnits": 1,
+    "yesterdayUnits": 28,
+    "todaySales": 18535,
+    "yesterdaySales": 494556
   },
   "top5": [
     {
       "rank": 1,
       "title": "『ネックレス』（Silver925）",
-      "units": 31,
+      "units": 32,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1L4A6061_1_7ca50b37-5a29-4124-955e-90d35a5e89af.jpg?v=1780952166"
     },
@@ -61,14 +65,14 @@
     {
       "rank": 3,
       "title": "『ブレスレット』(Silver925)",
-      "units": 17,
+      "units": 18,
       "handle": "silver-bracelet",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394"
     },
     {
       "rank": 4,
       "title": "『本革ボディーバッグ』（姫路レザー）",
-      "units": 9,
+      "units": 10,
       "handle": "stylish-genuine-leather-large-body-bag",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/65fac3698a30db8ea401e7be02ec86e1.jpg?v=1776449381"
     },
