@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-07-07T21:38:27+09:00",
+  "updatedAt": "2026-07-08T00:34:45+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 16911765,
-    "orders": 656,
-    "aov": 25780
+    "sales": 17017090,
+    "orders": 661,
+    "aov": 25744
   },
   "month": {
-    "salesTotal": 2488658,
-    "unitsTotal": 140,
-    "days": 7
+    "salesTotal": 2593983,
+    "unitsTotal": 145,
+    "days": 8
   },
   "trend": {
     "points": [
@@ -41,21 +41,25 @@
       },
       {
         "date": "2026-07-07",
-        "sales": 280452
+        "sales": 341227
+      },
+      {
+        "date": "2026-07-08",
+        "sales": 44550
       }
     ]
   },
   "daily": {
-    "todayUnits": 16,
-    "yesterdayUnits": 13,
-    "todaySales": 280452,
-    "yesterdaySales": 220025
+    "todayUnits": 2,
+    "yesterdayUnits": 19,
+    "todaySales": 44550,
+    "yesterdaySales": 341227
   },
   "top5": [
     {
       "rank": 1,
       "title": "『ネックレス』（Silver925）",
-      "units": 40,
+      "units": 42,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1L4A6061_1_7ca50b37-5a29-4124-955e-90d35a5e89af.jpg?v=1780952166"
     },
@@ -69,7 +73,7 @@
     {
       "rank": 3,
       "title": "『ブレスレット』(Silver925)",
-      "units": 20,
+      "units": 21,
       "handle": "silver-bracelet",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394"
     },
@@ -83,7 +87,7 @@
     {
       "rank": 5,
       "title": "「\"COOL\"イージーパンツ」~RELAXシリーズ",
-      "units": 6,
+      "units": 7,
       "handle": "cool-material-easy-pants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/a54cbdbd0433c15cd65b962f12f7afff.jpg?v=1773756986"
     }
