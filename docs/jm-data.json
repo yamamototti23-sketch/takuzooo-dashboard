@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-07-11T17:58:45+09:00",
+  "updatedAt": "2026-07-11T19:33:39+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 18261790,
-    "orders": 702,
-    "aov": 26014
+    "sales": 18309860,
+    "orders": 704,
+    "aov": 26008
   },
   "month": {
-    "salesTotal": 3838683,
-    "unitsTotal": 202,
+    "salesTotal": 3886753,
+    "unitsTotal": 205,
     "days": 11
   },
   "trend": {
@@ -57,28 +57,28 @@
       },
       {
         "date": "2026-07-11",
-        "sales": 308792
+        "sales": 356862
       }
     ]
   },
   "daily": {
-    "todayUnits": 16,
+    "todayUnits": 19,
     "yesterdayUnits": 14,
-    "todaySales": 308792,
+    "todaySales": 356862,
     "yesterdaySales": 481648
   },
   "top5": [
     {
       "rank": 1,
       "title": "『ネックレス』（Silver925）",
-      "units": 64,
+      "units": 65,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/DSC07665_2_ee65fd87-826d-4e4d-81bb-978991cd09c5.jpg?v=1783686672"
     },
     {
       "rank": 2,
       "title": "『ブレスレット』(Silver925)",
-      "units": 31,
+      "units": 33,
       "handle": "silver-bracelet",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A2139_1_13e0dffc-5170-4770-9afa-0290f5c9afac.jpg?v=1783603757"
     },
