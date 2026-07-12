@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-07-12T16:15:22+09:00",
+  "updatedAt": "2026-07-12T18:16:45+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 18797447,
-    "orders": 716,
-    "aov": 26253
+    "sales": 18861797,
+    "orders": 717,
+    "aov": 26307
   },
   "month": {
-    "salesTotal": 4374340,
-    "unitsTotal": 221,
+    "salesTotal": 4438690,
+    "unitsTotal": 223,
     "days": 12
   },
   "trend": {
@@ -61,14 +61,14 @@
       },
       {
         "date": "2026-07-12",
-        "sales": 139122
+        "sales": 203472
       }
     ]
   },
   "daily": {
-    "todayUnits": 7,
+    "todayUnits": 9,
     "yesterdayUnits": 28,
-    "todaySales": 139122,
+    "todaySales": 203472,
     "yesterdaySales": 705327
   },
   "top5": [
@@ -103,7 +103,7 @@
     {
       "rank": 5,
       "title": "「\"COOL\"イージーパンツ」~RELAXシリーズ",
-      "units": 10,
+      "units": 11,
       "handle": "cool-material-easy-pants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/20260519__69_2_090eb49b-900d-4150-b696-bfb873b81aaf.jpg?v=1783603751"
     }
