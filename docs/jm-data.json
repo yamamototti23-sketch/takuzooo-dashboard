@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-07-12T13:38:25+09:00",
+  "updatedAt": "2026-07-12T16:15:22+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 18769650,
-    "orders": 715,
-    "aov": 26251
+    "sales": 18797447,
+    "orders": 716,
+    "aov": 26253
   },
   "month": {
-    "salesTotal": 4346543,
-    "unitsTotal": 219,
+    "salesTotal": 4374340,
+    "unitsTotal": 221,
     "days": 12
   },
   "trend": {
@@ -61,14 +61,14 @@
       },
       {
         "date": "2026-07-12",
-        "sales": 111325
+        "sales": 139122
       }
     ]
   },
   "daily": {
-    "todayUnits": 5,
+    "todayUnits": 7,
     "yesterdayUnits": 28,
-    "todaySales": 111325,
+    "todaySales": 139122,
     "yesterdaySales": 705327
   },
   "top5": [
@@ -82,7 +82,7 @@
     {
       "rank": 2,
       "title": "『ブレスレット』(Silver925)",
-      "units": 33,
+      "units": 34,
       "handle": "silver-bracelet",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A2139_1_13e0dffc-5170-4770-9afa-0290f5c9afac.jpg?v=1783603757"
     },
@@ -96,7 +96,7 @@
     {
       "rank": 4,
       "title": "『本革ボディーバッグ』（姫路レザー）",
-      "units": 18,
+      "units": 19,
       "handle": "stylish-genuine-leather-large-body-bag",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A1554_1_ef495592-e3a6-4e83-8ffe-1f7f917d3092.jpg?v=1783603757"
     },
