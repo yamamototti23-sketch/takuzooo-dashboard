@@ -256,9 +256,14 @@ function render(){
     <div class="h"><div class="ic" style="background:${color}1a;color:${color}">${ic}</div>${label}</div>
     <div class="v num">${val}</div><div class="s">${sub||'—'}</div></div>`;
   const avgDaily = Math.round(d.month.salesTotal / Math.max(1, d.month.days));
+  const lastYear = d.lastYear || {salesTotal:0, days:0};
+  const lastYearMm = mm, lastYearYy = fyStartY;  // 昨年同期は 同じ月/日
+  const lastYearSubLabel = lastYear.days > 0
+    ? `${upd.getFullYear()-1}/${mm}/1〜${mm}/${dd} (${lastYear.days}日分)`
+    : '（BASE集計なし）';
   document.getElementById('kpis').innerHTML =
     kpi('💰','var(--red)',`今月売上（${monthLabel}）`, yen(d.month.salesTotal), monthPeriod, true) +
-    kpi('📦','var(--teal)','今月販売点数', full(d.month.unitsTotal)+'<small>点</small>', `${monthLabel} 累計`) +
+    kpi('📆','#2b4a73','昨年同期売上', `<span style="color:#2b4a73">${yen(lastYear.salesTotal)}</span>`, lastYearSubLabel) +
     kpi('🧾','var(--navy)','今期売上', yen(d.term.sales), `${fyPeriod}・注文 ${full(d.term.orders)}件`) +
     kpi('🎫','var(--gold)','平均客単価', yen(d.term.aov), '今期 AOV') +
     kpi('📈','var(--plum)','平均1日売上', yen(avgDaily), '今月 1日あたり');
@@ -276,7 +281,7 @@ function render(){
   if(diff===0){ de.innerHTML=`<span class="delta">±0 点（昨日と同じ）</span>`; }
   else{ const up=diff>0; de.innerHTML=`<span class="delta ${up?'up':'down'}">${up?'▲':'▼'} ${Math.abs(diff)}点 ${up?'増':'減'}（前日比）</span>`; }
 
-  renderChart(d.trend.points);
+  renderChart(d.trend.points, d.trend.points_lastyear || []);
   renderRanking(d.top5);
   fitDash();
 }
@@ -290,32 +295,70 @@ function fitDash(){
 window.addEventListener('resize',fitDash);
 if(document.fonts&&document.fonts.ready) document.fonts.ready.then(fitDash);
 
-function renderChart(pts){
+function renderChart(pts, ptsLy){
   const wrap=document.getElementById('chart');
+  ptsLy = Array.isArray(ptsLy) ? ptsLy : [];
   const total=pts.reduce((s,p)=>s+p.sales,0);
+  const totalLy = ptsLy.reduce((s,p)=>s+p.sales,0);
   const peak=pts.reduce((m,p)=>p.sales>m.sales?p:m,pts[0]);
   const md=d=>d.slice(5).replace('-','/').replace(/^0/,'').replace('/0','/');
-  document.getElementById('chartMeta').textContent =
-    `${md(pts[0].date)}〜${md(pts[pts.length-1].date)} ・ 累計 ${yen(total)} ・ 最高 ${man(peak.sales)}（${md(peak.date)}）`;
-  const maxV=Math.max(...pts.map(p=>p.sales))*1.15;
+
+  // 昨年 (青) の凡例＋累計を chartMeta に含める
+  const legend = ptsLy.length
+    ? `<span style="color:var(--red);font-weight:800">━ 今年</span>／<span style="color:#2b4a73;font-weight:800">┅ 昨年</span> ・ `
+    : '';
+  const lySuffix = ptsLy.length ? ` ・ 昨年同期 ${yen(totalLy)}` : '';
+  document.getElementById('chartMeta').innerHTML =
+    `${legend}${md(pts[0].date)}〜${md(pts[pts.length-1].date)} ・ 累計 ${yen(total)} ・ 最高 ${man(peak.sales)}（${md(peak.date)}）${lySuffix}`;
+
+  // Y軸最大 = 今年+昨年 共通スケール (案X)
+  const maxV = Math.max(
+    ...pts.map(p=>p.sales),
+    ...ptsLy.map(p=>p.sales),
+    1
+  ) * 1.15;
   const padL=8,padR=4,padT=14,padB=10, n=pts.length;
   const X=i=> padL + (n<=1?0:(i/(n-1)))*(100-padL-padR);
   const Y=v=> padT + (1-v/maxV)*(100-padT-padB);
+
+  // 今年の日付→index マップ (昨年の同月同日を今年の X 位置に貼るため)
+  const idxByMd = new Map();
+  pts.forEach((p,i)=>{ idxByMd.set(p.date.slice(5), i); });
+  // 昨年 points を「今年 index に mapping」に変換 (該当なしはドロップ)
+  const lyMapped = ptsLy
+    .map(p => ({ i: idxByMd.get(p.date.slice(5)), sales: p.sales, date: p.date }))
+    .filter(q => q.i !== undefined)
+    .sort((a,b)=>a.i-b.i);
+
   let grid='';
   for(let i=0;i<=3;i++){ const y=Y(maxV*i/3);
     grid+=`<line x1="${padL}%" x2="100%" y1="${y}%" y2="${y}%" stroke="rgba(20,18,16,.07)"/>`; }
   const line=pts.map((p,i)=>`${i?'L':'M'} ${X(i)} ${Y(p.sales)}`).join(' ');
   const area=`M ${X(0)} ${Y(0)} `+pts.map((p,i)=>`L ${X(i)} ${Y(p.sales)}`).join(' ')+` L ${X(n-1)} ${Y(0)} Z`;
+  const lineLy = lyMapped.length
+    ? lyMapped.map((q,i)=>`${i?'L':'M'} ${X(q.i)} ${Y(q.sales)}`).join(' ')
+    : '';
+
   let html=`<svg viewBox="0 0 100 100" preserveAspectRatio="none">${grid}
     <defs><linearGradient id="fill" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="rgba(193,18,31,.16)"/>
       <stop offset="100%" stop-color="rgba(193,18,31,0)"/></linearGradient></defs>
-    <path d="${area}" fill="url(#fill)" stroke="none"/>
-    <path d="${line}" fill="none" stroke="var(--red)" stroke-width="0.8"
+    <path d="${area}" fill="url(#fill)" stroke="none"/>`;
+  if(lineLy){
+    html += `<path d="${lineLy}" fill="none" stroke="#2b4a73" stroke-width="0.7"
+      vector-effect="non-scaling-stroke" stroke-linejoin="round" stroke-linecap="round"
+      stroke-dasharray="1.4,1.2" opacity="0.75"/>`;
+  }
+  html += `<path d="${line}" fill="none" stroke="var(--red)" stroke-width="0.8"
       vector-effect="non-scaling-stroke" stroke-linejoin="round" stroke-linecap="round"/></svg>
-  <svg viewBox="0 0 100 100" preserveAspectRatio="none">
-    ${pts.map((p,i)=>`<circle class="node ${i===n-1?'hi':''}" cx="${X(i)}" cy="${Y(p.sales)}" r="${i===n-1?1.2:0.85}" vector-effect="non-scaling-stroke"/>`).join('')}
-  </svg>`;
+  <svg viewBox="0 0 100 100" preserveAspectRatio="none">`;
+  if(lyMapped.length){
+    html += lyMapped.map(q=>`<circle cx="${X(q.i)}" cy="${Y(q.sales)}" r="0.7"
+      fill="#2b4a73" opacity="0.6" vector-effect="non-scaling-stroke"/>`).join('');
+  }
+  html += pts.map((p,i)=>`<circle class="node ${i===n-1?'hi':''}" cx="${X(i)}" cy="${Y(p.sales)}" r="${i===n-1?1.2:0.85}" vector-effect="non-scaling-stroke"/>`).join('');
+  html += `</svg>`;
+
   for(let i=0;i<=3;i++){ const v=maxV*i/3; html+=`<div class="yl" style="top:${Y(v)}%">${i?man(Math.round(v)):'0'}</div>`; }
   const step=Math.max(1,Math.ceil(n/9));
   pts.forEach((p,i)=>{ if(i%step===0||i===n-1)

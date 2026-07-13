@@ -109,6 +109,7 @@ def main():
 
     # Analytics確定の末日から逆7日（B案）。窓はデータが進めば自動でスライドする。
     views7d = []
+    daily_views_by_day = {}
     if daily:
         end_day = dt.date.fromisoformat(daily[-1]["day"])
         daily_views_by_day = {r["day"]: r["views"] for r in daily}
@@ -121,12 +122,35 @@ def main():
     else:
         print("views7d: empty (no Analytics data)")
 
+    # 昨年同期7日 (絶対厳守: 今年 views7d の日付範囲を1年前にずらすだけ)
+    views7d_lastyear = []
+    if views7d:
+        for entry in views7d:
+            d_this = dt.date.fromisoformat(entry["date"])
+            try:
+                d_ly = d_this.replace(year=d_this.year - 1)
+            except ValueError:  # 2/29 → 2/28
+                d_ly = d_this.replace(year=d_this.year - 1, day=max(1, d_this.day - 1))
+            iso = d_ly.isoformat()
+            views7d_lastyear.append({"date": iso, "views": int(daily_views_by_day.get(iso, 0))})
+    views7d_lastyear_total = sum(x["views"] for x in views7d_lastyear)
+    if views7d_lastyear:
+        print(f"views7d_lastyear: {views7d_lastyear_total} total over {views7d_lastyear[0]['date']}..{views7d_lastyear[-1]['date']}")
+
     def w_(days):
         rows = daily if days is None else [r for r in daily if r["day"] >= (today-dt.timedelta(days=days)).isoformat()]
         return {"views":sum(r["views"] for r in rows), "likes":sum(r["likes"] for r in rows),
                 "comments":sum(r["comments"] for r in rows),
                 "subscribersDelta":sum(r["gained"]-r["lost"] for r in rows)}
     subs_exact = sum(r["gained"]-r["lost"] for r in daily) if daily else subs_rounded
+
+    def shift_year(iso_date, delta=-1):
+        """YYYY-MM-DD を delta 年ずらす。2/29 は 2/28 に丸める。"""
+        y, m, d = int(iso_date[:4])+delta, int(iso_date[5:7]), int(iso_date[8:10])
+        try:
+            return dt.date(y, m, d)
+        except ValueError:
+            return dt.date(y, m, max(1, d-1))
 
     WIN = {"1週間":7,"2週間":14,"1ヶ月":30,"3ヶ月":90,"6ヶ月":180,"1年":365,"全期間":None}
     periods = {}
@@ -136,7 +160,26 @@ def main():
         agg["videos"] = total_videos if k=="全期間" else len(sel)
         pts = sorted(sel, key=lambda v: v["date"])[-CHART_CAP:]
         rnk = sorted([v for v in sel if v["type"]=="long"], key=lambda v:-v["views"])[:20]
-        periods[k] = {**agg, "chart":{"points":[slim(v) for v in pts]},
+
+        # 昨年同期間 (絶対厳守: 今年 pts の左端-右端の月日 を 1年前 に貼った窓に該当する動画のみ)
+        # 「全期間」は昨年比較の意味薄いのでスキップ (=空配列)
+        pts_ly = []
+        if w is not None and pts:
+            t0_ly = shift_year(pts[0]["date"])
+            t1_ly = shift_year(pts[-1]["date"])
+            sel_ly = []
+            for v in vids:
+                try:
+                    vd = dt.date.fromisoformat(v["date"])
+                except ValueError:
+                    continue
+                if t0_ly <= vd <= t1_ly:
+                    sel_ly.append(v)
+            pts_ly = sorted(sel_ly, key=lambda v: v["date"])[-CHART_CAP:]
+
+        periods[k] = {**agg,
+                      "chart":{"points":[slim(v) for v in pts],
+                               "points_lastyear":[slim(v) for v in pts_ly]},
                       "ranking":[rankrow(v,i) for i,v in enumerate(rnk)]}
 
     longs = sorted([v for v in vids if v["type"]=="long"], key=lambda v:v["publishedAt"], reverse=True)
@@ -181,6 +224,7 @@ def main():
            "subscribersDelta28d": w_(28)["subscribersDelta"] if daily else None,
            "goal":{"target":GOAL_TARGET,"current":subs_exact},
            "views7d":views7d, "views7d_total":views7d_total,
+           "views7d_lastyear":views7d_lastyear, "views7d_lastyear_total":views7d_lastyear_total,
            "latestLong":latestLong, "periods":periods}
     os.makedirs("docs", exist_ok=True)
     json.dump(out, open(OUT,"w"), ensure_ascii=False)

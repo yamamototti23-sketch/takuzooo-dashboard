@@ -90,6 +90,8 @@
   .v24-num{font-size:46px; font-weight:800; color:var(--red); line-height:1; display:flex;
     align-items:baseline; gap:6px}
   .v24-num small{font-size:18px; color:var(--red)}
+  .v24-num.ly{color:var(--blue); margin-top:6px}
+  .v24-num.ly small{color:var(--blue)}
   .v24-bars{position:relative; height:90px; margin:18px 0 22px;
     display:flex; align-items:flex-end; gap:3px}
   .v24-bar{flex:1; min-width:0; background:linear-gradient(180deg,#ff6a5d,#c1322a);
@@ -178,7 +180,8 @@
       <div class="v24-num num"><span id="v7dTotal">—</span><small>回</small></div>
       <div class="v24-bars" id="v7dBars"></div>
       <div class="v24-xlbls" id="v7dXlbls"></div>
-      <div class="v24-note">📊 直近7日の視聴回数（集計確定分）</div>
+      <div class="v24-big" id="v7dLastYearLabel" style="margin-top:16px">昨年同期</div>
+      <div class="v24-num num ly"><span id="v7dLastYearTotal">—</span><small>回</small></div>
     </div>
 
     <div class="panel">
@@ -302,16 +305,22 @@ function renderStatic(){
 function renderViews7d(){
   const arr = DATA && DATA.views7d;
   const total = DATA && DATA.views7d_total;
+  const arrLy = (DATA && DATA.views7d_lastyear) || [];
+  const totalLy = (DATA && DATA.views7d_lastyear_total) || 0;
   const elTotal = document.getElementById('v7dTotal');
   const elBars  = document.getElementById('v7dBars');
   const elXl    = document.getElementById('v7dXlbls');
+  const elLyLabel = document.getElementById('v7dLastYearLabel');
+  const elLyTotal = document.getElementById('v7dLastYearTotal');
+  const fmtDate = s => { const m = s.match(/-(\d{2})-(\d{2})$/); return m ? `${+m[1]}/${+m[2]}` : s; };
   if(!Array.isArray(arr) || arr.length===0){
     elTotal.textContent = '—';
     elBars.innerHTML = '<div style="color:var(--mut2);font-size:11px;align-self:center;margin:0 auto">取得中</div>';
     elXl.innerHTML = '';
+    if(elLyLabel) elLyLabel.textContent = '昨年同期';
+    if(elLyTotal) elLyTotal.textContent = '—';
     return;
   }
-  const fmtDate = s => { const m = s.match(/-(\d{2})-(\d{2})$/); return m ? `${+m[1]}/${+m[2]}` : s; };
   elTotal.textContent = fmtFull(total||0);
   const max = Math.max(1, ...arr.map(b=>b.views||0));
   elBars.innerHTML = arr.map(b=>{
@@ -320,6 +329,17 @@ function renderViews7d(){
     return `<div class="v24-bar${zero}" style="height:${h}%" title="${fmtDate(b.date)}: ${fmtFull(b.views||0)}回"></div>`;
   }).join('');
   elXl.innerHTML = arr.map(b=>`<span style="flex:1;text-align:center">${fmtDate(b.date)}</span>`).join('');
+  // 昨年同期7日 (今年と同フォントサイズ・青字)
+  if(elLyLabel && elLyTotal){
+    if(arrLy.length){
+      const rangeLy = `${fmtDate(arrLy[0].date)}〜${fmtDate(arrLy[arrLy.length-1].date)}`;
+      elLyLabel.textContent = `昨年同期（${rangeLy}）`;
+      elLyTotal.textContent = fmtFull(totalLy);
+    } else {
+      elLyLabel.textContent = '昨年同期';
+      elLyTotal.textContent = '—';
+    }
+  }
 }
 
 function renderPeriod(){
@@ -348,24 +368,69 @@ function renderChart(){
   let pts=DATA.periods[period].chart.points.slice();
   if(typeFilter!=='all') pts=pts.filter(p=>p.type===typeFilter);
   pts.sort((a,b)=>new Date(a.date)-new Date(b.date));
-  document.getElementById('chartMeta').textContent=
-    `${pts.length}本・累計 ${fmtFull(pts.reduce((s,p)=>s+p.views,0))} 回再生`;
+
+  // 昨年同期間 (絶対厳守: 今年 pts の左端-右端の月日を1年前に貼った窓のみ)
+  let ptsLy = (DATA.periods[period].chart.points_lastyear || []).slice();
+  if(typeFilter!=='all') ptsLy = ptsLy.filter(p=>p.type===typeFilter);
+  ptsLy.sort((a,b)=>new Date(a.date)-new Date(b.date));
+
+  const totalThis = pts.reduce((s,p)=>s+p.views,0);
+  const totalLy = ptsLy.reduce((s,p)=>s+p.views,0);
+  const legend = ptsLy.length
+    ? `<span style="color:var(--red);font-weight:800">━ 今年</span>／<span style="color:var(--blue);font-weight:800">┅ 昨年</span> ・ `
+    : '';
+  const lyMeta = ptsLy.length
+    ? ` ・ 昨年同期 ${ptsLy.length}本・${fmtFull(totalLy)}回`
+    : '';
+  document.getElementById('chartMeta').innerHTML =
+    `${legend}${pts.length}本・累計 ${fmtFull(totalThis)} 回再生${lyMeta}`;
+
   if(!pts.length){wrap.innerHTML='<div style="color:var(--mut2);font-size:12px">該当データなし</div>';return;}
   const t0=new Date(pts[0].date).getTime(), t1=new Date(pts[pts.length-1].date).getTime();
-  const span=Math.max(1,t1-t0), maxV=Math.max(...pts.map(p=>p.views))*1.12;
+  const span=Math.max(1,t1-t0);
+
+  // 昨年の日付を +1年 shift して今年の X 軸座標に乗せる
+  const yShift = iso => {
+    const [y,m,d] = iso.split('-').map(Number);
+    return new Date(y+1, m-1, d).getTime();
+  };
+  const lyMapped = ptsLy.map(p => ({...p, xMs: yShift(p.date)}));
+
+  // Y軸最大 = 今年+昨年 共通スケール (案X)
+  const maxV = Math.max(
+    ...pts.map(p=>p.views),
+    ...ptsLy.map(p=>p.views),
+    1
+  ) * 1.12;
+
   const padL=8,padR=4,padT=12,padB=10;
   const X=p=>padL+((new Date(p.date).getTime()-t0)/span)*(100-padL-padR);
+  const Xms=ms=>padL+((ms-t0)/span)*(100-padL-padR);
   const Y=v=>padT+(1-v/maxV)*(100-padT-padB);
   let g='';
   for(let i=0;i<=3;i++){const y=Y(maxV*i/3);
     g+=`<line x1="${padL}%" x2="100%" y1="${y}%" y2="${y}%" stroke="rgba(255,255,255,.05)"/>`;}
   const path=pts.map((p,i)=>`${i?'L':'M'} ${X(p)} ${Y(p.views)}`).join(' ');
-  let html=`<svg viewBox="0 0 100 100" preserveAspectRatio="none">${g}
-    <path d="${path}" fill="none" stroke="var(--red)" stroke-width="0.7" vector-effect="non-scaling-stroke"
+  const pathLy = lyMapped.length
+    ? lyMapped.map((p,i)=>`${i?'L':'M'} ${Xms(p.xMs)} ${Y(p.views)}`).join(' ')
+    : '';
+
+  let html=`<svg viewBox="0 0 100 100" preserveAspectRatio="none">${g}`;
+  if(pathLy){
+    html += `<path d="${pathLy}" fill="none" stroke="var(--blue)" stroke-width="0.7"
+      vector-effect="non-scaling-stroke" stroke-linejoin="round" stroke-linecap="round"
+      stroke-dasharray="1.4,1.2" opacity="0.75"/>`;
+  }
+  html += `<path d="${path}" fill="none" stroke="var(--red)" stroke-width="0.7" vector-effect="non-scaling-stroke"
       stroke-linejoin="round" stroke-linecap="round"/></svg>
-  <svg viewBox="0 0 100 100" preserveAspectRatio="none">
-    ${pts.map(p=>`<circle class="node" cx="${X(p)}" cy="${Y(p.views)}" r="0.9" vector-effect="non-scaling-stroke"/>`).join('')}
-  </svg>`;
+  <svg viewBox="0 0 100 100" preserveAspectRatio="none">`;
+  if(lyMapped.length){
+    html += lyMapped.map(p=>`<circle cx="${Xms(p.xMs)}" cy="${Y(p.views)}" r="0.75"
+      fill="var(--blue)" opacity="0.65" vector-effect="non-scaling-stroke"/>`).join('');
+  }
+  html += pts.map(p=>`<circle class="node" cx="${X(p)}" cy="${Y(p.views)}" r="0.9" vector-effect="non-scaling-stroke"/>`).join('');
+  html += `</svg>`;
+
   for(let i=0;i<=3;i++){const v=maxV*i/3; html+=`<div class="yl" style="top:${Y(v)}%">${i?fmtMan(Math.round(v)):'0'}</div>`;}
   const step=Math.max(1,Math.ceil(pts.length/6));
   pts.forEach((p,i)=>{ if(i%step===0||i===pts.length-1)

@@ -23,6 +23,7 @@ GitHub Actions から毎時実行する想定（PC不要）。
 import os
 import sys
 import json
+import base64
 import datetime
 from zoneinfo import ZoneInfo
 import urllib.request
@@ -111,6 +112,75 @@ def day_of(row):
     return str(v)[:10]
 
 
+def load_base_daily_totals():
+    """昨年比較用の BASE 日別売上 JSON を読み込む。
+
+    以下の順で試す:
+      1) 環境変数 BASE_DAILY_TOTALS_B64 (base64 済 JSON・GHA Secret 想定)
+      2) 環境変数 BASE_DAILY_TOTALS_PATH (ファイルパス)
+      3) デフォルトパス docs/base_daily_totals.json
+
+    返り値: {"YYYY-MM-DD": {"sales_tax_incl": int, "orders": int}, ...}  形式の dict。
+    どれも読めなければ空 dict を返す (機能は fail-soft・呼び出し側で空判定して skip)。
+    """
+    b64 = os.environ.get("BASE_DAILY_TOTALS_B64", "").strip()
+    if b64:
+        try:
+            raw = base64.b64decode(b64)
+            payload = json.loads(raw.decode("utf-8"))
+            return payload.get("data", {}) if isinstance(payload, dict) else {}
+        except Exception as e:  # noqa: BLE001
+            print(f"WARN: BASE_DAILY_TOTALS_B64 decode failed: {e}", file=sys.stderr)
+
+    path = os.environ.get("BASE_DAILY_TOTALS_PATH", "docs/base_daily_totals.json")
+    try:
+        with open(path, encoding="utf-8") as f:
+            payload = json.load(f)
+        return payload.get("data", {}) if isinstance(payload, dict) else {}
+    except FileNotFoundError:
+        print(f"INFO: BASE daily totals not found at {path} (skip lastyear overlay)", file=sys.stderr)
+        return {}
+    except Exception as e:  # noqa: BLE001
+        print(f"WARN: BASE_DAILY_TOTALS_PATH load failed ({path}): {e}", file=sys.stderr)
+        return {}
+
+
+def build_points_lastyear(points_this_year, base_data):
+    """今年の trend.points[] と 同じ「月-日」まで の 昨年 BASE 日次を作る。
+
+    絶対厳守: 今年 points の末尾日 (通常は today) の 1年前 を含めた それ以前だけ。
+    今年が 7/1〜7/13 なら 昨年は 2025-07-01〜2025-07-13 の 13 日分のみ。
+    """
+    if not points_this_year or not base_data:
+        return []
+    last_date = points_this_year[-1]["date"]  # 例: "2026-07-13"
+    try:
+        last_dt = datetime.date.fromisoformat(last_date)
+    except ValueError:
+        return []
+    ly_year = last_dt.year - 1
+    ly_start = datetime.date(ly_year, last_dt.month, 1)
+    # 閏日 (2/29) の場合は 2/28 に丸める
+    try:
+        ly_end = datetime.date(ly_year, last_dt.month, last_dt.day)
+    except ValueError:
+        ly_end = datetime.date(ly_year, last_dt.month, last_dt.day - 1)
+
+    result = []
+    cur = ly_start
+    while cur <= ly_end:
+        key = cur.isoformat()
+        entry = base_data.get(key)
+        if entry is not None:
+            if isinstance(entry, dict):
+                sales = int(entry.get("sales_tax_incl", 0) or 0)
+            else:
+                sales = int(entry or 0)
+            result.append({"date": key, "sales": sales})
+        cur += datetime.timedelta(days=1)
+    return result
+
+
 def main():
     global TOKEN
     TOKEN = fetch_access_token()
@@ -135,6 +205,11 @@ def main():
     trend_rows = shopifyql(f"FROM sales SHOW total_sales TIMESERIES day SINCE {iso(month_start)} UNTIL today")
     points = [{"date": day_of(r), "sales": money(r.get("total_sales"))} for r in trend_rows]
     month_sales_total = sum(p["sales"] for p in points)
+
+    # --- 昨年同月同日までの日別売上 (BASE) ---
+    base_data = load_base_daily_totals()
+    points_lastyear = build_points_lastyear(points, base_data)
+    lastyear_sales_total = sum(p["sales"] for p in points_lastyear)
 
     # --- 今月の販売点数合計 ---
     mu = shopifyql(f"FROM inventory SHOW inventory_units_sold SINCE {iso(month_start)} UNTIL today")
@@ -188,7 +263,9 @@ def main():
                  "sales": term_sales, "orders": term_orders, "aov": aov},
         "month": {"salesTotal": month_sales_total,
                   "unitsTotal": month_units_total, "days": today.day},
-        "trend": {"points": points},
+        "lastYear": {"salesTotal": lastyear_sales_total,
+                     "days": len(points_lastyear)},
+        "trend": {"points": points, "points_lastyear": points_lastyear},
         "daily": {
             "todayUnits": units_by_day.get(today_s, 0),
             "yesterdayUnits": units_by_day.get(yday_s, 0),
@@ -205,7 +282,8 @@ def main():
 
     print(f"wrote {OUT_PATH}: 今期=¥{term_sales:,}({term_orders}件) / "
           f"今月=¥{month_sales_total:,}({month_units_total}点) / "
-          f"本日={out['daily']['todayUnits']}点 / TOP5={len(top5)}")
+          f"本日={out['daily']['todayUnits']}点 / TOP5={len(top5)} / "
+          f"昨年比較={len(points_lastyear)}日分")
 
 
 if __name__ == "__main__":

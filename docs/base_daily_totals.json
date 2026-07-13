@@ -1,0 +1,6899 @@
+{
+ "source": "BASE",
+ "note": "BASE主軸期の日次集計 (2021-2026/3/27・以降はShopify)。個人情報なし・注文合計金額のみ。",
+ "data": {
+  "2021-05-07": {
+   "sales_tax_incl": 110,
+   "orders": 1
+  },
+  "2021-05-09": {
+   "sales_tax_incl": 110,
+   "orders": 1
+  },
+  "2021-05-17": {
+   "sales_tax_incl": 220,
+   "orders": 2
+  },
+  "2021-05-20": {
+   "sales_tax_incl": 550,
+   "orders": 1
+  },
+  "2021-05-23": {
+   "sales_tax_incl": 550,
+   "orders": 1
+  },
+  "2021-05-24": {
+   "sales_tax_incl": 550,
+   "orders": 1
+  },
+  "2021-05-26": {
+   "sales_tax_incl": 550,
+   "orders": 1
+  },
+  "2021-05-29": {
+   "sales_tax_incl": 14980,
+   "orders": 1
+  },
+  "2021-05-31": {
+   "sales_tax_incl": 14980,
+   "orders": 1
+  },
+  "2021-06-01": {
+   "sales_tax_incl": 16740,
+   "orders": 17
+  },
+  "2021-06-02": {
+   "sales_tax_incl": 770,
+   "orders": 3
+  },
+  "2021-06-03": {
+   "sales_tax_incl": 14980,
+   "orders": 1
+  },
+  "2021-06-04": {
+   "sales_tax_incl": 14980,
+   "orders": 1
+  },
+  "2021-06-05": {
+   "sales_tax_incl": 195400,
+   "orders": 15
+  },
+  "2021-06-06": {
+   "sales_tax_incl": 165000,
+   "orders": 13
+  },
+  "2021-06-07": {
+   "sales_tax_incl": 60170,
+   "orders": 4
+  },
+  "2021-06-08": {
+   "sales_tax_incl": 44940,
+   "orders": 3
+  },
+  "2021-06-09": {
+   "sales_tax_incl": 75010,
+   "orders": 5
+  },
+  "2021-06-10": {
+   "sales_tax_incl": 29960,
+   "orders": 2
+  },
+  "2021-06-11": {
+   "sales_tax_incl": 29960,
+   "orders": 2
+  },
+  "2021-06-13": {
+   "sales_tax_incl": 14980,
+   "orders": 1
+  },
+  "2021-06-14": {
+   "sales_tax_incl": 29960,
+   "orders": 2
+  },
+  "2021-06-15": {
+   "sales_tax_incl": 74900,
+   "orders": 5
+  },
+  "2021-06-16": {
+   "sales_tax_incl": 29960,
+   "orders": 2
+  },
+  "2021-06-17": {
+   "sales_tax_incl": 15200,
+   "orders": 3
+  },
+  "2021-06-18": {
+   "sales_tax_incl": 44260,
+   "orders": 3
+  },
+  "2021-06-19": {
+   "sales_tax_incl": 74220,
+   "orders": 5
+  },
+  "2021-06-20": {
+   "sales_tax_incl": 15530,
+   "orders": 2
+  },
+  "2021-06-23": {
+   "sales_tax_incl": 30510,
+   "orders": 3
+  },
+  "2021-06-24": {
+   "sales_tax_incl": 58430,
+   "orders": 5
+  },
+  "2021-06-26": {
+   "sales_tax_incl": 14980,
+   "orders": 1
+  },
+  "2021-06-30": {
+   "sales_tax_incl": 36300,
+   "orders": 1
+  },
+  "2021-07-01": {
+   "sales_tax_incl": 1760,
+   "orders": 16
+  },
+  "2021-07-02": {
+   "sales_tax_incl": 15750,
+   "orders": 4
+  },
+  "2021-07-03": {
+   "sales_tax_incl": 14300,
+   "orders": 1
+  },
+  "2021-07-04": {
+   "sales_tax_incl": 50600,
+   "orders": 2
+  },
+  "2021-07-05": {
+   "sales_tax_incl": 660,
+   "orders": 2
+  },
+  "2021-07-06": {
+   "sales_tax_incl": 220,
+   "orders": 2
+  },
+  "2021-07-07": {
+   "sales_tax_incl": 14410,
+   "orders": 2
+  },
+  "2021-07-09": {
+   "sales_tax_incl": 110,
+   "orders": 1
+  },
+  "2021-07-11": {
+   "sales_tax_incl": 14980,
+   "orders": 1
+  },
+  "2021-07-12": {
+   "sales_tax_incl": 14980,
+   "orders": 1
+  },
+  "2021-07-13": {
+   "sales_tax_incl": 14300,
+   "orders": 1
+  },
+  "2021-07-14": {
+   "sales_tax_incl": 14300,
+   "orders": 1
+  },
+  "2021-07-16": {
+   "sales_tax_incl": 14980,
+   "orders": 1
+  },
+  "2021-07-17": {
+   "sales_tax_incl": 15200,
+   "orders": 3
+  },
+  "2021-07-18": {
+   "sales_tax_incl": 44940,
+   "orders": 3
+  },
+  "2021-07-20": {
+   "sales_tax_incl": 550,
+   "orders": 1
+  },
+  "2021-07-21": {
+   "sales_tax_incl": 14980,
+   "orders": 1
+  },
+  "2021-07-22": {
+   "sales_tax_incl": 29280,
+   "orders": 2
+  },
+  "2021-07-23": {
+   "sales_tax_incl": 550,
+   "orders": 1
+  },
+  "2021-07-24": {
+   "sales_tax_incl": 550,
+   "orders": 1
+  },
+  "2021-07-29": {
+   "sales_tax_incl": 14300,
+   "orders": 1
+  },
+  "2021-08-02": {
+   "sales_tax_incl": 15530,
+   "orders": 2
+  },
+  "2021-08-03": {
+   "sales_tax_incl": 100100,
+   "orders": 7
+  },
+  "2021-08-04": {
+   "sales_tax_incl": 71500,
+   "orders": 5
+  },
+  "2021-08-05": {
+   "sales_tax_incl": 14850,
+   "orders": 2
+  },
+  "2021-08-06": {
+   "sales_tax_incl": 28600,
+   "orders": 2
+  },
+  "2021-08-07": {
+   "sales_tax_incl": 29280,
+   "orders": 2
+  },
+  "2021-08-08": {
+   "sales_tax_incl": 14300,
+   "orders": 1
+  },
+  "2021-08-11": {
+   "sales_tax_incl": 36300,
+   "orders": 1
+  },
+  "2021-08-13": {
+   "sales_tax_incl": 14300,
+   "orders": 1
+  },
+  "2021-08-15": {
+   "sales_tax_incl": 14980,
+   "orders": 1
+  },
+  "2021-08-16": {
+   "sales_tax_incl": 14300,
+   "orders": 1
+  },
+  "2021-08-17": {
+   "sales_tax_incl": 30100,
+   "orders": 1
+  },
+  "2021-08-20": {
+   "sales_tax_incl": 550,
+   "orders": 1
+  },
+  "2021-08-23": {
+   "sales_tax_incl": 14850,
+   "orders": 2
+  },
+  "2021-08-24": {
+   "sales_tax_incl": 550,
+   "orders": 1
+  },
+  "2021-08-25": {
+   "sales_tax_incl": 14300,
+   "orders": 1
+  },
+  "2021-08-27": {
+   "sales_tax_incl": 30100,
+   "orders": 1
+  },
+  "2021-08-28": {
+   "sales_tax_incl": 33000,
+   "orders": 2
+  },
+  "2021-09-02": {
+   "sales_tax_incl": 19960,
+   "orders": 2
+  },
+  "2021-09-03": {
+   "sales_tax_incl": 29280,
+   "orders": 2
+  },
+  "2021-09-04": {
+   "sales_tax_incl": 154020,
+   "orders": 15
+  },
+  "2021-09-05": {
+   "sales_tax_incl": 14300,
+   "orders": 1
+  },
+  "2021-09-07": {
+   "sales_tax_incl": 49900,
+   "orders": 5
+  },
+  "2021-09-08": {
+   "sales_tax_incl": 56420,
+   "orders": 5
+  },
+  "2021-09-09": {
+   "sales_tax_incl": 9980,
+   "orders": 1
+  },
+  "2021-09-10": {
+   "sales_tax_incl": 9980,
+   "orders": 1
+  },
+  "2021-09-11": {
+   "sales_tax_incl": 207020,
+   "orders": 13
+  },
+  "2021-09-12": {
+   "sales_tax_incl": 47980,
+   "orders": 3
+  },
+  "2021-09-13": {
+   "sales_tax_incl": 42980,
+   "orders": 3
+  },
+  "2021-09-14": {
+   "sales_tax_incl": 14980,
+   "orders": 1
+  },
+  "2021-09-15": {
+   "sales_tax_incl": 19960,
+   "orders": 2
+  },
+  "2021-09-16": {
+   "sales_tax_incl": 41460,
+   "orders": 3
+  },
+  "2021-09-18": {
+   "sales_tax_incl": 209840,
+   "orders": 22
+  },
+  "2021-09-19": {
+   "sales_tax_incl": 61600,
+   "orders": 7
+  },
+  "2021-09-20": {
+   "sales_tax_incl": 51780,
+   "orders": 4
+  },
+  "2021-09-21": {
+   "sales_tax_incl": 17600,
+   "orders": 2
+  },
+  "2021-09-23": {
+   "sales_tax_incl": 8800,
+   "orders": 1
+  },
+  "2021-09-25": {
+   "sales_tax_incl": 908180,
+   "orders": 90
+  },
+  "2021-09-26": {
+   "sales_tax_incl": 538920,
+   "orders": 54
+  },
+  "2021-09-27": {
+   "sales_tax_incl": 178460,
+   "orders": 18
+  },
+  "2021-09-28": {
+   "sales_tax_incl": 89840,
+   "orders": 8
+  },
+  "2021-09-29": {
+   "sales_tax_incl": 69860,
+   "orders": 7
+  },
+  "2021-09-30": {
+   "sales_tax_incl": 69860,
+   "orders": 7
+  },
+  "2021-10-01": {
+   "sales_tax_incl": 84160,
+   "orders": 8
+  },
+  "2021-10-02": {
+   "sales_tax_incl": 73680,
+   "orders": 7
+  },
+  "2021-10-03": {
+   "sales_tax_incl": 134740,
+   "orders": 13
+  },
+  "2021-10-04": {
+   "sales_tax_incl": 54220,
+   "orders": 4
+  },
+  "2021-10-05": {
+   "sales_tax_incl": 74180,
+   "orders": 7
+  },
+  "2021-10-06": {
+   "sales_tax_incl": 76380,
+   "orders": 6
+  },
+  "2021-10-07": {
+   "sales_tax_incl": 89160,
+   "orders": 8
+  },
+  "2021-10-08": {
+   "sales_tax_incl": 54220,
+   "orders": 5
+  },
+  "2021-10-09": {
+   "sales_tax_incl": 39920,
+   "orders": 3
+  },
+  "2021-10-10": {
+   "sales_tax_incl": 38740,
+   "orders": 4
+  },
+  "2021-10-11": {
+   "sales_tax_incl": 9980,
+   "orders": 1
+  },
+  "2021-10-12": {
+   "sales_tax_incl": 24960,
+   "orders": 2
+  },
+  "2021-10-13": {
+   "sales_tax_incl": 106180,
+   "orders": 7
+  },
+  "2021-10-14": {
+   "sales_tax_incl": 29940,
+   "orders": 3
+  },
+  "2021-10-15": {
+   "sales_tax_incl": 24960,
+   "orders": 2
+  },
+  "2021-10-16": {
+   "sales_tax_incl": 114220,
+   "orders": 18
+  },
+  "2021-10-17": {
+   "sales_tax_incl": 29860,
+   "orders": 4
+  },
+  "2021-10-18": {
+   "sales_tax_incl": 45030,
+   "orders": 3
+  },
+  "2021-10-19": {
+   "sales_tax_incl": 9980,
+   "orders": 1
+  },
+  "2021-10-20": {
+   "sales_tax_incl": 51230,
+   "orders": 3
+  },
+  "2021-10-21": {
+   "sales_tax_incl": 24960,
+   "orders": 2
+  },
+  "2021-10-22": {
+   "sales_tax_incl": 9900,
+   "orders": 2
+  },
+  "2021-10-23": {
+   "sales_tax_incl": 24960,
+   "orders": 2
+  },
+  "2021-10-24": {
+   "sales_tax_incl": 19960,
+   "orders": 2
+  },
+  "2021-10-25": {
+   "sales_tax_incl": 34890,
+   "orders": 4
+  },
+  "2021-10-26": {
+   "sales_tax_incl": 188740,
+   "orders": 11
+  },
+  "2021-10-27": {
+   "sales_tax_incl": 122820,
+   "orders": 7
+  },
+  "2021-10-28": {
+   "sales_tax_incl": 221440,
+   "orders": 8
+  },
+  "2021-10-29": {
+   "sales_tax_incl": 9980,
+   "orders": 1
+  },
+  "2021-10-30": {
+   "sales_tax_incl": 24280,
+   "orders": 2
+  },
+  "2021-10-31": {
+   "sales_tax_incl": 71190,
+   "orders": 5
+  },
+  "2021-11-01": {
+   "sales_tax_incl": 36300,
+   "orders": 1
+  },
+  "2021-11-02": {
+   "sales_tax_incl": 71580,
+   "orders": 4
+  },
+  "2021-11-03": {
+   "sales_tax_incl": 27580,
+   "orders": 3
+  },
+  "2021-11-04": {
+   "sales_tax_incl": 19960,
+   "orders": 2
+  },
+  "2021-11-05": {
+   "sales_tax_incl": 71240,
+   "orders": 4
+  },
+  "2021-11-06": {
+   "sales_tax_incl": 53900,
+   "orders": 3
+  },
+  "2021-11-07": {
+   "sales_tax_incl": 48690,
+   "orders": 5
+  },
+  "2021-11-08": {
+   "sales_tax_incl": 19960,
+   "orders": 2
+  },
+  "2021-11-10": {
+   "sales_tax_incl": 76220,
+   "orders": 5
+  },
+  "2021-11-11": {
+   "sales_tax_incl": 9980,
+   "orders": 1
+  },
+  "2021-11-13": {
+   "sales_tax_incl": 49900,
+   "orders": 5
+  },
+  "2021-11-14": {
+   "sales_tax_incl": 96180,
+   "orders": 7
+  },
+  "2021-11-15": {
+   "sales_tax_incl": 39940,
+   "orders": 3
+  },
+  "2021-11-16": {
+   "sales_tax_incl": 76220,
+   "orders": 5
+  },
+  "2021-11-17": {
+   "sales_tax_incl": 56260,
+   "orders": 3
+  },
+  "2021-11-18": {
+   "sales_tax_incl": 117520,
+   "orders": 6
+  },
+  "2021-11-19": {
+   "sales_tax_incl": 72600,
+   "orders": 2
+  },
+  "2021-11-20": {
+   "sales_tax_incl": 9980,
+   "orders": 1
+  },
+  "2021-11-21": {
+   "sales_tax_incl": 24960,
+   "orders": 2
+  },
+  "2021-11-22": {
+   "sales_tax_incl": 44870,
+   "orders": 5
+  },
+  "2021-11-23": {
+   "sales_tax_incl": 59880,
+   "orders": 6
+  },
+  "2021-11-24": {
+   "sales_tax_incl": 39920,
+   "orders": 4
+  },
+  "2021-11-25": {
+   "sales_tax_incl": 106160,
+   "orders": 8
+  },
+  "2021-11-26": {
+   "sales_tax_incl": 344050,
+   "orders": 19
+  },
+  "2021-11-27": {
+   "sales_tax_incl": 239130,
+   "orders": 12
+  },
+  "2021-11-28": {
+   "sales_tax_incl": 373810,
+   "orders": 18
+  },
+  "2021-11-29": {
+   "sales_tax_incl": 95410,
+   "orders": 5
+  },
+  "2021-11-30": {
+   "sales_tax_incl": 19960,
+   "orders": 2
+  },
+  "2021-12-01": {
+   "sales_tax_incl": 86680,
+   "orders": 4
+  },
+  "2021-12-02": {
+   "sales_tax_incl": 59880,
+   "orders": 6
+  },
+  "2021-12-03": {
+   "sales_tax_incl": 70180,
+   "orders": 3
+  },
+  "2021-12-04": {
+   "sales_tax_incl": 132640,
+   "orders": 6
+  },
+  "2021-12-05": {
+   "sales_tax_incl": 64200,
+   "orders": 6
+  },
+  "2021-12-06": {
+   "sales_tax_incl": 58700,
+   "orders": 5
+  },
+  "2021-12-07": {
+   "sales_tax_incl": 39920,
+   "orders": 4
+  },
+  "2021-12-08": {
+   "sales_tax_incl": 19960,
+   "orders": 2
+  },
+  "2021-12-09": {
+   "sales_tax_incl": 9980,
+   "orders": 1
+  },
+  "2021-12-10": {
+   "sales_tax_incl": 551390,
+   "orders": 38
+  },
+  "2021-12-11": {
+   "sales_tax_incl": 299260,
+   "orders": 25
+  },
+  "2021-12-12": {
+   "sales_tax_incl": 217080,
+   "orders": 15
+  },
+  "2021-12-13": {
+   "sales_tax_incl": 108900,
+   "orders": 3
+  },
+  "2021-12-14": {
+   "sales_tax_incl": 39940,
+   "orders": 3
+  },
+  "2021-12-15": {
+   "sales_tax_incl": 14930,
+   "orders": 2
+  },
+  "2021-12-16": {
+   "sales_tax_incl": 9980,
+   "orders": 1
+  },
+  "2021-12-17": {
+   "sales_tax_incl": 44160,
+   "orders": 5
+  },
+  "2021-12-18": {
+   "sales_tax_incl": 80080,
+   "orders": 5
+  },
+  "2021-12-19": {
+   "sales_tax_incl": 59900,
+   "orders": 5
+  },
+  "2021-12-20": {
+   "sales_tax_incl": 24960,
+   "orders": 2
+  },
+  "2021-12-21": {
+   "sales_tax_incl": 1118150,
+   "orders": 78
+  },
+  "2021-12-22": {
+   "sales_tax_incl": 1117140,
+   "orders": 77
+  },
+  "2021-12-23": {
+   "sales_tax_incl": 401540,
+   "orders": 31
+  },
+  "2021-12-24": {
+   "sales_tax_incl": 316520,
+   "orders": 21
+  },
+  "2021-12-25": {
+   "sales_tax_incl": 763880,
+   "orders": 54
+  },
+  "2021-12-26": {
+   "sales_tax_incl": 81400,
+   "orders": 6
+  },
+  "2021-12-27": {
+   "sales_tax_incl": 106450,
+   "orders": 8
+  },
+  "2021-12-28": {
+   "sales_tax_incl": 19960,
+   "orders": 2
+  },
+  "2021-12-29": {
+   "sales_tax_incl": 125120,
+   "orders": 7
+  },
+  "2021-12-30": {
+   "sales_tax_incl": 86300,
+   "orders": 7
+  },
+  "2021-12-31": {
+   "sales_tax_incl": 24910,
+   "orders": 3
+  },
+  "2022-01-01": {
+   "sales_tax_incl": 95520,
+   "orders": 6
+  },
+  "2022-01-02": {
+   "sales_tax_incl": 39940,
+   "orders": 3
+  },
+  "2022-01-03": {
+   "sales_tax_incl": 66240,
+   "orders": 4
+  },
+  "2022-01-04": {
+   "sales_tax_incl": 117940,
+   "orders": 8
+  },
+  "2022-01-05": {
+   "sales_tax_incl": 96260,
+   "orders": 6
+  },
+  "2022-01-06": {
+   "sales_tax_incl": 106320,
+   "orders": 5
+  },
+  "2022-01-07": {
+   "sales_tax_incl": 29940,
+   "orders": 3
+  },
+  "2022-01-08": {
+   "sales_tax_incl": 49890,
+   "orders": 4
+  },
+  "2022-01-09": {
+   "sales_tax_incl": 38740,
+   "orders": 4
+  },
+  "2022-01-10": {
+   "sales_tax_incl": 76240,
+   "orders": 4
+  },
+  "2022-01-11": {
+   "sales_tax_incl": 60580,
+   "orders": 3
+  },
+  "2022-01-12": {
+   "sales_tax_incl": 29230,
+   "orders": 3
+  },
+  "2022-01-13": {
+   "sales_tax_incl": 8800,
+   "orders": 1
+  },
+  "2022-01-14": {
+   "sales_tax_incl": 29960,
+   "orders": 2
+  },
+  "2022-01-15": {
+   "sales_tax_incl": 36300,
+   "orders": 1
+  },
+  "2022-01-16": {
+   "sales_tax_incl": 81220,
+   "orders": 4
+  },
+  "2022-01-17": {
+   "sales_tax_incl": 44920,
+   "orders": 4
+  },
+  "2022-01-19": {
+   "sales_tax_incl": 39940,
+   "orders": 3
+  },
+  "2022-01-20": {
+   "sales_tax_incl": 29940,
+   "orders": 3
+  },
+  "2022-01-21": {
+   "sales_tax_incl": 232860,
+   "orders": 15
+  },
+  "2022-01-22": {
+   "sales_tax_incl": 173330,
+   "orders": 12
+  },
+  "2022-01-23": {
+   "sales_tax_incl": 84360,
+   "orders": 6
+  },
+  "2022-01-24": {
+   "sales_tax_incl": 146980,
+   "orders": 7
+  },
+  "2022-01-25": {
+   "sales_tax_incl": 203900,
+   "orders": 16
+  },
+  "2022-01-26": {
+   "sales_tax_incl": 149760,
+   "orders": 10
+  },
+  "2022-01-27": {
+   "sales_tax_incl": 90440,
+   "orders": 7
+  },
+  "2022-01-28": {
+   "sales_tax_incl": 104880,
+   "orders": 5
+  },
+  "2022-01-29": {
+   "sales_tax_incl": 89500,
+   "orders": 5
+  },
+  "2022-01-30": {
+   "sales_tax_incl": 54740,
+   "orders": 5
+  },
+  "2022-01-31": {
+   "sales_tax_incl": 174910,
+   "orders": 10
+  },
+  "2022-02-01": {
+   "sales_tax_incl": 56260,
+   "orders": 3
+  },
+  "2022-02-02": {
+   "sales_tax_incl": 19960,
+   "orders": 2
+  },
+  "2022-02-03": {
+   "sales_tax_incl": 61210,
+   "orders": 4
+  },
+  "2022-02-04": {
+   "sales_tax_incl": 34940,
+   "orders": 3
+  },
+  "2022-02-05": {
+   "sales_tax_incl": 74990,
+   "orders": 5
+  },
+  "2022-02-06": {
+   "sales_tax_incl": 34860,
+   "orders": 4
+  },
+  "2022-02-07": {
+   "sales_tax_incl": 34940,
+   "orders": 3
+  },
+  "2022-02-08": {
+   "sales_tax_incl": 26480,
+   "orders": 2
+  },
+  "2022-02-09": {
+   "sales_tax_incl": 34940,
+   "orders": 3
+  },
+  "2022-02-10": {
+   "sales_tax_incl": 9980,
+   "orders": 1
+  },
+  "2022-02-11": {
+   "sales_tax_incl": 30100,
+   "orders": 1
+  },
+  "2022-02-12": {
+   "sales_tax_incl": 24910,
+   "orders": 3
+  },
+  "2022-02-13": {
+   "sales_tax_incl": 58780,
+   "orders": 4
+  },
+  "2022-02-14": {
+   "sales_tax_incl": 24960,
+   "orders": 2
+  },
+  "2022-02-17": {
+   "sales_tax_incl": 66400,
+   "orders": 2
+  },
+  "2022-02-19": {
+   "sales_tax_incl": 9980,
+   "orders": 1
+  },
+  "2022-02-20": {
+   "sales_tax_incl": 19960,
+   "orders": 2
+  },
+  "2022-02-21": {
+   "sales_tax_incl": 50600,
+   "orders": 2
+  },
+  "2022-02-22": {
+   "sales_tax_incl": 9980,
+   "orders": 1
+  },
+  "2022-02-23": {
+   "sales_tax_incl": 14850,
+   "orders": 1
+  },
+  "2022-02-24": {
+   "sales_tax_incl": 66400,
+   "orders": 2
+  },
+  "2022-02-25": {
+   "sales_tax_incl": 1430810,
+   "orders": 73
+  },
+  "2022-02-26": {
+   "sales_tax_incl": 520930,
+   "orders": 11
+  },
+  "2022-02-27": {
+   "sales_tax_incl": 164220,
+   "orders": 6
+  },
+  "2022-02-28": {
+   "sales_tax_incl": 300760,
+   "orders": 14
+  },
+  "2022-03-01": {
+   "sales_tax_incl": 152880,
+   "orders": 7
+  },
+  "2022-03-02": {
+   "sales_tax_incl": 69220,
+   "orders": 5
+  },
+  "2022-03-03": {
+   "sales_tax_incl": 64770,
+   "orders": 5
+  },
+  "2022-03-04": {
+   "sales_tax_incl": 9980,
+   "orders": 1
+  },
+  "2022-03-05": {
+   "sales_tax_incl": 70060,
+   "orders": 4
+  },
+  "2022-03-06": {
+   "sales_tax_incl": 148030,
+   "orders": 5
+  },
+  "2022-03-07": {
+   "sales_tax_incl": 14930,
+   "orders": 2
+  },
+  "2022-03-08": {
+   "sales_tax_incl": 61260,
+   "orders": 3
+  },
+  "2022-03-09": {
+   "sales_tax_incl": 82580,
+   "orders": 3
+  },
+  "2022-03-10": {
+   "sales_tax_incl": 24280,
+   "orders": 2
+  },
+  "2022-03-11": {
+   "sales_tax_incl": 36300,
+   "orders": 1
+  },
+  "2022-03-12": {
+   "sales_tax_incl": 66240,
+   "orders": 4
+  },
+  "2022-03-13": {
+   "sales_tax_incl": 41410,
+   "orders": 4
+  },
+  "2022-03-15": {
+   "sales_tax_incl": 30100,
+   "orders": 1
+  },
+  "2022-03-16": {
+   "sales_tax_incl": 4950,
+   "orders": 1
+  },
+  "2022-03-17": {
+   "sales_tax_incl": 29960,
+   "orders": 2
+  },
+  "2022-03-18": {
+   "sales_tax_incl": 14980,
+   "orders": 1
+  },
+  "2022-03-19": {
+   "sales_tax_incl": 160600,
+   "orders": 3
+  },
+  "2022-03-21": {
+   "sales_tax_incl": 40080,
+   "orders": 2
+  },
+  "2022-03-22": {
+   "sales_tax_incl": 662280,
+   "orders": 9
+  },
+  "2022-03-23": {
+   "sales_tax_incl": 293940,
+   "orders": 6
+  },
+  "2022-03-24": {
+   "sales_tax_incl": 371960,
+   "orders": 6
+  },
+  "2022-03-25": {
+   "sales_tax_incl": 107960,
+   "orders": 3
+  },
+  "2022-03-26": {
+   "sales_tax_incl": 149260,
+   "orders": 4
+  },
+  "2022-03-27": {
+   "sales_tax_incl": 476300,
+   "orders": 6
+  },
+  "2022-03-28": {
+   "sales_tax_incl": 1437230,
+   "orders": 52
+  },
+  "2022-03-29": {
+   "sales_tax_incl": 280160,
+   "orders": 10
+  },
+  "2022-03-30": {
+   "sales_tax_incl": 452810,
+   "orders": 10
+  },
+  "2022-03-31": {
+   "sales_tax_incl": 187080,
+   "orders": 8
+  },
+  "2022-04-01": {
+   "sales_tax_incl": 112280,
+   "orders": 7
+  },
+  "2022-04-02": {
+   "sales_tax_incl": 92740,
+   "orders": 5
+  },
+  "2022-04-05": {
+   "sales_tax_incl": 29960,
+   "orders": 2
+  },
+  "2022-04-06": {
+   "sales_tax_incl": 9980,
+   "orders": 1
+  },
+  "2022-04-07": {
+   "sales_tax_incl": 14980,
+   "orders": 1
+  },
+  "2022-04-09": {
+   "sales_tax_incl": 46460,
+   "orders": 3
+  },
+  "2022-04-10": {
+   "sales_tax_incl": 411240,
+   "orders": 38
+  },
+  "2022-04-11": {
+   "sales_tax_incl": 86840,
+   "orders": 8
+  },
+  "2022-04-13": {
+   "sales_tax_incl": 20960,
+   "orders": 2
+  },
+  "2022-04-14": {
+   "sales_tax_incl": 45920,
+   "orders": 4
+  },
+  "2022-04-15": {
+   "sales_tax_incl": 114930,
+   "orders": 8
+  },
+  "2022-04-16": {
+   "sales_tax_incl": 159580,
+   "orders": 11
+  },
+  "2022-04-17": {
+   "sales_tax_incl": 49660,
+   "orders": 4
+  },
+  "2022-04-18": {
+   "sales_tax_incl": 36810,
+   "orders": 3
+  },
+  "2022-04-19": {
+   "sales_tax_incl": 14850,
+   "orders": 1
+  },
+  "2022-04-20": {
+   "sales_tax_incl": 32450,
+   "orders": 3
+  },
+  "2022-04-21": {
+   "sales_tax_incl": 39760,
+   "orders": 4
+  },
+  "2022-04-22": {
+   "sales_tax_incl": 40080,
+   "orders": 2
+  },
+  "2022-04-23": {
+   "sales_tax_incl": 24830,
+   "orders": 2
+  },
+  "2022-04-24": {
+   "sales_tax_incl": 14850,
+   "orders": 1
+  },
+  "2022-04-25": {
+   "sales_tax_incl": 545580,
+   "orders": 42
+  },
+  "2022-04-26": {
+   "sales_tax_incl": 500890,
+   "orders": 41
+  },
+  "2022-04-27": {
+   "sales_tax_incl": 196350,
+   "orders": 14
+  },
+  "2022-04-28": {
+   "sales_tax_incl": 143620,
+   "orders": 10
+  },
+  "2022-04-29": {
+   "sales_tax_incl": 384550,
+   "orders": 30
+  },
+  "2022-05-01": {
+   "sales_tax_incl": 64880,
+   "orders": 5
+  },
+  "2022-05-03": {
+   "sales_tax_incl": 4950,
+   "orders": 1
+  },
+  "2022-05-04": {
+   "sales_tax_incl": 39920,
+   "orders": 4
+  },
+  "2022-05-05": {
+   "sales_tax_incl": 19960,
+   "orders": 2
+  },
+  "2022-05-07": {
+   "sales_tax_incl": 9980,
+   "orders": 1
+  },
+  "2022-05-08": {
+   "sales_tax_incl": 19960,
+   "orders": 2
+  },
+  "2022-05-09": {
+   "sales_tax_incl": 33000,
+   "orders": 2
+  },
+  "2022-05-10": {
+   "sales_tax_incl": 39890,
+   "orders": 4
+  },
+  "2022-05-11": {
+   "sales_tax_incl": 108980,
+   "orders": 2
+  },
+  "2022-05-12": {
+   "sales_tax_incl": 9980,
+   "orders": 1
+  },
+  "2022-05-13": {
+   "sales_tax_incl": 14980,
+   "orders": 1
+  },
+  "2022-05-14": {
+   "sales_tax_incl": 154060,
+   "orders": 4
+  },
+  "2022-05-15": {
+   "sales_tax_incl": 36460,
+   "orders": 3
+  },
+  "2022-05-16": {
+   "sales_tax_incl": 124460,
+   "orders": 3
+  },
+  "2022-05-17": {
+   "sales_tax_incl": 9980,
+   "orders": 1
+  },
+  "2022-05-18": {
+   "sales_tax_incl": 9980,
+   "orders": 1
+  },
+  "2022-05-20": {
+   "sales_tax_incl": 529780,
+   "orders": 36
+  },
+  "2022-05-21": {
+   "sales_tax_incl": 371880,
+   "orders": 20
+  },
+  "2022-05-22": {
+   "sales_tax_incl": 95780,
+   "orders": 6
+  },
+  "2022-05-23": {
+   "sales_tax_incl": 128280,
+   "orders": 3
+  },
+  "2022-05-24": {
+   "sales_tax_incl": 57880,
+   "orders": 4
+  },
+  "2022-05-25": {
+   "sales_tax_incl": 63540,
+   "orders": 5
+  },
+  "2022-05-26": {
+   "sales_tax_incl": 28600,
+   "orders": 2
+  },
+  "2022-05-27": {
+   "sales_tax_incl": 52880,
+   "orders": 4
+  },
+  "2022-05-28": {
+   "sales_tax_incl": 52880,
+   "orders": 4
+  },
+  "2022-05-29": {
+   "sales_tax_incl": 48560,
+   "orders": 4
+  },
+  "2022-05-30": {
+   "sales_tax_incl": 1321450,
+   "orders": 101
+  },
+  "2022-05-31": {
+   "sales_tax_incl": 169460,
+   "orders": 14
+  },
+  "2022-06-01": {
+   "sales_tax_incl": 119410,
+   "orders": 10
+  },
+  "2022-06-02": {
+   "sales_tax_incl": 23180,
+   "orders": 2
+  },
+  "2022-06-03": {
+   "sales_tax_incl": 62780,
+   "orders": 5
+  },
+  "2022-06-04": {
+   "sales_tax_incl": 77080,
+   "orders": 6
+  },
+  "2022-06-05": {
+   "sales_tax_incl": 67860,
+   "orders": 4
+  },
+  "2022-06-06": {
+   "sales_tax_incl": 9980,
+   "orders": 1
+  },
+  "2022-06-07": {
+   "sales_tax_incl": 24280,
+   "orders": 2
+  },
+  "2022-06-08": {
+   "sales_tax_incl": 41330,
+   "orders": 4
+  },
+  "2022-06-09": {
+   "sales_tax_incl": 44210,
+   "orders": 4
+  },
+  "2022-06-10": {
+   "sales_tax_incl": 200270,
+   "orders": 17
+  },
+  "2022-06-11": {
+   "sales_tax_incl": 36380,
+   "orders": 3
+  },
+  "2022-06-12": {
+   "sales_tax_incl": 266710,
+   "orders": 22
+  },
+  "2022-06-13": {
+   "sales_tax_incl": 98940,
+   "orders": 8
+  },
+  "2022-06-14": {
+   "sales_tax_incl": 103360,
+   "orders": 8
+  },
+  "2022-06-15": {
+   "sales_tax_incl": 52800,
+   "orders": 4
+  },
+  "2022-06-16": {
+   "sales_tax_incl": 1461960,
+   "orders": 78
+  },
+  "2022-06-17": {
+   "sales_tax_incl": 588440,
+   "orders": 45
+  },
+  "2022-06-18": {
+   "sales_tax_incl": 622740,
+   "orders": 38
+  },
+  "2022-06-19": {
+   "sales_tax_incl": 152960,
+   "orders": 12
+  },
+  "2022-06-20": {
+   "sales_tax_incl": 288200,
+   "orders": 22
+  },
+  "2022-06-21": {
+   "sales_tax_incl": 225720,
+   "orders": 18
+  },
+  "2022-06-22": {
+   "sales_tax_incl": 168380,
+   "orders": 13
+  },
+  "2022-06-23": {
+   "sales_tax_incl": 176700,
+   "orders": 13
+  },
+  "2022-06-24": {
+   "sales_tax_incl": 150740,
+   "orders": 12
+  },
+  "2022-06-25": {
+   "sales_tax_incl": 303180,
+   "orders": 24
+  },
+  "2022-06-26": {
+   "sales_tax_incl": 248640,
+   "orders": 19
+  },
+  "2022-06-27": {
+   "sales_tax_incl": 183460,
+   "orders": 15
+  },
+  "2022-06-28": {
+   "sales_tax_incl": 102360,
+   "orders": 8
+  },
+  "2022-06-29": {
+   "sales_tax_incl": 133080,
+   "orders": 10
+  },
+  "2022-06-30": {
+   "sales_tax_incl": 140250,
+   "orders": 11
+  },
+  "2022-07-01": {
+   "sales_tax_incl": 178140,
+   "orders": 14
+  },
+  "2022-07-02": {
+   "sales_tax_incl": 177820,
+   "orders": 14
+  },
+  "2022-07-03": {
+   "sales_tax_incl": 90280,
+   "orders": 7
+  },
+  "2022-07-04": {
+   "sales_tax_incl": 147500,
+   "orders": 12
+  },
+  "2022-07-05": {
+   "sales_tax_incl": 223280,
+   "orders": 17
+  },
+  "2022-07-06": {
+   "sales_tax_incl": 197980,
+   "orders": 15
+  },
+  "2022-07-07": {
+   "sales_tax_incl": 107800,
+   "orders": 8
+  },
+  "2022-07-08": {
+   "sales_tax_incl": 193560,
+   "orders": 15
+  },
+  "2022-07-09": {
+   "sales_tax_incl": 127560,
+   "orders": 10
+  },
+  "2022-07-10": {
+   "sales_tax_incl": 235380,
+   "orders": 18
+  },
+  "2022-07-11": {
+   "sales_tax_incl": 177140,
+   "orders": 14
+  },
+  "2022-07-12": {
+   "sales_tax_incl": 118780,
+   "orders": 9
+  },
+  "2022-07-13": {
+   "sales_tax_incl": 108310,
+   "orders": 9
+  },
+  "2022-07-14": {
+   "sales_tax_incl": 83560,
+   "orders": 7
+  },
+  "2022-07-15": {
+   "sales_tax_incl": 37380,
+   "orders": 3
+  },
+  "2022-07-16": {
+   "sales_tax_incl": 117680,
+   "orders": 8
+  },
+  "2022-07-17": {
+   "sales_tax_incl": 127660,
+   "orders": 10
+  },
+  "2022-07-18": {
+   "sales_tax_incl": 236960,
+   "orders": 17
+  },
+  "2022-07-19": {
+   "sales_tax_incl": 101160,
+   "orders": 8
+  },
+  "2022-07-20": {
+   "sales_tax_incl": 121540,
+   "orders": 11
+  },
+  "2022-07-21": {
+   "sales_tax_incl": 115880,
+   "orders": 9
+  },
+  "2022-07-22": {
+   "sales_tax_incl": 76980,
+   "orders": 6
+  },
+  "2022-07-23": {
+   "sales_tax_incl": 176700,
+   "orders": 14
+  },
+  "2022-07-24": {
+   "sales_tax_incl": 320060,
+   "orders": 22
+  },
+  "2022-07-25": {
+   "sales_tax_incl": 212280,
+   "orders": 16
+  },
+  "2022-07-26": {
+   "sales_tax_incl": 126560,
+   "orders": 10
+  },
+  "2022-07-27": {
+   "sales_tax_incl": 166280,
+   "orders": 15
+  },
+  "2022-07-28": {
+   "sales_tax_incl": 444520,
+   "orders": 32
+  },
+  "2022-07-29": {
+   "sales_tax_incl": 347720,
+   "orders": 26
+  },
+  "2022-07-30": {
+   "sales_tax_incl": 222140,
+   "orders": 17
+  },
+  "2022-07-31": {
+   "sales_tax_incl": 280020,
+   "orders": 21
+  },
+  "2022-08-01": {
+   "sales_tax_incl": 172460,
+   "orders": 14
+  },
+  "2022-08-02": {
+   "sales_tax_incl": 144860,
+   "orders": 11
+  },
+  "2022-08-03": {
+   "sales_tax_incl": 193640,
+   "orders": 15
+  },
+  "2022-08-04": {
+   "sales_tax_incl": 148660,
+   "orders": 12
+  },
+  "2022-08-05": {
+   "sales_tax_incl": 120980,
+   "orders": 10
+  },
+  "2022-08-06": {
+   "sales_tax_incl": 131580,
+   "orders": 10
+  },
+  "2022-08-07": {
+   "sales_tax_incl": 121660,
+   "orders": 9
+  },
+  "2022-08-08": {
+   "sales_tax_incl": 86840,
+   "orders": 7
+  },
+  "2022-08-09": {
+   "sales_tax_incl": 94600,
+   "orders": 7
+  },
+  "2022-08-10": {
+   "sales_tax_incl": 89180,
+   "orders": 7
+  },
+  "2022-08-11": {
+   "sales_tax_incl": 126440,
+   "orders": 10
+  },
+  "2022-08-12": {
+   "sales_tax_incl": 514800,
+   "orders": 12
+  },
+  "2022-08-13": {
+   "sales_tax_incl": 26400,
+   "orders": 2
+  },
+  "2022-08-14": {
+   "sales_tax_incl": 116120,
+   "orders": 9
+  },
+  "2022-08-15": {
+   "sales_tax_incl": 136720,
+   "orders": 11
+  },
+  "2022-08-16": {
+   "sales_tax_incl": 90260,
+   "orders": 7
+  },
+  "2022-08-17": {
+   "sales_tax_incl": 77080,
+   "orders": 6
+  },
+  "2022-08-18": {
+   "sales_tax_incl": 74760,
+   "orders": 6
+  },
+  "2022-08-19": {
+   "sales_tax_incl": 536330,
+   "orders": 37
+  },
+  "2022-08-20": {
+   "sales_tax_incl": 181580,
+   "orders": 13
+  },
+  "2022-08-21": {
+   "sales_tax_incl": 127600,
+   "orders": 9
+  },
+  "2022-08-22": {
+   "sales_tax_incl": 176510,
+   "orders": 10
+  },
+  "2022-08-23": {
+   "sales_tax_incl": 101160,
+   "orders": 6
+  },
+  "2022-08-24": {
+   "sales_tax_incl": 81060,
+   "orders": 6
+  },
+  "2022-08-25": {
+   "sales_tax_incl": 795910,
+   "orders": 75
+  },
+  "2022-08-26": {
+   "sales_tax_incl": 475760,
+   "orders": 40
+  },
+  "2022-08-27": {
+   "sales_tax_incl": 155060,
+   "orders": 13
+  },
+  "2022-08-28": {
+   "sales_tax_incl": 226410,
+   "orders": 17
+  },
+  "2022-08-29": {
+   "sales_tax_incl": 142240,
+   "orders": 9
+  },
+  "2022-08-30": {
+   "sales_tax_incl": 107290,
+   "orders": 9
+  },
+  "2022-08-31": {
+   "sales_tax_incl": 49500,
+   "orders": 2
+  },
+  "2022-09-01": {
+   "sales_tax_incl": 62700,
+   "orders": 3
+  },
+  "2022-09-02": {
+   "sales_tax_incl": 75510,
+   "orders": 6
+  },
+  "2022-09-03": {
+   "sales_tax_incl": 151170,
+   "orders": 10
+  },
+  "2022-09-04": {
+   "sales_tax_incl": 184300,
+   "orders": 14
+  },
+  "2022-09-05": {
+   "sales_tax_incl": 101340,
+   "orders": 8
+  },
+  "2022-09-06": {
+   "sales_tax_incl": 91260,
+   "orders": 7
+  },
+  "2022-09-07": {
+   "sales_tax_incl": 56230,
+   "orders": 4
+  },
+  "2022-09-08": {
+   "sales_tax_incl": 286820,
+   "orders": 21
+  },
+  "2022-09-09": {
+   "sales_tax_incl": 175980,
+   "orders": 11
+  },
+  "2022-09-10": {
+   "sales_tax_incl": 75330,
+   "orders": 4
+  },
+  "2022-09-11": {
+   "sales_tax_incl": 192420,
+   "orders": 13
+  },
+  "2022-09-12": {
+   "sales_tax_incl": 96800,
+   "orders": 7
+  },
+  "2022-09-13": {
+   "sales_tax_incl": 52230,
+   "orders": 4
+  },
+  "2022-09-14": {
+   "sales_tax_incl": 100590,
+   "orders": 8
+  },
+  "2022-09-15": {
+   "sales_tax_incl": 241270,
+   "orders": 18
+  },
+  "2022-09-16": {
+   "sales_tax_incl": 814170,
+   "orders": 20
+  },
+  "2022-09-17": {
+   "sales_tax_incl": 133290,
+   "orders": 10
+  },
+  "2022-09-18": {
+   "sales_tax_incl": 98450,
+   "orders": 7
+  },
+  "2022-09-19": {
+   "sales_tax_incl": 85230,
+   "orders": 7
+  },
+  "2022-09-20": {
+   "sales_tax_incl": 175350,
+   "orders": 11
+  },
+  "2022-09-21": {
+   "sales_tax_incl": 103380,
+   "orders": 6
+  },
+  "2022-09-22": {
+   "sales_tax_incl": 271410,
+   "orders": 21
+  },
+  "2022-09-23": {
+   "sales_tax_incl": 321010,
+   "orders": 29
+  },
+  "2022-09-24": {
+   "sales_tax_incl": 1297110,
+   "orders": 62
+  },
+  "2022-09-25": {
+   "sales_tax_incl": 272390,
+   "orders": 20
+  },
+  "2022-09-26": {
+   "sales_tax_incl": 256780,
+   "orders": 11
+  },
+  "2022-09-27": {
+   "sales_tax_incl": 250450,
+   "orders": 17
+  },
+  "2022-09-28": {
+   "sales_tax_incl": 151920,
+   "orders": 11
+  },
+  "2022-09-29": {
+   "sales_tax_incl": 707930,
+   "orders": 44
+  },
+  "2022-09-30": {
+   "sales_tax_incl": 652110,
+   "orders": 39
+  },
+  "2022-10-01": {
+   "sales_tax_incl": 394440,
+   "orders": 17
+  },
+  "2022-10-02": {
+   "sales_tax_incl": 217860,
+   "orders": 13
+  },
+  "2022-10-03": {
+   "sales_tax_incl": 552780,
+   "orders": 46
+  },
+  "2022-10-04": {
+   "sales_tax_incl": 76190,
+   "orders": 6
+  },
+  "2022-10-05": {
+   "sales_tax_incl": 117310,
+   "orders": 10
+  },
+  "2022-10-06": {
+   "sales_tax_incl": 129780,
+   "orders": 8
+  },
+  "2022-10-07": {
+   "sales_tax_incl": 54450,
+   "orders": 4
+  },
+  "2022-10-08": {
+   "sales_tax_incl": 80850,
+   "orders": 6
+  },
+  "2022-10-09": {
+   "sales_tax_incl": 118360,
+   "orders": 10
+  },
+  "2022-10-10": {
+   "sales_tax_incl": 93740,
+   "orders": 8
+  },
+  "2022-10-11": {
+   "sales_tax_incl": 79410,
+   "orders": 6
+  },
+  "2022-10-12": {
+   "sales_tax_incl": 168380,
+   "orders": 10
+  },
+  "2022-10-13": {
+   "sales_tax_incl": 163350,
+   "orders": 7
+  },
+  "2022-10-14": {
+   "sales_tax_incl": 99080,
+   "orders": 6
+  },
+  "2022-10-15": {
+   "sales_tax_incl": 435950,
+   "orders": 32
+  },
+  "2022-10-16": {
+   "sales_tax_incl": 211080,
+   "orders": 15
+  },
+  "2022-10-17": {
+   "sales_tax_incl": 62210,
+   "orders": 5
+  },
+  "2022-10-18": {
+   "sales_tax_incl": 133750,
+   "orders": 11
+  },
+  "2022-10-19": {
+   "sales_tax_incl": 63210,
+   "orders": 5
+  },
+  "2022-10-20": {
+   "sales_tax_incl": 239480,
+   "orders": 12
+  },
+  "2022-10-21": {
+   "sales_tax_incl": 551120,
+   "orders": 38
+  },
+  "2022-10-22": {
+   "sales_tax_incl": 427230,
+   "orders": 25
+  },
+  "2022-10-23": {
+   "sales_tax_incl": 243730,
+   "orders": 18
+  },
+  "2022-10-24": {
+   "sales_tax_incl": 74460,
+   "orders": 6
+  },
+  "2022-10-25": {
+   "sales_tax_incl": 298060,
+   "orders": 20
+  },
+  "2022-10-26": {
+   "sales_tax_incl": 293460,
+   "orders": 20
+  },
+  "2022-10-27": {
+   "sales_tax_incl": 479000,
+   "orders": 19
+  },
+  "2022-10-28": {
+   "sales_tax_incl": 156820,
+   "orders": 9
+  },
+  "2022-10-29": {
+   "sales_tax_incl": 84520,
+   "orders": 7
+  },
+  "2022-10-30": {
+   "sales_tax_incl": 254740,
+   "orders": 13
+  },
+  "2022-10-31": {
+   "sales_tax_incl": 164010,
+   "orders": 12
+  },
+  "2022-11-01": {
+   "sales_tax_incl": 209080,
+   "orders": 15
+  },
+  "2022-11-02": {
+   "sales_tax_incl": 80360,
+   "orders": 7
+  },
+  "2022-11-03": {
+   "sales_tax_incl": 128880,
+   "orders": 11
+  },
+  "2022-11-04": {
+   "sales_tax_incl": 104820,
+   "orders": 8
+  },
+  "2022-11-05": {
+   "sales_tax_incl": 146280,
+   "orders": 8
+  },
+  "2022-11-06": {
+   "sales_tax_incl": 221690,
+   "orders": 15
+  },
+  "2022-11-07": {
+   "sales_tax_incl": 87580,
+   "orders": 5
+  },
+  "2022-11-08": {
+   "sales_tax_incl": 96860,
+   "orders": 6
+  },
+  "2022-11-09": {
+   "sales_tax_incl": 186560,
+   "orders": 9
+  },
+  "2022-11-10": {
+   "sales_tax_incl": 180000,
+   "orders": 13
+  },
+  "2022-11-11": {
+   "sales_tax_incl": 84680,
+   "orders": 6
+  },
+  "2022-11-12": {
+   "sales_tax_incl": 105860,
+   "orders": 5
+  },
+  "2022-11-13": {
+   "sales_tax_incl": 220200,
+   "orders": 15
+  },
+  "2022-11-14": {
+   "sales_tax_incl": 290180,
+   "orders": 11
+  },
+  "2022-11-15": {
+   "sales_tax_incl": 142980,
+   "orders": 8
+  },
+  "2022-11-16": {
+   "sales_tax_incl": 148000,
+   "orders": 10
+  },
+  "2022-11-17": {
+   "sales_tax_incl": 122740,
+   "orders": 10
+  },
+  "2022-11-18": {
+   "sales_tax_incl": 110620,
+   "orders": 8
+  },
+  "2022-11-19": {
+   "sales_tax_incl": 146220,
+   "orders": 10
+  },
+  "2022-11-20": {
+   "sales_tax_incl": 207480,
+   "orders": 17
+  },
+  "2022-11-21": {
+   "sales_tax_incl": 108840,
+   "orders": 9
+  },
+  "2022-11-22": {
+   "sales_tax_incl": 95360,
+   "orders": 8
+  },
+  "2022-11-23": {
+   "sales_tax_incl": 109980,
+   "orders": 7
+  },
+  "2022-11-24": {
+   "sales_tax_incl": 97420,
+   "orders": 8
+  },
+  "2022-11-25": {
+   "sales_tax_incl": 3969140,
+   "orders": 136
+  },
+  "2022-11-26": {
+   "sales_tax_incl": 502190,
+   "orders": 28
+  },
+  "2022-11-27": {
+   "sales_tax_incl": 905190,
+   "orders": 53
+  },
+  "2022-11-28": {
+   "sales_tax_incl": 55040,
+   "orders": 5
+  },
+  "2022-11-29": {
+   "sales_tax_incl": 111760,
+   "orders": 7
+  },
+  "2022-11-30": {
+   "sales_tax_incl": 357220,
+   "orders": 19
+  },
+  "2022-12-01": {
+   "sales_tax_incl": 213240,
+   "orders": 16
+  },
+  "2022-12-02": {
+   "sales_tax_incl": 103900,
+   "orders": 10
+  },
+  "2022-12-03": {
+   "sales_tax_incl": 115580,
+   "orders": 7
+  },
+  "2022-12-04": {
+   "sales_tax_incl": 131020,
+   "orders": 11
+  },
+  "2022-12-05": {
+   "sales_tax_incl": 145110,
+   "orders": 11
+  },
+  "2022-12-06": {
+   "sales_tax_incl": 78300,
+   "orders": 7
+  },
+  "2022-12-07": {
+   "sales_tax_incl": 110620,
+   "orders": 7
+  },
+  "2022-12-08": {
+   "sales_tax_incl": 84660,
+   "orders": 5
+  },
+  "2022-12-09": {
+   "sales_tax_incl": 261840,
+   "orders": 7
+  },
+  "2022-12-10": {
+   "sales_tax_incl": 332400,
+   "orders": 16
+  },
+  "2022-12-11": {
+   "sales_tax_incl": 203700,
+   "orders": 11
+  },
+  "2022-12-12": {
+   "sales_tax_incl": 185960,
+   "orders": 11
+  },
+  "2022-12-13": {
+   "sales_tax_incl": 151760,
+   "orders": 10
+  },
+  "2022-12-14": {
+   "sales_tax_incl": 173490,
+   "orders": 12
+  },
+  "2022-12-15": {
+   "sales_tax_incl": 191230,
+   "orders": 9
+  },
+  "2022-12-16": {
+   "sales_tax_incl": 2524750,
+   "orders": 120
+  },
+  "2022-12-17": {
+   "sales_tax_incl": 772040,
+   "orders": 52
+  },
+  "2022-12-18": {
+   "sales_tax_incl": 568250,
+   "orders": 44
+  },
+  "2022-12-19": {
+   "sales_tax_incl": 149600,
+   "orders": 8
+  },
+  "2022-12-20": {
+   "sales_tax_incl": 160680,
+   "orders": 7
+  },
+  "2022-12-21": {
+   "sales_tax_incl": 149170,
+   "orders": 12
+  },
+  "2022-12-22": {
+   "sales_tax_incl": 123340,
+   "orders": 9
+  },
+  "2022-12-23": {
+   "sales_tax_incl": 110760,
+   "orders": 7
+  },
+  "2022-12-24": {
+   "sales_tax_incl": 111680,
+   "orders": 9
+  },
+  "2022-12-25": {
+   "sales_tax_incl": 232660,
+   "orders": 17
+  },
+  "2022-12-26": {
+   "sales_tax_incl": 50580,
+   "orders": 4
+  },
+  "2022-12-27": {
+   "sales_tax_incl": 162880,
+   "orders": 14
+  },
+  "2022-12-28": {
+   "sales_tax_incl": 156500,
+   "orders": 14
+  },
+  "2022-12-29": {
+   "sales_tax_incl": 129360,
+   "orders": 8
+  },
+  "2022-12-30": {
+   "sales_tax_incl": 144580,
+   "orders": 9
+  },
+  "2022-12-31": {
+   "sales_tax_incl": 135240,
+   "orders": 9
+  },
+  "2023-01-01": {
+   "sales_tax_incl": 190370,
+   "orders": 10
+  },
+  "2023-01-02": {
+   "sales_tax_incl": 73760,
+   "orders": 6
+  },
+  "2023-01-03": {
+   "sales_tax_incl": 137780,
+   "orders": 9
+  },
+  "2023-01-04": {
+   "sales_tax_incl": 105780,
+   "orders": 9
+  },
+  "2023-01-05": {
+   "sales_tax_incl": 46160,
+   "orders": 4
+  },
+  "2023-01-06": {
+   "sales_tax_incl": 626540,
+   "orders": 23
+  },
+  "2023-01-07": {
+   "sales_tax_incl": 225920,
+   "orders": 9
+  },
+  "2023-01-08": {
+   "sales_tax_incl": 66170,
+   "orders": 6
+  },
+  "2023-01-09": {
+   "sales_tax_incl": 50560,
+   "orders": 4
+  },
+  "2023-01-10": {
+   "sales_tax_incl": 125360,
+   "orders": 8
+  },
+  "2023-01-11": {
+   "sales_tax_incl": 39580,
+   "orders": 3
+  },
+  "2023-01-12": {
+   "sales_tax_incl": 78840,
+   "orders": 6
+  },
+  "2023-01-13": {
+   "sales_tax_incl": 144220,
+   "orders": 11
+  },
+  "2023-01-14": {
+   "sales_tax_incl": 34260,
+   "orders": 3
+  },
+  "2023-01-15": {
+   "sales_tax_incl": 122610,
+   "orders": 11
+  },
+  "2023-01-16": {
+   "sales_tax_incl": 19880,
+   "orders": 2
+  },
+  "2023-01-17": {
+   "sales_tax_incl": 65280,
+   "orders": 4
+  },
+  "2023-01-18": {
+   "sales_tax_incl": 113420,
+   "orders": 9
+  },
+  "2023-01-19": {
+   "sales_tax_incl": 67180,
+   "orders": 5
+  },
+  "2023-01-20": {
+   "sales_tax_incl": 70060,
+   "orders": 5
+  },
+  "2023-01-21": {
+   "sales_tax_incl": 130640,
+   "orders": 10
+  },
+  "2023-01-22": {
+   "sales_tax_incl": 117420,
+   "orders": 8
+  },
+  "2023-01-23": {
+   "sales_tax_incl": 55080,
+   "orders": 4
+  },
+  "2023-01-24": {
+   "sales_tax_incl": 75880,
+   "orders": 4
+  },
+  "2023-01-25": {
+   "sales_tax_incl": 100100,
+   "orders": 7
+  },
+  "2023-01-26": {
+   "sales_tax_incl": 127580,
+   "orders": 9
+  },
+  "2023-01-27": {
+   "sales_tax_incl": 3442030,
+   "orders": 131
+  },
+  "2023-01-28": {
+   "sales_tax_incl": 537860,
+   "orders": 19
+  },
+  "2023-01-29": {
+   "sales_tax_incl": 166440,
+   "orders": 10
+  },
+  "2023-01-30": {
+   "sales_tax_incl": 79840,
+   "orders": 6
+  },
+  "2023-01-31": {
+   "sales_tax_incl": 89180,
+   "orders": 5
+  },
+  "2023-02-01": {
+   "sales_tax_incl": 167640,
+   "orders": 11
+  },
+  "2023-02-02": {
+   "sales_tax_incl": 179920,
+   "orders": 12
+  },
+  "2023-02-03": {
+   "sales_tax_incl": 187980,
+   "orders": 14
+  },
+  "2023-02-04": {
+   "sales_tax_incl": 261310,
+   "orders": 10
+  },
+  "2023-02-05": {
+   "sales_tax_incl": 68180,
+   "orders": 5
+  },
+  "2023-02-06": {
+   "sales_tax_incl": 86860,
+   "orders": 5
+  },
+  "2023-02-07": {
+   "sales_tax_incl": 105160,
+   "orders": 6
+  },
+  "2023-02-08": {
+   "sales_tax_incl": 57200,
+   "orders": 4
+  },
+  "2023-02-09": {
+   "sales_tax_incl": 50600,
+   "orders": 2
+  },
+  "2023-02-10": {
+   "sales_tax_incl": 129720,
+   "orders": 10
+  },
+  "2023-02-11": {
+   "sales_tax_incl": 88140,
+   "orders": 7
+  },
+  "2023-02-12": {
+   "sales_tax_incl": 129980,
+   "orders": 11
+  },
+  "2023-02-13": {
+   "sales_tax_incl": 108020,
+   "orders": 9
+  },
+  "2023-02-14": {
+   "sales_tax_incl": 127740,
+   "orders": 11
+  },
+  "2023-02-15": {
+   "sales_tax_incl": 138380,
+   "orders": 11
+  },
+  "2023-02-16": {
+   "sales_tax_incl": 133400,
+   "orders": 10
+  },
+  "2023-02-17": {
+   "sales_tax_incl": 81420,
+   "orders": 7
+  },
+  "2023-02-18": {
+   "sales_tax_incl": 105780,
+   "orders": 8
+  },
+  "2023-02-19": {
+   "sales_tax_incl": 243000,
+   "orders": 12
+  },
+  "2023-02-20": {
+   "sales_tax_incl": 130260,
+   "orders": 7
+  },
+  "2023-02-21": {
+   "sales_tax_incl": 78180,
+   "orders": 7
+  },
+  "2023-02-22": {
+   "sales_tax_incl": 81340,
+   "orders": 7
+  },
+  "2023-02-23": {
+   "sales_tax_incl": 50560,
+   "orders": 4
+  },
+  "2023-02-24": {
+   "sales_tax_incl": 2686430,
+   "orders": 100
+  },
+  "2023-02-25": {
+   "sales_tax_incl": 622680,
+   "orders": 24
+  },
+  "2023-02-26": {
+   "sales_tax_incl": 507220,
+   "orders": 24
+  },
+  "2023-02-27": {
+   "sales_tax_incl": 163560,
+   "orders": 8
+  },
+  "2023-02-28": {
+   "sales_tax_incl": 299220,
+   "orders": 14
+  },
+  "2023-03-01": {
+   "sales_tax_incl": 122080,
+   "orders": 9
+  },
+  "2023-03-02": {
+   "sales_tax_incl": 78790,
+   "orders": 6
+  },
+  "2023-03-03": {
+   "sales_tax_incl": 159420,
+   "orders": 10
+  },
+  "2023-03-04": {
+   "sales_tax_incl": 103380,
+   "orders": 6
+  },
+  "2023-03-05": {
+   "sales_tax_incl": 190840,
+   "orders": 14
+  },
+  "2023-03-06": {
+   "sales_tax_incl": 228590,
+   "orders": 17
+  },
+  "2023-03-07": {
+   "sales_tax_incl": 108330,
+   "orders": 9
+  },
+  "2023-03-08": {
+   "sales_tax_incl": 76470,
+   "orders": 7
+  },
+  "2023-03-09": {
+   "sales_tax_incl": 370130,
+   "orders": 26
+  },
+  "2023-03-10": {
+   "sales_tax_incl": 150760,
+   "orders": 11
+  },
+  "2023-03-11": {
+   "sales_tax_incl": 93460,
+   "orders": 7
+  },
+  "2023-03-12": {
+   "sales_tax_incl": 452280,
+   "orders": 35
+  },
+  "2023-03-13": {
+   "sales_tax_incl": 291460,
+   "orders": 17
+  },
+  "2023-03-14": {
+   "sales_tax_incl": 265760,
+   "orders": 20
+  },
+  "2023-03-15": {
+   "sales_tax_incl": 166080,
+   "orders": 12
+  },
+  "2023-03-16": {
+   "sales_tax_incl": 95090,
+   "orders": 7
+  },
+  "2023-03-17": {
+   "sales_tax_incl": 90400,
+   "orders": 8
+  },
+  "2023-03-18": {
+   "sales_tax_incl": 261120,
+   "orders": 20
+  },
+  "2023-03-19": {
+   "sales_tax_incl": 264480,
+   "orders": 17
+  },
+  "2023-03-20": {
+   "sales_tax_incl": 296700,
+   "orders": 21
+  },
+  "2023-03-21": {
+   "sales_tax_incl": 118420,
+   "orders": 9
+  },
+  "2023-03-22": {
+   "sales_tax_incl": 88140,
+   "orders": 7
+  },
+  "2023-03-23": {
+   "sales_tax_incl": 117660,
+   "orders": 8
+  },
+  "2023-03-24": {
+   "sales_tax_incl": 2529430,
+   "orders": 136
+  },
+  "2023-03-25": {
+   "sales_tax_incl": 619920,
+   "orders": 36
+  },
+  "2023-03-26": {
+   "sales_tax_incl": 500640,
+   "orders": 25
+  },
+  "2023-03-27": {
+   "sales_tax_incl": 211680,
+   "orders": 15
+  },
+  "2023-03-28": {
+   "sales_tax_incl": 300320,
+   "orders": 19
+  },
+  "2023-03-29": {
+   "sales_tax_incl": 454540,
+   "orders": 25
+  },
+  "2023-03-30": {
+   "sales_tax_incl": 255100,
+   "orders": 13
+  },
+  "2023-03-31": {
+   "sales_tax_incl": 158930,
+   "orders": 12
+  },
+  "2023-04-01": {
+   "sales_tax_incl": 278320,
+   "orders": 21
+  },
+  "2023-04-02": {
+   "sales_tax_incl": 379100,
+   "orders": 24
+  },
+  "2023-04-03": {
+   "sales_tax_incl": 135790,
+   "orders": 11
+  },
+  "2023-04-04": {
+   "sales_tax_incl": 112120,
+   "orders": 9
+  },
+  "2023-04-05": {
+   "sales_tax_incl": 195820,
+   "orders": 13
+  },
+  "2023-04-06": {
+   "sales_tax_incl": 238620,
+   "orders": 16
+  },
+  "2023-04-07": {
+   "sales_tax_incl": 89100,
+   "orders": 8
+  },
+  "2023-04-08": {
+   "sales_tax_incl": 196060,
+   "orders": 15
+  },
+  "2023-04-09": {
+   "sales_tax_incl": 203440,
+   "orders": 13
+  },
+  "2023-04-10": {
+   "sales_tax_incl": 154490,
+   "orders": 12
+  },
+  "2023-04-11": {
+   "sales_tax_incl": 130980,
+   "orders": 11
+  },
+  "2023-04-12": {
+   "sales_tax_incl": 185000,
+   "orders": 14
+  },
+  "2023-04-13": {
+   "sales_tax_incl": 154680,
+   "orders": 11
+  },
+  "2023-04-14": {
+   "sales_tax_incl": 159560,
+   "orders": 9
+  },
+  "2023-04-15": {
+   "sales_tax_incl": 63860,
+   "orders": 5
+  },
+  "2023-04-16": {
+   "sales_tax_incl": 246380,
+   "orders": 19
+  },
+  "2023-04-17": {
+   "sales_tax_incl": 63860,
+   "orders": 4
+  },
+  "2023-04-18": {
+   "sales_tax_incl": 167100,
+   "orders": 12
+  },
+  "2023-04-19": {
+   "sales_tax_incl": 98120,
+   "orders": 8
+  },
+  "2023-04-20": {
+   "sales_tax_incl": 69540,
+   "orders": 6
+  },
+  "2023-04-21": {
+   "sales_tax_incl": 109660,
+   "orders": 9
+  },
+  "2023-04-22": {
+   "sales_tax_incl": 101140,
+   "orders": 9
+  },
+  "2023-04-23": {
+   "sales_tax_incl": 223260,
+   "orders": 17
+  },
+  "2023-04-24": {
+   "sales_tax_incl": 116580,
+   "orders": 9
+  },
+  "2023-04-25": {
+   "sales_tax_incl": 439020,
+   "orders": 10
+  },
+  "2023-04-26": {
+   "sales_tax_incl": 287100,
+   "orders": 13
+  },
+  "2023-04-27": {
+   "sales_tax_incl": 110780,
+   "orders": 9
+  },
+  "2023-04-28": {
+   "sales_tax_incl": 158000,
+   "orders": 11
+  },
+  "2023-04-29": {
+   "sales_tax_incl": 247600,
+   "orders": 16
+  },
+  "2023-04-30": {
+   "sales_tax_incl": 224400,
+   "orders": 17
+  },
+  "2023-05-01": {
+   "sales_tax_incl": 3219700,
+   "orders": 156
+  },
+  "2023-05-02": {
+   "sales_tax_incl": 2048930,
+   "orders": 78
+  },
+  "2023-05-03": {
+   "sales_tax_incl": 633680,
+   "orders": 25
+  },
+  "2023-05-04": {
+   "sales_tax_incl": 364610,
+   "orders": 17
+  },
+  "2023-05-05": {
+   "sales_tax_incl": 254850,
+   "orders": 14
+  },
+  "2023-05-06": {
+   "sales_tax_incl": 89060,
+   "orders": 6
+  },
+  "2023-05-07": {
+   "sales_tax_incl": 287280,
+   "orders": 16
+  },
+  "2023-05-08": {
+   "sales_tax_incl": 122160,
+   "orders": 7
+  },
+  "2023-05-09": {
+   "sales_tax_incl": 257590,
+   "orders": 13
+  },
+  "2023-05-10": {
+   "sales_tax_incl": 379420,
+   "orders": 21
+  },
+  "2023-05-11": {
+   "sales_tax_incl": 147400,
+   "orders": 7
+  },
+  "2023-05-12": {
+   "sales_tax_incl": 144760,
+   "orders": 7
+  },
+  "2023-05-13": {
+   "sales_tax_incl": 317680,
+   "orders": 19
+  },
+  "2023-05-14": {
+   "sales_tax_incl": 152980,
+   "orders": 10
+  },
+  "2023-05-15": {
+   "sales_tax_incl": 126240,
+   "orders": 9
+  },
+  "2023-05-16": {
+   "sales_tax_incl": 77590,
+   "orders": 6
+  },
+  "2023-05-17": {
+   "sales_tax_incl": 148440,
+   "orders": 8
+  },
+  "2023-05-18": {
+   "sales_tax_incl": 203150,
+   "orders": 12
+  },
+  "2023-05-19": {
+   "sales_tax_incl": 160230,
+   "orders": 12
+  },
+  "2023-05-20": {
+   "sales_tax_incl": 169460,
+   "orders": 9
+  },
+  "2023-05-21": {
+   "sales_tax_incl": 609910,
+   "orders": 39
+  },
+  "2023-05-22": {
+   "sales_tax_incl": 540080,
+   "orders": 39
+  },
+  "2023-05-23": {
+   "sales_tax_incl": 314580,
+   "orders": 23
+  },
+  "2023-05-24": {
+   "sales_tax_incl": 477440,
+   "orders": 33
+  },
+  "2023-05-25": {
+   "sales_tax_incl": 823880,
+   "orders": 28
+  },
+  "2023-05-26": {
+   "sales_tax_incl": 1099610,
+   "orders": 56
+  },
+  "2023-05-27": {
+   "sales_tax_incl": 520850,
+   "orders": 33
+  },
+  "2023-05-28": {
+   "sales_tax_incl": 468070,
+   "orders": 31
+  },
+  "2023-05-29": {
+   "sales_tax_incl": 397180,
+   "orders": 27
+  },
+  "2023-05-30": {
+   "sales_tax_incl": 848650,
+   "orders": 34
+  },
+  "2023-05-31": {
+   "sales_tax_incl": 1254040,
+   "orders": 51
+  },
+  "2023-06-01": {
+   "sales_tax_incl": 402740,
+   "orders": 28
+  },
+  "2023-06-02": {
+   "sales_tax_incl": 355910,
+   "orders": 22
+  },
+  "2023-06-03": {
+   "sales_tax_incl": 273980,
+   "orders": 21
+  },
+  "2023-06-04": {
+   "sales_tax_incl": 378910,
+   "orders": 25
+  },
+  "2023-06-05": {
+   "sales_tax_incl": 284900,
+   "orders": 16
+  },
+  "2023-06-06": {
+   "sales_tax_incl": 178350,
+   "orders": 14
+  },
+  "2023-06-07": {
+   "sales_tax_incl": 221080,
+   "orders": 13
+  },
+  "2023-06-08": {
+   "sales_tax_incl": 279020,
+   "orders": 19
+  },
+  "2023-06-09": {
+   "sales_tax_incl": 300280,
+   "orders": 23
+  },
+  "2023-06-10": {
+   "sales_tax_incl": 229980,
+   "orders": 15
+  },
+  "2023-06-11": {
+   "sales_tax_incl": 442240,
+   "orders": 31
+  },
+  "2023-06-12": {
+   "sales_tax_incl": 117740,
+   "orders": 9
+  },
+  "2023-06-13": {
+   "sales_tax_incl": 335540,
+   "orders": 24
+  },
+  "2023-06-14": {
+   "sales_tax_incl": 348350,
+   "orders": 27
+  },
+  "2023-06-15": {
+   "sales_tax_incl": 168910,
+   "orders": 13
+  },
+  "2023-06-16": {
+   "sales_tax_incl": 127660,
+   "orders": 10
+  },
+  "2023-06-17": {
+   "sales_tax_incl": 341170,
+   "orders": 19
+  },
+  "2023-06-18": {
+   "sales_tax_incl": 272830,
+   "orders": 19
+  },
+  "2023-06-19": {
+   "sales_tax_incl": 172760,
+   "orders": 11
+  },
+  "2023-06-20": {
+   "sales_tax_incl": 78180,
+   "orders": 6
+  },
+  "2023-06-21": {
+   "sales_tax_incl": 178490,
+   "orders": 12
+  },
+  "2023-06-22": {
+   "sales_tax_incl": 189040,
+   "orders": 15
+  },
+  "2023-06-23": {
+   "sales_tax_incl": 446030,
+   "orders": 19
+  },
+  "2023-06-24": {
+   "sales_tax_incl": 689000,
+   "orders": 43
+  },
+  "2023-06-25": {
+   "sales_tax_incl": 1036290,
+   "orders": 71
+  },
+  "2023-06-26": {
+   "sales_tax_incl": 385740,
+   "orders": 19
+  },
+  "2023-06-27": {
+   "sales_tax_incl": 162310,
+   "orders": 12
+  },
+  "2023-06-28": {
+   "sales_tax_incl": 162800,
+   "orders": 11
+  },
+  "2023-06-29": {
+   "sales_tax_incl": 510650,
+   "orders": 28
+  },
+  "2023-06-30": {
+   "sales_tax_incl": 377260,
+   "orders": 23
+  },
+  "2023-07-01": {
+   "sales_tax_incl": 297170,
+   "orders": 24
+  },
+  "2023-07-02": {
+   "sales_tax_incl": 317960,
+   "orders": 23
+  },
+  "2023-07-03": {
+   "sales_tax_incl": 210120,
+   "orders": 15
+  },
+  "2023-07-04": {
+   "sales_tax_incl": 384430,
+   "orders": 22
+  },
+  "2023-07-05": {
+   "sales_tax_incl": 292540,
+   "orders": 19
+  },
+  "2023-07-06": {
+   "sales_tax_incl": 215640,
+   "orders": 17
+  },
+  "2023-07-07": {
+   "sales_tax_incl": 365320,
+   "orders": 26
+  },
+  "2023-07-08": {
+   "sales_tax_incl": 245990,
+   "orders": 17
+  },
+  "2023-07-09": {
+   "sales_tax_incl": 291150,
+   "orders": 21
+  },
+  "2023-07-10": {
+   "sales_tax_incl": 286590,
+   "orders": 17
+  },
+  "2023-07-11": {
+   "sales_tax_incl": 252980,
+   "orders": 15
+  },
+  "2023-07-12": {
+   "sales_tax_incl": 450120,
+   "orders": 28
+  },
+  "2023-07-13": {
+   "sales_tax_incl": 338250,
+   "orders": 22
+  },
+  "2023-07-14": {
+   "sales_tax_incl": 164530,
+   "orders": 12
+  },
+  "2023-07-15": {
+   "sales_tax_incl": 164470,
+   "orders": 12
+  },
+  "2023-07-16": {
+   "sales_tax_incl": 162680,
+   "orders": 13
+  },
+  "2023-07-17": {
+   "sales_tax_incl": 184890,
+   "orders": 13
+  },
+  "2023-07-18": {
+   "sales_tax_incl": 201320,
+   "orders": 15
+  },
+  "2023-07-19": {
+   "sales_tax_incl": 107840,
+   "orders": 9
+  },
+  "2023-07-20": {
+   "sales_tax_incl": 216660,
+   "orders": 14
+  },
+  "2023-07-21": {
+   "sales_tax_incl": 129340,
+   "orders": 8
+  },
+  "2023-07-22": {
+   "sales_tax_incl": 157760,
+   "orders": 10
+  },
+  "2023-07-23": {
+   "sales_tax_incl": 135880,
+   "orders": 12
+  },
+  "2023-07-24": {
+   "sales_tax_incl": 453400,
+   "orders": 32
+  },
+  "2023-07-25": {
+   "sales_tax_incl": 570950,
+   "orders": 23
+  },
+  "2023-07-26": {
+   "sales_tax_incl": 469370,
+   "orders": 22
+  },
+  "2023-07-27": {
+   "sales_tax_incl": 273900,
+   "orders": 21
+  },
+  "2023-07-28": {
+   "sales_tax_incl": 214480,
+   "orders": 16
+  },
+  "2023-07-29": {
+   "sales_tax_incl": 234240,
+   "orders": 14
+  },
+  "2023-07-30": {
+   "sales_tax_incl": 184760,
+   "orders": 14
+  },
+  "2023-07-31": {
+   "sales_tax_incl": 263630,
+   "orders": 18
+  },
+  "2023-08-01": {
+   "sales_tax_incl": 287650,
+   "orders": 18
+  },
+  "2023-08-02": {
+   "sales_tax_incl": 233200,
+   "orders": 18
+  },
+  "2023-08-03": {
+   "sales_tax_incl": 237030,
+   "orders": 15
+  },
+  "2023-08-04": {
+   "sales_tax_incl": 107360,
+   "orders": 8
+  },
+  "2023-08-05": {
+   "sales_tax_incl": 273220,
+   "orders": 19
+  },
+  "2023-08-06": {
+   "sales_tax_incl": 236560,
+   "orders": 19
+  },
+  "2023-08-07": {
+   "sales_tax_incl": 197390,
+   "orders": 13
+  },
+  "2023-08-08": {
+   "sales_tax_incl": 140140,
+   "orders": 10
+  },
+  "2023-08-09": {
+   "sales_tax_incl": 213930,
+   "orders": 17
+  },
+  "2023-08-10": {
+   "sales_tax_incl": 144100,
+   "orders": 11
+  },
+  "2023-08-11": {
+   "sales_tax_incl": 207380,
+   "orders": 15
+  },
+  "2023-08-12": {
+   "sales_tax_incl": 181480,
+   "orders": 8
+  },
+  "2023-08-13": {
+   "sales_tax_incl": 115540,
+   "orders": 9
+  },
+  "2023-08-14": {
+   "sales_tax_incl": 126410,
+   "orders": 11
+  },
+  "2023-08-15": {
+   "sales_tax_incl": 171860,
+   "orders": 15
+  },
+  "2023-08-16": {
+   "sales_tax_incl": 216740,
+   "orders": 14
+  },
+  "2023-08-17": {
+   "sales_tax_incl": 167860,
+   "orders": 13
+  },
+  "2023-08-18": {
+   "sales_tax_incl": 105760,
+   "orders": 6
+  },
+  "2023-08-19": {
+   "sales_tax_incl": 92500,
+   "orders": 8
+  },
+  "2023-08-20": {
+   "sales_tax_incl": 128090,
+   "orders": 10
+  },
+  "2023-08-21": {
+   "sales_tax_incl": 204640,
+   "orders": 15
+  },
+  "2023-08-22": {
+   "sales_tax_incl": 113730,
+   "orders": 10
+  },
+  "2023-08-23": {
+   "sales_tax_incl": 202290,
+   "orders": 16
+  },
+  "2023-08-24": {
+   "sales_tax_incl": 188180,
+   "orders": 14
+  },
+  "2023-08-25": {
+   "sales_tax_incl": 1118760,
+   "orders": 48
+  },
+  "2023-08-26": {
+   "sales_tax_incl": 595440,
+   "orders": 25
+  },
+  "2023-08-27": {
+   "sales_tax_incl": 316760,
+   "orders": 18
+  },
+  "2023-08-28": {
+   "sales_tax_incl": 321830,
+   "orders": 17
+  },
+  "2023-08-29": {
+   "sales_tax_incl": 459070,
+   "orders": 33
+  },
+  "2023-08-30": {
+   "sales_tax_incl": 514740,
+   "orders": 35
+  },
+  "2023-08-31": {
+   "sales_tax_incl": 167240,
+   "orders": 13
+  },
+  "2023-09-01": {
+   "sales_tax_incl": 207820,
+   "orders": 16
+  },
+  "2023-09-02": {
+   "sales_tax_incl": 221040,
+   "orders": 15
+  },
+  "2023-09-03": {
+   "sales_tax_incl": 282690,
+   "orders": 22
+  },
+  "2023-09-04": {
+   "sales_tax_incl": 118920,
+   "orders": 9
+  },
+  "2023-09-05": {
+   "sales_tax_incl": 199100,
+   "orders": 16
+  },
+  "2023-09-06": {
+   "sales_tax_incl": 160560,
+   "orders": 12
+  },
+  "2023-09-07": {
+   "sales_tax_incl": 288470,
+   "orders": 18
+  },
+  "2023-09-08": {
+   "sales_tax_incl": 168340,
+   "orders": 11
+  },
+  "2023-09-09": {
+   "sales_tax_incl": 189080,
+   "orders": 15
+  },
+  "2023-09-10": {
+   "sales_tax_incl": 253760,
+   "orders": 16
+  },
+  "2023-09-11": {
+   "sales_tax_incl": 119160,
+   "orders": 8
+  },
+  "2023-09-12": {
+   "sales_tax_incl": 196660,
+   "orders": 13
+  },
+  "2023-09-13": {
+   "sales_tax_incl": 124320,
+   "orders": 9
+  },
+  "2023-09-14": {
+   "sales_tax_incl": 147220,
+   "orders": 11
+  },
+  "2023-09-15": {
+   "sales_tax_incl": 118840,
+   "orders": 9
+  },
+  "2023-09-16": {
+   "sales_tax_incl": 215700,
+   "orders": 11
+  },
+  "2023-09-17": {
+   "sales_tax_incl": 136620,
+   "orders": 11
+  },
+  "2023-09-18": {
+   "sales_tax_incl": 230340,
+   "orders": 15
+  },
+  "2023-09-19": {
+   "sales_tax_incl": 151920,
+   "orders": 11
+  },
+  "2023-09-20": {
+   "sales_tax_incl": 142940,
+   "orders": 11
+  },
+  "2023-09-21": {
+   "sales_tax_incl": 228580,
+   "orders": 13
+  },
+  "2023-09-22": {
+   "sales_tax_incl": 74120,
+   "orders": 6
+  },
+  "2023-09-23": {
+   "sales_tax_incl": 116660,
+   "orders": 8
+  },
+  "2023-09-24": {
+   "sales_tax_incl": 215230,
+   "orders": 15
+  },
+  "2023-09-25": {
+   "sales_tax_incl": 2814060,
+   "orders": 97
+  },
+  "2023-09-26": {
+   "sales_tax_incl": 825040,
+   "orders": 28
+  },
+  "2023-09-27": {
+   "sales_tax_incl": 326230,
+   "orders": 18
+  },
+  "2023-09-28": {
+   "sales_tax_incl": 214990,
+   "orders": 11
+  },
+  "2023-09-29": {
+   "sales_tax_incl": 106780,
+   "orders": 6
+  },
+  "2023-09-30": {
+   "sales_tax_incl": 267470,
+   "orders": 11
+  },
+  "2023-10-01": {
+   "sales_tax_incl": 299700,
+   "orders": 17
+  },
+  "2023-10-02": {
+   "sales_tax_incl": 270250,
+   "orders": 13
+  },
+  "2023-10-03": {
+   "sales_tax_incl": 198120,
+   "orders": 13
+  },
+  "2023-10-04": {
+   "sales_tax_incl": 177710,
+   "orders": 11
+  },
+  "2023-10-05": {
+   "sales_tax_incl": 216170,
+   "orders": 12
+  },
+  "2023-10-06": {
+   "sales_tax_incl": 151450,
+   "orders": 10
+  },
+  "2023-10-07": {
+   "sales_tax_incl": 219460,
+   "orders": 12
+  },
+  "2023-10-08": {
+   "sales_tax_incl": 100820,
+   "orders": 8
+  },
+  "2023-10-09": {
+   "sales_tax_incl": 115540,
+   "orders": 8
+  },
+  "2023-10-10": {
+   "sales_tax_incl": 142510,
+   "orders": 8
+  },
+  "2023-10-11": {
+   "sales_tax_incl": 156350,
+   "orders": 11
+  },
+  "2023-10-12": {
+   "sales_tax_incl": 178830,
+   "orders": 13
+  },
+  "2023-10-13": {
+   "sales_tax_incl": 171560,
+   "orders": 7
+  },
+  "2023-10-14": {
+   "sales_tax_incl": 285430,
+   "orders": 15
+  },
+  "2023-10-15": {
+   "sales_tax_incl": 167160,
+   "orders": 11
+  },
+  "2023-10-16": {
+   "sales_tax_incl": 169210,
+   "orders": 9
+  },
+  "2023-10-17": {
+   "sales_tax_incl": 158400,
+   "orders": 9
+  },
+  "2023-10-18": {
+   "sales_tax_incl": 222790,
+   "orders": 11
+  },
+  "2023-10-19": {
+   "sales_tax_incl": 186430,
+   "orders": 11
+  },
+  "2023-10-20": {
+   "sales_tax_incl": 261310,
+   "orders": 13
+  },
+  "2023-10-21": {
+   "sales_tax_incl": 132980,
+   "orders": 10
+  },
+  "2023-10-22": {
+   "sales_tax_incl": 154490,
+   "orders": 9
+  },
+  "2023-10-23": {
+   "sales_tax_incl": 335520,
+   "orders": 23
+  },
+  "2023-10-24": {
+   "sales_tax_incl": 153900,
+   "orders": 10
+  },
+  "2023-10-25": {
+   "sales_tax_incl": 1077250,
+   "orders": 24
+  },
+  "2023-10-26": {
+   "sales_tax_incl": 425660,
+   "orders": 10
+  },
+  "2023-10-27": {
+   "sales_tax_incl": 520260,
+   "orders": 19
+  },
+  "2023-10-28": {
+   "sales_tax_incl": 717730,
+   "orders": 25
+  },
+  "2023-10-29": {
+   "sales_tax_incl": 235460,
+   "orders": 11
+  },
+  "2023-10-30": {
+   "sales_tax_incl": 368480,
+   "orders": 16
+  },
+  "2023-10-31": {
+   "sales_tax_incl": 493840,
+   "orders": 21
+  },
+  "2023-11-01": {
+   "sales_tax_incl": 345820,
+   "orders": 16
+  },
+  "2023-11-02": {
+   "sales_tax_incl": 907360,
+   "orders": 36
+  },
+  "2023-11-03": {
+   "sales_tax_incl": 796240,
+   "orders": 37
+  },
+  "2023-11-04": {
+   "sales_tax_incl": 484570,
+   "orders": 22
+  },
+  "2023-11-05": {
+   "sales_tax_incl": 427820,
+   "orders": 22
+  },
+  "2023-11-06": {
+   "sales_tax_incl": 336060,
+   "orders": 16
+  },
+  "2023-11-07": {
+   "sales_tax_incl": 345360,
+   "orders": 16
+  },
+  "2023-11-08": {
+   "sales_tax_incl": 296570,
+   "orders": 17
+  },
+  "2023-11-09": {
+   "sales_tax_incl": 419590,
+   "orders": 17
+  },
+  "2023-11-10": {
+   "sales_tax_incl": 311790,
+   "orders": 14
+  },
+  "2023-11-11": {
+   "sales_tax_incl": 445580,
+   "orders": 20
+  },
+  "2023-11-12": {
+   "sales_tax_incl": 377750,
+   "orders": 19
+  },
+  "2023-11-13": {
+   "sales_tax_incl": 460390,
+   "orders": 17
+  },
+  "2023-11-14": {
+   "sales_tax_incl": 375630,
+   "orders": 14
+  },
+  "2023-11-15": {
+   "sales_tax_incl": 267970,
+   "orders": 15
+  },
+  "2023-11-16": {
+   "sales_tax_incl": 304630,
+   "orders": 14
+  },
+  "2023-11-17": {
+   "sales_tax_incl": 154140,
+   "orders": 10
+  },
+  "2023-11-18": {
+   "sales_tax_incl": 154060,
+   "orders": 9
+  },
+  "2023-11-19": {
+   "sales_tax_incl": 223130,
+   "orders": 11
+  },
+  "2023-11-20": {
+   "sales_tax_incl": 492210,
+   "orders": 23
+  },
+  "2023-11-21": {
+   "sales_tax_incl": 228190,
+   "orders": 15
+  },
+  "2023-11-22": {
+   "sales_tax_incl": 335440,
+   "orders": 15
+  },
+  "2023-11-23": {
+   "sales_tax_incl": 277820,
+   "orders": 16
+  },
+  "2023-11-24": {
+   "sales_tax_incl": 272730,
+   "orders": 15
+  },
+  "2023-11-25": {
+   "sales_tax_incl": 359070,
+   "orders": 19
+  },
+  "2023-11-26": {
+   "sales_tax_incl": 459270,
+   "orders": 22
+  },
+  "2023-11-27": {
+   "sales_tax_incl": 163450,
+   "orders": 12
+  },
+  "2023-11-28": {
+   "sales_tax_incl": 214480,
+   "orders": 10
+  },
+  "2023-11-29": {
+   "sales_tax_incl": 167160,
+   "orders": 7
+  },
+  "2023-11-30": {
+   "sales_tax_incl": 363040,
+   "orders": 12
+  },
+  "2023-12-01": {
+   "sales_tax_incl": 212320,
+   "orders": 15
+  },
+  "2023-12-02": {
+   "sales_tax_incl": 141280,
+   "orders": 7
+  },
+  "2023-12-03": {
+   "sales_tax_incl": 188180,
+   "orders": 11
+  },
+  "2023-12-04": {
+   "sales_tax_incl": 104990,
+   "orders": 8
+  },
+  "2023-12-05": {
+   "sales_tax_incl": 117600,
+   "orders": 8
+  },
+  "2023-12-06": {
+   "sales_tax_incl": 145200,
+   "orders": 10
+  },
+  "2023-12-07": {
+   "sales_tax_incl": 168320,
+   "orders": 11
+  },
+  "2023-12-08": {
+   "sales_tax_incl": 6433520,
+   "orders": 203
+  },
+  "2023-12-09": {
+   "sales_tax_incl": 1165940,
+   "orders": 41
+  },
+  "2023-12-10": {
+   "sales_tax_incl": 590080,
+   "orders": 26
+  },
+  "2023-12-11": {
+   "sales_tax_incl": 356340,
+   "orders": 21
+  },
+  "2023-12-12": {
+   "sales_tax_incl": 302600,
+   "orders": 12
+  },
+  "2023-12-13": {
+   "sales_tax_incl": 394970,
+   "orders": 21
+  },
+  "2023-12-14": {
+   "sales_tax_incl": 274420,
+   "orders": 18
+  },
+  "2023-12-15": {
+   "sales_tax_incl": 327190,
+   "orders": 13
+  },
+  "2023-12-16": {
+   "sales_tax_incl": 290340,
+   "orders": 14
+  },
+  "2023-12-17": {
+   "sales_tax_incl": 301950,
+   "orders": 20
+  },
+  "2023-12-18": {
+   "sales_tax_incl": 432740,
+   "orders": 16
+  },
+  "2023-12-19": {
+   "sales_tax_incl": 254020,
+   "orders": 14
+  },
+  "2023-12-20": {
+   "sales_tax_incl": 358540,
+   "orders": 15
+  },
+  "2023-12-21": {
+   "sales_tax_incl": 320080,
+   "orders": 20
+  },
+  "2023-12-22": {
+   "sales_tax_incl": 12401950,
+   "orders": 230
+  },
+  "2023-12-23": {
+   "sales_tax_incl": 7484760,
+   "orders": 97
+  },
+  "2023-12-24": {
+   "sales_tax_incl": 2791270,
+   "orders": 53
+  },
+  "2023-12-25": {
+   "sales_tax_incl": 2026060,
+   "orders": 36
+  },
+  "2023-12-26": {
+   "sales_tax_incl": 1531610,
+   "orders": 24
+  },
+  "2023-12-27": {
+   "sales_tax_incl": 2844820,
+   "orders": 29
+  },
+  "2023-12-28": {
+   "sales_tax_incl": 1172870,
+   "orders": 21
+  },
+  "2023-12-29": {
+   "sales_tax_incl": 2275310,
+   "orders": 29
+  },
+  "2023-12-30": {
+   "sales_tax_incl": 2491400,
+   "orders": 32
+  },
+  "2023-12-31": {
+   "sales_tax_incl": 7082190,
+   "orders": 70
+  },
+  "2024-01-01": {
+   "sales_tax_incl": 221980,
+   "orders": 11
+  },
+  "2024-01-02": {
+   "sales_tax_incl": 202140,
+   "orders": 11
+  },
+  "2024-01-03": {
+   "sales_tax_incl": 319550,
+   "orders": 20
+  },
+  "2024-01-04": {
+   "sales_tax_incl": 244560,
+   "orders": 12
+  },
+  "2024-01-05": {
+   "sales_tax_incl": 589030,
+   "orders": 14
+  },
+  "2024-01-06": {
+   "sales_tax_incl": 222620,
+   "orders": 12
+  },
+  "2024-01-07": {
+   "sales_tax_incl": 171520,
+   "orders": 10
+  },
+  "2024-01-08": {
+   "sales_tax_incl": 281320,
+   "orders": 16
+  },
+  "2024-01-09": {
+   "sales_tax_incl": 317610,
+   "orders": 13
+  },
+  "2024-01-10": {
+   "sales_tax_incl": 171470,
+   "orders": 12
+  },
+  "2024-01-11": {
+   "sales_tax_incl": 539770,
+   "orders": 18
+  },
+  "2024-01-12": {
+   "sales_tax_incl": 97310,
+   "orders": 6
+  },
+  "2024-01-13": {
+   "sales_tax_incl": 184370,
+   "orders": 9
+  },
+  "2024-01-14": {
+   "sales_tax_incl": 206920,
+   "orders": 13
+  },
+  "2024-01-15": {
+   "sales_tax_incl": 128480,
+   "orders": 5
+  },
+  "2024-01-16": {
+   "sales_tax_incl": 194110,
+   "orders": 13
+  },
+  "2024-01-17": {
+   "sales_tax_incl": 306550,
+   "orders": 13
+  },
+  "2024-01-18": {
+   "sales_tax_incl": 63720,
+   "orders": 6
+  },
+  "2024-01-19": {
+   "sales_tax_incl": 104970,
+   "orders": 7
+  },
+  "2024-01-20": {
+   "sales_tax_incl": 75440,
+   "orders": 5
+  },
+  "2024-01-21": {
+   "sales_tax_incl": 153530,
+   "orders": 11
+  },
+  "2024-01-22": {
+   "sales_tax_incl": 178100,
+   "orders": 11
+  },
+  "2024-01-23": {
+   "sales_tax_incl": 227000,
+   "orders": 9
+  },
+  "2024-01-24": {
+   "sales_tax_incl": 175190,
+   "orders": 11
+  },
+  "2024-01-25": {
+   "sales_tax_incl": 635530,
+   "orders": 20
+  },
+  "2024-01-26": {
+   "sales_tax_incl": 743740,
+   "orders": 32
+  },
+  "2024-01-27": {
+   "sales_tax_incl": 306370,
+   "orders": 16
+  },
+  "2024-01-28": {
+   "sales_tax_incl": 262790,
+   "orders": 14
+  },
+  "2024-01-29": {
+   "sales_tax_incl": 219310,
+   "orders": 14
+  },
+  "2024-01-30": {
+   "sales_tax_incl": 96720,
+   "orders": 7
+  },
+  "2024-01-31": {
+   "sales_tax_incl": 219110,
+   "orders": 12
+  },
+  "2024-02-01": {
+   "sales_tax_incl": 237640,
+   "orders": 12
+  },
+  "2024-02-02": {
+   "sales_tax_incl": 216470,
+   "orders": 13
+  },
+  "2024-02-03": {
+   "sales_tax_incl": 201870,
+   "orders": 13
+  },
+  "2024-02-04": {
+   "sales_tax_incl": 139950,
+   "orders": 10
+  },
+  "2024-02-05": {
+   "sales_tax_incl": 98670,
+   "orders": 6
+  },
+  "2024-02-06": {
+   "sales_tax_incl": 151760,
+   "orders": 9
+  },
+  "2024-02-07": {
+   "sales_tax_incl": 164520,
+   "orders": 12
+  },
+  "2024-02-08": {
+   "sales_tax_incl": 170620,
+   "orders": 10
+  },
+  "2024-02-09": {
+   "sales_tax_incl": 143940,
+   "orders": 7
+  },
+  "2024-02-10": {
+   "sales_tax_incl": 194990,
+   "orders": 12
+  },
+  "2024-02-11": {
+   "sales_tax_incl": 244950,
+   "orders": 14
+  },
+  "2024-02-12": {
+   "sales_tax_incl": 403040,
+   "orders": 21
+  },
+  "2024-02-13": {
+   "sales_tax_incl": 512600,
+   "orders": 11
+  },
+  "2024-02-14": {
+   "sales_tax_incl": 150050,
+   "orders": 10
+  },
+  "2024-02-15": {
+   "sales_tax_incl": 182930,
+   "orders": 14
+  },
+  "2024-02-16": {
+   "sales_tax_incl": 186770,
+   "orders": 13
+  },
+  "2024-02-17": {
+   "sales_tax_incl": 86480,
+   "orders": 7
+  },
+  "2024-02-18": {
+   "sales_tax_incl": 165890,
+   "orders": 12
+  },
+  "2024-02-19": {
+   "sales_tax_incl": 166090,
+   "orders": 13
+  },
+  "2024-02-20": {
+   "sales_tax_incl": 111630,
+   "orders": 8
+  },
+  "2024-02-21": {
+   "sales_tax_incl": 112100,
+   "orders": 8
+  },
+  "2024-02-22": {
+   "sales_tax_incl": 168880,
+   "orders": 10
+  },
+  "2024-02-23": {
+   "sales_tax_incl": 90760,
+   "orders": 7
+  },
+  "2024-02-24": {
+   "sales_tax_incl": 150810,
+   "orders": 11
+  },
+  "2024-02-25": {
+   "sales_tax_incl": 633430,
+   "orders": 19
+  },
+  "2024-02-26": {
+   "sales_tax_incl": 78780,
+   "orders": 6
+  },
+  "2024-02-27": {
+   "sales_tax_incl": 64390,
+   "orders": 4
+  },
+  "2024-02-28": {
+   "sales_tax_incl": 271680,
+   "orders": 10
+  },
+  "2024-02-29": {
+   "sales_tax_incl": 135280,
+   "orders": 6
+  },
+  "2024-03-01": {
+   "sales_tax_incl": 463260,
+   "orders": 25
+  },
+  "2024-03-02": {
+   "sales_tax_incl": 811330,
+   "orders": 47
+  },
+  "2024-03-03": {
+   "sales_tax_incl": 908520,
+   "orders": 55
+  },
+  "2024-03-04": {
+   "sales_tax_incl": 467800,
+   "orders": 28
+  },
+  "2024-03-05": {
+   "sales_tax_incl": 245960,
+   "orders": 16
+  },
+  "2024-03-06": {
+   "sales_tax_incl": 290330,
+   "orders": 16
+  },
+  "2024-03-07": {
+   "sales_tax_incl": 317710,
+   "orders": 17
+  },
+  "2024-03-08": {
+   "sales_tax_incl": 363050,
+   "orders": 13
+  },
+  "2024-03-09": {
+   "sales_tax_incl": 257270,
+   "orders": 19
+  },
+  "2024-03-10": {
+   "sales_tax_incl": 363530,
+   "orders": 20
+  },
+  "2024-03-11": {
+   "sales_tax_incl": 129400,
+   "orders": 8
+  },
+  "2024-03-12": {
+   "sales_tax_incl": 177780,
+   "orders": 12
+  },
+  "2024-03-13": {
+   "sales_tax_incl": 163840,
+   "orders": 13
+  },
+  "2024-03-14": {
+   "sales_tax_incl": 286080,
+   "orders": 15
+  },
+  "2024-03-15": {
+   "sales_tax_incl": 700460,
+   "orders": 37
+  },
+  "2024-03-16": {
+   "sales_tax_incl": 829110,
+   "orders": 45
+  },
+  "2024-03-17": {
+   "sales_tax_incl": 133060,
+   "orders": 10
+  },
+  "2024-03-18": {
+   "sales_tax_incl": 288120,
+   "orders": 18
+  },
+  "2024-03-19": {
+   "sales_tax_incl": 179380,
+   "orders": 5
+  },
+  "2024-03-20": {
+   "sales_tax_incl": 507690,
+   "orders": 19
+  },
+  "2024-03-21": {
+   "sales_tax_incl": 183880,
+   "orders": 9
+  },
+  "2024-03-22": {
+   "sales_tax_incl": 376770,
+   "orders": 18
+  },
+  "2024-03-23": {
+   "sales_tax_incl": 147540,
+   "orders": 12
+  },
+  "2024-03-24": {
+   "sales_tax_incl": 397160,
+   "orders": 18
+  },
+  "2024-03-25": {
+   "sales_tax_incl": 2360580,
+   "orders": 64
+  },
+  "2024-03-26": {
+   "sales_tax_incl": 728590,
+   "orders": 36
+  },
+  "2024-03-27": {
+   "sales_tax_incl": 381500,
+   "orders": 19
+  },
+  "2024-03-28": {
+   "sales_tax_incl": 321580,
+   "orders": 15
+  },
+  "2024-03-29": {
+   "sales_tax_incl": 1442170,
+   "orders": 85
+  },
+  "2024-03-30": {
+   "sales_tax_incl": 1173150,
+   "orders": 70
+  },
+  "2024-03-31": {
+   "sales_tax_incl": 2108780,
+   "orders": 108
+  },
+  "2024-04-01": {
+   "sales_tax_incl": 116840,
+   "orders": 9
+  },
+  "2024-04-02": {
+   "sales_tax_incl": 125510,
+   "orders": 6
+  },
+  "2024-04-03": {
+   "sales_tax_incl": 92730,
+   "orders": 5
+  },
+  "2024-04-04": {
+   "sales_tax_incl": 137700,
+   "orders": 18
+  },
+  "2024-04-05": {
+   "sales_tax_incl": 79680,
+   "orders": 7
+  },
+  "2024-04-06": {
+   "sales_tax_incl": 162030,
+   "orders": 6
+  },
+  "2024-04-07": {
+   "sales_tax_incl": 121330,
+   "orders": 6
+  },
+  "2024-04-08": {
+   "sales_tax_incl": 147950,
+   "orders": 7
+  },
+  "2024-04-09": {
+   "sales_tax_incl": 77000,
+   "orders": 3
+  },
+  "2024-04-10": {
+   "sales_tax_incl": 158400,
+   "orders": 6
+  },
+  "2024-04-11": {
+   "sales_tax_incl": 279950,
+   "orders": 13
+  },
+  "2024-04-12": {
+   "sales_tax_incl": 108790,
+   "orders": 4
+  },
+  "2024-04-13": {
+   "sales_tax_incl": 14960,
+   "orders": 1
+  },
+  "2024-04-14": {
+   "sales_tax_incl": 168410,
+   "orders": 8
+  },
+  "2024-04-15": {
+   "sales_tax_incl": 122430,
+   "orders": 7
+  },
+  "2024-04-16": {
+   "sales_tax_incl": 165660,
+   "orders": 7
+  },
+  "2024-04-17": {
+   "sales_tax_incl": 246070,
+   "orders": 13
+  },
+  "2024-04-18": {
+   "sales_tax_incl": 47300,
+   "orders": 2
+  },
+  "2024-04-19": {
+   "sales_tax_incl": 62700,
+   "orders": 3
+  },
+  "2024-04-20": {
+   "sales_tax_incl": 78210,
+   "orders": 5
+  },
+  "2024-04-21": {
+   "sales_tax_incl": 139150,
+   "orders": 8
+  },
+  "2024-04-22": {
+   "sales_tax_incl": 89100,
+   "orders": 5
+  },
+  "2024-04-23": {
+   "sales_tax_incl": 99220,
+   "orders": 5
+  },
+  "2024-04-24": {
+   "sales_tax_incl": 69960,
+   "orders": 3
+  },
+  "2024-04-25": {
+   "sales_tax_incl": 512820,
+   "orders": 12
+  },
+  "2024-04-26": {
+   "sales_tax_incl": 583660,
+   "orders": 31
+  },
+  "2024-04-27": {
+   "sales_tax_incl": 66330,
+   "orders": 4
+  },
+  "2024-04-28": {
+   "sales_tax_incl": 179410,
+   "orders": 9
+  },
+  "2024-04-29": {
+   "sales_tax_incl": 215050,
+   "orders": 10
+  },
+  "2024-04-30": {
+   "sales_tax_incl": 255200,
+   "orders": 8
+  },
+  "2024-05-01": {
+   "sales_tax_incl": 759486,
+   "orders": 40
+  },
+  "2024-05-02": {
+   "sales_tax_incl": 550110,
+   "orders": 23
+  },
+  "2024-05-03": {
+   "sales_tax_incl": 113520,
+   "orders": 7
+  },
+  "2024-05-04": {
+   "sales_tax_incl": 304246,
+   "orders": 15
+  },
+  "2024-05-05": {
+   "sales_tax_incl": 756690,
+   "orders": 36
+  },
+  "2024-05-06": {
+   "sales_tax_incl": 474980,
+   "orders": 19
+  },
+  "2024-05-07": {
+   "sales_tax_incl": 211200,
+   "orders": 11
+  },
+  "2024-05-08": {
+   "sales_tax_incl": 128260,
+   "orders": 6
+  },
+  "2024-05-09": {
+   "sales_tax_incl": 237160,
+   "orders": 10
+  },
+  "2024-05-10": {
+   "sales_tax_incl": 83160,
+   "orders": 5
+  },
+  "2024-05-11": {
+   "sales_tax_incl": 124630,
+   "orders": 7
+  },
+  "2024-05-12": {
+   "sales_tax_incl": 135520,
+   "orders": 8
+  },
+  "2024-05-13": {
+   "sales_tax_incl": 182820,
+   "orders": 10
+  },
+  "2024-05-14": {
+   "sales_tax_incl": 169730,
+   "orders": 8
+  },
+  "2024-05-15": {
+   "sales_tax_incl": 108570,
+   "orders": 6
+  },
+  "2024-05-16": {
+   "sales_tax_incl": 272690,
+   "orders": 16
+  },
+  "2024-05-17": {
+   "sales_tax_incl": 100320,
+   "orders": 6
+  },
+  "2024-05-18": {
+   "sales_tax_incl": 219450,
+   "orders": 11
+  },
+  "2024-05-19": {
+   "sales_tax_incl": 109230,
+   "orders": 7
+  },
+  "2024-05-20": {
+   "sales_tax_incl": 98890,
+   "orders": 6
+  },
+  "2024-05-21": {
+   "sales_tax_incl": 220770,
+   "orders": 11
+  },
+  "2024-05-22": {
+   "sales_tax_incl": 115060,
+   "orders": 6
+  },
+  "2024-05-23": {
+   "sales_tax_incl": 191290,
+   "orders": 10
+  },
+  "2024-05-24": {
+   "sales_tax_incl": 1249160,
+   "orders": 20
+  },
+  "2024-05-25": {
+   "sales_tax_incl": 290400,
+   "orders": 8
+  },
+  "2024-05-26": {
+   "sales_tax_incl": 195250,
+   "orders": 8
+  },
+  "2024-05-27": {
+   "sales_tax_incl": 311300,
+   "orders": 11
+  },
+  "2024-05-28": {
+   "sales_tax_incl": 289960,
+   "orders": 15
+  },
+  "2024-05-29": {
+   "sales_tax_incl": 365750,
+   "orders": 15
+  },
+  "2024-05-30": {
+   "sales_tax_incl": 130020,
+   "orders": 7
+  },
+  "2024-05-31": {
+   "sales_tax_incl": 104060,
+   "orders": 6
+  },
+  "2024-06-01": {
+   "sales_tax_incl": 214344,
+   "orders": 29
+  },
+  "2024-06-02": {
+   "sales_tax_incl": 127352,
+   "orders": 9
+  },
+  "2024-06-03": {
+   "sales_tax_incl": 193586,
+   "orders": 10
+  },
+  "2024-06-04": {
+   "sales_tax_incl": 193696,
+   "orders": 12
+  },
+  "2024-06-05": {
+   "sales_tax_incl": 132756,
+   "orders": 9
+  },
+  "2024-06-06": {
+   "sales_tax_incl": 236170,
+   "orders": 9
+  },
+  "2024-06-07": {
+   "sales_tax_incl": 142670,
+   "orders": 7
+  },
+  "2024-06-08": {
+   "sales_tax_incl": 179520,
+   "orders": 10
+  },
+  "2024-06-09": {
+   "sales_tax_incl": 294910,
+   "orders": 13
+  },
+  "2024-06-10": {
+   "sales_tax_incl": 392920,
+   "orders": 18
+  },
+  "2024-06-11": {
+   "sales_tax_incl": 201300,
+   "orders": 12
+  },
+  "2024-06-12": {
+   "sales_tax_incl": 187000,
+   "orders": 10
+  },
+  "2024-06-13": {
+   "sales_tax_incl": 417780,
+   "orders": 21
+  },
+  "2024-06-14": {
+   "sales_tax_incl": 252670,
+   "orders": 12
+  },
+  "2024-06-15": {
+   "sales_tax_incl": 245286,
+   "orders": 12
+  },
+  "2024-06-16": {
+   "sales_tax_incl": 340766,
+   "orders": 21
+  },
+  "2024-06-17": {
+   "sales_tax_incl": 196996,
+   "orders": 11
+  },
+  "2024-06-18": {
+   "sales_tax_incl": 359136,
+   "orders": 16
+  },
+  "2024-06-19": {
+   "sales_tax_incl": 337810,
+   "orders": 13
+  },
+  "2024-06-20": {
+   "sales_tax_incl": 401806,
+   "orders": 14
+  },
+  "2024-06-21": {
+   "sales_tax_incl": 585832,
+   "orders": 14
+  },
+  "2024-06-22": {
+   "sales_tax_incl": 665500,
+   "orders": 18
+  },
+  "2024-06-23": {
+   "sales_tax_incl": 422950,
+   "orders": 16
+  },
+  "2024-06-24": {
+   "sales_tax_incl": 310310,
+   "orders": 10
+  },
+  "2024-06-25": {
+   "sales_tax_incl": 389620,
+   "orders": 17
+  },
+  "2024-06-26": {
+   "sales_tax_incl": 175450,
+   "orders": 10
+  },
+  "2024-06-27": {
+   "sales_tax_incl": 216700,
+   "orders": 9
+  },
+  "2024-06-28": {
+   "sales_tax_incl": 1141360,
+   "orders": 67
+  },
+  "2024-06-29": {
+   "sales_tax_incl": 423610,
+   "orders": 19
+  },
+  "2024-06-30": {
+   "sales_tax_incl": 531520,
+   "orders": 25
+  },
+  "2024-07-01": {
+   "sales_tax_incl": 493460,
+   "orders": 20
+  },
+  "2024-07-02": {
+   "sales_tax_incl": 233090,
+   "orders": 11
+  },
+  "2024-07-03": {
+   "sales_tax_incl": 339900,
+   "orders": 13
+  },
+  "2024-07-04": {
+   "sales_tax_incl": 310310,
+   "orders": 18
+  },
+  "2024-07-05": {
+   "sales_tax_incl": 570900,
+   "orders": 33
+  },
+  "2024-07-06": {
+   "sales_tax_incl": 399740,
+   "orders": 22
+  },
+  "2024-07-07": {
+   "sales_tax_incl": 463430,
+   "orders": 25
+  },
+  "2024-07-08": {
+   "sales_tax_incl": 320980,
+   "orders": 17
+  },
+  "2024-07-09": {
+   "sales_tax_incl": 357170,
+   "orders": 20
+  },
+  "2024-07-10": {
+   "sales_tax_incl": 266860,
+   "orders": 16
+  },
+  "2024-07-11": {
+   "sales_tax_incl": 380270,
+   "orders": 21
+  },
+  "2024-07-12": {
+   "sales_tax_incl": 220220,
+   "orders": 11
+  },
+  "2024-07-13": {
+   "sales_tax_incl": 154220,
+   "orders": 10
+  },
+  "2024-07-14": {
+   "sales_tax_incl": 224620,
+   "orders": 11
+  },
+  "2024-07-15": {
+   "sales_tax_incl": 226600,
+   "orders": 13
+  },
+  "2024-07-16": {
+   "sales_tax_incl": 280720,
+   "orders": 14
+  },
+  "2024-07-17": {
+   "sales_tax_incl": 307560,
+   "orders": 17
+  },
+  "2024-07-18": {
+   "sales_tax_incl": 399630,
+   "orders": 20
+  },
+  "2024-07-19": {
+   "sales_tax_incl": 199980,
+   "orders": 11
+  },
+  "2024-07-20": {
+   "sales_tax_incl": 113520,
+   "orders": 7
+  },
+  "2024-07-21": {
+   "sales_tax_incl": 185680,
+   "orders": 11
+  },
+  "2024-07-22": {
+   "sales_tax_incl": 260040,
+   "orders": 15
+  },
+  "2024-07-23": {
+   "sales_tax_incl": 245520,
+   "orders": 12
+  },
+  "2024-07-24": {
+   "sales_tax_incl": 314820,
+   "orders": 16
+  },
+  "2024-07-25": {
+   "sales_tax_incl": 583550,
+   "orders": 15
+  },
+  "2024-07-26": {
+   "sales_tax_incl": 439174,
+   "orders": 24
+  },
+  "2024-07-27": {
+   "sales_tax_incl": 430112,
+   "orders": 25
+  },
+  "2024-07-28": {
+   "sales_tax_incl": 307514,
+   "orders": 35
+  },
+  "2024-07-29": {
+   "sales_tax_incl": 492864,
+   "orders": 34
+  },
+  "2024-07-30": {
+   "sales_tax_incl": 269224,
+   "orders": 17
+  },
+  "2024-07-31": {
+   "sales_tax_incl": 283250,
+   "orders": 16
+  },
+  "2024-08-01": {
+   "sales_tax_incl": 280720,
+   "orders": 13
+  },
+  "2024-08-02": {
+   "sales_tax_incl": 1085260,
+   "orders": 18
+  },
+  "2024-08-03": {
+   "sales_tax_incl": 583440,
+   "orders": 17
+  },
+  "2024-08-04": {
+   "sales_tax_incl": 458920,
+   "orders": 18
+  },
+  "2024-08-05": {
+   "sales_tax_incl": 318450,
+   "orders": 11
+  },
+  "2024-08-06": {
+   "sales_tax_incl": 221320,
+   "orders": 11
+  },
+  "2024-08-07": {
+   "sales_tax_incl": 331870,
+   "orders": 11
+  },
+  "2024-08-08": {
+   "sales_tax_incl": 161370,
+   "orders": 9
+  },
+  "2024-08-09": {
+   "sales_tax_incl": 471802,
+   "orders": 23
+  },
+  "2024-08-10": {
+   "sales_tax_incl": 418838,
+   "orders": 22
+  },
+  "2024-08-11": {
+   "sales_tax_incl": 272346,
+   "orders": 14
+  },
+  "2024-08-12": {
+   "sales_tax_incl": 416130,
+   "orders": 10
+  },
+  "2024-08-13": {
+   "sales_tax_incl": 252120,
+   "orders": 13
+  },
+  "2024-08-14": {
+   "sales_tax_incl": 215710,
+   "orders": 11
+  },
+  "2024-08-15": {
+   "sales_tax_incl": 235386,
+   "orders": 15
+  },
+  "2024-08-16": {
+   "sales_tax_incl": 168300,
+   "orders": 9
+  },
+  "2024-08-17": {
+   "sales_tax_incl": 292380,
+   "orders": 17
+  },
+  "2024-08-18": {
+   "sales_tax_incl": 307450,
+   "orders": 16
+  },
+  "2024-08-19": {
+   "sales_tax_incl": 100072,
+   "orders": 7
+  },
+  "2024-08-20": {
+   "sales_tax_incl": 122760,
+   "orders": 7
+  },
+  "2024-08-21": {
+   "sales_tax_incl": 147620,
+   "orders": 8
+  },
+  "2024-08-22": {
+   "sales_tax_incl": 144100,
+   "orders": 8
+  },
+  "2024-08-23": {
+   "sales_tax_incl": 639210,
+   "orders": 17
+  },
+  "2024-08-24": {
+   "sales_tax_incl": 240680,
+   "orders": 8
+  },
+  "2024-08-25": {
+   "sales_tax_incl": 420310,
+   "orders": 16
+  },
+  "2024-08-26": {
+   "sales_tax_incl": 228910,
+   "orders": 11
+  },
+  "2024-08-27": {
+   "sales_tax_incl": 123640,
+   "orders": 6
+  },
+  "2024-08-28": {
+   "sales_tax_incl": 139480,
+   "orders": 8
+  },
+  "2024-08-29": {
+   "sales_tax_incl": 221760,
+   "orders": 5
+  },
+  "2024-08-30": {
+   "sales_tax_incl": 68090,
+   "orders": 3
+  },
+  "2024-08-31": {
+   "sales_tax_incl": 310750,
+   "orders": 7
+  },
+  "2024-09-01": {
+   "sales_tax_incl": 88660,
+   "orders": 5
+  },
+  "2024-09-02": {
+   "sales_tax_incl": 175450,
+   "orders": 11
+  },
+  "2024-09-03": {
+   "sales_tax_incl": 154880,
+   "orders": 8
+  },
+  "2024-09-04": {
+   "sales_tax_incl": 246840,
+   "orders": 12
+  },
+  "2024-09-05": {
+   "sales_tax_incl": 405680,
+   "orders": 22
+  },
+  "2024-09-06": {
+   "sales_tax_incl": 185680,
+   "orders": 11
+  },
+  "2024-09-07": {
+   "sales_tax_incl": 361570,
+   "orders": 18
+  },
+  "2024-09-08": {
+   "sales_tax_incl": 234960,
+   "orders": 10
+  },
+  "2024-09-09": {
+   "sales_tax_incl": 314380,
+   "orders": 14
+  },
+  "2024-09-10": {
+   "sales_tax_incl": 210540,
+   "orders": 8
+  },
+  "2024-09-11": {
+   "sales_tax_incl": 124520,
+   "orders": 6
+  },
+  "2024-09-12": {
+   "sales_tax_incl": 68420,
+   "orders": 4
+  },
+  "2024-09-13": {
+   "sales_tax_incl": 283470,
+   "orders": 16
+  },
+  "2024-09-14": {
+   "sales_tax_incl": 176220,
+   "orders": 11
+  },
+  "2024-09-15": {
+   "sales_tax_incl": 178200,
+   "orders": 11
+  },
+  "2024-09-16": {
+   "sales_tax_incl": 292160,
+   "orders": 12
+  },
+  "2024-09-17": {
+   "sales_tax_incl": 184800,
+   "orders": 9
+  },
+  "2024-09-18": {
+   "sales_tax_incl": 185680,
+   "orders": 11
+  },
+  "2024-09-19": {
+   "sales_tax_incl": 133760,
+   "orders": 8
+  },
+  "2024-09-20": {
+   "sales_tax_incl": 355300,
+   "orders": 18
+  },
+  "2024-09-21": {
+   "sales_tax_incl": 1121560,
+   "orders": 29
+  },
+  "2024-09-22": {
+   "sales_tax_incl": 270600,
+   "orders": 15
+  },
+  "2024-09-23": {
+   "sales_tax_incl": 473440,
+   "orders": 17
+  },
+  "2024-09-24": {
+   "sales_tax_incl": 537680,
+   "orders": 15
+  },
+  "2024-09-25": {
+   "sales_tax_incl": 189860,
+   "orders": 9
+  },
+  "2024-09-26": {
+   "sales_tax_incl": 360910,
+   "orders": 12
+  },
+  "2024-09-27": {
+   "sales_tax_incl": 1112430,
+   "orders": 39
+  },
+  "2024-09-28": {
+   "sales_tax_incl": 507540,
+   "orders": 20
+  },
+  "2024-09-29": {
+   "sales_tax_incl": 287100,
+   "orders": 14
+  },
+  "2024-09-30": {
+   "sales_tax_incl": 305030,
+   "orders": 10
+  },
+  "2024-10-01": {
+   "sales_tax_incl": 315920,
+   "orders": 15
+  },
+  "2024-10-02": {
+   "sales_tax_incl": 278300,
+   "orders": 15
+  },
+  "2024-10-03": {
+   "sales_tax_incl": 202730,
+   "orders": 9
+  },
+  "2024-10-04": {
+   "sales_tax_incl": 198220,
+   "orders": 10
+  },
+  "2024-10-05": {
+   "sales_tax_incl": 246510,
+   "orders": 11
+  },
+  "2024-10-06": {
+   "sales_tax_incl": 310200,
+   "orders": 15
+  },
+  "2024-10-07": {
+   "sales_tax_incl": 244420,
+   "orders": 11
+  },
+  "2024-10-08": {
+   "sales_tax_incl": 283030,
+   "orders": 9
+  },
+  "2024-10-09": {
+   "sales_tax_incl": 213950,
+   "orders": 9
+  },
+  "2024-10-10": {
+   "sales_tax_incl": 179960,
+   "orders": 10
+  },
+  "2024-10-11": {
+   "sales_tax_incl": 426690,
+   "orders": 15
+  },
+  "2024-10-12": {
+   "sales_tax_incl": 347270,
+   "orders": 9
+  },
+  "2024-10-13": {
+   "sales_tax_incl": 166320,
+   "orders": 8
+  },
+  "2024-10-14": {
+   "sales_tax_incl": 358050,
+   "orders": 13
+  },
+  "2024-10-15": {
+   "sales_tax_incl": 275220,
+   "orders": 9
+  },
+  "2024-10-16": {
+   "sales_tax_incl": 254650,
+   "orders": 13
+  },
+  "2024-10-17": {
+   "sales_tax_incl": 90420,
+   "orders": 5
+  },
+  "2024-10-18": {
+   "sales_tax_incl": 136510,
+   "orders": 6
+  },
+  "2024-10-19": {
+   "sales_tax_incl": 193600,
+   "orders": 9
+  },
+  "2024-10-20": {
+   "sales_tax_incl": 309320,
+   "orders": 13
+  },
+  "2024-10-21": {
+   "sales_tax_incl": 80300,
+   "orders": 3
+  },
+  "2024-10-22": {
+   "sales_tax_incl": 104390,
+   "orders": 5
+  },
+  "2024-10-23": {
+   "sales_tax_incl": 214940,
+   "orders": 11
+  },
+  "2024-10-24": {
+   "sales_tax_incl": 201960,
+   "orders": 9
+  },
+  "2024-10-25": {
+   "sales_tax_incl": 1048300,
+   "orders": 13
+  },
+  "2024-10-26": {
+   "sales_tax_incl": 1160500,
+   "orders": 31
+  },
+  "2024-10-27": {
+   "sales_tax_incl": 647130,
+   "orders": 19
+  },
+  "2024-10-28": {
+   "sales_tax_incl": 235950,
+   "orders": 11
+  },
+  "2024-10-29": {
+   "sales_tax_incl": 728090,
+   "orders": 16
+  },
+  "2024-10-30": {
+   "sales_tax_incl": 412060,
+   "orders": 9
+  },
+  "2024-10-31": {
+   "sales_tax_incl": 923780,
+   "orders": 17
+  },
+  "2024-11-01": {
+   "sales_tax_incl": 2383150,
+   "orders": 47
+  },
+  "2024-11-02": {
+   "sales_tax_incl": 973830,
+   "orders": 23
+  },
+  "2024-11-03": {
+   "sales_tax_incl": 509850,
+   "orders": 18
+  },
+  "2024-11-04": {
+   "sales_tax_incl": 749650,
+   "orders": 23
+  },
+  "2024-11-05": {
+   "sales_tax_incl": 358490,
+   "orders": 11
+  },
+  "2024-11-06": {
+   "sales_tax_incl": 522280,
+   "orders": 13
+  },
+  "2024-11-07": {
+   "sales_tax_incl": 212960,
+   "orders": 11
+  },
+  "2024-11-08": {
+   "sales_tax_incl": 319000,
+   "orders": 9
+  },
+  "2024-11-09": {
+   "sales_tax_incl": 319660,
+   "orders": 14
+  },
+  "2024-11-10": {
+   "sales_tax_incl": 308770,
+   "orders": 13
+  },
+  "2024-11-11": {
+   "sales_tax_incl": 268840,
+   "orders": 9
+  },
+  "2024-11-12": {
+   "sales_tax_incl": 296560,
+   "orders": 8
+  },
+  "2024-11-13": {
+   "sales_tax_incl": 218680,
+   "orders": 9
+  },
+  "2024-11-14": {
+   "sales_tax_incl": 157850,
+   "orders": 6
+  },
+  "2024-11-15": {
+   "sales_tax_incl": 315150,
+   "orders": 8
+  },
+  "2024-11-16": {
+   "sales_tax_incl": 209990,
+   "orders": 5
+  },
+  "2024-11-17": {
+   "sales_tax_incl": 199650,
+   "orders": 7
+  },
+  "2024-11-18": {
+   "sales_tax_incl": 29920,
+   "orders": 2
+  },
+  "2024-11-19": {
+   "sales_tax_incl": 73260,
+   "orders": 2
+  },
+  "2024-11-20": {
+   "sales_tax_incl": 406450,
+   "orders": 8
+  },
+  "2024-11-21": {
+   "sales_tax_incl": 263230,
+   "orders": 6
+  },
+  "2024-11-22": {
+   "sales_tax_incl": 670560,
+   "orders": 10
+  },
+  "2024-11-23": {
+   "sales_tax_incl": 922460,
+   "orders": 9
+  },
+  "2024-11-24": {
+   "sales_tax_incl": 707740,
+   "orders": 15
+  },
+  "2024-11-25": {
+   "sales_tax_incl": 1029270,
+   "orders": 34
+  },
+  "2024-11-26": {
+   "sales_tax_incl": 635360,
+   "orders": 16
+  },
+  "2024-11-27": {
+   "sales_tax_incl": 575190,
+   "orders": 15
+  },
+  "2024-11-28": {
+   "sales_tax_incl": 629750,
+   "orders": 20
+  },
+  "2024-11-29": {
+   "sales_tax_incl": 900130,
+   "orders": 27
+  },
+  "2024-11-30": {
+   "sales_tax_incl": 575190,
+   "orders": 16
+  },
+  "2024-12-01": {
+   "sales_tax_incl": 394130,
+   "orders": 19
+  },
+  "2024-12-02": {
+   "sales_tax_incl": 363660,
+   "orders": 15
+  },
+  "2024-12-03": {
+   "sales_tax_incl": 165110,
+   "orders": 5
+  },
+  "2024-12-04": {
+   "sales_tax_incl": 468710,
+   "orders": 13
+  },
+  "2024-12-05": {
+   "sales_tax_incl": 426360,
+   "orders": 10
+  },
+  "2024-12-06": {
+   "sales_tax_incl": 647570,
+   "orders": 18
+  },
+  "2024-12-07": {
+   "sales_tax_incl": 434940,
+   "orders": 12
+  },
+  "2024-12-08": {
+   "sales_tax_incl": 298980,
+   "orders": 13
+  },
+  "2024-12-09": {
+   "sales_tax_incl": 288750,
+   "orders": 8
+  },
+  "2024-12-10": {
+   "sales_tax_incl": 339460,
+   "orders": 15
+  },
+  "2024-12-11": {
+   "sales_tax_incl": 446490,
+   "orders": 17
+  },
+  "2024-12-12": {
+   "sales_tax_incl": 1392270,
+   "orders": 32
+  },
+  "2024-12-13": {
+   "sales_tax_incl": 1796740,
+   "orders": 41
+  },
+  "2024-12-14": {
+   "sales_tax_incl": 1231890,
+   "orders": 45
+  },
+  "2024-12-15": {
+   "sales_tax_incl": 777700,
+   "orders": 28
+  },
+  "2024-12-16": {
+   "sales_tax_incl": 576840,
+   "orders": 22
+  },
+  "2024-12-17": {
+   "sales_tax_incl": 469260,
+   "orders": 17
+  },
+  "2024-12-18": {
+   "sales_tax_incl": 351890,
+   "orders": 13
+  },
+  "2024-12-19": {
+   "sales_tax_incl": 667700,
+   "orders": 15
+  },
+  "2024-12-20": {
+   "sales_tax_incl": 1202080,
+   "orders": 20
+  },
+  "2024-12-21": {
+   "sales_tax_incl": 1208570,
+   "orders": 24
+  },
+  "2024-12-22": {
+   "sales_tax_incl": 470910,
+   "orders": 17
+  },
+  "2024-12-23": {
+   "sales_tax_incl": 612260,
+   "orders": 19
+  },
+  "2024-12-24": {
+   "sales_tax_incl": 767690,
+   "orders": 17
+  },
+  "2024-12-25": {
+   "sales_tax_incl": 1480490,
+   "orders": 26
+  },
+  "2024-12-26": {
+   "sales_tax_incl": 757680,
+   "orders": 19
+  },
+  "2024-12-27": {
+   "sales_tax_incl": 455730,
+   "orders": 14
+  },
+  "2024-12-28": {
+   "sales_tax_incl": 358930,
+   "orders": 10
+  },
+  "2024-12-29": {
+   "sales_tax_incl": 385330,
+   "orders": 10
+  },
+  "2024-12-30": {
+   "sales_tax_incl": 46860,
+   "orders": 3
+  },
+  "2024-12-31": {
+   "sales_tax_incl": 35200,
+   "orders": 2
+  },
+  "2025-01-01": {
+   "sales_tax_incl": 788480,
+   "orders": 10
+  },
+  "2025-01-02": {
+   "sales_tax_incl": 334620,
+   "orders": 10
+  },
+  "2025-01-03": {
+   "sales_tax_incl": 211750,
+   "orders": 10
+  },
+  "2025-01-04": {
+   "sales_tax_incl": 338690,
+   "orders": 6
+  },
+  "2025-01-05": {
+   "sales_tax_incl": 228030,
+   "orders": 11
+  },
+  "2025-01-06": {
+   "sales_tax_incl": 522500,
+   "orders": 13
+  },
+  "2025-01-07": {
+   "sales_tax_incl": 478830,
+   "orders": 12
+  },
+  "2025-01-08": {
+   "sales_tax_incl": 150590,
+   "orders": 6
+  },
+  "2025-01-09": {
+   "sales_tax_incl": 134090,
+   "orders": 6
+  },
+  "2025-01-10": {
+   "sales_tax_incl": 177100,
+   "orders": 3
+  },
+  "2025-01-11": {
+   "sales_tax_incl": 170500,
+   "orders": 2
+  },
+  "2025-01-12": {
+   "sales_tax_incl": 266860,
+   "orders": 6
+  },
+  "2025-01-13": {
+   "sales_tax_incl": 245410,
+   "orders": 12
+  },
+  "2025-01-14": {
+   "sales_tax_incl": 328680,
+   "orders": 6
+  },
+  "2025-01-15": {
+   "sales_tax_incl": 71830,
+   "orders": 3
+  },
+  "2025-01-16": {
+   "sales_tax_incl": 340890,
+   "orders": 12
+  },
+  "2025-01-17": {
+   "sales_tax_incl": 283140,
+   "orders": 11
+  },
+  "2025-01-18": {
+   "sales_tax_incl": 151030,
+   "orders": 6
+  },
+  "2025-01-19": {
+   "sales_tax_incl": 131230,
+   "orders": 4
+  },
+  "2025-01-20": {
+   "sales_tax_incl": 275660,
+   "orders": 6
+  },
+  "2025-01-21": {
+   "sales_tax_incl": 171490,
+   "orders": 7
+  },
+  "2025-01-22": {
+   "sales_tax_incl": 94600,
+   "orders": 4
+  },
+  "2025-01-23": {
+   "sales_tax_incl": 248490,
+   "orders": 6
+  },
+  "2025-01-24": {
+   "sales_tax_incl": 1728650,
+   "orders": 54
+  },
+  "2025-01-25": {
+   "sales_tax_incl": 628430,
+   "orders": 16
+  },
+  "2025-01-26": {
+   "sales_tax_incl": 336160,
+   "orders": 15
+  },
+  "2025-01-27": {
+   "sales_tax_incl": 226600,
+   "orders": 7
+  },
+  "2025-01-28": {
+   "sales_tax_incl": 194590,
+   "orders": 6
+  },
+  "2025-01-29": {
+   "sales_tax_incl": 140250,
+   "orders": 6
+  },
+  "2025-01-30": {
+   "sales_tax_incl": 211860,
+   "orders": 5
+  },
+  "2025-01-31": {
+   "sales_tax_incl": 163900,
+   "orders": 7
+  },
+  "2025-02-01": {
+   "sales_tax_incl": 321640,
+   "orders": 14
+  },
+  "2025-02-02": {
+   "sales_tax_incl": 378950,
+   "orders": 13
+  },
+  "2025-02-03": {
+   "sales_tax_incl": 286550,
+   "orders": 7
+  },
+  "2025-02-04": {
+   "sales_tax_incl": 288200,
+   "orders": 14
+  },
+  "2025-02-05": {
+   "sales_tax_incl": 461450,
+   "orders": 17
+  },
+  "2025-02-06": {
+   "sales_tax_incl": 226820,
+   "orders": 8
+  },
+  "2025-02-07": {
+   "sales_tax_incl": 208450,
+   "orders": 9
+  },
+  "2025-02-08": {
+   "sales_tax_incl": 348590,
+   "orders": 16
+  },
+  "2025-02-09": {
+   "sales_tax_incl": 164560,
+   "orders": 8
+  },
+  "2025-02-10": {
+   "sales_tax_incl": 234960,
+   "orders": 10
+  },
+  "2025-02-11": {
+   "sales_tax_incl": 248050,
+   "orders": 10
+  },
+  "2025-02-12": {
+   "sales_tax_incl": 244090,
+   "orders": 11
+  },
+  "2025-02-13": {
+   "sales_tax_incl": 426470,
+   "orders": 15
+  },
+  "2025-02-14": {
+   "sales_tax_incl": 323290,
+   "orders": 15
+  },
+  "2025-02-15": {
+   "sales_tax_incl": 189530,
+   "orders": 8
+  },
+  "2025-02-16": {
+   "sales_tax_incl": 359920,
+   "orders": 16
+  },
+  "2025-02-17": {
+   "sales_tax_incl": 152570,
+   "orders": 7
+  },
+  "2025-02-18": {
+   "sales_tax_incl": 164560,
+   "orders": 8
+  },
+  "2025-02-19": {
+   "sales_tax_incl": 208450,
+   "orders": 9
+  },
+  "2025-02-20": {
+   "sales_tax_incl": 281050,
+   "orders": 8
+  },
+  "2025-02-21": {
+   "sales_tax_incl": 159280,
+   "orders": 8
+  },
+  "2025-02-22": {
+   "sales_tax_incl": 408320,
+   "orders": 7
+  },
+  "2025-02-23": {
+   "sales_tax_incl": 245300,
+   "orders": 8
+  },
+  "2025-02-24": {
+   "sales_tax_incl": 704000,
+   "orders": 13
+  },
+  "2025-02-25": {
+   "sales_tax_incl": 542850,
+   "orders": 11
+  },
+  "2025-02-26": {
+   "sales_tax_incl": 129800,
+   "orders": 6
+  },
+  "2025-02-27": {
+   "sales_tax_incl": 83600,
+   "orders": 3
+  },
+  "2025-02-28": {
+   "sales_tax_incl": 791340,
+   "orders": 20
+  },
+  "2025-03-01": {
+   "sales_tax_incl": 480480,
+   "orders": 12
+  },
+  "2025-03-02": {
+   "sales_tax_incl": 414480,
+   "orders": 17
+  },
+  "2025-03-03": {
+   "sales_tax_incl": 110000,
+   "orders": 5
+  },
+  "2025-03-04": {
+   "sales_tax_incl": 432630,
+   "orders": 13
+  },
+  "2025-03-05": {
+   "sales_tax_incl": 155650,
+   "orders": 6
+  },
+  "2025-03-06": {
+   "sales_tax_incl": 100100,
+   "orders": 5
+  },
+  "2025-03-07": {
+   "sales_tax_incl": 178750,
+   "orders": 8
+  },
+  "2025-03-08": {
+   "sales_tax_incl": 178530,
+   "orders": 9
+  },
+  "2025-03-09": {
+   "sales_tax_incl": 286220,
+   "orders": 10
+  },
+  "2025-03-10": {
+   "sales_tax_incl": 211860,
+   "orders": 9
+  },
+  "2025-03-11": {
+   "sales_tax_incl": 123200,
+   "orders": 6
+  },
+  "2025-03-12": {
+   "sales_tax_incl": 191840,
+   "orders": 8
+  },
+  "2025-03-13": {
+   "sales_tax_incl": 420200,
+   "orders": 27
+  },
+  "2025-03-14": {
+   "sales_tax_incl": 281490,
+   "orders": 14
+  },
+  "2025-03-15": {
+   "sales_tax_incl": 273570,
+   "orders": 13
+  },
+  "2025-03-16": {
+   "sales_tax_incl": 363220,
+   "orders": 19
+  },
+  "2025-03-17": {
+   "sales_tax_incl": 168190,
+   "orders": 7
+  },
+  "2025-03-18": {
+   "sales_tax_incl": 370260,
+   "orders": 12
+  },
+  "2025-03-19": {
+   "sales_tax_incl": 150700,
+   "orders": 8
+  },
+  "2025-03-20": {
+   "sales_tax_incl": 260590,
+   "orders": 14
+  },
+  "2025-03-21": {
+   "sales_tax_incl": 2060960,
+   "orders": 33
+  },
+  "2025-03-22": {
+   "sales_tax_incl": 418000,
+   "orders": 13
+  },
+  "2025-03-23": {
+   "sales_tax_incl": 277860,
+   "orders": 10
+  },
+  "2025-03-24": {
+   "sales_tax_incl": 184030,
+   "orders": 10
+  },
+  "2025-03-25": {
+   "sales_tax_incl": 126720,
+   "orders": 7
+  },
+  "2025-03-26": {
+   "sales_tax_incl": 205700,
+   "orders": 11
+  },
+  "2025-03-27": {
+   "sales_tax_incl": 335280,
+   "orders": 16
+  },
+  "2025-03-28": {
+   "sales_tax_incl": 864115,
+   "orders": 20
+  },
+  "2025-03-29": {
+   "sales_tax_incl": 392160,
+   "orders": 13
+  },
+  "2025-03-30": {
+   "sales_tax_incl": 294585,
+   "orders": 14
+  },
+  "2025-03-31": {
+   "sales_tax_incl": 278850,
+   "orders": 9
+  },
+  "2025-04-01": {
+   "sales_tax_incl": 292160,
+   "orders": 17
+  },
+  "2025-04-02": {
+   "sales_tax_incl": 197560,
+   "orders": 11
+  },
+  "2025-04-03": {
+   "sales_tax_incl": 276215,
+   "orders": 11
+  },
+  "2025-04-04": {
+   "sales_tax_incl": 261800,
+   "orders": 11
+  },
+  "2025-04-05": {
+   "sales_tax_incl": 1736500,
+   "orders": 85
+  },
+  "2025-04-06": {
+   "sales_tax_incl": 489060,
+   "orders": 26
+  },
+  "2025-04-07": {
+   "sales_tax_incl": 306900,
+   "orders": 15
+  },
+  "2025-04-08": {
+   "sales_tax_incl": 171820,
+   "orders": 10
+  },
+  "2025-04-09": {
+   "sales_tax_incl": 249260,
+   "orders": 11
+  },
+  "2025-04-10": {
+   "sales_tax_incl": 256520,
+   "orders": 10
+  },
+  "2025-04-11": {
+   "sales_tax_incl": 279510,
+   "orders": 10
+  },
+  "2025-04-12": {
+   "sales_tax_incl": 321310,
+   "orders": 16
+  },
+  "2025-04-13": {
+   "sales_tax_incl": 298760,
+   "orders": 16
+  },
+  "2025-04-14": {
+   "sales_tax_incl": 324280,
+   "orders": 17
+  },
+  "2025-04-15": {
+   "sales_tax_incl": 115500,
+   "orders": 6
+  },
+  "2025-04-16": {
+   "sales_tax_incl": 272030,
+   "orders": 15
+  },
+  "2025-04-17": {
+   "sales_tax_incl": 261580,
+   "orders": 15
+  },
+  "2025-04-18": {
+   "sales_tax_incl": 446930,
+   "orders": 20
+  },
+  "2025-04-19": {
+   "sales_tax_incl": 201850,
+   "orders": 10
+  },
+  "2025-04-20": {
+   "sales_tax_incl": 380160,
+   "orders": 16
+  },
+  "2025-04-21": {
+   "sales_tax_incl": 290510,
+   "orders": 13
+  },
+  "2025-04-22": {
+   "sales_tax_incl": 276100,
+   "orders": 15
+  },
+  "2025-04-23": {
+   "sales_tax_incl": 205260,
+   "orders": 10
+  },
+  "2025-04-24": {
+   "sales_tax_incl": 168960,
+   "orders": 10
+  },
+  "2025-04-25": {
+   "sales_tax_incl": 3668760,
+   "orders": 108
+  },
+  "2025-04-26": {
+   "sales_tax_incl": 543340,
+   "orders": 20
+  },
+  "2025-04-27": {
+   "sales_tax_incl": 516170,
+   "orders": 24
+  },
+  "2025-04-28": {
+   "sales_tax_incl": 261910,
+   "orders": 14
+  },
+  "2025-04-29": {
+   "sales_tax_incl": 498960,
+   "orders": 23
+  },
+  "2025-04-30": {
+   "sales_tax_incl": 180515,
+   "orders": 8
+  },
+  "2025-05-01": {
+   "sales_tax_incl": 708075,
+   "orders": 24
+  },
+  "2025-05-02": {
+   "sales_tax_incl": 198660,
+   "orders": 11
+  },
+  "2025-05-03": {
+   "sales_tax_incl": 168300,
+   "orders": 8
+  },
+  "2025-05-04": {
+   "sales_tax_incl": 304700,
+   "orders": 15
+  },
+  "2025-05-05": {
+   "sales_tax_incl": 201300,
+   "orders": 12
+  },
+  "2025-05-06": {
+   "sales_tax_incl": 525910,
+   "orders": 20
+  },
+  "2025-05-07": {
+   "sales_tax_incl": 326700,
+   "orders": 14
+  },
+  "2025-05-08": {
+   "sales_tax_incl": 413600,
+   "orders": 17
+  },
+  "2025-05-09": {
+   "sales_tax_incl": 272805,
+   "orders": 11
+  },
+  "2025-05-10": {
+   "sales_tax_incl": 140030,
+   "orders": 8
+  },
+  "2025-05-11": {
+   "sales_tax_incl": 326700,
+   "orders": 11
+  },
+  "2025-05-12": {
+   "sales_tax_incl": 359810,
+   "orders": 16
+  },
+  "2025-05-13": {
+   "sales_tax_incl": 313615,
+   "orders": 12
+  },
+  "2025-05-14": {
+   "sales_tax_incl": 153120,
+   "orders": 9
+  },
+  "2025-05-15": {
+   "sales_tax_incl": 345630,
+   "orders": 10
+  },
+  "2025-05-16": {
+   "sales_tax_incl": 297220,
+   "orders": 16
+  },
+  "2025-05-17": {
+   "sales_tax_incl": 216480,
+   "orders": 14
+  },
+  "2025-05-18": {
+   "sales_tax_incl": 220660,
+   "orders": 13
+  },
+  "2025-05-19": {
+   "sales_tax_incl": 194700,
+   "orders": 10
+  },
+  "2025-05-20": {
+   "sales_tax_incl": 165440,
+   "orders": 8
+  },
+  "2025-05-21": {
+   "sales_tax_incl": 225060,
+   "orders": 12
+  },
+  "2025-05-22": {
+   "sales_tax_incl": 106920,
+   "orders": 6
+  },
+  "2025-05-23": {
+   "sales_tax_incl": 3338170,
+   "orders": 48
+  },
+  "2025-05-24": {
+   "sales_tax_incl": 498850,
+   "orders": 15
+  },
+  "2025-05-25": {
+   "sales_tax_incl": 270820,
+   "orders": 16
+  },
+  "2025-05-26": {
+   "sales_tax_incl": 203500,
+   "orders": 12
+  },
+  "2025-05-27": {
+   "sales_tax_incl": 148060,
+   "orders": 6
+  },
+  "2025-05-28": {
+   "sales_tax_incl": 200200,
+   "orders": 12
+  },
+  "2025-05-29": {
+   "sales_tax_incl": 139590,
+   "orders": 7
+  },
+  "2025-05-30": {
+   "sales_tax_incl": 95260,
+   "orders": 5
+  },
+  "2025-05-31": {
+   "sales_tax_incl": 158730,
+   "orders": 9
+  },
+  "2025-06-01": {
+   "sales_tax_incl": 432300,
+   "orders": 19
+  },
+  "2025-06-02": {
+   "sales_tax_incl": 308110,
+   "orders": 13
+  },
+  "2025-06-03": {
+   "sales_tax_incl": 339240,
+   "orders": 20
+  },
+  "2025-06-04": {
+   "sales_tax_incl": 255750,
+   "orders": 12
+  },
+  "2025-06-05": {
+   "sales_tax_incl": 237055,
+   "orders": 10
+  },
+  "2025-06-06": {
+   "sales_tax_incl": 897600,
+   "orders": 43
+  },
+  "2025-06-07": {
+   "sales_tax_incl": 425920,
+   "orders": 18
+  },
+  "2025-06-08": {
+   "sales_tax_incl": 172700,
+   "orders": 10
+  },
+  "2025-06-09": {
+   "sales_tax_incl": 233200,
+   "orders": 12
+  },
+  "2025-06-10": {
+   "sales_tax_incl": 261470,
+   "orders": 14
+  },
+  "2025-06-11": {
+   "sales_tax_incl": 143110,
+   "orders": 8
+  },
+  "2025-06-12": {
+   "sales_tax_incl": 112200,
+   "orders": 7
+  },
+  "2025-06-13": {
+   "sales_tax_incl": 643280,
+   "orders": 38
+  },
+  "2025-06-14": {
+   "sales_tax_incl": 416290,
+   "orders": 25
+  },
+  "2025-06-15": {
+   "sales_tax_incl": 377080,
+   "orders": 19
+  },
+  "2025-06-16": {
+   "sales_tax_incl": 293810,
+   "orders": 17
+  },
+  "2025-06-17": {
+   "sales_tax_incl": 326370,
+   "orders": 17
+  },
+  "2025-06-18": {
+   "sales_tax_incl": 392040,
+   "orders": 23
+  },
+  "2025-06-19": {
+   "sales_tax_incl": 205040,
+   "orders": 12
+  },
+  "2025-06-20": {
+   "sales_tax_incl": 3517690,
+   "orders": 38
+  },
+  "2025-06-21": {
+   "sales_tax_incl": 747340,
+   "orders": 14
+  },
+  "2025-06-22": {
+   "sales_tax_incl": 610060,
+   "orders": 16
+  },
+  "2025-06-23": {
+   "sales_tax_incl": 303930,
+   "orders": 15
+  },
+  "2025-06-24": {
+   "sales_tax_incl": 623700,
+   "orders": 16
+  },
+  "2025-06-25": {
+   "sales_tax_incl": 279620,
+   "orders": 17
+  },
+  "2025-06-26": {
+   "sales_tax_incl": 255200,
+   "orders": 14
+  },
+  "2025-06-27": {
+   "sales_tax_incl": 2201540,
+   "orders": 79
+  },
+  "2025-06-28": {
+   "sales_tax_incl": 434610,
+   "orders": 19
+  },
+  "2025-06-29": {
+   "sales_tax_incl": 452870,
+   "orders": 21
+  },
+  "2025-06-30": {
+   "sales_tax_incl": 508640,
+   "orders": 22
+  },
+  "2025-07-01": {
+   "sales_tax_incl": 412940,
+   "orders": 22
+  },
+  "2025-07-02": {
+   "sales_tax_incl": 213180,
+   "orders": 12
+  },
+  "2025-07-03": {
+   "sales_tax_incl": 253220,
+   "orders": 14
+  },
+  "2025-07-04": {
+   "sales_tax_incl": 282700,
+   "orders": 16
+  },
+  "2025-07-05": {
+   "sales_tax_incl": 199320,
+   "orders": 12
+  },
+  "2025-07-06": {
+   "sales_tax_incl": 520080,
+   "orders": 28
+  },
+  "2025-07-07": {
+   "sales_tax_incl": 423280,
+   "orders": 19
+  },
+  "2025-07-08": {
+   "sales_tax_incl": 315700,
+   "orders": 14
+  },
+  "2025-07-09": {
+   "sales_tax_incl": 265650,
+   "orders": 15
+  },
+  "2025-07-10": {
+   "sales_tax_incl": 311850,
+   "orders": 19
+  },
+  "2025-07-11": {
+   "sales_tax_incl": 180180,
+   "orders": 11
+  },
+  "2025-07-12": {
+   "sales_tax_incl": 191620,
+   "orders": 11
+  },
+  "2025-07-13": {
+   "sales_tax_incl": 384120,
+   "orders": 19
+  },
+  "2025-07-14": {
+   "sales_tax_incl": 192610,
+   "orders": 10
+  },
+  "2025-07-15": {
+   "sales_tax_incl": 210100,
+   "orders": 8
+  },
+  "2025-07-16": {
+   "sales_tax_incl": 322740,
+   "orders": 15
+  },
+  "2025-07-17": {
+   "sales_tax_incl": 167640,
+   "orders": 11
+  },
+  "2025-07-18": {
+   "sales_tax_incl": 364650,
+   "orders": 17
+  },
+  "2025-07-19": {
+   "sales_tax_incl": 316030,
+   "orders": 10
+  },
+  "2025-07-20": {
+   "sales_tax_incl": 309430,
+   "orders": 13
+  },
+  "2025-07-21": {
+   "sales_tax_incl": 261580,
+   "orders": 14
+  },
+  "2025-07-22": {
+   "sales_tax_incl": 53460,
+   "orders": 4
+  },
+  "2025-07-23": {
+   "sales_tax_incl": 231550,
+   "orders": 12
+  },
+  "2025-07-24": {
+   "sales_tax_incl": 224180,
+   "orders": 12
+  },
+  "2025-07-25": {
+   "sales_tax_incl": 1709070,
+   "orders": 25
+  },
+  "2025-07-26": {
+   "sales_tax_incl": 935990,
+   "orders": 16
+  },
+  "2025-07-27": {
+   "sales_tax_incl": 452210,
+   "orders": 13
+  },
+  "2025-07-28": {
+   "sales_tax_incl": 181720,
+   "orders": 9
+  },
+  "2025-07-29": {
+   "sales_tax_incl": 337150,
+   "orders": 13
+  },
+  "2025-07-30": {
+   "sales_tax_incl": 280060,
+   "orders": 10
+  },
+  "2025-07-31": {
+   "sales_tax_incl": 324500,
+   "orders": 18
+  },
+  "2025-08-01": {
+   "sales_tax_incl": 224840,
+   "orders": 14
+  },
+  "2025-08-02": {
+   "sales_tax_incl": 182600,
+   "orders": 12
+  },
+  "2025-08-03": {
+   "sales_tax_incl": 258610,
+   "orders": 14
+  },
+  "2025-08-04": {
+   "sales_tax_incl": 141900,
+   "orders": 7
+  },
+  "2025-08-05": {
+   "sales_tax_incl": 209330,
+   "orders": 11
+  },
+  "2025-08-06": {
+   "sales_tax_incl": 108900,
+   "orders": 6
+  },
+  "2025-08-07": {
+   "sales_tax_incl": 413270,
+   "orders": 20
+  },
+  "2025-08-08": {
+   "sales_tax_incl": 148060,
+   "orders": 9
+  },
+  "2025-08-09": {
+   "sales_tax_incl": 316360,
+   "orders": 16
+  },
+  "2025-08-10": {
+   "sales_tax_incl": 142560,
+   "orders": 8
+  },
+  "2025-08-11": {
+   "sales_tax_incl": 277530,
+   "orders": 16
+  },
+  "2025-08-12": {
+   "sales_tax_incl": 132000,
+   "orders": 7
+  },
+  "2025-08-13": {
+   "sales_tax_incl": 82720,
+   "orders": 5
+  },
+  "2025-08-14": {
+   "sales_tax_incl": 119900,
+   "orders": 7
+  },
+  "2025-08-15": {
+   "sales_tax_incl": 87560,
+   "orders": 6
+  },
+  "2025-08-16": {
+   "sales_tax_incl": 109230,
+   "orders": 7
+  },
+  "2025-08-17": {
+   "sales_tax_incl": 313060,
+   "orders": 16
+  },
+  "2025-08-18": {
+   "sales_tax_incl": 171160,
+   "orders": 8
+  },
+  "2025-08-19": {
+   "sales_tax_incl": 64460,
+   "orders": 4
+  },
+  "2025-08-20": {
+   "sales_tax_incl": 172700,
+   "orders": 10
+  },
+  "2025-08-21": {
+   "sales_tax_incl": 141900,
+   "orders": 7
+  },
+  "2025-08-22": {
+   "sales_tax_incl": 2815780,
+   "orders": 88
+  },
+  "2025-08-23": {
+   "sales_tax_incl": 1449580,
+   "orders": 30
+  },
+  "2025-08-24": {
+   "sales_tax_incl": 925650,
+   "orders": 26
+  },
+  "2025-08-25": {
+   "sales_tax_incl": 441980,
+   "orders": 16
+  },
+  "2025-08-26": {
+   "sales_tax_incl": 987250,
+   "orders": 18
+  },
+  "2025-08-27": {
+   "sales_tax_incl": 267410,
+   "orders": 13
+  },
+  "2025-08-28": {
+   "sales_tax_incl": 219450,
+   "orders": 9
+  },
+  "2025-08-29": {
+   "sales_tax_incl": 53900,
+   "orders": 3
+  },
+  "2025-08-30": {
+   "sales_tax_incl": 172040,
+   "orders": 10
+  },
+  "2025-08-31": {
+   "sales_tax_incl": 153560,
+   "orders": 8
+  },
+  "2025-09-01": {
+   "sales_tax_incl": 248710,
+   "orders": 14
+  },
+  "2025-09-02": {
+   "sales_tax_incl": 262240,
+   "orders": 14
+  },
+  "2025-09-03": {
+   "sales_tax_incl": 245960,
+   "orders": 13
+  },
+  "2025-09-04": {
+   "sales_tax_incl": 151800,
+   "orders": 7
+  },
+  "2025-09-05": {
+   "sales_tax_incl": 179520,
+   "orders": 6
+  },
+  "2025-09-06": {
+   "sales_tax_incl": 250800,
+   "orders": 10
+  },
+  "2025-09-07": {
+   "sales_tax_incl": 158400,
+   "orders": 7
+  },
+  "2025-09-08": {
+   "sales_tax_incl": 100760,
+   "orders": 6
+  },
+  "2025-09-09": {
+   "sales_tax_incl": 69960,
+   "orders": 4
+  },
+  "2025-09-10": {
+   "sales_tax_incl": 246950,
+   "orders": 11
+  },
+  "2025-09-11": {
+   "sales_tax_incl": 146520,
+   "orders": 8
+  },
+  "2025-09-12": {
+   "sales_tax_incl": 204050,
+   "orders": 10
+  },
+  "2025-09-13": {
+   "sales_tax_incl": 128150,
+   "orders": 6
+  },
+  "2025-09-14": {
+   "sales_tax_incl": 123200,
+   "orders": 6
+  },
+  "2025-09-15": {
+   "sales_tax_incl": 170500,
+   "orders": 9
+  },
+  "2025-09-16": {
+   "sales_tax_incl": 56650,
+   "orders": 2
+  },
+  "2025-09-17": {
+   "sales_tax_incl": 92950,
+   "orders": 6
+  },
+  "2025-09-18": {
+   "sales_tax_incl": 193600,
+   "orders": 8
+  },
+  "2025-09-19": {
+   "sales_tax_incl": 1416815,
+   "orders": 48
+  },
+  "2025-09-20": {
+   "sales_tax_incl": 317900,
+   "orders": 14
+  },
+  "2025-09-21": {
+   "sales_tax_incl": 462560,
+   "orders": 15
+  },
+  "2025-09-22": {
+   "sales_tax_incl": 361460,
+   "orders": 18
+  },
+  "2025-09-23": {
+   "sales_tax_incl": 176665,
+   "orders": 6
+  },
+  "2025-09-24": {
+   "sales_tax_incl": 159720,
+   "orders": 9
+  },
+  "2025-09-25": {
+   "sales_tax_incl": 265100,
+   "orders": 13
+  },
+  "2025-09-26": {
+   "sales_tax_incl": 5727441,
+   "orders": 121
+  },
+  "2025-09-27": {
+   "sales_tax_incl": 1337715,
+   "orders": 22
+  },
+  "2025-09-28": {
+   "sales_tax_incl": 490710,
+   "orders": 19
+  },
+  "2025-09-29": {
+   "sales_tax_incl": 275990,
+   "orders": 12
+  },
+  "2025-09-30": {
+   "sales_tax_incl": 592900,
+   "orders": 14
+  },
+  "2025-10-01": {
+   "sales_tax_incl": 201960,
+   "orders": 9
+  },
+  "2025-10-02": {
+   "sales_tax_incl": 403920,
+   "orders": 15
+  },
+  "2025-10-03": {
+   "sales_tax_incl": 141900,
+   "orders": 7
+  },
+  "2025-10-04": {
+   "sales_tax_incl": 300630,
+   "orders": 12
+  },
+  "2025-10-05": {
+   "sales_tax_incl": 174790,
+   "orders": 9
+  },
+  "2025-10-06": {
+   "sales_tax_incl": 279620,
+   "orders": 13
+  },
+  "2025-10-07": {
+   "sales_tax_incl": 356840,
+   "orders": 16
+  },
+  "2025-10-08": {
+   "sales_tax_incl": 282920,
+   "orders": 11
+  },
+  "2025-10-09": {
+   "sales_tax_incl": 310860,
+   "orders": 11
+  },
+  "2025-10-10": {
+   "sales_tax_incl": 317020,
+   "orders": 14
+  },
+  "2025-10-11": {
+   "sales_tax_incl": 166100,
+   "orders": 6
+  },
+  "2025-10-12": {
+   "sales_tax_incl": 359155,
+   "orders": 11
+  },
+  "2025-10-13": {
+   "sales_tax_incl": 170500,
+   "orders": 8
+  },
+  "2025-10-14": {
+   "sales_tax_incl": 303050,
+   "orders": 12
+  },
+  "2025-10-15": {
+   "sales_tax_incl": 301400,
+   "orders": 6
+  },
+  "2025-10-16": {
+   "sales_tax_incl": 134200,
+   "orders": 7
+  },
+  "2025-10-17": {
+   "sales_tax_incl": 177100,
+   "orders": 6
+  },
+  "2025-10-18": {
+   "sales_tax_incl": 86130,
+   "orders": 4
+  },
+  "2025-10-19": {
+   "sales_tax_incl": 217030,
+   "orders": 8
+  },
+  "2025-10-20": {
+   "sales_tax_incl": 108130,
+   "orders": 5
+  },
+  "2025-10-21": {
+   "sales_tax_incl": 159610,
+   "orders": 7
+  },
+  "2025-10-22": {
+   "sales_tax_incl": 142780,
+   "orders": 6
+  },
+  "2025-10-23": {
+   "sales_tax_incl": 251570,
+   "orders": 8
+  },
+  "2025-10-24": {
+   "sales_tax_incl": 2635248,
+   "orders": 67
+  },
+  "2025-10-25": {
+   "sales_tax_incl": 682330,
+   "orders": 13
+  },
+  "2025-10-26": {
+   "sales_tax_incl": 411840,
+   "orders": 11
+  },
+  "2025-10-27": {
+   "sales_tax_incl": 605330,
+   "orders": 19
+  },
+  "2025-10-28": {
+   "sales_tax_incl": 377960,
+   "orders": 12
+  },
+  "2025-10-29": {
+   "sales_tax_incl": 242990,
+   "orders": 9
+  },
+  "2025-10-30": {
+   "sales_tax_incl": 111100,
+   "orders": 5
+  },
+  "2025-10-31": {
+   "sales_tax_incl": 212410,
+   "orders": 9
+  },
+  "2025-11-01": {
+   "sales_tax_incl": 444950,
+   "orders": 15
+  },
+  "2025-11-02": {
+   "sales_tax_incl": 408760,
+   "orders": 13
+  },
+  "2025-11-03": {
+   "sales_tax_incl": 236170,
+   "orders": 12
+  },
+  "2025-11-04": {
+   "sales_tax_incl": 176330,
+   "orders": 7
+  },
+  "2025-11-05": {
+   "sales_tax_incl": 239470,
+   "orders": 11
+  },
+  "2025-11-06": {
+   "sales_tax_incl": 327915,
+   "orders": 13
+  },
+  "2025-11-07": {
+   "sales_tax_incl": 218680,
+   "orders": 10
+  },
+  "2025-11-08": {
+   "sales_tax_incl": 211530,
+   "orders": 8
+  },
+  "2025-11-09": {
+   "sales_tax_incl": 341550,
+   "orders": 14
+  },
+  "2025-11-10": {
+   "sales_tax_incl": 339685,
+   "orders": 13
+  },
+  "2025-11-11": {
+   "sales_tax_incl": 122430,
+   "orders": 5
+  },
+  "2025-11-12": {
+   "sales_tax_incl": 291830,
+   "orders": 8
+  },
+  "2025-11-13": {
+   "sales_tax_incl": 136400,
+   "orders": 7
+  },
+  "2025-11-14": {
+   "sales_tax_incl": 184800,
+   "orders": 9
+  },
+  "2025-11-15": {
+   "sales_tax_incl": 441210,
+   "orders": 12
+  },
+  "2025-11-16": {
+   "sales_tax_incl": 221430,
+   "orders": 5
+  },
+  "2025-11-17": {
+   "sales_tax_incl": 57200,
+   "orders": 3
+  },
+  "2025-11-18": {
+   "sales_tax_incl": 391715,
+   "orders": 8
+  },
+  "2025-11-19": {
+   "sales_tax_incl": 214390,
+   "orders": 7
+  },
+  "2025-11-20": {
+   "sales_tax_incl": 316800,
+   "orders": 9
+  },
+  "2025-11-21": {
+   "sales_tax_incl": 275330,
+   "orders": 8
+  },
+  "2025-11-22": {
+   "sales_tax_incl": 5913278,
+   "orders": 158
+  },
+  "2025-11-23": {
+   "sales_tax_incl": 1042085,
+   "orders": 28
+  },
+  "2025-11-24": {
+   "sales_tax_incl": 1062122,
+   "orders": 33
+  },
+  "2025-11-25": {
+   "sales_tax_incl": 209182,
+   "orders": 7
+  },
+  "2025-11-26": {
+   "sales_tax_incl": 186010,
+   "orders": 8
+  },
+  "2025-11-27": {
+   "sales_tax_incl": 323582,
+   "orders": 9
+  },
+  "2025-11-28": {
+   "sales_tax_incl": 1486870,
+   "orders": 17
+  },
+  "2025-11-29": {
+   "sales_tax_incl": 1104400,
+   "orders": 14
+  },
+  "2025-11-30": {
+   "sales_tax_incl": 229166,
+   "orders": 9
+  },
+  "2025-12-01": {
+   "sales_tax_incl": 691647,
+   "orders": 17
+  },
+  "2025-12-02": {
+   "sales_tax_incl": 717753,
+   "orders": 12
+  },
+  "2025-12-03": {
+   "sales_tax_incl": 470805,
+   "orders": 15
+  },
+  "2025-12-04": {
+   "sales_tax_incl": 180620,
+   "orders": 7
+  },
+  "2025-12-05": {
+   "sales_tax_incl": 198586,
+   "orders": 8
+  },
+  "2025-12-06": {
+   "sales_tax_incl": 240900,
+   "orders": 10
+  },
+  "2025-12-07": {
+   "sales_tax_incl": 289740,
+   "orders": 12
+  },
+  "2025-12-08": {
+   "sales_tax_incl": 504025,
+   "orders": 14
+  },
+  "2025-12-09": {
+   "sales_tax_incl": 184250,
+   "orders": 8
+  },
+  "2025-12-10": {
+   "sales_tax_incl": 245850,
+   "orders": 12
+  },
+  "2025-12-11": {
+   "sales_tax_incl": 192830,
+   "orders": 10
+  },
+  "2025-12-12": {
+   "sales_tax_incl": 441320,
+   "orders": 12
+  },
+  "2025-12-13": {
+   "sales_tax_incl": 14473928,
+   "orders": 297
+  },
+  "2025-12-14": {
+   "sales_tax_incl": 1514969,
+   "orders": 49
+  },
+  "2025-12-15": {
+   "sales_tax_incl": 1301715,
+   "orders": 31
+  },
+  "2025-12-16": {
+   "sales_tax_incl": 1090942,
+   "orders": 33
+  },
+  "2025-12-17": {
+   "sales_tax_incl": 583555,
+   "orders": 15
+  },
+  "2025-12-18": {
+   "sales_tax_incl": 725508,
+   "orders": 22
+  },
+  "2025-12-19": {
+   "sales_tax_incl": 615340,
+   "orders": 19
+  },
+  "2025-12-20": {
+   "sales_tax_incl": 985820,
+   "orders": 53
+  },
+  "2025-12-21": {
+   "sales_tax_incl": 743077,
+   "orders": 30
+  },
+  "2025-12-22": {
+   "sales_tax_incl": 345972,
+   "orders": 15
+  },
+  "2025-12-23": {
+   "sales_tax_incl": 400576,
+   "orders": 14
+  },
+  "2025-12-24": {
+   "sales_tax_incl": 554510,
+   "orders": 21
+  },
+  "2025-12-25": {
+   "sales_tax_incl": 748225,
+   "orders": 18
+  },
+  "2025-12-26": {
+   "sales_tax_incl": 402827,
+   "orders": 19
+  },
+  "2025-12-27": {
+   "sales_tax_incl": 397100,
+   "orders": 26
+  },
+  "2025-12-28": {
+   "sales_tax_incl": 536800,
+   "orders": 30
+  },
+  "2025-12-29": {
+   "sales_tax_incl": 432960,
+   "orders": 18
+  },
+  "2025-12-30": {
+   "sales_tax_incl": 362450,
+   "orders": 15
+  },
+  "2025-12-31": {
+   "sales_tax_incl": 409535,
+   "orders": 16
+  },
+  "2026-01-01": {
+   "sales_tax_incl": 677600,
+   "orders": 20
+  },
+  "2026-01-02": {
+   "sales_tax_incl": 146630,
+   "orders": 6
+  },
+  "2026-01-03": {
+   "sales_tax_incl": 316286,
+   "orders": 12
+  },
+  "2026-01-04": {
+   "sales_tax_incl": 586446,
+   "orders": 20
+  },
+  "2026-01-05": {
+   "sales_tax_incl": 289487,
+   "orders": 9
+  },
+  "2026-01-06": {
+   "sales_tax_incl": 258830,
+   "orders": 9
+  },
+  "2026-01-07": {
+   "sales_tax_incl": 159610,
+   "orders": 7
+  },
+  "2026-01-08": {
+   "sales_tax_incl": 238260,
+   "orders": 8
+  },
+  "2026-01-09": {
+   "sales_tax_incl": 219780,
+   "orders": 9
+  },
+  "2026-01-10": {
+   "sales_tax_incl": 1966629,
+   "orders": 49
+  },
+  "2026-01-11": {
+   "sales_tax_incl": 638198,
+   "orders": 19
+  },
+  "2026-01-12": {
+   "sales_tax_incl": 315500,
+   "orders": 11
+  },
+  "2026-01-13": {
+   "sales_tax_incl": 275445,
+   "orders": 9
+  },
+  "2026-01-14": {
+   "sales_tax_incl": 258390,
+   "orders": 9
+  },
+  "2026-01-15": {
+   "sales_tax_incl": 346278,
+   "orders": 14
+  },
+  "2026-01-16": {
+   "sales_tax_incl": 371360,
+   "orders": 7
+  },
+  "2026-01-17": {
+   "sales_tax_incl": 388300,
+   "orders": 18
+  },
+  "2026-01-18": {
+   "sales_tax_incl": 516340,
+   "orders": 13
+  },
+  "2026-01-19": {
+   "sales_tax_incl": 216260,
+   "orders": 8
+  },
+  "2026-01-20": {
+   "sales_tax_incl": 173616,
+   "orders": 5
+  },
+  "2026-01-21": {
+   "sales_tax_incl": 531872,
+   "orders": 13
+  },
+  "2026-01-22": {
+   "sales_tax_incl": 249282,
+   "orders": 6
+  },
+  "2026-01-23": {
+   "sales_tax_incl": 1962911,
+   "orders": 24
+  },
+  "2026-01-24": {
+   "sales_tax_incl": 1347522,
+   "orders": 44
+  },
+  "2026-01-25": {
+   "sales_tax_incl": 760031,
+   "orders": 29
+  },
+  "2026-01-26": {
+   "sales_tax_incl": 523160,
+   "orders": 16
+  },
+  "2026-01-27": {
+   "sales_tax_incl": 305910,
+   "orders": 9
+  },
+  "2026-01-28": {
+   "sales_tax_incl": 546208,
+   "orders": 16
+  },
+  "2026-01-29": {
+   "sales_tax_incl": 475750,
+   "orders": 11
+  },
+  "2026-01-30": {
+   "sales_tax_incl": 324940,
+   "orders": 11
+  },
+  "2026-01-31": {
+   "sales_tax_incl": 461362,
+   "orders": 13
+  },
+  "2026-02-01": {
+   "sales_tax_incl": 444185,
+   "orders": 16
+  },
+  "2026-02-02": {
+   "sales_tax_incl": 122650,
+   "orders": 5
+  },
+  "2026-02-03": {
+   "sales_tax_incl": 152900,
+   "orders": 8
+  },
+  "2026-02-04": {
+   "sales_tax_incl": 398860,
+   "orders": 8
+  },
+  "2026-02-05": {
+   "sales_tax_incl": 243686,
+   "orders": 10
+  },
+  "2026-02-06": {
+   "sales_tax_incl": 237617,
+   "orders": 8
+  },
+  "2026-02-07": {
+   "sales_tax_incl": 380275,
+   "orders": 10
+  },
+  "2026-02-08": {
+   "sales_tax_incl": 270825,
+   "orders": 10
+  },
+  "2026-02-09": {
+   "sales_tax_incl": 488032,
+   "orders": 27
+  },
+  "2026-02-10": {
+   "sales_tax_incl": 197632,
+   "orders": 7
+  },
+  "2026-02-11": {
+   "sales_tax_incl": 258835,
+   "orders": 10
+  },
+  "2026-02-12": {
+   "sales_tax_incl": 187990,
+   "orders": 8
+  },
+  "2026-02-13": {
+   "sales_tax_incl": 173910,
+   "orders": 8
+  },
+  "2026-02-14": {
+   "sales_tax_incl": 432322,
+   "orders": 18
+  },
+  "2026-02-15": {
+   "sales_tax_incl": 353502,
+   "orders": 13
+  },
+  "2026-02-16": {
+   "sales_tax_incl": 317135,
+   "orders": 11
+  },
+  "2026-02-17": {
+   "sales_tax_incl": 248490,
+   "orders": 9
+  },
+  "2026-02-18": {
+   "sales_tax_incl": 231990,
+   "orders": 9
+  },
+  "2026-02-19": {
+   "sales_tax_incl": 339570,
+   "orders": 13
+  },
+  "2026-02-20": {
+   "sales_tax_incl": 321492,
+   "orders": 11
+  },
+  "2026-02-21": {
+   "sales_tax_incl": 618860,
+   "orders": 27
+  },
+  "2026-02-22": {
+   "sales_tax_incl": 548496,
+   "orders": 26
+  },
+  "2026-02-23": {
+   "sales_tax_incl": 326810,
+   "orders": 16
+  },
+  "2026-02-24": {
+   "sales_tax_incl": 588280,
+   "orders": 19
+  },
+  "2026-02-25": {
+   "sales_tax_incl": 84260,
+   "orders": 5
+  },
+  "2026-02-26": {
+   "sales_tax_incl": 383405,
+   "orders": 13
+  },
+  "2026-02-27": {
+   "sales_tax_incl": 2228055,
+   "orders": 24
+  },
+  "2026-02-28": {
+   "sales_tax_incl": 655930,
+   "orders": 7
+  },
+  "2026-03-01": {
+   "sales_tax_incl": 592575,
+   "orders": 14
+  },
+  "2026-03-02": {
+   "sales_tax_incl": 413490,
+   "orders": 15
+  },
+  "2026-03-03": {
+   "sales_tax_incl": 564532,
+   "orders": 13
+  },
+  "2026-03-04": {
+   "sales_tax_incl": 250800,
+   "orders": 12
+  },
+  "2026-03-05": {
+   "sales_tax_incl": 162360,
+   "orders": 8
+  },
+  "2026-03-06": {
+   "sales_tax_incl": 197120,
+   "orders": 9
+  },
+  "2026-03-07": {
+   "sales_tax_incl": 983692,
+   "orders": 37
+  },
+  "2026-03-08": {
+   "sales_tax_incl": 321750,
+   "orders": 14
+  },
+  "2026-03-09": {
+   "sales_tax_incl": 218900,
+   "orders": 10
+  },
+  "2026-03-10": {
+   "sales_tax_incl": 324060,
+   "orders": 15
+  },
+  "2026-03-11": {
+   "sales_tax_incl": 197742,
+   "orders": 8
+  },
+  "2026-03-12": {
+   "sales_tax_incl": 227442,
+   "orders": 10
+  },
+  "2026-03-13": {
+   "sales_tax_incl": 211681,
+   "orders": 8
+  },
+  "2026-03-14": {
+   "sales_tax_incl": 483010,
+   "orders": 18
+  },
+  "2026-03-15": {
+   "sales_tax_incl": 157300,
+   "orders": 7
+  },
+  "2026-03-16": {
+   "sales_tax_incl": 204050,
+   "orders": 9
+  },
+  "2026-03-17": {
+   "sales_tax_incl": 260112,
+   "orders": 10
+  },
+  "2026-03-18": {
+   "sales_tax_incl": 247060,
+   "orders": 10
+  },
+  "2026-03-19": {
+   "sales_tax_incl": 258022,
+   "orders": 11
+  },
+  "2026-03-20": {
+   "sales_tax_incl": 326260,
+   "orders": 15
+  },
+  "2026-03-21": {
+   "sales_tax_incl": 821810,
+   "orders": 17
+  },
+  "2026-03-22": {
+   "sales_tax_incl": 332420,
+   "orders": 11
+  },
+  "2026-03-23": {
+   "sales_tax_incl": 322960,
+   "orders": 15
+  },
+  "2026-03-24": {
+   "sales_tax_incl": 275440,
+   "orders": 14
+  },
+  "2026-03-25": {
+   "sales_tax_incl": 390500,
+   "orders": 15
+  },
+  "2026-03-26": {
+   "sales_tax_incl": 249222,
+   "orders": 11
+  },
+  "2026-03-27": {
+   "sales_tax_incl": 9900,
+   "orders": 1
+  },
+  "2026-03-30": {
+   "sales_tax_incl": 9900,
+   "orders": 1
+  },
+  "2026-04-22": {
+   "sales_tax_incl": 25850,
+   "orders": 1
+  },
+  "2026-04-25": {
+   "sales_tax_incl": 19800,
+   "orders": 1
+  },
+  "2026-04-30": {
+   "sales_tax_incl": 54560,
+   "orders": 2
+  }
+ },
+ "updatedAt": "2026-07-12T11:29:28.973304"
+}
