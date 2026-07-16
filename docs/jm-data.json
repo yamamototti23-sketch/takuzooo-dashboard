@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-07-16T09:08:57+09:00",
+  "updatedAt": "2026-07-16T12:35:13+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 20577421,
-    "orders": 778,
-    "aov": 26449
+    "sales": 20659613,
+    "orders": 782,
+    "aov": 26419
   },
   "month": {
-    "salesTotal": 6154314,
-    "unitsTotal": 297,
+    "salesTotal": 6236506,
+    "unitsTotal": 302,
     "days": 16
   },
   "lastYear": {
@@ -81,7 +81,7 @@
       },
       {
         "date": "2026-07-16",
-        "sales": 81444
+        "sales": 163636
       }
     ],
     "points_lastyear": [
@@ -152,16 +152,16 @@
     ]
   },
   "daily": {
-    "todayUnits": 4,
+    "todayUnits": 9,
     "yesterdayUnits": 24,
-    "todaySales": 81444,
+    "todaySales": 163636,
     "yesterdaySales": 537295
   },
   "top5": [
     {
       "rank": 1,
       "title": "『ネックレス』（Silver925）",
-      "units": 93,
+      "units": 94,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/DSC07665_2_ee65fd87-826d-4e4d-81bb-978991cd09c5.jpg?v=1783686672"
     },
@@ -175,14 +175,14 @@
     {
       "rank": 3,
       "title": "【夏モデル】「7oz Tシャツ」気温20〜30℃〜透けない万能型",
-      "units": 31,
+      "units": 33,
       "handle": "7oz-t-shirt",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/20260630__641_2_4b853f26-b3f9-42ba-ae9a-ad181234c6b8.jpg?v=1783603751"
     },
     {
       "rank": 4,
       "title": "『本革ボディーバッグ』（姫路レザー）",
-      "units": 24,
+      "units": 25,
       "handle": "stylish-genuine-leather-large-body-bag",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A1554_1_ef495592-e3a6-4e83-8ffe-1f7f917d3092.jpg?v=1783603757"
     },
