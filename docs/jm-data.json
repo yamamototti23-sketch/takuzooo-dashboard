@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-07-17T09:11:33+09:00",
+  "updatedAt": "2026-07-17T12:35:27+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 20813584,
-    "orders": 789,
-    "aov": 26380
+    "sales": 20824254,
+    "orders": 790,
+    "aov": 26360
   },
   "month": {
-    "salesTotal": 6390477,
-    "unitsTotal": 312,
+    "salesTotal": 6401147,
+    "unitsTotal": 313,
     "days": 17
   },
   "lastYear": {
@@ -85,7 +85,7 @@
       },
       {
         "date": "2026-07-17",
-        "sales": 33605
+        "sales": 44275
       }
     ],
     "points_lastyear": [
@@ -160,9 +160,9 @@
     ]
   },
   "daily": {
-    "todayUnits": 2,
+    "todayUnits": 3,
     "yesterdayUnits": 17,
-    "todaySales": 33605,
+    "todaySales": 44275,
     "yesterdaySales": 284002
   },
   "top5": [
@@ -183,7 +183,7 @@
     {
       "rank": 3,
       "title": "【夏モデル】「7oz Tシャツ」気温20〜30℃〜透けない万能型",
-      "units": 34,
+      "units": 35,
       "handle": "7oz-t-shirt",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/20260630__641_2_4b853f26-b3f9-42ba-ae9a-ad181234c6b8.jpg?v=1783603751"
     },
