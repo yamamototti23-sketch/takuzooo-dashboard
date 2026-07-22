@@ -1,21 +1,21 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-07-22T23:20:39+09:00",
+  "updatedAt": "2026-07-23T01:07:16+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 23637757,
-    "orders": 884,
-    "aov": 26740
+    "sales": 23773631,
+    "orders": 887,
+    "aov": 26802
   },
   "month": {
-    "salesTotal": 9214650,
-    "unitsTotal": 437,
-    "days": 22
+    "salesTotal": 9350524,
+    "unitsTotal": 444,
+    "days": 23
   },
   "lastYear": {
-    "salesTotal": 6152080,
-    "days": 22
+    "salesTotal": 6383630,
+    "days": 23
   },
   "trend": {
     "points": [
@@ -105,7 +105,11 @@
       },
       {
         "date": "2026-07-22",
-        "sales": 570616
+        "sales": 683190
+      },
+      {
+        "date": "2026-07-23",
+        "sales": 23300
       }
     ],
     "points_lastyear": [
@@ -196,14 +200,18 @@
       {
         "date": "2025-07-22",
         "sales": 53460
+      },
+      {
+        "date": "2025-07-23",
+        "sales": 231550
       }
     ]
   },
   "daily": {
-    "todayUnits": 22,
-    "yesterdayUnits": 13,
-    "todaySales": 570616,
-    "yesterdaySales": 252019
+    "todayUnits": 2,
+    "yesterdayUnits": 27,
+    "todaySales": 23300,
+    "yesterdaySales": 683190
   },
   "top5": [
     {
@@ -216,30 +224,30 @@
     {
       "rank": 2,
       "title": "『ブレスレット』(Silver925)",
-      "units": 61,
+      "units": 63,
       "handle": "silver-bracelet",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A2139_1_13e0dffc-5170-4770-9afa-0290f5c9afac.jpg?v=1783603757"
     },
     {
       "rank": 3,
       "title": "【夏モデル】「7oz Tシャツ」気温20〜30℃〜透けない万能型",
-      "units": 38,
+      "units": 39,
       "handle": "7oz-t-shirt",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/20260630__641_2_4b853f26-b3f9-42ba-ae9a-ad181234c6b8.jpg?v=1783603751"
     },
     {
       "rank": 4,
       "title": "『本革ボディーバッグ』（姫路レザー）",
-      "units": 38,
+      "units": 39,
       "handle": "stylish-genuine-leather-large-body-bag",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A1554_1_ef495592-e3a6-4e83-8ffe-1f7f917d3092.jpg?v=1783603757"
     },
     {
       "rank": 5,
-      "title": "「\"COOL\"イージーパンツ」~RELAXシリーズ",
+      "title": "『\"和\"ブレスレット』(Silver925)",
       "units": 15,
-      "handle": "cool-material-easy-pants",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/20260519__69_2_090eb49b-900d-4150-b696-bfb873b81aaf.jpg?v=1783603751"
+      "handle": "japanese-bracelet",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/3V7A0359_square_compressed_37a94712-9a5f-4523-b364-0e5416534cb0.jpg?v=1783565273"
     }
   ]
 }
