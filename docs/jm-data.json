@@ -1,15 +1,15 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-07-23T08:40:03+09:00",
+  "updatedAt": "2026-07-23T10:11:59+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 23987515,
+    "sales": 23961494,
     "orders": 893,
-    "aov": 26862
+    "aov": 26833
   },
   "month": {
-    "salesTotal": 9564408,
+    "salesTotal": 9538387,
     "unitsTotal": 452,
     "days": 23
   },
@@ -105,7 +105,7 @@
       },
       {
         "date": "2026-07-22",
-        "sales": 683190
+        "sales": 657169
       },
       {
         "date": "2026-07-23",
@@ -211,7 +211,7 @@
     "todayUnits": 10,
     "yesterdayUnits": 27,
     "todaySales": 237184,
-    "yesterdaySales": 683190
+    "yesterdaySales": 657169
   },
   "top5": [
     {
@@ -219,14 +219,14 @@
       "title": "『ネックレス』（Silver925）",
       "units": 137,
       "handle": "silver-necklace",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/DSC07665_2_ee65fd87-826d-4e4d-81bb-978991cd09c5.jpg?v=1783686672"
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1L4A6061_1_7ca50b37-5a29-4124-955e-90d35a5e89af.jpg?v=1780952166"
     },
     {
       "rank": 2,
       "title": "『ブレスレット』(Silver925)",
       "units": 63,
       "handle": "silver-bracelet",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A2139_1_13e0dffc-5170-4770-9afa-0290f5c9afac.jpg?v=1783603757"
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394"
     },
     {
       "rank": 3,
@@ -240,7 +240,7 @@
       "title": "【夏モデル】「7oz Tシャツ」気温20〜30℃〜透けない万能型",
       "units": 39,
       "handle": "7oz-t-shirt",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/20260630__641_2_4b853f26-b3f9-42ba-ae9a-ad181234c6b8.jpg?v=1783603751"
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/11_89fb2c50-ea69-408c-af05-993aac825213.jpg?v=1781283847"
     },
     {
       "rank": 5,
