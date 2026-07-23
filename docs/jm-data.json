@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-07-23T19:04:55+09:00",
+  "updatedAt": "2026-07-23T21:01:53+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 24055534,
-    "orders": 897,
-    "aov": 26818
+    "sales": 24384997,
+    "orders": 904,
+    "aov": 26975
   },
   "month": {
-    "salesTotal": 9632427,
-    "unitsTotal": 457,
+    "salesTotal": 9961890,
+    "unitsTotal": 468,
     "days": 23
   },
   "lastYear": {
@@ -109,7 +109,7 @@
       },
       {
         "date": "2026-07-23",
-        "sales": 331224
+        "sales": 660687
       }
     ],
     "points_lastyear": [
@@ -208,16 +208,16 @@
     ]
   },
   "daily": {
-    "todayUnits": 15,
+    "todayUnits": 26,
     "yesterdayUnits": 27,
-    "todaySales": 331224,
+    "todaySales": 660687,
     "yesterdaySales": 657169
   },
   "top5": [
     {
       "rank": 1,
       "title": "『ネックレス』（Silver925）",
-      "units": 139,
+      "units": 141,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1L4A6061_1_7ca50b37-5a29-4124-955e-90d35a5e89af.jpg?v=1780952166"
     },
@@ -244,10 +244,10 @@
     },
     {
       "rank": 5,
-      "title": "『\"和\"ブレスレット』(Silver925)",
-      "units": 15,
-      "handle": "japanese-bracelet",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/3V7A0359_square_compressed_37a94712-9a5f-4523-b364-0e5416534cb0.jpg?v=1783565273"
+      "title": "「\"サマー\"パンツ」~SMARTシリーズ",
+      "units": 16,
+      "handle": "summer-slacks-pants",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/20260417__0_204_2_5bb07572-8bc7-4e06-ab90-63ddb1dec26a.jpg?v=1783603751"
     }
   ]
 }
