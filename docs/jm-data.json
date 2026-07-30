@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-07-30T19:03:13+09:00",
+  "updatedAt": "2026-07-30T21:03:01+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 29197442,
-    "orders": 1040,
-    "aov": 28074
+    "sales": 29311452,
+    "orders": 1041,
+    "aov": 28157
   },
   "month": {
-    "salesTotal": 14774335,
-    "unitsTotal": 657,
+    "salesTotal": 14888345,
+    "unitsTotal": 659,
     "days": 30
   },
   "lastYear": {
@@ -137,7 +137,7 @@
       },
       {
         "date": "2026-07-30",
-        "sales": 117956
+        "sales": 231966
       }
     ],
     "points_lastyear": [
@@ -264,9 +264,9 @@
     ]
   },
   "daily": {
-    "todayUnits": 6,
+    "todayUnits": 8,
     "yesterdayUnits": 12,
-    "todaySales": 117956,
+    "todaySales": 231966,
     "yesterdaySales": 195360
   },
   "top5": [
@@ -301,7 +301,7 @@
     {
       "rank": 5,
       "title": "「\"サマー\"パンツ」~SMARTシリーズ",
-      "units": 38,
+      "units": 39,
       "handle": "summer-slacks-pants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/20260417__0_204_2_5bb07572-8bc7-4e06-ab90-63ddb1dec26a.jpg?v=1783603751"
     }
