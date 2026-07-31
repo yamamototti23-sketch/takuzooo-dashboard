@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-08-01T06:20:12+09:00",
+  "updatedAt": "2026-08-01T07:41:17+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 29621372,
-    "orders": 1058,
-    "aov": 27998
+    "sales": 29666362,
+    "orders": 1060,
+    "aov": 27987
   },
   "month": {
-    "salesTotal": 54010,
-    "unitsTotal": 3,
+    "salesTotal": 99000,
+    "unitsTotal": 6,
     "days": 1
   },
   "lastYear": {
@@ -21,7 +21,7 @@
     "points": [
       {
         "date": "2026-08-01",
-        "sales": 54010
+        "sales": 99000
       }
     ],
     "points_lastyear": [
@@ -32,46 +32,46 @@
     ]
   },
   "daily": {
-    "todayUnits": 3,
+    "todayUnits": 6,
     "yesterdayUnits": 14,
-    "todaySales": 54010,
+    "todaySales": 99000,
     "yesterdaySales": 272305
   },
   "top5": [
     {
       "rank": 1,
       "title": "『ネックレス』（Silver925）",
-      "units": 2,
+      "units": 3,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1L4A6061_1_7ca50b37-5a29-4124-955e-90d35a5e89af.jpg?v=1780952166"
     },
     {
       "rank": 2,
+      "title": "「\"ラグジュアリー\"サマーニット」~SMARTシリーズ",
+      "units": 1,
+      "handle": "a-luxurious-knit-that-looks-great-on-its-own",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/3V7A4800_1_907ea811-5fb2-47cb-b7aa-9c0cdad15cd3.jpg?v=1783603757"
+    },
+    {
+      "rank": 3,
+      "title": "【夏モデル】「7oz Tシャツ」気温20〜30℃〜透けない万能型",
+      "units": 1,
+      "handle": "7oz-t-shirt",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/11_89fb2c50-ea69-408c-af05-993aac825213.jpg?v=1781283847"
+    },
+    {
+      "rank": 4,
       "title": "『ブレスレット』(Silver925)",
       "units": 1,
       "handle": "silver-bracelet",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394"
     },
     {
-      "rank": 3,
-      "title": "『三つ折り財布〜パイソン革〜』",
-      "units": 0,
-      "handle": "tri-fold-wallet-python-leather",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/ffdd1b40eb9baef7a10e66ff37ac9060.jpg?v=1774174327"
-    },
-    {
-      "rank": 4,
+      "rank": 5,
       "title": "「シングルディアレザー」~SMARTシリーズ",
       "units": 0,
       "handle": "single-deer-leather",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/77d74b6514998160288b87c694db8c52.jpg?v=1731116591"
-    },
-    {
-      "rank": 5,
-      "title": "【廃盤】「紳士ショーツ」長めの\"丈感\"~RELAXシリーズ",
-      "units": 0,
-      "handle": "gentleman-shorts",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/96dfbf8ce0362a20de8ba7ab97350df7.jpg?v=1776451630"
     }
   ]
 }
