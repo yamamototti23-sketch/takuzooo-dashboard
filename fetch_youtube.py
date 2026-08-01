@@ -45,12 +45,61 @@ def dur_sec(s):
 _UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
        "(KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36")
 
-def is_members_only(video_id):
-    """Detect members-only gated content.
-    Data API returns privacyStatus='public' for members-only videos, so /watch page scraping
-    is the only reliable signal. Look for playabilityStatus.status=UNPLAYABLE + membership hint.
-    Simple Mozilla/5.0 UA gets a JS-fallback stub page — need a full browser UA + Accept-Language.
-    Fail-safe: return False on any error (fallback to excluded_video_ids.txt).
+# Public INNERTUBE key for WEB client (well-known, does not grant access to private data).
+_INNERTUBE_KEY = "AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8"
+_MEMBERS_MARKERS = (
+    "members-only", "members only", "member content",
+    "メンバー限定", "メンバーになる", "チャンネルに参加",
+    "join this channel to get access",
+)
+
+def _has_members_marker(text):
+    tl = (text or "").lower()
+    return any(m.lower() in tl for m in _MEMBERS_MARKERS)
+
+def _is_members_only_innertube(video_id):
+    """Primary detector via YouTube Innertube API (WEB client).
+    Returns True/False/None. None = indeterminate (bot-blocked etc.) → caller falls back.
+    Reason string is authoritative: reason='Join this channel to get access to members-only content...'
+    for members-only, whereas bot-blocked responses return reason='Video unavailable'.
+    """
+    try:
+        body = json.dumps({
+            "context": {"client": {"clientName": "WEB", "clientVersion": "2.20240101.00.00"}},
+            "videoId": video_id,
+        }).encode()
+        req = urllib.request.Request(
+            "https://www.youtube.com/youtubei/v1/player?key=" + _INNERTUBE_KEY,
+            data=body,
+            headers={"Content-Type": "application/json", "User-Agent": _UA},
+        )
+        with urllib.request.urlopen(req, timeout=15) as r:
+            data = json.load(r)
+        ps = data.get("playabilityStatus", {}) or {}
+        status = ps.get("status", "") or ""
+        reason = ps.get("reason") or ""
+        if _has_members_marker(reason):
+            return True
+        # errorScreen.subreason (runs / simpleText) — belt & braces
+        err = ps.get("errorScreen", {}).get("playerErrorMessageRenderer", {}) or {}
+        sub = err.get("subreason", {}) or {}
+        if isinstance(sub, dict):
+            if _has_members_marker(sub.get("simpleText", "")):
+                return True
+            for run in (sub.get("runs") or []):
+                if _has_members_marker(run.get("text", "")):
+                    return True
+        if status == "OK":
+            return False
+        # UNPLAYABLE + generic "Video unavailable" = bot-block ambiguity → indeterminate
+        return None
+    except Exception as e:
+        print(f"_is_members_only_innertube({video_id}) fail: {e}")
+        return None
+
+def _is_members_only_scrape(video_id):
+    """Fallback detector via /watch HTML scraping. Legacy signal.
+    Returns True/False. False on error (fail-soft).
     """
     try:
         req = urllib.request.Request(f"https://www.youtube.com/watch?v={video_id}",
@@ -60,7 +109,25 @@ def is_members_only(video_id):
         if '"status":"UNPLAYABLE"' in html and ('メンバー' in html or 'members-only' in html.lower()):
             return True
     except Exception as e:
-        print(f"is_members_only({video_id}) fail-soft: {e}")
+        print(f"_is_members_only_scrape({video_id}) fail-soft: {e}")
+    return False
+
+def is_members_only(video_id):
+    """Two-layer detection: Innertube API (primary) + /watch scraping (fallback).
+    Root-cause note (2026-08-01): scraping alone is unstable — YouTube's CDN sometimes
+    returns a bot-safe stub page where '"status":"UNPLAYABLE"' is absent even for members-only
+    videos (b5b9noGRnIE 沖縄旅行Vlog surfaced this). Innertube API's `reason` field is the
+    authoritative signal ("Join this channel to get access to members-only content...").
+    Fail-safe: excluded_video_ids.txt remains the manual belt-and-braces override.
+    """
+    r1 = _is_members_only_innertube(video_id)
+    if r1 is True:
+        print(f"  [members-only via innertube] {video_id}")
+        return True
+    r2 = _is_members_only_scrape(video_id)
+    if r2 is True:
+        print(f"  [members-only via scrape] {video_id}")
+        return True
     return False
 
 def slim(v): return {"date":v["date"],"views":v["views"],"title":v["title"],
