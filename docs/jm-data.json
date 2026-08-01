@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-08-01T13:34:38+09:00",
+  "updatedAt": "2026-08-01T16:14:16+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 30044414,
-    "orders": 1071,
-    "aov": 28053
+    "sales": 30109699,
+    "orders": 1073,
+    "aov": 28061
   },
   "month": {
-    "salesTotal": 477052,
-    "unitsTotal": 21,
+    "salesTotal": 542337,
+    "unitsTotal": 23,
     "days": 1
   },
   "lastYear": {
@@ -21,7 +21,7 @@
     "points": [
       {
         "date": "2026-08-01",
-        "sales": 477052
+        "sales": 542337
       }
     ],
     "points_lastyear": [
@@ -32,16 +32,16 @@
     ]
   },
   "daily": {
-    "todayUnits": 21,
+    "todayUnits": 23,
     "yesterdayUnits": 14,
-    "todaySales": 477052,
+    "todaySales": 542337,
     "yesterdaySales": 272305
   },
   "top5": [
     {
       "rank": 1,
       "title": "『ネックレス』（Silver925）",
-      "units": 5,
+      "units": 6,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1L4A6061_1_7ca50b37-5a29-4124-955e-90d35a5e89af.jpg?v=1780952166"
     },
@@ -54,17 +54,17 @@
     },
     {
       "rank": 3,
+      "title": "『\"和\"ブレスレット』(Silver925)",
+      "units": 3,
+      "handle": "japanese-bracelet",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/3V7A0359_square_compressed_37a94712-9a5f-4523-b364-0e5416534cb0.jpg?v=1783565273"
+    },
+    {
+      "rank": 4,
       "title": "50年後も着たい「スラックスデニム」（セットアップ）~SMARTシリーズ",
       "units": 2,
       "handle": "slacks-denim",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/6_eaa94988-b72a-492f-b35a-08b3b4fc5621.jpg?v=1776451630"
-    },
-    {
-      "rank": 4,
-      "title": "『\"和\"ブレスレット』(Silver925)",
-      "units": 2,
-      "handle": "japanese-bracelet",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/3V7A0359_square_compressed_37a94712-9a5f-4523-b364-0e5416534cb0.jpg?v=1783565273"
     },
     {
       "rank": 5,
