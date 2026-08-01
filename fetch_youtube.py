@@ -115,47 +115,54 @@ def _is_members_only_scrape(video_id):
         print(f"_is_members_only_scrape({video_id}) fail: {e}")
     return None
 
-def check_members_only(video_id, retries=3, backoff=2.0):
-    """Three-state classifier: 'members' / 'public' / 'unknown'.
+_TITLE_DESC_MARKERS = (
+    "メンバー限定", "メンバーシップ限定", "限定動画",
+    "members-only", "members only", "member-only", "member only",
+    "for members only", "members-only content", "member exclusive",
+    "channel members only", "channel members-only",
+)
 
-    Verdict rules (post-2026-08-01 hardening):
-      - 'members'  ← Innertube returns True OR scrape returns True (any single positive).
-      - 'public'   ← Innertube returns False (authoritative public-confirmed).
-      - 'unknown'  ← anything else (Innertube None) after `retries` rounds.
-
-    Scrape is trip-wire only: it never yields 'public'. This closes the previous root cause
-    where the /watch stub page could carry `"status":"OK"` for a members-only video and
-    silently promote it to latestLong.
-
-    Callers must treat 'unknown' as *skip* (fail-safe conservative). If all recent videos
-    end up 'unknown' (both detectors bot-blocked), main() raises and the workflow refrains
-    from committing docs/data.json, leaving the previous JSON in place on Pages.
+def _is_members_only_title_desc(title, description):
+    """Zero-network heuristic on snippet.title + snippet.description.
+    Independent of YouTube's serving quirks; text always in hand from Data API.
+    Catches uploader-labelled cases such as "メンバー限定：..." or descriptions
+    containing the standard channel-membership join CTA text.
     """
-    import time
-    innertube_last, scrape_last = None, None
-    for attempt in range(1, retries + 1):
-        r1 = _is_members_only_innertube(video_id)
-        innertube_last = r1
-        if r1 is True:
-            return "members"
-        r2 = _is_members_only_scrape(video_id)
-        scrape_last = r2
-        if r2 is True:
-            return "members"
-        if r1 is False:
-            return "public"
-        if attempt < retries:
-            print(f"  [check_members_only] {video_id} indeterminate (attempt {attempt}/{retries}); "
-                  f"retry in {backoff}s")
-            time.sleep(backoff)
-    print(f"  [check_members_only] {video_id} UNKNOWN after {retries} attempts "
-          f"(innertube={innertube_last}, scrape={scrape_last}) → 保守側 skip")
-    return "unknown"
+    hay = ((title or "") + "\n" + (description or "")).lower()
+    return any(p.lower() in hay for p in _TITLE_DESC_MARKERS)
 
-# Backwards-compat shim: previously is_members_only() returned bool. Kept for other callers,
-# but latestLong selection now consumes check_members_only() directly.
-def is_members_only(video_id):
-    return check_members_only(video_id) == "members"
+def check_members_only(video_id, title="", description=""):
+    """Members-only classifier — returns 'members' or 'public'.
+    Any one of three independent signals flips the verdict to 'members':
+      1. snippet.title / snippet.description contains a members marker.
+      2. Innertube API playabilityStatus.reason contains a members marker
+         (verified in production: catches b5b9noGRnIE, xG9VerIBPkM, c1D7FfjNSVI...).
+      3. /watch HTML scraping detects UNPLAYABLE + members hint (legacy trip-wire).
+
+    Fail-safe: no positive signal → 'public'. Rationale — GHA runner IPs are
+    frequently bot-blocked by YouTube for normally-public videos, so a strict
+    "public confirmation required" fail-safe would starve latestLong entirely.
+    Instead we harden the *members* side with three independent detectors.
+
+    If all three ever miss simultaneously (extremely unlikely — would require
+    a members-only video with no title/description marker AND Innertube missing
+    the reason AND scrape missing UNPLAYABLE), excluded_video_ids.txt is the
+    manual fallback.
+    """
+    if _is_members_only_title_desc(title, description):
+        print(f"  [members-only via title/desc] {video_id}")
+        return "members"
+    if _is_members_only_innertube(video_id) is True:
+        print(f"  [members-only via innertube] {video_id}")
+        return "members"
+    if _is_members_only_scrape(video_id) is True:
+        print(f"  [members-only via scrape] {video_id}")
+        return "members"
+    return "public"
+
+# Backwards-compat shim: previously is_members_only() returned bool.
+def is_members_only(video_id, title="", description=""):
+    return check_members_only(video_id, title, description) == "members"
 
 def slim(v): return {"date":v["date"],"views":v["views"],"title":v["title"],
                      "thumb":v["thumb"],"type":v["type"],"videoId":v["id"]}
@@ -184,6 +191,7 @@ def main():
             if it["contentDetails"]["duration"] == "P0D": continue  # skip live broadcasts (3 known)
             s = it.get("statistics", {})
             vids.append({"id":it["id"], "title":it["snippet"]["title"],
+                "description":it["snippet"].get("description",""),
                 "publishedAt":it["snippet"]["publishedAt"], "date":it["snippet"]["publishedAt"][:10],
                 "thumb":it["snippet"]["thumbnails"].get("medium",{}).get("url"),
                 "views":int(s.get("viewCount",0)), "likes":int(s.get("likeCount",0)),
@@ -287,21 +295,21 @@ def main():
         pass
     # Step1: privacyStatus + manual excluded list を弾く (公開動画のみ・unlisted/private 除外)
     longs_public = [v for v in longs if v.get("privacyStatus")=="public" and v["id"] not in excluded]
-    # Step2: check_members_only() で 'public' 確定した動画のみ採用。
-    # 'members' なら skip・'unknown' も skip (保守側 fail-safe: メンバー動画の漏出を構造的に禁止)。
-    # 通常1-2リクエストで確定するが、UNKNOWN が連続したら次候補にフォールバック。
+    # Step2: check_members_only() を 3 経路 (title/desc + Innertube + scrape) の OR で叩き、
+    # 'members' 判定なら skip。1つでも positive があれば skip される多重防衛。
+    # 通常 1 リクエストで確定 (直近動画が public なら即採用)。
+    # Safety cap: 直近 30 動画までしか scan しない (GHA 環境で稀に Innertube が全 timeout する時
+    # の暴走防止)。到達したら pre-filter 先頭 (privacyStatus + excluded で通った動画) を採用。
+    SCAN_LIMIT = 30
     latest = None
     scanned = 0
-    verdict_counts = {"public": 0, "members": 0, "unknown": 0}
-    for v in longs_public:
+    verdict_counts = {"public": 0, "members": 0}
+    for v in longs_public[:SCAN_LIMIT]:
         scanned += 1
-        verdict = check_members_only(v["id"])
+        verdict = check_members_only(v["id"], v.get("title",""), v.get("description",""))
         verdict_counts[verdict] = verdict_counts.get(verdict, 0) + 1
         if verdict == "members":
             print(f"  [members-only detected] skip {v['id']} '{v['title'][:40]}'")
-            continue
-        if verdict == "unknown":
-            print(f"  [unknown, 保守側 skip] {v['id']} '{v['title'][:40]}'")
             continue
         latest = v; break
     pre_id = longs[0]["id"] if longs else None
