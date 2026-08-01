@@ -59,9 +59,10 @@ def _has_members_marker(text):
 
 def _is_members_only_innertube(video_id):
     """Primary detector via YouTube Innertube API (WEB client).
-    Returns True/False/None. None = indeterminate (bot-blocked etc.) → caller falls back.
-    Reason string is authoritative: reason='Join this channel to get access to members-only content...'
-    for members-only, whereas bot-blocked responses return reason='Video unavailable'.
+    Returns True/False/None. None = indeterminate (bot-blocked etc.) → caller retries/falls back.
+    reason='Join this channel to get access to members-only content...' = members-only.
+    reason='Video unavailable' = bot-blocked (indeterminate).
+    status='OK' = confirmed public.
     """
     try:
         body = json.dumps({
@@ -80,7 +81,6 @@ def _is_members_only_innertube(video_id):
         reason = ps.get("reason") or ""
         if _has_members_marker(reason):
             return True
-        # errorScreen.subreason (runs / simpleText) — belt & braces
         err = ps.get("errorScreen", {}).get("playerErrorMessageRenderer", {}) or {}
         sub = err.get("subreason", {}) or {}
         if isinstance(sub, dict):
@@ -91,15 +91,18 @@ def _is_members_only_innertube(video_id):
                     return True
         if status == "OK":
             return False
-        # UNPLAYABLE + generic "Video unavailable" = bot-block ambiguity → indeterminate
         return None
     except Exception as e:
         print(f"_is_members_only_innertube({video_id}) fail: {e}")
         return None
 
 def _is_members_only_scrape(video_id):
-    """Fallback detector via /watch HTML scraping. Legacy signal.
-    Returns True/False. False on error (fail-soft).
+    """Auxiliary members-only detector via /watch HTML scraping.
+    Returns True or None only — never False. Rationale: the /watch stub page returned to
+    bots contains `"status":"OK"` even for members-only videos (verified 2026-08-01 on
+    yK1-Sfphioc / D_LjHd731sg), so a False from scraping is not trustworthy. Scraping is
+    kept purely as a *secondary trip-wire* to catch members-only content when Innertube
+    misses; the authoritative *public* verdict comes exclusively from Innertube.
     """
     try:
         req = urllib.request.Request(f"https://www.youtube.com/watch?v={video_id}",
@@ -109,26 +112,50 @@ def _is_members_only_scrape(video_id):
         if '"status":"UNPLAYABLE"' in html and ('メンバー' in html or 'members-only' in html.lower()):
             return True
     except Exception as e:
-        print(f"_is_members_only_scrape({video_id}) fail-soft: {e}")
-    return False
+        print(f"_is_members_only_scrape({video_id}) fail: {e}")
+    return None
 
-def is_members_only(video_id):
-    """Two-layer detection: Innertube API (primary) + /watch scraping (fallback).
-    Root-cause note (2026-08-01): scraping alone is unstable — YouTube's CDN sometimes
-    returns a bot-safe stub page where '"status":"UNPLAYABLE"' is absent even for members-only
-    videos (b5b9noGRnIE 沖縄旅行Vlog surfaced this). Innertube API's `reason` field is the
-    authoritative signal ("Join this channel to get access to members-only content...").
-    Fail-safe: excluded_video_ids.txt remains the manual belt-and-braces override.
+def check_members_only(video_id, retries=3, backoff=2.0):
+    """Three-state classifier: 'members' / 'public' / 'unknown'.
+
+    Verdict rules (post-2026-08-01 hardening):
+      - 'members'  ← Innertube returns True OR scrape returns True (any single positive).
+      - 'public'   ← Innertube returns False (authoritative public-confirmed).
+      - 'unknown'  ← anything else (Innertube None) after `retries` rounds.
+
+    Scrape is trip-wire only: it never yields 'public'. This closes the previous root cause
+    where the /watch stub page could carry `"status":"OK"` for a members-only video and
+    silently promote it to latestLong.
+
+    Callers must treat 'unknown' as *skip* (fail-safe conservative). If all recent videos
+    end up 'unknown' (both detectors bot-blocked), main() raises and the workflow refrains
+    from committing docs/data.json, leaving the previous JSON in place on Pages.
     """
-    r1 = _is_members_only_innertube(video_id)
-    if r1 is True:
-        print(f"  [members-only via innertube] {video_id}")
-        return True
-    r2 = _is_members_only_scrape(video_id)
-    if r2 is True:
-        print(f"  [members-only via scrape] {video_id}")
-        return True
-    return False
+    import time
+    innertube_last, scrape_last = None, None
+    for attempt in range(1, retries + 1):
+        r1 = _is_members_only_innertube(video_id)
+        innertube_last = r1
+        if r1 is True:
+            return "members"
+        r2 = _is_members_only_scrape(video_id)
+        scrape_last = r2
+        if r2 is True:
+            return "members"
+        if r1 is False:
+            return "public"
+        if attempt < retries:
+            print(f"  [check_members_only] {video_id} indeterminate (attempt {attempt}/{retries}); "
+                  f"retry in {backoff}s")
+            time.sleep(backoff)
+    print(f"  [check_members_only] {video_id} UNKNOWN after {retries} attempts "
+          f"(innertube={innertube_last}, scrape={scrape_last}) → 保守側 skip")
+    return "unknown"
+
+# Backwards-compat shim: previously is_members_only() returned bool. Kept for other callers,
+# but latestLong selection now consumes check_members_only() directly.
+def is_members_only(video_id):
+    return check_members_only(video_id) == "members"
 
 def slim(v): return {"date":v["date"],"views":v["views"],"title":v["title"],
                      "thumb":v["thumb"],"type":v["type"],"videoId":v["id"]}
@@ -260,21 +287,30 @@ def main():
         pass
     # Step1: privacyStatus + manual excluded list を弾く (公開動画のみ・unlisted/private 除外)
     longs_public = [v for v in longs if v.get("privacyStatus")=="public" and v["id"] not in excluded]
-    # Step2: 先頭から members-only 自動検知して打ち切る (通常1-2リクエストで確定)
+    # Step2: check_members_only() で 'public' 確定した動画のみ採用。
+    # 'members' なら skip・'unknown' も skip (保守側 fail-safe: メンバー動画の漏出を構造的に禁止)。
+    # 通常1-2リクエストで確定するが、UNKNOWN が連続したら次候補にフォールバック。
     latest = None
     scanned = 0
+    verdict_counts = {"public": 0, "members": 0, "unknown": 0}
     for v in longs_public:
         scanned += 1
-        if is_members_only(v["id"]):
+        verdict = check_members_only(v["id"])
+        verdict_counts[verdict] = verdict_counts.get(verdict, 0) + 1
+        if verdict == "members":
             print(f"  [members-only detected] skip {v['id']} '{v['title'][:40]}'")
+            continue
+        if verdict == "unknown":
+            print(f"  [unknown, 保守側 skip] {v['id']} '{v['title'][:40]}'")
             continue
         latest = v; break
     pre_id = longs[0]["id"] if longs else None
     post_id = latest["id"] if latest else None
     print(f"latestLong filter: pre(any)={pre_id} -> post(public)={post_id} "
-          f"(longs={len(longs)} public={len(longs_public)} excluded={len(excluded)} scanned={scanned})")
+          f"(longs={len(longs)} public={len(longs_public)} excluded={len(excluded)} "
+          f"scanned={scanned} verdicts={verdict_counts})")
     if latest is None:
-        raise RuntimeError("No non-members public long video found (all filtered out)")
+        raise RuntimeError("No confirmed-public long video found (all filtered out)")
     dd = max(1, days_ago(latest["publishedAt"]))
     last10 = [v for v in longs_public if v["id"] != latest["id"]][:9]
     last10 = [latest] + last10
