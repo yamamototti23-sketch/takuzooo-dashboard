@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-08-01T10:13:19+09:00",
+  "updatedAt": "2026-08-01T13:34:38+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 29712177,
-    "orders": 1061,
-    "aov": 28004
+    "sales": 30044414,
+    "orders": 1071,
+    "aov": 28053
   },
   "month": {
-    "salesTotal": 144815,
-    "unitsTotal": 7,
+    "salesTotal": 477052,
+    "unitsTotal": 21,
     "days": 1
   },
   "lastYear": {
@@ -21,7 +21,7 @@
     "points": [
       {
         "date": "2026-08-01",
-        "sales": 144815
+        "sales": 477052
       }
     ],
     "points_lastyear": [
@@ -32,46 +32,46 @@
     ]
   },
   "daily": {
-    "todayUnits": 7,
+    "todayUnits": 21,
     "yesterdayUnits": 14,
-    "todaySales": 144815,
+    "todaySales": 477052,
     "yesterdaySales": 272305
   },
   "top5": [
     {
       "rank": 1,
       "title": "『ネックレス』（Silver925）",
-      "units": 3,
+      "units": 5,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1L4A6061_1_7ca50b37-5a29-4124-955e-90d35a5e89af.jpg?v=1780952166"
     },
     {
       "rank": 2,
       "title": "『ブレスレット』(Silver925)",
-      "units": 1,
+      "units": 3,
       "handle": "silver-bracelet",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394"
     },
     {
       "rank": 3,
+      "title": "50年後も着たい「スラックスデニム」（セットアップ）~SMARTシリーズ",
+      "units": 2,
+      "handle": "slacks-denim",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/6_eaa94988-b72a-492f-b35a-08b3b4fc5621.jpg?v=1776451630"
+    },
+    {
+      "rank": 4,
       "title": "『\"和\"ブレスレット』(Silver925)",
-      "units": 1,
+      "units": 2,
       "handle": "japanese-bracelet",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/3V7A0359_square_compressed_37a94712-9a5f-4523-b364-0e5416534cb0.jpg?v=1783565273"
     },
     {
-      "rank": 4,
-      "title": "【夏モデル】「7oz Tシャツ」気温20〜30℃〜透けない万能型",
-      "units": 1,
-      "handle": "7oz-t-shirt",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/11_89fb2c50-ea69-408c-af05-993aac825213.jpg?v=1781283847"
-    },
-    {
       "rank": 5,
-      "title": "「\"ラグジュアリー\"サマーニット」~SMARTシリーズ",
-      "units": 1,
-      "handle": "a-luxurious-knit-that-looks-great-on-its-own",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/3V7A4800_1_907ea811-5fb2-47cb-b7aa-9c0cdad15cd3.jpg?v=1783603757"
+      "title": "「\"COOL\"オープンカラーシャツ」~RELAXシリーズ",
+      "units": 2,
+      "handle": "open-collar-short-sleeved-shirt",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/20260417__0_173_square_compressed_b867d27d-dced-43ff-b126-eeffdf4282f8.jpg?v=1783561409"
     }
   ]
 }
