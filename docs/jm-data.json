@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-08-02T07:09:46+09:00",
+  "updatedAt": "2026-08-02T08:09:43+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 30323554,
-    "orders": 1083,
-    "aov": 28000
+    "sales": 30392568,
+    "orders": 1084,
+    "aov": 28037
   },
   "month": {
-    "salesTotal": 756192,
-    "unitsTotal": 36,
+    "salesTotal": 825206,
+    "unitsTotal": 38,
     "days": 2
   },
   "lastYear": {
@@ -25,7 +25,7 @@
       },
       {
         "date": "2026-08-02",
-        "sales": 48070
+        "sales": 117084
       }
     ],
     "points_lastyear": [
@@ -40,9 +40,9 @@
     ]
   },
   "daily": {
-    "todayUnits": 3,
+    "todayUnits": 5,
     "yesterdayUnits": 33,
-    "todaySales": 48070,
+    "todaySales": 117084,
     "yesterdaySales": 708122
   },
   "top5": [
@@ -69,17 +69,17 @@
     },
     {
       "rank": 4,
-      "title": "50年後も着たい「スラックスデニム」（セットアップ）~SMARTシリーズ",
-      "units": 2,
-      "handle": "slacks-denim",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/6_eaa94988-b72a-492f-b35a-08b3b4fc5621.jpg?v=1776451630"
-    },
-    {
-      "rank": 5,
       "title": "「\"COOL\"オープンカラーシャツ」~RELAXシリーズ",
       "units": 2,
       "handle": "open-collar-short-sleeved-shirt",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/20260417__0_173_square_compressed_b867d27d-dced-43ff-b126-eeffdf4282f8.jpg?v=1783561409"
+    },
+    {
+      "rank": 5,
+      "title": "50年後も着たい「スラックスデニム」（セットアップ）~SMARTシリーズ",
+      "units": 2,
+      "handle": "slacks-denim",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/6_eaa94988-b72a-492f-b35a-08b3b4fc5621.jpg?v=1776451630"
     }
   ]
 }
