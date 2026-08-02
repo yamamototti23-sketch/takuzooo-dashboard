@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-08-02T15:46:25+09:00",
+  "updatedAt": "2026-08-02T17:59:09+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 30628958,
-    "orders": 1092,
-    "aov": 28048
+    "sales": 30660308,
+    "orders": 1093,
+    "aov": 28052
   },
   "month": {
-    "salesTotal": 1061596,
-    "unitsTotal": 50,
+    "salesTotal": 1092946,
+    "unitsTotal": 51,
     "days": 2
   },
   "lastYear": {
@@ -25,7 +25,7 @@
       },
       {
         "date": "2026-08-02",
-        "sales": 353474
+        "sales": 384824
       }
     ],
     "points_lastyear": [
@@ -40,9 +40,9 @@
     ]
   },
   "daily": {
-    "todayUnits": 17,
+    "todayUnits": 18,
     "yesterdayUnits": 33,
-    "todaySales": 353474,
+    "todaySales": 384824,
     "yesterdaySales": 708122
   },
   "top5": [
@@ -76,10 +76,10 @@
     },
     {
       "rank": 5,
-      "title": "『カーゴパンツ』(ビンテージウォッシュ)~RELAXシリーズ",
+      "title": "「\"リラックス\"タンクトップ」（30番手コーマ天竺）",
       "units": 2,
-      "handle": "cargo-pants",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/2026-04-25_16.32.19.png?v=1777125277"
+      "handle": "tank-top",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/37a2bdff473de104a9946693d33335ad.jpg?v=1776451513"
     }
   ]
 }
