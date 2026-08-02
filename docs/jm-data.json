@@ -1,21 +1,21 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-08-02T22:56:26+09:00",
+  "updatedAt": "2026-08-03T00:18:15+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 30985677,
-    "orders": 1104,
-    "aov": 28067
+    "sales": 31037124,
+    "orders": 1106,
+    "aov": 28062
   },
   "month": {
-    "salesTotal": 1418315,
-    "unitsTotal": 67,
-    "days": 2
+    "salesTotal": 1469762,
+    "unitsTotal": 70,
+    "days": 3
   },
   "lastYear": {
-    "salesTotal": 407440,
-    "days": 2
+    "salesTotal": 666050,
+    "days": 3
   },
   "trend": {
     "points": [
@@ -25,7 +25,11 @@
       },
       {
         "date": "2026-08-02",
-        "sales": 710193
+        "sales": 761640
+      },
+      {
+        "date": "2026-08-03",
+        "sales": 0
       }
     ],
     "points_lastyear": [
@@ -36,20 +40,24 @@
       {
         "date": "2025-08-02",
         "sales": 182600
+      },
+      {
+        "date": "2025-08-03",
+        "sales": 258610
       }
     ]
   },
   "daily": {
-    "todayUnits": 34,
-    "yesterdayUnits": 33,
-    "todaySales": 710193,
-    "yesterdaySales": 708122
+    "todayUnits": 0,
+    "yesterdayUnits": 37,
+    "todaySales": 0,
+    "yesterdaySales": 761640
   },
   "top5": [
     {
       "rank": 1,
       "title": "『ネックレス』（Silver925）",
-      "units": 19,
+      "units": 21,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1L4A6061_1_7ca50b37-5a29-4124-955e-90d35a5e89af.jpg?v=1780952166"
     },
@@ -62,24 +70,24 @@
     },
     {
       "rank": 3,
+      "title": "『本革ボディーバッグ』（姫路レザー）",
+      "units": 4,
+      "handle": "stylish-genuine-leather-large-body-bag",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A1554_1_ef495592-e3a6-4e83-8ffe-1f7f917d3092.jpg?v=1783603757"
+    },
+    {
+      "rank": 4,
       "title": "【夏モデル】「7oz Tシャツ」気温20〜30℃〜透けない万能型",
       "units": 4,
       "handle": "7oz-t-shirt",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/11_89fb2c50-ea69-408c-af05-993aac825213.jpg?v=1781283847"
     },
     {
-      "rank": 4,
+      "rank": 5,
       "title": "『\"和\"ブレスレット』(Silver925)",
       "units": 4,
       "handle": "japanese-bracelet",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/3V7A0359_square_compressed_37a94712-9a5f-4523-b364-0e5416534cb0.jpg?v=1783565273"
-    },
-    {
-      "rank": 5,
-      "title": "「\"サマー\"パンツ」~SMARTシリーズ",
-      "units": 3,
-      "handle": "summer-slacks-pants",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/20260417__0_204_2_5bb07572-8bc7-4e06-ab90-63ddb1dec26a.jpg?v=1783603751"
     }
   ]
 }
