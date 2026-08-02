@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-08-02T19:49:32+09:00",
+  "updatedAt": "2026-08-02T21:15:13+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 30858297,
-    "orders": 1099,
-    "aov": 28079
+    "sales": 30985677,
+    "orders": 1104,
+    "aov": 28067
   },
   "month": {
-    "salesTotal": 1290935,
-    "unitsTotal": 59,
+    "salesTotal": 1418315,
+    "unitsTotal": 67,
     "days": 2
   },
   "lastYear": {
@@ -25,7 +25,7 @@
       },
       {
         "date": "2026-08-02",
-        "sales": 582813
+        "sales": 710193
       }
     ],
     "points_lastyear": [
@@ -40,46 +40,46 @@
     ]
   },
   "daily": {
-    "todayUnits": 26,
+    "todayUnits": 34,
     "yesterdayUnits": 33,
-    "todaySales": 582813,
+    "todaySales": 710193,
     "yesterdaySales": 708122
   },
   "top5": [
     {
       "rank": 1,
       "title": "『ネックレス』（Silver925）",
-      "units": 17,
+      "units": 19,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1L4A6061_1_7ca50b37-5a29-4124-955e-90d35a5e89af.jpg?v=1780952166"
     },
     {
       "rank": 2,
       "title": "『ブレスレット』(Silver925)",
-      "units": 9,
+      "units": 11,
       "handle": "silver-bracelet",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394"
     },
     {
       "rank": 3,
+      "title": "【夏モデル】「7oz Tシャツ」気温20〜30℃〜透けない万能型",
+      "units": 4,
+      "handle": "7oz-t-shirt",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/11_89fb2c50-ea69-408c-af05-993aac825213.jpg?v=1781283847"
+    },
+    {
+      "rank": 4,
       "title": "『\"和\"ブレスレット』(Silver925)",
       "units": 4,
       "handle": "japanese-bracelet",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/3V7A0359_square_compressed_37a94712-9a5f-4523-b364-0e5416534cb0.jpg?v=1783565273"
     },
     {
-      "rank": 4,
-      "title": "【夏モデル】「7oz Tシャツ」気温20〜30℃〜透けない万能型",
-      "units": 3,
-      "handle": "7oz-t-shirt",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/11_89fb2c50-ea69-408c-af05-993aac825213.jpg?v=1781283847"
-    },
-    {
       "rank": 5,
-      "title": "「\"COOL\"オープンカラーシャツ」~RELAXシリーズ",
+      "title": "「\"サマー\"パンツ」~SMARTシリーズ",
       "units": 3,
-      "handle": "open-collar-short-sleeved-shirt",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/20260417__0_173_square_compressed_b867d27d-dced-43ff-b126-eeffdf4282f8.jpg?v=1783561409"
+      "handle": "summer-slacks-pants",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/20260417__0_204_2_5bb07572-8bc7-4e06-ab90-63ddb1dec26a.jpg?v=1783603751"
     }
   ]
 }
