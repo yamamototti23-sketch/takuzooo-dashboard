@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-08-03T19:58:39+09:00",
+  "updatedAt": "2026-08-03T22:47:55+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 31235289,
-    "orders": 1117,
-    "aov": 27964
+    "sales": 31436597,
+    "orders": 1125,
+    "aov": 27944
   },
   "month": {
-    "salesTotal": 1667927,
-    "unitsTotal": 81,
+    "salesTotal": 1869235,
+    "unitsTotal": 93,
     "days": 3
   },
   "lastYear": {
@@ -29,7 +29,7 @@
       },
       {
         "date": "2026-08-03",
-        "sales": 217635
+        "sales": 418943
       }
     ],
     "points_lastyear": [
@@ -48,44 +48,44 @@
     ]
   },
   "daily": {
-    "todayUnits": 11,
+    "todayUnits": 23,
     "yesterdayUnits": 37,
-    "todaySales": 217635,
+    "todaySales": 418943,
     "yesterdaySales": 742170
   },
   "top5": [
     {
       "rank": 1,
       "title": "『ネックレス』（Silver925）",
-      "units": 25,
+      "units": 27,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1L4A6061_1_7ca50b37-5a29-4124-955e-90d35a5e89af.jpg?v=1780952166"
     },
     {
       "rank": 2,
       "title": "『ブレスレット』(Silver925)",
-      "units": 12,
+      "units": 13,
       "handle": "silver-bracelet",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394"
     },
     {
       "rank": 3,
-      "title": "『\"和\"ブレスレット』(Silver925)",
-      "units": 5,
-      "handle": "japanese-bracelet",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/3V7A0359_square_compressed_37a94712-9a5f-4523-b364-0e5416534cb0.jpg?v=1783565273"
+      "title": "「\"リラックス\"タンクトップ」（30番手コーマ天竺）",
+      "units": 6,
+      "handle": "tank-top",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/37a2bdff473de104a9946693d33335ad.jpg?v=1776451513"
     },
     {
       "rank": 4,
       "title": "『本革ボディーバッグ』（姫路レザー）",
-      "units": 4,
+      "units": 6,
       "handle": "stylish-genuine-leather-large-body-bag",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A1554_1_ef495592-e3a6-4e83-8ffe-1f7f917d3092.jpg?v=1783603757"
     },
     {
       "rank": 5,
       "title": "【夏モデル】「7oz Tシャツ」気温20〜30℃〜透けない万能型",
-      "units": 4,
+      "units": 5,
       "handle": "7oz-t-shirt",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/11_89fb2c50-ea69-408c-af05-993aac825213.jpg?v=1781283847"
     }
