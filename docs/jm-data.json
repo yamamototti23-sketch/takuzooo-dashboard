@@ -1,21 +1,21 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-08-06T22:19:05+09:00",
+  "updatedAt": "2026-08-07T09:13:54+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 32159457,
-    "orders": 1164,
-    "aov": 27628
+    "sales": 32223147,
+    "orders": 1168,
+    "aov": 27588
   },
   "month": {
-    "salesTotal": 2592095,
-    "unitsTotal": 136,
-    "days": 6
+    "salesTotal": 2655785,
+    "unitsTotal": 140,
+    "days": 7
   },
   "lastYear": {
-    "salesTotal": 1126180,
-    "days": 6
+    "salesTotal": 1539450,
+    "days": 7
   },
   "trend": {
     "points": [
@@ -41,7 +41,11 @@
       },
       {
         "date": "2026-08-06",
-        "sales": 371938
+        "sales": 395423
+      },
+      {
+        "date": "2026-08-07",
+        "sales": 40205
       }
     ],
     "points_lastyear": [
@@ -68,14 +72,18 @@
       {
         "date": "2025-08-06",
         "sales": 108900
+      },
+      {
+        "date": "2025-08-07",
+        "sales": 413270
       }
     ]
   },
   "daily": {
-    "todayUnits": 16,
-    "yesterdayUnits": 11,
-    "todaySales": 371938,
-    "yesterdaySales": 190520
+    "todayUnits": 2,
+    "yesterdayUnits": 18,
+    "todaySales": 40205,
+    "yesterdaySales": 395423
   },
   "top5": [
     {
@@ -88,7 +96,7 @@
     {
       "rank": 2,
       "title": "『ブレスレット』(Silver925)",
-      "units": 21,
+      "units": 23,
       "handle": "silver-bracelet",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394"
     },
@@ -108,10 +116,10 @@
     },
     {
       "rank": 5,
-      "title": "「\"サマー\"パンツ」~SMARTシリーズ",
+      "title": "「\"リラックス\"タンクトップ」（30番手コーマ天竺）",
       "units": 7,
-      "handle": "summer-slacks-pants",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/20260417__0_204_2_5bb07572-8bc7-4e06-ab90-63ddb1dec26a.jpg?v=1783603751"
+      "handle": "tank-top",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/37a2bdff473de104a9946693d33335ad.jpg?v=1776451513"
     }
   ]
 }
