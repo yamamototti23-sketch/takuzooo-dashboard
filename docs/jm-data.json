@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-08-07T09:13:54+09:00",
+  "updatedAt": "2026-08-07T12:14:38+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 32223147,
-    "orders": 1168,
-    "aov": 27588
+    "sales": 32263600,
+    "orders": 1170,
+    "aov": 27576
   },
   "month": {
-    "salesTotal": 2655785,
-    "unitsTotal": 140,
+    "salesTotal": 2696238,
+    "unitsTotal": 142,
     "days": 7
   },
   "lastYear": {
@@ -45,7 +45,7 @@
       },
       {
         "date": "2026-08-07",
-        "sales": 40205
+        "sales": 80658
       }
     ],
     "points_lastyear": [
@@ -80,9 +80,9 @@
     ]
   },
   "daily": {
-    "todayUnits": 2,
+    "todayUnits": 4,
     "yesterdayUnits": 18,
-    "todaySales": 40205,
+    "todaySales": 80658,
     "yesterdaySales": 395423
   },
   "top5": [
@@ -110,16 +110,16 @@
     {
       "rank": 4,
       "title": "【夏モデル】「7oz Tシャツ」気温20〜30℃〜透けない万能型",
-      "units": 8,
+      "units": 9,
       "handle": "7oz-t-shirt",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/11_89fb2c50-ea69-408c-af05-993aac825213.jpg?v=1781283847"
     },
     {
       "rank": 5,
-      "title": "「\"リラックス\"タンクトップ」（30番手コーマ天竺）",
-      "units": 7,
-      "handle": "tank-top",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/37a2bdff473de104a9946693d33335ad.jpg?v=1776451513"
+      "title": "「\"サマー\"パンツ」~SMARTシリーズ",
+      "units": 8,
+      "handle": "summer-slacks-pants",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/20260417__0_204_2_5bb07572-8bc7-4e06-ab90-63ddb1dec26a.jpg?v=1783603751"
     }
   ]
 }
