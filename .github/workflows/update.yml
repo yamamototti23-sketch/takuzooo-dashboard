@@ -51,3 +51,4 @@ jobs:
               git fetch origin main && git rebase origin/main
               sleep $((i * 2))
             done
+          fi
