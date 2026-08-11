@@ -1,6 +1,6 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-08-11T23:43:16+09:00",
+  "updatedAt": "2026-08-12T00:38:27+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
@@ -11,11 +11,11 @@
   "month": {
     "salesTotal": 3971890,
     "unitsTotal": 205,
-    "days": 11
+    "days": 12
   },
   "lastYear": {
-    "salesTotal": 2423960,
-    "days": 11
+    "salesTotal": 2555960,
+    "days": 12
   },
   "trend": {
     "points": [
@@ -62,6 +62,10 @@
       {
         "date": "2026-08-11",
         "sales": 174704
+      },
+      {
+        "date": "2026-08-12",
+        "sales": 0
       }
     ],
     "points_lastyear": [
@@ -108,14 +112,18 @@
       {
         "date": "2025-08-11",
         "sales": 277530
+      },
+      {
+        "date": "2025-08-12",
+        "sales": 132000
       }
     ]
   },
   "daily": {
-    "todayUnits": 9,
-    "yesterdayUnits": 13,
-    "todaySales": 174704,
-    "yesterdaySales": 232317
+    "todayUnits": 0,
+    "yesterdayUnits": 9,
+    "todaySales": 0,
+    "yesterdaySales": 174704
   },
   "top5": [
     {
@@ -134,17 +142,17 @@
     },
     {
       "rank": 3,
-      "title": "『本革ボディーバッグ』（姫路レザー）",
-      "units": 14,
-      "handle": "stylish-genuine-leather-large-body-bag",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1__compressed_1ceeb199-e765-42d2-ba72-60d78d0cd57f.jpg?v=1786422673"
-    },
-    {
-      "rank": 4,
       "title": "「\"サマー\"パンツ」~SMARTシリーズ",
       "units": 14,
       "handle": "summer-slacks-pants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/7_compressed_8c5559ec-9426-4f15-91bc-9d584808070a.jpg?v=1786422778"
+    },
+    {
+      "rank": 4,
+      "title": "『本革ボディーバッグ』（姫路レザー）",
+      "units": 14,
+      "handle": "stylish-genuine-leather-large-body-bag",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1__compressed_1ceeb199-e765-42d2-ba72-60d78d0cd57f.jpg?v=1786422673"
     },
     {
       "rank": 5,
