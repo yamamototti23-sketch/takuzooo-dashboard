@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-08-12T09:42:06+09:00",
+  "updatedAt": "2026-08-12T12:09:41+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 33604922,
-    "orders": 1226,
-    "aov": 27410
+    "sales": 33741322,
+    "orders": 1230,
+    "aov": 27432
   },
   "month": {
-    "salesTotal": 4037560,
-    "unitsTotal": 207,
+    "salesTotal": 4173960,
+    "unitsTotal": 212,
     "days": 12
   },
   "lastYear": {
@@ -65,7 +65,7 @@
       },
       {
         "date": "2026-08-12",
-        "sales": 65670
+        "sales": 202070
       }
     ],
     "points_lastyear": [
@@ -120,32 +120,32 @@
     ]
   },
   "daily": {
-    "todayUnits": 2,
+    "todayUnits": 7,
     "yesterdayUnits": 9,
-    "todaySales": 65670,
+    "todaySales": 202070,
     "yesterdaySales": 174704
   },
   "top5": [
     {
       "rank": 1,
       "title": "『ネックレス』（Silver925）",
-      "units": 64,
+      "units": 65,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1__compressed_31873aeb-f599-4a1c-945f-35b53a771bd5.jpg?v=1786422419"
     },
     {
       "rank": 2,
       "title": "『ブレスレット』(Silver925)",
-      "units": 34,
+      "units": 35,
       "handle": "silver-bracelet",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/17_compressed_c5dc843d-dff2-4c8c-b4c4-3bea1d8da1ce.jpg?v=1786422692"
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/17_compressed_c5dc843d-dff2-4c8c-b4c4-3bea1d8da1ce.jpg?v=1786503967"
     },
     {
       "rank": 3,
       "title": "「\"サマー\"パンツ」~SMARTシリーズ",
-      "units": 14,
+      "units": 15,
       "handle": "summer-slacks-pants",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/7_compressed_8c5559ec-9426-4f15-91bc-9d584808070a.jpg?v=1786422778"
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/7_compressed_8c5559ec-9426-4f15-91bc-9d584808070a.jpg?v=1786503852"
     },
     {
       "rank": 4,
