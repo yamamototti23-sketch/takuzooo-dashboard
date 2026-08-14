@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-08-15T07:58:30+09:00",
+  "updatedAt": "2026-08-15T08:35:29+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 34414960,
-    "orders": 1256,
-    "aov": 27400
+    "sales": 34430690,
+    "orders": 1257,
+    "aov": 27391
   },
   "month": {
-    "salesTotal": 4847598,
-    "unitsTotal": 247,
+    "salesTotal": 4863328,
+    "unitsTotal": 248,
     "days": 15
   },
   "lastYear": {
@@ -77,7 +77,7 @@
       },
       {
         "date": "2026-08-15",
-        "sales": 55955
+        "sales": 71685
       }
     ],
     "points_lastyear": [
@@ -144,9 +144,9 @@
     ]
   },
   "daily": {
-    "todayUnits": 3,
+    "todayUnits": 4,
     "yesterdayUnits": 7,
-    "todaySales": 55955,
+    "todaySales": 71685,
     "yesterdaySales": 129470
   },
   "top5": [
@@ -167,7 +167,7 @@
     {
       "rank": 3,
       "title": "『本革ボディーバッグ』（姫路レザー）",
-      "units": 16,
+      "units": 17,
       "handle": "stylish-genuine-leather-large-body-bag",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1__compressed_1ceeb199-e765-42d2-ba72-60d78d0cd57f.jpg?v=1786422673"
     },
