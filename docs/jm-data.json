@@ -1,21 +1,21 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-08-14T14:00:37+09:00",
+  "updatedAt": "2026-08-15T07:38:44+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 34256925,
-    "orders": 1249,
-    "aov": 27427
+    "sales": 34414960,
+    "orders": 1256,
+    "aov": 27400
   },
   "month": {
-    "salesTotal": 4689563,
-    "unitsTotal": 238,
-    "days": 14
+    "salesTotal": 4847598,
+    "unitsTotal": 247,
+    "days": 15
   },
   "lastYear": {
-    "salesTotal": 2758580,
-    "days": 14
+    "salesTotal": 2846140,
+    "days": 15
   },
   "trend": {
     "points": [
@@ -73,7 +73,11 @@
       },
       {
         "date": "2026-08-14",
-        "sales": 27390
+        "sales": 129470
+      },
+      {
+        "date": "2026-08-15",
+        "sales": 55955
       }
     ],
     "points_lastyear": [
@@ -132,34 +136,38 @@
       {
         "date": "2025-08-14",
         "sales": 119900
+      },
+      {
+        "date": "2025-08-15",
+        "sales": 87560
       }
     ]
   },
   "daily": {
-    "todayUnits": 1,
+    "todayUnits": 3,
     "yesterdayUnits": 7,
-    "todaySales": 27390,
-    "yesterdaySales": 151349
+    "todaySales": 55955,
+    "yesterdaySales": 129470
   },
   "top5": [
     {
       "rank": 1,
       "title": "『ネックレス』（Silver925）",
-      "units": 74,
+      "units": 78,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1__compressed_31873aeb-f599-4a1c-945f-35b53a771bd5.jpg?v=1786422419"
     },
     {
       "rank": 2,
       "title": "『ブレスレット』(Silver925)",
-      "units": 39,
+      "units": 43,
       "handle": "silver-bracelet",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/17_compressed_c5dc843d-dff2-4c8c-b4c4-3bea1d8da1ce.jpg?v=1786503967"
     },
     {
       "rank": 3,
       "title": "『本革ボディーバッグ』（姫路レザー）",
-      "units": 15,
+      "units": 16,
       "handle": "stylish-genuine-leather-large-body-bag",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1__compressed_1ceeb199-e765-42d2-ba72-60d78d0cd57f.jpg?v=1786422673"
     },
