@@ -5,7 +5,7 @@ YouTube Analytics = 期間ごとの正確な視聴・高評価・コメント・
 出力: docs/data.json （GitHub Pages がそのまま配信）
 必要な環境変数: YT_CLIENT_ID / YT_CLIENT_SECRET / YT_REFRESH_TOKEN
 """
-import os, re, json, datetime as dt, urllib.request, urllib.parse, urllib.error
+import os, re, json, time, datetime as dt, urllib.request, urllib.parse, urllib.error
 
 CLIENT_ID     = os.environ["YT_CLIENT_ID"]
 CLIENT_SECRET = os.environ["YT_CLIENT_SECRET"]
@@ -17,16 +17,39 @@ JST = dt.timezone(dt.timedelta(hours=9))
 DATA_API  = "https://www.googleapis.com/youtube/v3/"
 ANALYTICS = "https://youtubeanalytics.googleapis.com/v2/reports"
 
+# Retry on transient upstream errors (404/429/5xx + URLError timeout/network).
+# Do NOT retry on 400/401/403 (permanent client/auth errors).
+_RETRY_HTTP_CODES = (404, 429, 500, 502, 503, 504)
+
+def urlopen_with_retry(req_or_url, timeout, max_tries=3, backoff_base=1.0):
+    for attempt in range(max_tries):
+        try:
+            return urllib.request.urlopen(req_or_url, timeout=timeout)
+        except urllib.error.HTTPError as e:
+            if e.code in _RETRY_HTTP_CODES and attempt < max_tries - 1:
+                sleep_sec = backoff_base * (2 ** attempt)
+                print(f"[retry {attempt+1}/{max_tries}] HTTP {e.code} → sleep {sleep_sec}s")
+                time.sleep(sleep_sec)
+                continue
+            raise
+        except urllib.error.URLError as e:
+            if attempt < max_tries - 1:
+                sleep_sec = backoff_base * (2 ** attempt)
+                print(f"[retry {attempt+1}/{max_tries}] URLError: {e.reason} → sleep {sleep_sec}s")
+                time.sleep(sleep_sec)
+                continue
+            raise
+
 def access_token():
     body = urllib.parse.urlencode({"client_id":CLIENT_ID,"client_secret":CLIENT_SECRET,
         "refresh_token":REFRESH_TOKEN,"grant_type":"refresh_token"}).encode()
-    with urllib.request.urlopen(urllib.request.Request("https://oauth2.googleapis.com/token", data=body), timeout=30) as r:
+    with urlopen_with_retry(urllib.request.Request("https://oauth2.googleapis.com/token", data=body), timeout=30) as r:
         return json.load(r)["access_token"]
 
 def data_api(token, ep, **p):
     req = urllib.request.Request(DATA_API+ep+"?"+urllib.parse.urlencode(p),
                                  headers={"Authorization":"Bearer "+token})
-    with urllib.request.urlopen(req, timeout=40) as r:
+    with urlopen_with_retry(req, timeout=40) as r:
         return json.load(r)
 
 def analytics_daily(token, start, end):
@@ -34,7 +57,7 @@ def analytics_daily(token, start, end):
         "metrics":"views,likes,comments,subscribersGained,subscribersLost",
         "dimensions":"day","sort":"day","maxResults":10000})
     req = urllib.request.Request(ANALYTICS+"?"+q, headers={"Authorization":"Bearer "+token})
-    with urllib.request.urlopen(req, timeout=40) as r:
+    with urlopen_with_retry(req, timeout=40) as r:
         rows = json.load(r).get("rows", [])
     return [{"day":x[0],"views":x[1],"likes":x[2],"comments":x[3],"gained":x[4],"lost":x[5]} for x in rows]
 
@@ -74,7 +97,7 @@ def _is_members_only_innertube(video_id):
             data=body,
             headers={"Content-Type": "application/json", "User-Agent": _UA},
         )
-        with urllib.request.urlopen(req, timeout=15) as r:
+        with urlopen_with_retry(req, timeout=15) as r:
             data = json.load(r)
         ps = data.get("playabilityStatus", {}) or {}
         status = ps.get("status", "") or ""
@@ -107,7 +130,7 @@ def _is_members_only_scrape(video_id):
     try:
         req = urllib.request.Request(f"https://www.youtube.com/watch?v={video_id}",
                                      headers={"User-Agent": _UA, "Accept-Language": "ja,en;q=0.5"})
-        with urllib.request.urlopen(req, timeout=15) as r:
+        with urlopen_with_retry(req, timeout=15) as r:
             html = r.read().decode("utf-8", errors="ignore")
         if '"status":"UNPLAYABLE"' in html and ('メンバー' in html or 'members-only' in html.lower()):
             return True
