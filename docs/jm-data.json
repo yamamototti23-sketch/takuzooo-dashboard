@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-08-22T00:46:49+09:00",
+  "updatedAt": "2026-08-22T01:12:39+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 35405250,
-    "orders": 1303,
+    "sales": 35431650,
+    "orders": 1304,
     "aov": 27172
   },
   "month": {
-    "salesTotal": 5837888,
-    "unitsTotal": 302,
+    "salesTotal": 5864288,
+    "unitsTotal": 304,
     "days": 22
   },
   "lastYear": {
@@ -105,7 +105,7 @@
       },
       {
         "date": "2026-08-22",
-        "sales": 0
+        "sales": 26400
       }
     ],
     "points_lastyear": [
@@ -200,9 +200,9 @@
     ]
   },
   "daily": {
-    "todayUnits": 0,
+    "todayUnits": 2,
     "yesterdayUnits": 12,
-    "todaySales": 0,
+    "todaySales": 26400,
     "yesterdaySales": 220880
   },
   "top5": [
@@ -229,17 +229,17 @@
     },
     {
       "rank": 4,
-      "title": "【夏モデル】「7oz Tシャツ」気温20〜30℃〜透けない万能型",
-      "units": 15,
-      "handle": "7oz-t-shirt",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_compressed_895d1a66-c5ce-42bc-a725-c3bf33ea86b4.jpg?v=1786413189"
-    },
-    {
-      "rank": 5,
       "title": "「\"サマー\"パンツ」~SMARTシリーズ",
       "units": 15,
       "handle": "summer-slacks-pants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/7_compressed_8c5559ec-9426-4f15-91bc-9d584808070a.jpg?v=1786503852"
+    },
+    {
+      "rank": 5,
+      "title": "【夏モデル】「7oz Tシャツ」気温20〜30℃〜透けない万能型",
+      "units": 15,
+      "handle": "7oz-t-shirt",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_compressed_895d1a66-c5ce-42bc-a725-c3bf33ea86b4.jpg?v=1786413189"
     }
   ]
 }
