@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-08-26T16:57:41+09:00",
+  "updatedAt": "2026-08-26T18:00:48+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 36539377,
-    "orders": 1339,
-    "aov": 27289
+    "sales": 36557912,
+    "orders": 1340,
+    "aov": 27282
   },
   "month": {
-    "salesTotal": 6972015,
-    "unitsTotal": 347,
+    "salesTotal": 6990550,
+    "unitsTotal": 348,
     "days": 26
   },
   "lastYear": {
@@ -121,7 +121,7 @@
       },
       {
         "date": "2026-08-26",
-        "sales": 84865
+        "sales": 103400
       }
     ],
     "points_lastyear": [
@@ -232,16 +232,16 @@
     ]
   },
   "daily": {
-    "todayUnits": 5,
+    "todayUnits": 6,
     "yesterdayUnits": 9,
-    "todaySales": 84865,
+    "todaySales": 103400,
     "yesterdaySales": 204446
   },
   "top5": [
     {
       "rank": 1,
       "title": "『ネックレス』（Silver925）",
-      "units": 110,
+      "units": 111,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1L4A6061_1_7ca50b37-5a29-4124-955e-90d35a5e89af.jpg?v=1780952166"
     },
