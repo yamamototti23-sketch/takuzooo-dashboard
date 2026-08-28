@@ -1,6 +1,6 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-08-28T20:21:22+09:00",
+  "updatedAt": "2026-08-29T06:30:58+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
@@ -10,12 +10,12 @@
   },
   "month": {
     "salesTotal": 8288041,
-    "unitsTotal": 379,
-    "days": 28
+    "unitsTotal": 365,
+    "days": 29
   },
   "lastYear": {
-    "salesTotal": 10925750,
-    "days": 28
+    "salesTotal": 10979650,
+    "days": 29
   },
   "trend": {
     "points": [
@@ -130,6 +130,10 @@
       {
         "date": "2026-08-28",
         "sales": 54395
+      },
+      {
+        "date": "2026-08-29",
+        "sales": 0
       }
     ],
     "points_lastyear": [
@@ -244,27 +248,31 @@
       {
         "date": "2025-08-28",
         "sales": 219450
+      },
+      {
+        "date": "2025-08-29",
+        "sales": 53900
       }
     ]
   },
   "daily": {
-    "todayUnits": 4,
-    "yesterdayUnits": 19,
-    "todaySales": 54395,
-    "yesterdaySales": 563581
+    "todayUnits": 0,
+    "yesterdayUnits": 4,
+    "todaySales": 0,
+    "yesterdaySales": 54395
   },
   "top5": [
     {
       "rank": 1,
       "title": "『ネックレス』（Silver925）",
-      "units": 121,
+      "units": 117,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1L4A6061_1_7ca50b37-5a29-4124-955e-90d35a5e89af.jpg?v=1780952166"
     },
     {
       "rank": 2,
       "title": "『ブレスレット』(Silver925)",
-      "units": 68,
+      "units": 65,
       "handle": "silver-bracelet",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394"
     },
@@ -277,17 +285,17 @@
     },
     {
       "rank": 4,
-      "title": "【夏モデル】「7oz Tシャツ」気温20〜30℃〜透けない万能型",
-      "units": 17,
-      "handle": "7oz-t-shirt",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/11_89fb2c50-ea69-408c-af05-993aac825213.jpg?v=1781283847"
-    },
-    {
-      "rank": 5,
       "title": "「\"サマー\"パンツ」~SMARTシリーズ",
       "units": 16,
       "handle": "summer-slacks-pants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/20260417__0_204_2_5bb07572-8bc7-4e06-ab90-63ddb1dec26a.jpg?v=1783603751"
+    },
+    {
+      "rank": 5,
+      "title": "【夏モデル】「7oz Tシャツ」気温20〜30℃〜透けない万能型",
+      "units": 16,
+      "handle": "7oz-t-shirt",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/11_89fb2c50-ea69-408c-af05-993aac825213.jpg?v=1781283847"
     }
   ]
 }
