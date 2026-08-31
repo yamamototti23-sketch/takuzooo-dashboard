@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-09-01T00:04:29+09:00",
+  "updatedAt": "2026-09-01T05:49:20+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 39154234,
-    "orders": 1407,
-    "aov": 27828
+    "sales": 39187234,
+    "orders": 1408,
+    "aov": 27832
   },
   "month": {
-    "salesTotal": 0,
-    "unitsTotal": 0,
+    "salesTotal": 33000,
+    "unitsTotal": 2,
     "days": 1
   },
   "lastYear": {
@@ -21,7 +21,7 @@
     "points": [
       {
         "date": "2026-09-01",
-        "sales": 0
+        "sales": 33000
       }
     ],
     "points_lastyear": [
@@ -32,46 +32,46 @@
     ]
   },
   "daily": {
-    "todayUnits": 0,
+    "todayUnits": 2,
     "yesterdayUnits": 15,
-    "todaySales": 0,
+    "todaySales": 33000,
     "yesterdaySales": 306081
   },
   "top5": [
     {
       "rank": 1,
-      "title": "【廃盤】「紳士ショーツ」長めの\"丈感\"~RELAXシリーズ",
-      "units": 0,
-      "handle": "gentleman-shorts",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/96dfbf8ce0362a20de8ba7ab97350df7.jpg?v=1776451630"
+      "title": "『ネックレス』（Silver925）",
+      "units": 1,
+      "handle": "silver-necklace",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1L4A6061_1_7ca50b37-5a29-4124-955e-90d35a5e89af.jpg?v=1780952166"
     },
     {
       "rank": 2,
+      "title": "『ブレスレット』(Silver925)",
+      "units": 1,
+      "handle": "silver-bracelet",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394"
+    },
+    {
+      "rank": 3,
       "title": "「シングルディアレザー」~SMARTシリーズ",
       "units": 0,
       "handle": "single-deer-leather",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/68_compressed_2fe41adf-a807-4e9d-8f4f-bc732b1c2a6a.jpg?v=1786503918"
     },
     {
-      "rank": 3,
-      "title": "30代以上の上品な『防水レザーリュック』",
-      "units": 0,
-      "handle": "waterproof-leather-backpack",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/be0035e128c2f6ba37ae54588690bd0b.jpg?v=1774175579"
-    },
-    {
       "rank": 4,
-      "title": "『\"ストライプ\"シャツ』~RELAXシリーズ",
+      "title": "『三つ折り財布〜パイソン革〜』",
       "units": 0,
-      "handle": "striped-shirt",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/20260219__74_square_compressed_b358022b-d1f7-4f24-aab3-d29f790cda58.jpg?v=1783561408"
+      "handle": "tri-fold-wallet-python-leather",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/48_compressed_f4b214cd-47af-4532-ba0b-e1bd95cf6f87.jpg?v=1786503854"
     },
     {
       "rank": 5,
-      "title": "k18『Goldブレスレット』18㎝",
+      "title": "【廃盤】「紳士ショーツ」長めの\"丈感\"~RELAXシリーズ",
       "units": 0,
-      "handle": "k18-gold-bracelet-18",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/b3475111af2fc4c976a982fb9a2340c6.jpg?v=1776451690"
+      "handle": "gentleman-shorts",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/96dfbf8ce0362a20de8ba7ab97350df7.jpg?v=1776451630"
     }
   ]
 }
