@@ -62,7 +62,8 @@
   function load(i){
     const f=fr[i], s=SLIDES[i];
     f.onload = s.lock ? ()=>applyLock(f) : null;
-    f.src=s.url;
+    // 自社スライド (lock=false) はキャッシュバスターで最新版を強制フェッチ
+    f.src = s.lock ? s.url : s.url + (s.url.indexOf('?') >= 0 ? '&' : '?') + '_=' + Date.now();
   }
 
   function show(i){
