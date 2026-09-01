@@ -45,6 +45,20 @@ BASE_CSV_FILES = [
 BASE_MONTHLY_JSON = os.environ.get("BASE_MONTHLY_JSON", "docs/base_monthly.json")
 OUT_PATH = os.environ.get("OUT_PATH", "docs/jm-yearly.json")
 
+# freee 営業利益 (2023-06〜先月): freee-accounting スキル lib_freee.py 経由。
+# GHA モードでは FREEE_ENV_PATH で env 場所を差替え可能。
+FREEE_LIB_PATH = os.environ.get(
+    "FREEE_LIB_PATH",
+    "/Users/takuma/.claude/skills/freee-accounting/scripts",
+)
+# 会計期 (JM 6月始まり): fy=2023 → 2023-06〜2024-05
+FREEE_FY_RANGES = [
+    (2023, [(6, 12), (1, 5)]),
+    (2024, [(6, 12), (1, 5)]),
+    (2025, [(6, 12), (1, 5)]),
+    (2026, [(6, 5)]),  # end_month は下記 main() で今日基準に動的計算
+]
+
 
 def aggregate_base_monthly():
     """BASE 月次売上 dict {YYYY-MM: sales_int} を返す。
@@ -199,6 +213,74 @@ def calc_rolling_12m(months_list, monthly_sales_dict):
     return rolling
 
 
+def calc_rolling_12m_with_null(months_list, monthly_dict, min_data_ym: str):
+    """rolling 12M・当該月含む直近12ヶ月に監視対象データ (freee 開始月以降) が
+    全て揃っている月のみ計算。1つでも欠けたら None (freee 未登録期の混入防止)。
+    """
+    rolling = {}
+    for i, ym in enumerate(months_list):
+        if i < 11:
+            rolling[ym] = None
+            continue
+        window = months_list[i - 11 : i + 1]
+        # 全ての window 月が min_data_ym 以降 かつ dict にあるか
+        if any(m < min_data_ym or monthly_dict.get(m) is None for m in window):
+            rolling[ym] = None
+        else:
+            rolling[ym] = sum(monthly_dict.get(m, 0) for m in window)
+    return rolling
+
+
+def aggregate_freee_profit(end_ym: str) -> dict:
+    """freee trial_pl API から 2023-06〜end_ym の月次営業利益 dict を返す。
+    lib_freee.py (FreeeClient) 経由。取得失敗時は空 dict を返す (fail-soft)。
+    """
+    try:
+        sys.path.insert(0, FREEE_LIB_PATH)
+        from lib_freee import FreeeClient  # type: ignore
+    except Exception as e:
+        print(f"[freee] lib import failed: {e} (skip profit)", file=sys.stderr)
+        return {}
+
+    try:
+        c = FreeeClient()
+    except Exception as e:
+        print(f"[freee] client init failed: {e} (skip profit)", file=sys.stderr)
+        return {}
+
+    # end_ym を parse → 対象期のリスト決定
+    end_y, end_m = map(int, end_ym.split("-"))
+    monthly = {}
+
+    # 会計期 loop
+    for fy in range(2023, end_y + 2):  # fy=2023, 2024, 2025, 2026, ...
+        # fy 期 = fy-06 〜 (fy+1)-05
+        for m in list(range(6, 13)) + list(range(1, 6)):
+            # 実カレンダー年
+            cal_y = fy if m >= 6 else fy + 1
+            if (cal_y, m) > (end_y, end_m):
+                break
+            ym = f"{cal_y:04d}-{m:02d}"
+            try:
+                endpoint = (
+                    f"/reports/trial_pl?company_id={c.company_id}"
+                    f"&fiscal_year={fy}&start_month={m}&end_month={m}"
+                )
+                res = c._request("GET", endpoint)
+                bs = res["trial_pl"]["balances"]
+                eig = next(
+                    (b for b in bs if b.get("account_category_name") == "営業損益金額"),
+                    None,
+                )
+                if eig is None:
+                    continue
+                monthly[ym] = int(eig.get("closing_balance") or 0)
+            except Exception as e:
+                print(f"[freee] {ym} skip: {e}", file=sys.stderr)
+    print(f"[freee] {len(monthly)} months collected", file=sys.stderr)
+    return monthly
+
+
 def prev_year_month(ym: str) -> str:
     y, m = map(int, ym.split("-"))
     return f"{y - 1:04d}-{m:02d}"
@@ -237,6 +319,12 @@ def main():
 
     rolling = calc_rolling_12m(months_list, monthly_sales)
 
+    # --- freee 営業利益 (2023-06〜先月) 統合 ---
+    print("[3.5/3] freee 営業利益 集計中 (2023-06〜先月)...", file=sys.stderr)
+    profit_monthly = aggregate_freee_profit(end_ym)
+    # rolling 12M profit (freee 未登録の 2023-05 以前を含む window は None)
+    rolling_profit = calc_rolling_12m_with_null(months_list, profit_monthly, "2023-06")
+
     # 前年同月の rolling を紐付け
     months_out = []
     for ym in months_list:
@@ -247,6 +335,8 @@ def main():
             "monthly_sales": monthly_sales[ym],
             "rolling12m": r_current,
             "rolling12m_prev": r_prev,
+            "monthly_profit": profit_monthly.get(ym),
+            "rolling12m_profit": rolling_profit.get(ym),
         })
 
     # 最新月の YoY%
@@ -262,13 +352,15 @@ def main():
     out = {
         "shop": SHOP_NAME,
         "updatedAt": now.replace(microsecond=0).isoformat(),
-        "definition": "移動年計 (rolling 12M) = 当該月末の直近12ヶ月合計売上",
+        "definition": "移動年計 (rolling 12M) = 当該月末の直近12ヶ月合計。売上=BASE+Shopify、営業利益=freee (2023-06〜)。",
         "months": months_out,
         "latest": {
             "month": latest["month"],
             "rolling12m": latest["rolling12m"],
             "rolling12m_prev": latest["rolling12m_prev"],
             "yoy_pct": yoy_pct,
+            "rolling12m_profit": latest.get("rolling12m_profit"),
+            "monthly_profit": latest.get("monthly_profit"),
         },
     }
 
