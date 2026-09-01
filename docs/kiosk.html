@@ -22,18 +22,20 @@
 <div class="stage">
   <iframe id="f0" class="on" referrerpolicy="no-referrer"></iframe>
   <iframe id="f1" referrerpolicy="no-referrer"></iframe>
+  <iframe id="f2" referrerpolicy="no-referrer"></iframe>
 </div>
 <script>
   /* ====== 設定（ここだけ触ればOK） ====== */
   const INTERVAL    = 7000;       // 切替間隔（ミリ秒）= 7秒
   const LOCK_PERIOD = '1ヶ月';     // YouTube側を固定する期間。'1週間''2週間''1ヶ月''3ヶ月''6ヶ月''1年''全期間'
   const SLIDES = [
-    { name:'YouTube',      url:'https://yamamototti23-sketch.github.io/takuzooo-dashboard/', lock:true  },
-    { name:'Japan Made屋',  url:'./jm-dashboard.html',                                        lock:false },
+    { name:'YouTube',       url:'https://yamamototti23-sketch.github.io/takuzooo-dashboard/', lock:true  },
+    { name:'Japan Made屋',   url:'./jm-dashboard.html',                                        lock:false },
+    { name:'年計 (移動年計)', url:'./jm-yearly.html',                                            lock:false },
   ];
   /* ===================================== */
 
-  const fr=[document.getElementById('f0'),document.getElementById('f1')];
+  const fr=[document.getElementById('f0'),document.getElementById('f1'),document.getElementById('f2')];
   const label=document.getElementById('label');
   let cur=0;
 
@@ -69,7 +71,7 @@
     load(i); // 表示するたびに最新データで読み直し（lock付きなら再固定）
   }
 
-  load(0); load(1);
+  load(0); load(1); load(2);
   label.textContent=SLIDES[0].name;
   setInterval(()=>show((cur+1)%SLIDES.length), INTERVAL);
 </script>

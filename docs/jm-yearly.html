@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Japan Made屋 — 移動年計</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0; height: 100%;
+    background: #000; color: #fff;
+    font-family: system-ui, -apple-system, "Hiragino Sans", sans-serif;
+    overflow: hidden;
+  }
+  .wrap { display: flex; flex-direction: column; height: 100vh; padding: 24px 32px; }
+  .header {
+    display: flex; align-items: baseline; justify-content: space-between;
+    padding-bottom: 14px; border-bottom: 1px solid #333;
+  }
+  .title {
+    font-size: 22px; font-weight: 700; letter-spacing: 0.06em;
+    color: #ccc;
+  }
+  .title small { color: #888; font-size: 14px; margin-left: 12px; font-weight: 400; }
+  .updated { color: #666; font-size: 12px; }
+
+  .hero {
+    display: flex; align-items: baseline; justify-content: space-between;
+    padding: 20px 0 12px 0;
+  }
+  .hero-left { display: flex; flex-direction: column; }
+  .hero-label {
+    font-size: 14px; color: #888; letter-spacing: 0.1em; margin-bottom: 4px;
+  }
+  .hero-value {
+    font-size: 68px; font-weight: 800; letter-spacing: -0.02em;
+    color: #fff; line-height: 1.05;
+  }
+  .hero-sub { font-size: 16px; color: #999; margin-top: 6px; }
+
+  .hero-right { text-align: right; }
+  .yoy-label {
+    font-size: 13px; color: #888; letter-spacing: 0.1em; margin-bottom: 4px;
+  }
+  .yoy-value {
+    font-size: 44px; font-weight: 800; letter-spacing: -0.02em;
+    line-height: 1.05;
+  }
+  .yoy-value.up { color: #4ade80; }
+  .yoy-value.down { color: #f87171; }
+  .yoy-value.flat { color: #ccc; }
+  .yoy-sub { font-size: 13px; color: #888; margin-top: 4px; }
+
+  .chart-wrap {
+    flex: 1; position: relative; margin-top: 8px;
+    min-height: 300px;
+  }
+  canvas { position: absolute; inset: 0; width: 100% !important; height: 100% !important; }
+
+  .footer {
+    padding-top: 8px; font-size: 11px; color: #555; text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="header">
+    <div class="title">Japan Made屋 <small>移動年計 (直近12ヶ月合計)</small></div>
+    <div class="updated" id="updated">—</div>
+  </div>
+
+  <div class="hero">
+    <div class="hero-left">
+      <div class="hero-label">最新 移動年計 <span id="latest-month"></span></div>
+      <div class="hero-value" id="latest-value">¥—</div>
+      <div class="hero-sub" id="latest-sub">前年同月: ¥—</div>
+    </div>
+    <div class="hero-right">
+      <div class="yoy-label">前年同月比</div>
+      <div class="yoy-value flat" id="yoy-value">—</div>
+      <div class="yoy-sub" id="yoy-sub">前年差: ¥—</div>
+    </div>
+  </div>
+
+  <div class="chart-wrap">
+    <canvas id="chart"></canvas>
+  </div>
+
+  <div class="footer">BASE (2021-05〜2026-04) + Shopify (2026-02〜) 合算</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script>
+  const yen = n => (n == null ? "¥—" : "¥" + Math.round(n).toLocaleString("ja-JP"));
+  const yenShort = n => {
+    if (n == null) return "—";
+    if (n >= 1e8) return "¥" + (n / 1e8).toFixed(1) + "億";
+    if (n >= 1e4) return "¥" + Math.round(n / 1e4).toLocaleString("ja-JP") + "万";
+    return "¥" + n.toLocaleString("ja-JP");
+  };
+
+  fetch("./jm-yearly.json?_=" + Date.now())
+    .then(r => r.json())
+    .then(data => {
+      // Header
+      const updated = new Date(data.updatedAt);
+      document.getElementById("updated").textContent =
+        "更新 " + updated.getFullYear() + "/" + (updated.getMonth() + 1) + "/" + updated.getDate() +
+        " " + String(updated.getHours()).padStart(2, "0") + ":" + String(updated.getMinutes()).padStart(2, "0");
+
+      // Hero: latest values
+      const L = data.latest;
+      const [ly, lm] = L.month.split("-");
+      document.getElementById("latest-month").textContent = `(${parseInt(ly)}年${parseInt(lm)}月末時点)`;
+      document.getElementById("latest-value").textContent = yen(L.rolling12m);
+      document.getElementById("latest-sub").textContent =
+        "前年同月: " + yen(L.rolling12m_prev);
+
+      // YoY
+      const yoyEl = document.getElementById("yoy-value");
+      const yoySubEl = document.getElementById("yoy-sub");
+      if (L.yoy_pct == null) {
+        yoyEl.textContent = "—";
+        yoyEl.className = "yoy-value flat";
+        yoySubEl.textContent = "";
+      } else {
+        const sign = L.yoy_pct > 0 ? "+" : "";
+        yoyEl.textContent = sign + L.yoy_pct.toFixed(1) + "%";
+        yoyEl.className = "yoy-value " + (L.yoy_pct > 0 ? "up" : L.yoy_pct < 0 ? "down" : "flat");
+        const diff = L.rolling12m - L.rolling12m_prev;
+        yoySubEl.textContent = "前年差: " + (diff >= 0 ? "+" : "−") + yen(Math.abs(diff)).replace("¥", "¥");
+      }
+
+      // Chart data
+      const months = data.months;
+      const labels = months.map(m => {
+        const [y, mm] = m.month.split("-");
+        return `${y.slice(2)}/${parseInt(mm)}`;  // e.g. "26/8"
+      });
+      const rolling = months.map(m => m.rolling12m);
+      const rollingPrev = months.map(m => m.rolling12m_prev);
+
+      const ctx = document.getElementById("chart").getContext("2d");
+      new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: labels,
+          datasets: [
+            {
+              label: "移動年計 (直近12ヶ月合計)",
+              data: rolling,
+              borderColor: "#4ade80",
+              backgroundColor: "rgba(74, 222, 128, 0.08)",
+              borderWidth: 3,
+              tension: 0.25,
+              pointRadius: 0,
+              pointHoverRadius: 5,
+              fill: true,
+              spanGaps: false,
+            },
+            {
+              label: "前年同月線",
+              data: rollingPrev,
+              borderColor: "#666",
+              borderWidth: 1.5,
+              borderDash: [4, 4],
+              tension: 0.25,
+              pointRadius: 0,
+              pointHoverRadius: 4,
+              fill: false,
+              spanGaps: false,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          animation: { duration: 600 },
+          plugins: {
+            legend: {
+              labels: { color: "#ccc", font: { size: 13 }, padding: 16 },
+              position: "top",
+              align: "end",
+            },
+            tooltip: {
+              backgroundColor: "rgba(20,20,20,0.95)",
+              borderColor: "#444",
+              borderWidth: 1,
+              titleColor: "#fff",
+              bodyColor: "#eee",
+              padding: 10,
+              callbacks: {
+                label: (ctx) => ctx.dataset.label + ": " + yen(ctx.parsed.y),
+              },
+            },
+          },
+          scales: {
+            x: {
+              ticks: { color: "#888", font: { size: 11 }, maxRotation: 0, autoSkip: true, maxTicksLimit: 12 },
+              grid: { color: "rgba(255,255,255,0.05)" },
+            },
+            y: {
+              ticks: {
+                color: "#888",
+                font: { size: 11 },
+                callback: (v) => yenShort(v),
+              },
+              grid: { color: "rgba(255,255,255,0.08)" },
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+    })
+    .catch(err => {
+      document.getElementById("latest-value").textContent = "データ取得失敗";
+      console.error(err);
+    });
+</script>
+</body>
+</html>
