@@ -35,11 +35,24 @@
   .hero-label {
     font-size: 14px; color: #888; letter-spacing: 0.1em; margin-bottom: 4px;
   }
-  .hero-value {
-    font-size: 68px; font-weight: 800; letter-spacing: -0.02em;
-    color: #fff; line-height: 1.05;
+  .hero-values-row {
+    display: flex; align-items: baseline; gap: 40px; flex-wrap: wrap;
   }
-  .hero-sub { font-size: 16px; color: #999; margin-top: 6px; }
+  .hero-value-block { display: flex; flex-direction: column; }
+  .hero-label-small {
+    font-size: 12px; color: #666; letter-spacing: 0.08em; margin-bottom: 2px;
+  }
+  .hero-value {
+    font-size: 56px; font-weight: 800; letter-spacing: -0.02em;
+    color: #4ade80; line-height: 1.05;
+  }
+  .hero-value-profit {
+    font-size: 44px; font-weight: 800; letter-spacing: -0.02em;
+    line-height: 1.05;
+  }
+  .hero-value-profit.up { color: #4ade80; }
+  .hero-value-profit.down { color: #ef4444; }
+  .hero-sub { font-size: 14px; color: #999; margin-top: 8px; }
 
   .hero-right { text-align: right; }
   .yoy-label {
@@ -75,8 +88,17 @@
   <div class="hero">
     <div class="hero-left">
       <div class="hero-label">最新 移動年計 <span id="latest-month"></span></div>
-      <div class="hero-value" id="latest-value">¥—</div>
-      <div class="hero-sub" id="latest-sub">前年同月: ¥—</div>
+      <div class="hero-values-row">
+        <div class="hero-value-block">
+          <div class="hero-label-small">売上</div>
+          <div class="hero-value" id="latest-value">¥—</div>
+        </div>
+        <div class="hero-value-block">
+          <div class="hero-label-small">営業利益 (freee)</div>
+          <div class="hero-value-profit up" id="latest-profit">¥—</div>
+        </div>
+      </div>
+      <div class="hero-sub" id="latest-sub">前年同月 売上: ¥—</div>
     </div>
     <div class="hero-right">
       <div class="yoy-label">前年同月比</div>
@@ -111,13 +133,24 @@
         "更新 " + updated.getFullYear() + "/" + (updated.getMonth() + 1) + "/" + updated.getDate() +
         " " + String(updated.getHours()).padStart(2, "0") + ":" + String(updated.getMinutes()).padStart(2, "0");
 
-      // Hero: latest values
+      // Hero: latest values (前々月末時点の rolling 12M・売上+営業利益)
       const L = data.latest;
       const [ly, lm] = L.month.split("-");
       document.getElementById("latest-month").textContent = `(${parseInt(ly)}年${parseInt(lm)}月末時点)`;
       document.getElementById("latest-value").textContent = yen(L.rolling12m);
+
+      const profitEl = document.getElementById("latest-profit");
+      if (L.rolling12m_profit == null) {
+        profitEl.textContent = "—";
+        profitEl.className = "hero-value-profit";
+      } else {
+        const sign = L.rolling12m_profit >= 0 ? "" : "−";
+        profitEl.textContent = sign + yen(Math.abs(L.rolling12m_profit)).replace("¥", "¥");
+        profitEl.className = "hero-value-profit " + (L.rolling12m_profit >= 0 ? "up" : "down");
+      }
+
       document.getElementById("latest-sub").textContent =
-        "前年同月: " + yen(L.rolling12m_prev);
+        "前年同月 売上: " + yen(L.rolling12m_prev);
 
       // YoY
       const yoyEl = document.getElementById("yoy-value");
