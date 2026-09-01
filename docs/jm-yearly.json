@@ -1,6 +1,6 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-09-01T12:27:51+09:00",
+  "updatedAt": "2026-09-01T13:11:00+09:00",
   "definition": "移動年計 (rolling 12M) = 当該月末の直近12ヶ月合計売上",
   "months": [
     {
@@ -347,51 +347,51 @@
     },
     {
       "month": "2026-02",
-      "monthly_sales": 12972529,
-      "rolling12m": 196265591,
+      "monthly_sales": 12779764,
+      "rolling12m": 196072826,
       "rolling12m_prev": 146100319
     },
     {
       "month": "2026-03",
-      "monthly_sales": 16956089,
-      "rolling12m": 201049655,
+      "monthly_sales": 10140431,
+      "rolling12m": 194041232,
       "rolling12m_prev": 138813376
     },
     {
       "month": "2026-04",
-      "monthly_sales": 19201260,
-      "rolling12m": 203688445,
+      "monthly_sales": 97471,
+      "rolling12m": 177576233,
       "rolling12m_prev": 150256446
     },
     {
       "month": "2026-05",
-      "monthly_sales": 18230747,
-      "rolling12m": 208741497,
+      "monthly_sales": 0,
+      "rolling12m": 164398538,
       "rolling12m_prev": 153944041
     },
     {
       "month": "2026-06",
-      "monthly_sales": 14393264,
-      "rolling12m": 204261786,
+      "monthly_sales": 0,
+      "rolling12m": 145525563,
       "rolling12m_prev": 161914864
     },
     {
       "month": "2026-07",
-      "monthly_sales": 15035588,
-      "rolling12m": 207084414,
+      "monthly_sales": 14098569,
+      "rolling12m": 147411172,
       "rolling12m_prev": 162967384
     },
     {
       "month": "2026-08",
-      "monthly_sales": 9477955,
-      "rolling12m": 204234099,
+      "monthly_sales": 9520800,
+      "rolling12m": 144603702,
       "rolling12m_prev": 165022774
     }
   ],
   "latest": {
     "month": "2026-08",
-    "rolling12m": 204234099,
+    "rolling12m": 144603702,
     "rolling12m_prev": 165022774,
-    "yoy_pct": 23.8
+    "yoy_pct": -12.4
   }
 }
