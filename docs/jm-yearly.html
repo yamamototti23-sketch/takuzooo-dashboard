@@ -87,7 +87,7 @@
 
   <div class="hero">
     <div class="hero-left">
-      <div class="hero-label">最新 移動年計 <span id="latest-month"></span></div>
+      <div class="hero-label">最新月 <span id="latest-month"></span> (単月)</div>
       <div class="hero-values-row">
         <div class="hero-value-block">
           <div class="hero-label-small">売上</div>
@@ -133,38 +133,44 @@
         "更新 " + updated.getFullYear() + "/" + (updated.getMonth() + 1) + "/" + updated.getDate() +
         " " + String(updated.getHours()).padStart(2, "0") + ":" + String(updated.getMinutes()).padStart(2, "0");
 
-      // Hero: latest values (前々月末時点の rolling 12M・売上+営業利益)
-      const L = data.latest;
-      const [ly, lm] = L.month.split("-");
-      document.getElementById("latest-month").textContent = `(${parseInt(ly)}年${parseInt(lm)}月末時点)`;
-      document.getElementById("latest-value").textContent = yen(L.rolling12m);
+      // Hero: latest values (前々月の単月・売上+営業利益)
+      const latestMonth = data.months[data.months.length - 1];
+      const [ly, lm] = latestMonth.month.split("-");
+      const prevYm = `${parseInt(ly) - 1}-${lm}`;
+      const prevYearMonth = data.months.find(m => m.month === prevYm);
+
+      document.getElementById("latest-month").textContent = `(${parseInt(ly)}年${parseInt(lm)}月)`;
+      document.getElementById("latest-value").textContent = yen(latestMonth.monthly_sales);
 
       const profitEl = document.getElementById("latest-profit");
-      if (L.rolling12m_profit == null) {
+      if (latestMonth.monthly_profit == null) {
         profitEl.textContent = "—";
         profitEl.className = "hero-value-profit";
       } else {
-        const sign = L.rolling12m_profit >= 0 ? "" : "−";
-        profitEl.textContent = sign + yen(Math.abs(L.rolling12m_profit)).replace("¥", "¥");
-        profitEl.className = "hero-value-profit " + (L.rolling12m_profit >= 0 ? "up" : "down");
+        const p = latestMonth.monthly_profit;
+        const sign = p >= 0 ? "" : "−";
+        profitEl.textContent = sign + yen(Math.abs(p));
+        profitEl.className = "hero-value-profit " + (p >= 0 ? "up" : "down");
       }
 
+      const prevSales = prevYearMonth ? prevYearMonth.monthly_sales : null;
       document.getElementById("latest-sub").textContent =
-        "前年同月 売上: " + yen(L.rolling12m_prev);
+        "前年同月 売上: " + yen(prevSales);
 
-      // YoY
+      // YoY (単月ベース: 2026-07 vs 2025-07)
       const yoyEl = document.getElementById("yoy-value");
       const yoySubEl = document.getElementById("yoy-sub");
-      if (L.yoy_pct == null) {
+      if (!prevSales || latestMonth.monthly_sales == null) {
         yoyEl.textContent = "—";
         yoyEl.className = "yoy-value flat";
         yoySubEl.textContent = "";
       } else {
-        const sign = L.yoy_pct > 0 ? "+" : "";
-        yoyEl.textContent = sign + L.yoy_pct.toFixed(1) + "%";
-        yoyEl.className = "yoy-value " + (L.yoy_pct > 0 ? "up" : L.yoy_pct < 0 ? "down" : "flat");
-        const diff = L.rolling12m - L.rolling12m_prev;
-        yoySubEl.textContent = "前年差: " + (diff >= 0 ? "+" : "−") + yen(Math.abs(diff)).replace("¥", "¥");
+        const yoyPct = (latestMonth.monthly_sales - prevSales) / prevSales * 100;
+        const sign = yoyPct > 0 ? "+" : "";
+        yoyEl.textContent = sign + yoyPct.toFixed(1) + "%";
+        yoyEl.className = "yoy-value " + (yoyPct > 0 ? "up" : yoyPct < 0 ? "down" : "flat");
+        const diff = latestMonth.monthly_sales - prevSales;
+        yoySubEl.textContent = "前年差: " + (diff >= 0 ? "+" : "−") + yen(Math.abs(diff));
       }
 
       // Chart data — rolling12m が有効になる 2022-05 以降のみ表示
