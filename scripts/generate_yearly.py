@@ -290,11 +290,14 @@ def main():
     now = datetime.datetime.now(JST)
     today = now.date()
 
-    # 対話モード = 先月末まで (今月の未完月は除外)
-    if today.month == 1:
-        end_ym = f"{today.year - 1:04d}-12"
-    else:
-        end_ym = f"{today.year:04d}-{today.month - 1:02d}"
+    # 最新月 = 前々月末 (今月+先月は除外)
+    # 理由: 先月は freee 仕訳確定していない可能性が高く、rolling 12M 利益に
+    # 未確定データが混入すると数値が歪む (例: 9/1 → 8月分未確定 → 7月末が確定最新)
+    first_of_this_month = today.replace(day=1)
+    end_of_last_month = first_of_this_month - datetime.timedelta(days=1)
+    first_of_last_month = end_of_last_month.replace(day=1)
+    end_of_two_months_ago = first_of_last_month - datetime.timedelta(days=1)
+    end_ym = f"{end_of_two_months_ago.year:04d}-{end_of_two_months_ago.month:02d}"
 
     # BASE 全期間 + Shopify 開始月推定
     print("[1/3] BASE 集計中...", file=sys.stderr)
