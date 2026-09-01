@@ -176,9 +176,9 @@
         yoySubEl.textContent = "前年同期差: " + (diff >= 0 ? "+" : "−") + yen(Math.abs(diff));
       }
 
-      // Chart data — rolling12m が有効になる 2022-05 以降のみ表示
-      const CHART_START = "2022-05";
-      const months = data.months.filter(m => m.month >= CHART_START);
+      // Chart data — 直近 CHART_MONTHS ヶ月を表示 (最新月から遡り)
+      const CHART_MONTHS = 36;
+      const months = data.months.slice(-CHART_MONTHS);
       const labels = months.map(m => {
         const [y, mm] = m.month.split("-");
         return `${y.slice(2)}/${parseInt(mm)}`;  // e.g. "26/8"
