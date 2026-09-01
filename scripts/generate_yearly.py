@@ -352,29 +352,48 @@ def main():
     else:
         yoy_pct = None
 
-    # --- 期別累計 営業利益 (hero 表示用・6月始まり期) ---
+    # --- 期別累計 (hero 表示用・6月始まり期・売上+営業利益) ---
     # 前々月が今期内 (6月以降) → 今期の 6月〜前々月 累計
     # 前々月が前期内 (5月以前) → 前期通期 (前年6月〜当年5月) 累計
     end_y, end_m = map(int, end_ym.split("-"))
     if end_m >= 6:
-        # 今期 (期首=end_y-06)
         term_start_y = end_y
         term_label = "今期"
     else:
-        # 前期 (期首=(end_y-1)-06)
         term_start_y = end_y - 1
         term_label = "前期"
     term_start_ym = f"{term_start_y:04d}-06"
     term_end_ym = end_ym
 
-    # profit_monthly から term 範囲の合計 (None は除外)
+    # 今期 range と前年同期 range (同月数)
     term_months = [m for m in months_list if term_start_ym <= m <= term_end_ym]
+    prev_term_start_ym = f"{term_start_y - 1:04d}-06"
+    prev_term_end_y = end_y - 1
+    prev_term_end_ym = f"{prev_term_end_y:04d}-{end_m:02d}"
+    prev_term_months = [m for m in months_list if prev_term_start_ym <= m <= prev_term_end_ym]
+
+    # 売上 (常に完全: BASE + Shopify で全月データあり)
+    term_sales_sum = sum(monthly_sales.get(m, 0) for m in term_months) if term_months else None
+    prev_term_sales_sum = sum(monthly_sales.get(m, 0) for m in prev_term_months) if prev_term_months else None
+    if term_sales_sum is not None and prev_term_sales_sum:
+        term_yoy_pct = round(
+            (term_sales_sum - prev_term_sales_sum) / prev_term_sales_sum * 100, 1
+        )
+    else:
+        term_yoy_pct = None
+
+    # 営業利益 (freee 未登録期間は None・欠損月あれば None)
     term_profit_values = [profit_monthly.get(m) for m in term_months if profit_monthly.get(m) is not None]
     if len(term_profit_values) == len(term_months) and term_months:
         term_profit_sum = sum(term_profit_values)
     else:
-        # 欠損月あり → None (freee 未登録期間対策)
         term_profit_sum = None
+    prev_term_profit_values = [profit_monthly.get(m) for m in prev_term_months if profit_monthly.get(m) is not None]
+    prev_term_profit_sum = (
+        sum(prev_term_profit_values)
+        if len(prev_term_profit_values) == len(prev_term_months) and prev_term_months
+        else None
+    )
 
     out = {
         "shop": SHOP_NAME,
@@ -388,11 +407,18 @@ def main():
             "yoy_pct": yoy_pct,
             "rolling12m_profit": latest.get("rolling12m_profit"),
             "monthly_profit": latest.get("monthly_profit"),
-            # 期別累計 営業利益 (hero 用)
-            "term_profit_sum": term_profit_sum,
+            # 期別累計 (hero 用・今期 or 前期通期)
             "term_label": term_label,
             "term_start_month": term_start_ym,
             "term_end_month": term_end_ym,
+            "term_sales_sum": term_sales_sum,
+            "term_profit_sum": term_profit_sum,
+            # 前年同期
+            "term_prev_start_month": prev_term_start_ym,
+            "term_prev_end_month": prev_term_end_ym,
+            "term_prev_sales_sum": prev_term_sales_sum,
+            "term_prev_profit_sum": prev_term_profit_sum,
+            "term_yoy_pct": term_yoy_pct,
         },
     }
 
