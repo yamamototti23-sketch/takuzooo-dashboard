@@ -232,7 +232,16 @@ def calc_rolling_12m_with_null(months_list, monthly_dict, min_data_ym: str):
 
 
 def aggregate_freee_profit(end_ym: str) -> dict:
-    """freee trial_pl API から 2023-06〜end_ym の月次営業利益 dict を返す。
+    """freee trial_pl API から 2023-06〜end_ym の月次経常利益 dict を返す。
+
+    重要仕様 (2026-09-01 発見):
+      freee `trial_pl` API は start_month を無視して「期首〜end_month の累計」を返す。
+      単月値を得るには、当月累計 − 前月累計 の差分計算が必要。
+
+    手順:
+      1) 各会計期の 期首〜各月 累計値 (cum_by_ym) を fetch
+      2) 単月 = 当月累計 − 前月累計 (期首月 6月は累計そのまま=期首単月)
+
     lib_freee.py (FreeeClient) 経由。取得失敗時は空 dict を返す (fail-soft)。
     """
     try:
@@ -248,15 +257,12 @@ def aggregate_freee_profit(end_ym: str) -> dict:
         print(f"[freee] client init failed: {e} (skip profit)", file=sys.stderr)
         return {}
 
-    # end_ym を parse → 対象期のリスト決定
     end_y, end_m = map(int, end_ym.split("-"))
-    monthly = {}
 
-    # 会計期 loop
-    for fy in range(2023, end_y + 2):  # fy=2023, 2024, 2025, 2026, ...
-        # fy 期 = fy-06 〜 (fy+1)-05
+    # Phase 1: 各月 累計値を fetch
+    cum_by_ym = {}  # {"YYYY-MM": 期首〜当月の累計 経常利益}
+    for fy in range(2023, end_y + 2):
         for m in list(range(6, 13)) + list(range(1, 6)):
-            # 実カレンダー年
             cal_y = fy if m >= 6 else fy + 1
             if (cal_y, m) > (end_y, end_m):
                 break
@@ -264,7 +270,7 @@ def aggregate_freee_profit(end_ym: str) -> dict:
             try:
                 endpoint = (
                     f"/reports/trial_pl?company_id={c.company_id}"
-                    f"&fiscal_year={fy}&start_month={m}&end_month={m}"
+                    f"&fiscal_year={fy}&start_month=6&end_month={m}"
                 )
                 res = c._request("GET", endpoint)
                 bs = res["trial_pl"]["balances"]
@@ -272,12 +278,35 @@ def aggregate_freee_profit(end_ym: str) -> dict:
                     (b for b in bs if b.get("account_category_name") == "経常損益金額"),
                     None,
                 )
-                if eig is None:
-                    continue
-                monthly[ym] = int(eig.get("closing_balance") or 0)
+                if eig is not None:
+                    cum_by_ym[ym] = int(eig.get("closing_balance") or 0)
             except Exception as e:
-                print(f"[freee] {ym} skip: {e}", file=sys.stderr)
-    print(f"[freee] {len(monthly)} months collected", file=sys.stderr)
+                print(f"[freee] cum {ym} skip: {e}", file=sys.stderr)
+
+    # Phase 2: 単月 = 当月累計 - 前月累計
+    monthly = {}
+    for fy in range(2023, end_y + 2):
+        for i, m in enumerate(list(range(6, 13)) + list(range(1, 6))):
+            cal_y = fy if m >= 6 else fy + 1
+            if (cal_y, m) > (end_y, end_m):
+                break
+            ym = f"{cal_y:04d}-{m:02d}"
+            if ym not in cum_by_ym:
+                continue
+            if m == 6:
+                # 期首月 = 累計そのまま
+                monthly[ym] = cum_by_ym[ym]
+            else:
+                # 期内前月 (6→7→8...→12→1→2...→5 の並び)
+                prev_m = m - 1 if m > 1 else 12
+                prev_cal_y = cal_y if m > 1 else cal_y - 1
+                prev_ym = f"{prev_cal_y:04d}-{prev_m:02d}"
+                if prev_ym in cum_by_ym:
+                    monthly[ym] = cum_by_ym[ym] - cum_by_ym[prev_ym]
+                else:
+                    # 前月データ欠損 → 単月抽出不能 → skip
+                    print(f"[freee] {ym} skip: prev_ym {prev_ym} missing", file=sys.stderr)
+    print(f"[freee] {len(monthly)} months collected (単月・差分計算後)", file=sys.stderr)
     return monthly
 
 
