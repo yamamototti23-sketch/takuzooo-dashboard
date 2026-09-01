@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-09-01T09:36:43+09:00",
+  "updatedAt": "2026-09-01T14:40:08+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 39187234,
-    "orders": 1408,
-    "aov": 27832
+    "sales": 39289334,
+    "orders": 1411,
+    "aov": 27845
   },
   "month": {
-    "salesTotal": 33000,
-    "unitsTotal": 2,
+    "salesTotal": 160950,
+    "unitsTotal": 6,
     "days": 1
   },
   "lastYear": {
@@ -21,7 +21,7 @@
     "points": [
       {
         "date": "2026-09-01",
-        "sales": 33000
+        "sales": 160950
       }
     ],
     "points_lastyear": [
@@ -32,46 +32,46 @@
     ]
   },
   "daily": {
-    "todayUnits": 2,
+    "todayUnits": 6,
     "yesterdayUnits": 15,
-    "todaySales": 33000,
-    "yesterdaySales": 306081
+    "todaySales": 160950,
+    "yesterdaySales": 280231
   },
   "top5": [
     {
       "rank": 1,
       "title": "『ネックレス』（Silver925）",
-      "units": 1,
+      "units": 2,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1L4A6061_1_7ca50b37-5a29-4124-955e-90d35a5e89af.jpg?v=1780952166"
     },
     {
       "rank": 2,
+      "title": "50年後も着たい「デニムジャケット」（セットアップ）~SMARTシリーズ",
+      "units": 1,
+      "handle": "denim-jacket",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/7_cd35d176-3ef3-444c-8dc0-afebb853f82f.jpg?v=1776451631"
+    },
+    {
+      "rank": 3,
       "title": "『ブレスレット』(Silver925)",
       "units": 1,
       "handle": "silver-bracelet",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394"
     },
     {
-      "rank": 3,
-      "title": "「シングルディアレザー」~SMARTシリーズ",
-      "units": 0,
-      "handle": "single-deer-leather",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/68_compressed_2fe41adf-a807-4e9d-8f4f-bc732b1c2a6a.jpg?v=1786503918"
-    },
-    {
       "rank": 4,
-      "title": "『三つ折り財布〜パイソン革〜』",
-      "units": 0,
-      "handle": "tri-fold-wallet-python-leather",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/48_compressed_f4b214cd-47af-4532-ba0b-e1bd95cf6f87.jpg?v=1786503854"
+      "title": "『本革ボディーバッグ』（姫路レザー）",
+      "units": 1,
+      "handle": "stylish-genuine-leather-large-body-bag",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A1554_1_ef495592-e3a6-4e83-8ffe-1f7f917d3092.jpg?v=1783603757"
     },
     {
       "rank": 5,
-      "title": "【廃盤】「紳士ショーツ」長めの\"丈感\"~RELAXシリーズ",
-      "units": 0,
-      "handle": "gentleman-shorts",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/96dfbf8ce0362a20de8ba7ab97350df7.jpg?v=1776451630"
+      "title": "『\"和\"ブレスレット』(Silver925)",
+      "units": 1,
+      "handle": "japanese-bracelet",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/3V7A0359_square_compressed_37a94712-9a5f-4523-b364-0e5416534cb0.jpg?v=1783565273"
     }
   ]
 }
