@@ -290,14 +290,15 @@ def main():
     now = datetime.datetime.now(JST)
     today = now.date()
 
-    # 最新月 = 前々月末 (今月+先月は除外)
-    # 理由: 先月は freee 仕訳確定していない可能性が高く、rolling 12M 利益に
-    # 未確定データが混入すると数値が歪む (例: 9/1 → 8月分未確定 → 7月末が確定最新)
-    first_of_this_month = today.replace(day=1)
-    end_of_last_month = first_of_this_month - datetime.timedelta(days=1)
-    first_of_last_month = end_of_last_month.replace(day=1)
-    end_of_two_months_ago = first_of_last_month - datetime.timedelta(days=1)
-    end_ym = f"{end_of_two_months_ago.year:04d}-{end_of_two_months_ago.month:02d}"
+    # 最新月 = 今日から YEARLY_LAG_MONTHS ヶ月前の月末
+    # 現行 (旧税理士 UAO・2026-08-31 終了) = ラグ 2ヶ月 (前々月まで確定)
+    # 新税理士 (原様・2026-09-01 開始) = 将来 1ヶ月に短縮予定
+    #   → YEARLY_LAG_MONTHS=1 に変更するだけで前月末対応可能
+    lag_months = int(os.environ.get("YEARLY_LAG_MONTHS", "2"))
+    target = today.replace(day=1)
+    for _ in range(lag_months):
+        target = (target - datetime.timedelta(days=1)).replace(day=1)
+    end_ym = f"{target.year:04d}-{target.month:02d}"
 
     # BASE 全期間 + Shopify 開始月推定
     print("[1/3] BASE 集計中...", file=sys.stderr)
