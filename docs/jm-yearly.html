@@ -94,7 +94,7 @@
           <div class="hero-value" id="latest-value">¥—</div>
         </div>
         <div class="hero-value-block">
-          <div class="hero-label-small">営業利益 (freee)</div>
+          <div class="hero-label-small" id="profit-label">営業利益 (freee)</div>
           <div class="hero-value-profit up" id="latest-profit">¥—</div>
         </div>
       </div>
@@ -142,12 +142,18 @@
       document.getElementById("latest-month").textContent = `(${parseInt(ly)}年${parseInt(lm)}月)`;
       document.getElementById("latest-value").textContent = yen(latestMonth.monthly_sales);
 
+      // 営業利益 = 期別累計 (今期 or 前期通期)・6月始まり期
+      const L = data.latest;
       const profitEl = document.getElementById("latest-profit");
-      if (latestMonth.monthly_profit == null) {
+      const profitLabelEl = document.getElementById("profit-label");
+      // ラベル: "営業利益 (今期 6/1〜7/31 累計)" 等
+      const parseYm = (ym) => { const [y, m] = ym.split("-"); return `${parseInt(y)}/${parseInt(m)}`; };
+      profitLabelEl.textContent = `営業利益 (${L.term_label} ${parseYm(L.term_start_month)}〜${parseYm(L.term_end_month)} 累計)`;
+      if (L.term_profit_sum == null) {
         profitEl.textContent = "—";
         profitEl.className = "hero-value-profit";
       } else {
-        const p = latestMonth.monthly_profit;
+        const p = L.term_profit_sum;
         const sign = p >= 0 ? "" : "−";
         profitEl.textContent = sign + yen(Math.abs(p));
         profitEl.className = "hero-value-profit " + (p >= 0 ? "up" : "down");

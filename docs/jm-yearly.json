@@ -1,6 +1,6 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-09-01T13:56:50+09:00",
+  "updatedAt": "2026-09-01T14:21:36+09:00",
   "definition": "移動年計 (rolling 12M) = 当該月末の直近12ヶ月合計。売上=BASE+Shopify、営業利益=freee (2023-06〜)。",
   "months": [
     {
@@ -514,6 +514,10 @@
     "rolling12m_prev": 162967384,
     "yoy_pct": 27.0,
     "rolling12m_profit": -44022693,
-    "monthly_profit": -2129503
+    "monthly_profit": -2129503,
+    "term_profit_sum": -6145527,
+    "term_label": "今期",
+    "term_start_month": "2026-06",
+    "term_end_month": "2026-07"
   }
 }

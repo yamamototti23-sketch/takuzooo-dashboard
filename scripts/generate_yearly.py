@@ -352,6 +352,30 @@ def main():
     else:
         yoy_pct = None
 
+    # --- 期別累計 営業利益 (hero 表示用・6月始まり期) ---
+    # 前々月が今期内 (6月以降) → 今期の 6月〜前々月 累計
+    # 前々月が前期内 (5月以前) → 前期通期 (前年6月〜当年5月) 累計
+    end_y, end_m = map(int, end_ym.split("-"))
+    if end_m >= 6:
+        # 今期 (期首=end_y-06)
+        term_start_y = end_y
+        term_label = "今期"
+    else:
+        # 前期 (期首=(end_y-1)-06)
+        term_start_y = end_y - 1
+        term_label = "前期"
+    term_start_ym = f"{term_start_y:04d}-06"
+    term_end_ym = end_ym
+
+    # profit_monthly から term 範囲の合計 (None は除外)
+    term_months = [m for m in months_list if term_start_ym <= m <= term_end_ym]
+    term_profit_values = [profit_monthly.get(m) for m in term_months if profit_monthly.get(m) is not None]
+    if len(term_profit_values) == len(term_months) and term_months:
+        term_profit_sum = sum(term_profit_values)
+    else:
+        # 欠損月あり → None (freee 未登録期間対策)
+        term_profit_sum = None
+
     out = {
         "shop": SHOP_NAME,
         "updatedAt": now.replace(microsecond=0).isoformat(),
@@ -364,6 +388,11 @@ def main():
             "yoy_pct": yoy_pct,
             "rolling12m_profit": latest.get("rolling12m_profit"),
             "monthly_profit": latest.get("monthly_profit"),
+            # 期別累計 営業利益 (hero 用)
+            "term_profit_sum": term_profit_sum,
+            "term_label": term_label,
+            "term_start_month": term_start_ym,
+            "term_end_month": term_end_ym,
         },
     }
 
