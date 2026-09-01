@@ -11,7 +11,7 @@ concurrency:
   cancel-in-progress: false
 
 permissions:
-  contents: write  # jm-yearly.json をコミットするため
+  contents: write
 
 jobs:
   update:
@@ -40,65 +40,30 @@ jobs:
           git add docs/jm-yearly.json
           if git diff --cached --quiet -- docs/jm-yearly.json; then
             echo "no change in jm-yearly.json"
-            echo "committed=false" >> $GITHUB_OUTPUT
           else
             git commit -m "chore(yearly): monthly update $(date -u +%Y-%m) [skip ci]"
             for i in 1 2 3; do
-              if git push; then echo "✅ push OK on attempt $i"; break; fi
-              echo "⚠ push failed on attempt $i, rebasing origin/main..."
+              if git push; then echo "push OK on attempt $i"; break; fi
+              echo "push failed on attempt $i, rebasing origin/main..."
               git fetch origin main && git rebase origin/main
               sleep $((i * 2))
             done
-            echo "committed=true" >> $GITHUB_OUTPUT
           fi
 
       - name: Notify success (Chatwork マイチャット・月次可視化)
         if: success()
         env:
           CHATWORK_API_TOKEN: ${{ secrets.CHATWORK_API_TOKEN }}
-        run: |
-          python3 <<'PYEOF'
-          import json, os, urllib.request, urllib.parse, datetime
-          d = json.load(open("docs/jm-yearly.json"))
-          L = d["latest"]
-          m_year, m_month = L["month"].split("-")
-          latest_str = f"¥{L['rolling12m']:,}"
-          prev_str = f"¥{L['rolling12m_prev']:,}" if L.get("rolling12m_prev") else "—"
-          yoy = f"{L['yoy_pct']:+.1f}%" if L.get("yoy_pct") is not None else "—"
-          # 次回発火予定
-          now = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9)))
-          next_y, next_m = now.year, now.month + 1
-          if next_m > 12:
-              next_y += 1
-              next_m = 1
-          next_str = f"{next_y}/{next_m}/1 09:00 JST"
-          body = f"""[info][title]年計 月次更新完了 ({int(m_year)}年{int(m_month)}月末)[/title]移動年計 (直近12ヶ月合計): {latest_str}
-前年同月: {prev_str}
-前年比: {yoy}
-
-次回発火予定: {next_str}
-Kiosk: https://yamamototti23-sketch.github.io/takuzooo-dashboard/kiosk.html
-Yearly 単体: https://yamamototti23-sketch.github.io/takuzooo-dashboard/jm-yearly.html[/info]"""
-          token = os.environ["CHATWORK_API_TOKEN"]
-          data = urllib.parse.urlencode({"body": body, "self_unread": "1"}).encode()
-          req = urllib.request.Request(
-              "https://api.chatwork.com/v2/rooms/218962687/messages",
-              data=data,
-              headers={"X-ChatWorkToken": token},
-          )
-          urllib.request.urlopen(req, timeout=15)
-          print("✓ Chatwork 成功通知送信完了")
-          PYEOF
+        run: python3 scripts/notify_yearly_success.py
 
       - name: Notify failure (Chatwork マイチャット・即修復依頼)
         if: failure()
         env:
           CHATWORK_API_TOKEN: ${{ secrets.CHATWORK_API_TOKEN }}
+          REPO: ${{ github.repository }}
+          RUN_ID: ${{ github.run_id }}
         run: |
           curl -s -X POST -H "X-ChatWorkToken: $CHATWORK_API_TOKEN" \
-            --data-urlencode "body=[info][title]⚠ 年計 月次更新 失敗[/title]takuzooo-dashboard update-yearly workflow が失敗しました。
-Run: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
-月1回発火のため次回まで見逃すと1ヶ月遅延。即座に手動対応してください。
-手動発火: https://github.com/${{ github.repository }}/actions/workflows/update-yearly.yml[/info]" \
+            --data-urlencode "body=[info][title]⚠ 年計 月次更新 失敗[/title]takuzooo-dashboard update-yearly workflow が失敗しました。%0ARun: https://github.com/${REPO}/actions/runs/${RUN_ID}%0A月1回発火のため次回まで見逃すと1ヶ月遅延。即座に手動対応してください。%0A手動発火: https://github.com/${REPO}/actions/workflows/update-yearly.yml[/info]" \
             --data-urlencode "self_unread=1" \
             "https://api.chatwork.com/v2/rooms/218962687/messages"
