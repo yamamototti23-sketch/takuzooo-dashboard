@@ -269,7 +269,7 @@ def aggregate_freee_profit(end_ym: str) -> dict:
                 res = c._request("GET", endpoint)
                 bs = res["trial_pl"]["balances"]
                 eig = next(
-                    (b for b in bs if b.get("account_category_name") == "営業損益金額"),
+                    (b for b in bs if b.get("account_category_name") == "経常損益金額"),
                     None,
                 )
                 if eig is None:

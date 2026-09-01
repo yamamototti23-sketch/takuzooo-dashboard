@@ -1,6 +1,6 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-09-01T14:31:18+09:00",
+  "updatedAt": "2026-09-01T14:39:40+09:00",
   "definition": "移動年計 (rolling 12M) = 当該月末の直近12ヶ月合計。売上=BASE+Shopify、営業利益=freee (2023-06〜)。",
   "months": [
     {
@@ -208,7 +208,7 @@
       "monthly_sales": 10546044,
       "rolling12m": 105191332,
       "rolling12m_prev": 39997388,
-      "monthly_profit": -345949,
+      "monthly_profit": -324428,
       "rolling12m_profit": null
     },
     {
@@ -216,7 +216,7 @@
       "monthly_sales": 9321710,
       "rolling12m": 108928912,
       "rolling12m_prev": 45276233,
-      "monthly_profit": 2270180,
+      "monthly_profit": 2313173,
       "rolling12m_profit": null
     },
     {
@@ -224,7 +224,7 @@
       "monthly_sales": 8657530,
       "rolling12m": 111493332,
       "rolling12m_prev": 50892568,
-      "monthly_profit": 3913123,
+      "monthly_profit": 3977597,
       "rolling12m_profit": null
     },
     {
@@ -232,7 +232,7 @@
       "monthly_sales": 9496200,
       "rolling12m": 112687662,
       "rolling12m_prev": 56225458,
-      "monthly_profit": 2205401,
+      "monthly_profit": 2426795,
       "rolling12m_profit": null
     },
     {
@@ -240,7 +240,7 @@
       "monthly_sales": 9213770,
       "rolling12m": 114900102,
       "rolling12m_prev": 61242646,
-      "monthly_profit": 2736259,
+      "monthly_profit": 2977646,
       "rolling12m_profit": null
     },
     {
@@ -248,7 +248,7 @@
       "monthly_sales": 11763516,
       "rolling12m": 116938478,
       "rolling12m_prev": 68590894,
-      "monthly_profit": 1865101,
+      "monthly_profit": 2130109,
       "rolling12m_profit": null
     },
     {
@@ -256,7 +256,7 @@
       "monthly_sales": 57903442,
       "rolling12m": 165884652,
       "rolling12m_prev": 71140021,
-      "monthly_profit": 2352571,
+      "monthly_profit": 2640579,
       "rolling12m_profit": null
     },
     {
@@ -264,7 +264,7 @@
       "monthly_sales": 8416500,
       "rolling12m": 166631872,
       "rolling12m_prev": 76059911,
-      "monthly_profit": 5675036,
+      "monthly_profit": 5982988,
       "rolling12m_profit": null
     },
     {
@@ -272,7 +272,7 @@
       "monthly_sales": 6086500,
       "rolling12m": 165260262,
       "rolling12m_prev": 80305571,
-      "monthly_profit": 3251557,
+      "monthly_profit": 3581088,
       "rolling12m_profit": null
     },
     {
@@ -280,7 +280,7 @@
       "monthly_sales": 19458968,
       "rolling12m": 174529460,
       "rolling12m_prev": 84738911,
-      "monthly_profit": -456990,
+      "monthly_profit": -104670,
       "rolling12m_profit": null
     },
     {
@@ -288,7 +288,7 @@
       "monthly_sales": 5119400,
       "rolling12m": 173905930,
       "rolling12m_prev": 87231948,
-      "monthly_profit": 386114,
+      "monthly_profit": 758427,
       "rolling12m_profit": null
     },
     {
@@ -296,216 +296,216 @@
       "monthly_sales": 9490100,
       "rolling12m": 165473680,
       "rolling12m_prev": 101083398,
-      "monthly_profit": 15365957,
-      "rolling12m_profit": 39218360
+      "monthly_profit": 16168590,
+      "rolling12m_profit": 42527894
     },
     {
       "month": "2024-06",
       "monthly_sales": 10902152,
       "rolling12m": 165829788,
       "rolling12m_prev": 105191332,
-      "monthly_profit": 4606586,
-      "rolling12m_profit": 44170895
+      "monthly_profit": 4629586,
+      "rolling12m_profit": 47481908
     },
     {
       "month": "2024-07",
       "monthly_sales": 11160440,
       "rolling12m": 167668518,
       "rolling12m_prev": 108928912,
-      "monthly_profit": 3385263,
-      "rolling12m_profit": 45285978
+      "monthly_profit": 3414716,
+      "rolling12m_profit": 48583451
     },
     {
       "month": "2024-08",
       "monthly_sales": 10272880,
       "rolling12m": 169283868,
       "rolling12m_prev": 111493332,
-      "monthly_profit": 5887894,
-      "rolling12m_profit": 47260749
+      "monthly_profit": 5940578,
+      "rolling12m_profit": 50546432
     },
     {
       "month": "2024-09",
       "monthly_sales": 10696810,
       "rolling12m": 170484478,
       "rolling12m_prev": 112687662,
-      "monthly_profit": -152364,
-      "rolling12m_profit": 44902984
+      "monthly_profit": -103410,
+      "rolling12m_profit": 48016227
     },
     {
       "month": "2024-10",
       "monthly_sales": 11272880,
       "rolling12m": 172543588,
       "rolling12m_prev": 114900102,
-      "monthly_profit": -8596991,
-      "rolling12m_profit": 33569734
+      "monthly_profit": -8565509,
+      "rolling12m_profit": 36473072
     },
     {
       "month": "2024-11",
       "monthly_sales": 16940400,
       "rolling12m": 177720472,
       "rolling12m_prev": 116938478,
-      "monthly_profit": 6704172,
-      "rolling12m_profit": 38408805
+      "monthly_profit": 6750825,
+      "rolling12m_profit": 41093788
     },
     {
       "month": "2024-12",
       "monthly_sales": 20651989,
       "rolling12m": 140469019,
       "rolling12m_prev": 165884652,
-      "monthly_profit": 7162564,
-      "rolling12m_profit": 43218798
+      "monthly_profit": 7261139,
+      "rolling12m_profit": 45714348
     },
     {
       "month": "2025-01",
       "monthly_sales": 10770810,
       "rolling12m": 142823329,
       "rolling12m_prev": 166631872,
-      "monthly_profit": 8449820,
-      "rolling12m_profit": 45993582
+      "monthly_profit": 8521582,
+      "rolling12m_profit": 48252942
     },
     {
       "month": "2025-02",
       "monthly_sales": 9363490,
       "rolling12m": 146100319,
       "rolling12m_prev": 165260262,
-      "monthly_profit": 6179110,
-      "rolling12m_profit": 48921135
+      "monthly_profit": 6240179,
+      "rolling12m_profit": 50912033
     },
     {
       "month": "2025-03",
       "monthly_sales": 12172025,
       "rolling12m": 138813376,
       "rolling12m_prev": 174529460,
-      "monthly_profit": 6257204,
-      "rolling12m_profit": 55635329
+      "monthly_profit": 6379616,
+      "rolling12m_profit": 57396319
     },
     {
       "month": "2025-04",
       "monthly_sales": 16562470,
       "rolling12m": 150256446,
       "rolling12m_prev": 173905930,
-      "monthly_profit": 6121483,
-      "rolling12m_profit": 61370698
+      "monthly_profit": 6378023,
+      "rolling12m_profit": 63015915
     },
     {
       "month": "2025-05",
       "monthly_sales": 13177695,
       "rolling12m": 153944041,
       "rolling12m_prev": 165473680,
-      "monthly_profit": 8937954,
-      "rolling12m_profit": 54942695
+      "monthly_profit": 9211035,
+      "rolling12m_profit": 56058360
     },
     {
       "month": "2025-06",
       "monthly_sales": 18872975,
       "rolling12m": 161914864,
       "rolling12m_prev": 165829788,
-      "monthly_profit": -10738401,
-      "rolling12m_profit": 39597708
+      "monthly_profit": -10715280,
+      "rolling12m_profit": 40713494
     },
     {
       "month": "2025-07",
       "monthly_sales": 12212960,
       "rolling12m": 162967384,
       "rolling12m_prev": 167668518,
-      "monthly_profit": -6704947,
-      "rolling12m_profit": 29507498
+      "monthly_profit": -6724087,
+      "rolling12m_profit": 30574691
     },
     {
       "month": "2025-08",
       "monthly_sales": 12328270,
       "rolling12m": 165022774,
       "rolling12m_prev": 169283868,
-      "monthly_profit": -4746080,
-      "rolling12m_profit": 18873524
+      "monthly_profit": -4793925,
+      "rolling12m_profit": 19840188
     },
     {
       "month": "2025-09",
       "monthly_sales": 15933334,
       "rolling12m": 170259298,
       "rolling12m_prev": 170484478,
-      "monthly_profit": -5776093,
-      "rolling12m_profit": 13249795
+      "monthly_profit": -5861401,
+      "rolling12m_profit": 14082197
     },
     {
       "month": "2025-10",
       "monthly_sales": 11606303,
       "rolling12m": 170592721,
       "rolling12m_prev": 172543588,
-      "monthly_profit": -10696962,
-      "rolling12m_profit": 11149824
+      "monthly_profit": -10844480,
+      "rolling12m_profit": 11803226
     },
     {
       "month": "2025-11",
       "monthly_sales": 19107298,
       "rolling12m": 172759619,
       "rolling12m_prev": 177720472,
-      "monthly_profit": -20011528,
-      "rolling12m_profit": -15565876
+      "monthly_profit": -20036277,
+      "rolling12m_profit": -14983876
     },
     {
       "month": "2025-12",
       "monthly_sales": 33081928,
       "rolling12m": 185189558,
       "rolling12m_prev": 140469019,
-      "monthly_profit": -15761352,
-      "rolling12m_profit": -38489792
+      "monthly_profit": -15845620,
+      "rolling12m_profit": -38090635
     },
     {
       "month": "2026-01",
       "monthly_sales": 18237804,
       "rolling12m": 192656552,
       "rolling12m_prev": 142823329,
-      "monthly_profit": -13784461,
-      "rolling12m_profit": -60724073
+      "monthly_profit": -13925031,
+      "rolling12m_profit": -60537248
     },
     {
       "month": "2026-02",
       "monthly_sales": 12972529,
       "rolling12m": 196265591,
       "rolling12m_prev": 146100319,
-      "monthly_profit": -6493533,
-      "rolling12m_profit": -73396716
+      "monthly_profit": -6682285,
+      "rolling12m_profit": -73459712
     },
     {
       "month": "2026-03",
       "monthly_sales": 16956089,
       "rolling12m": 201049655,
       "rolling12m_prev": 138813376,
-      "monthly_profit": -8421362,
-      "rolling12m_profit": -88075282
+      "monthly_profit": -8634458,
+      "rolling12m_profit": -88473786
     },
     {
       "month": "2026-04",
       "monthly_sales": 19201260,
       "rolling12m": 203688445,
       "rolling12m_prev": 150256446,
-      "monthly_profit": 21875853,
-      "rolling12m_profit": -72320912
+      "monthly_profit": 21589997,
+      "rolling12m_profit": -73261812
     },
     {
       "month": "2026-05",
       "monthly_sales": 18230747,
       "rolling12m": 208741497,
       "rolling12m_prev": 153944041,
-      "monthly_profit": 25938352,
-      "rolling12m_profit": -55320514
+      "monthly_profit": 25593505,
+      "rolling12m_profit": -56879342
     },
     {
       "month": "2026-06",
       "monthly_sales": 14393264,
       "rolling12m": 204261786,
       "rolling12m_prev": 161914864,
-      "monthly_profit": -4016024,
-      "rolling12m_profit": -48598137
+      "monthly_profit": -4085673,
+      "rolling12m_profit": -50249735
     },
     {
       "month": "2026-07",
       "monthly_sales": 14936588,
       "rolling12m": 206985414,
       "rolling12m_prev": 162967384,
-      "monthly_profit": -2129503,
-      "rolling12m_profit": -44022693
+      "monthly_profit": -2268328,
+      "rolling12m_profit": -45793976
     }
   ],
   "latest": {
@@ -513,17 +513,17 @@
     "rolling12m": 206985414,
     "rolling12m_prev": 162967384,
     "yoy_pct": 27.0,
-    "rolling12m_profit": -44022693,
-    "monthly_profit": -2129503,
+    "rolling12m_profit": -45793976,
+    "monthly_profit": -2268328,
     "term_label": "今期",
     "term_start_month": "2026-06",
     "term_end_month": "2026-07",
     "term_sales_sum": 29329852,
-    "term_profit_sum": -6145527,
+    "term_profit_sum": -6354001,
     "term_prev_start_month": "2025-06",
     "term_prev_end_month": "2025-07",
     "term_prev_sales_sum": 31085935,
-    "term_prev_profit_sum": -17443348,
+    "term_prev_profit_sum": -17439367,
     "term_yoy_pct": -5.6
   }
 }
