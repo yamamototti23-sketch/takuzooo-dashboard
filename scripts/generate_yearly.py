@@ -42,17 +42,37 @@ BASE_CSV_FILES = [
     f"/Users/takuma/Documents/社ロゴ/顧客データ/{y}.csv"
     for y in [2021, 2022, 2023, 2024, 2025]
 ]
+BASE_MONTHLY_JSON = os.environ.get("BASE_MONTHLY_JSON", "docs/base_monthly.json")
 OUT_PATH = os.environ.get("OUT_PATH", "docs/jm-yearly.json")
 
 
 def aggregate_base_monthly():
-    """BASE 5 CSV → 月次売上 dict {YYYY-MM: sales_int}"""
+    """BASE 月次売上 dict {YYYY-MM: sales_int} を返す。
+
+    優先順位:
+      1) docs/base_monthly.json が存在すれば読み取り (GHA / public repo 環境)
+      2) BASE_CSV_FILES を Shift-JIS decode で直読み (Mac 対話モード)
+    """
+    # 案 D: 事前集計 JSON 経由 (GHA public repo 環境)
+    if os.path.exists(BASE_MONTHLY_JSON):
+        with open(BASE_MONTHLY_JSON, encoding="utf-8") as f:
+            payload = json.load(f)
+        monthly = {m["month"]: int(m["sales"]) for m in payload.get("months", [])}
+        print(f"[BASE] loaded {len(monthly)} months from {BASE_MONTHLY_JSON}",
+              file=sys.stderr)
+        return monthly
+
+    # Fallback: Mac 対話モード = BASE CSV 直読み
     monthly = defaultdict(int)
+    found = 0
     for f in BASE_CSV_FILES:
+        if not os.path.exists(f):
+            continue
+        found += 1
         with open(f, "rb") as fh:
             text = fh.read().decode("shift_jis", errors="replace")
         reader = csv.reader(io.StringIO(text))
-        next(reader)  # skip header
+        next(reader)
         for row in reader:
             if len(row) < 24:
                 continue
@@ -63,6 +83,11 @@ def aggregate_base_monthly():
                 continue
             ym = f"{dt.year:04d}-{dt.month:02d}"
             monthly[ym] += amount
+    if found == 0:
+        raise RuntimeError(
+            f"BASE データソース未発見: {BASE_MONTHLY_JSON} も BASE CSV も見つからない"
+        )
+    print(f"[BASE] loaded from {found} CSV files (Mac local)", file=sys.stderr)
     return dict(monthly)
 
 

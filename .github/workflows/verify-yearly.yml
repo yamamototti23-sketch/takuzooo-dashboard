@@ -1,0 +1,81 @@
+name: Verify yearly updated (Layer 4 発火漏れ検知)
+
+# 目的: 毎月1日 update-yearly が実際に発火したか翌日に検証。
+# jm-yearly.json の updatedAt が 30h 以上前なら発火漏れとして Chatwork 通知。
+# CLAUDE.md § 忘却リスクゼロ化 (2026-09-01) 準拠。
+
+on:
+  schedule:
+    # 毎月2日 00:00 UTC = 09:00 JST (update-yearly の翌日)
+    - cron: '0 0 2 * *'
+  workflow_dispatch:
+
+concurrency:
+  group: verify-yearly
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Verify updatedAt (< 30h ago)
+        env:
+          CHATWORK_API_TOKEN: ${{ secrets.CHATWORK_API_TOKEN }}
+        run: |
+          python3 <<'PYEOF'
+          import json, os, datetime, urllib.request, urllib.parse, sys
+          d = json.load(open("docs/jm-yearly.json"))
+          updated_str = d["updatedAt"]
+          try:
+              updated = datetime.datetime.fromisoformat(updated_str)
+          except ValueError:
+              print(f"⚠ updatedAt parse failed: {updated_str}", file=sys.stderr)
+              sys.exit(1)
+          if updated.tzinfo is None:
+              # tz なし表記は JST 想定 (generate_yearly.py は JST で出力)
+              updated = updated.replace(tzinfo=datetime.timezone(datetime.timedelta(hours=9)))
+          now = datetime.datetime.now(datetime.timezone.utc)
+          hours_ago = (now - updated).total_seconds() / 3600
+          print(f"updatedAt: {updated_str} ({hours_ago:.1f}h ago)")
+
+          if hours_ago > 30:
+              body = f"""[info][title]⚠ 年計 発火漏れ検知 (Layer 4)[/title]docs/jm-yearly.json の updatedAt が {hours_ago:.1f}h 前です。
+昨日 (毎月1日 09:00 JST) の update-yearly workflow が発火しなかった可能性があります。
+
+即座に手動発火してください:
+https://github.com/${{ github.repository }}/actions/workflows/update-yearly.yml
+
+原因調査:
+- Run 履歴: https://github.com/${{ github.repository }}/actions
+- GHA schedule は稀に遅延 or skip される (skip-trigger 対策で workflow_dispatch 手動発火が最短復旧)[/info]"""
+              token = os.environ["CHATWORK_API_TOKEN"]
+              data = urllib.parse.urlencode({"body": body, "self_unread": "1"}).encode()
+              req = urllib.request.Request(
+                  "https://api.chatwork.com/v2/rooms/218962687/messages",
+                  data=data,
+                  headers={"X-ChatWorkToken": token},
+              )
+              urllib.request.urlopen(req, timeout=15)
+              print(f"⚠ 発火漏れ通知送信完了 ({hours_ago:.1f}h ago)")
+              sys.exit(1)  # verify workflow 自体を failure 扱いで failure 通知経路もキック
+          else:
+              print(f"✓ updated {hours_ago:.1f}h ago - OK (silent)")
+          PYEOF
+
+      - name: Notify verify workflow failure
+        if: failure()
+        env:
+          CHATWORK_API_TOKEN: ${{ secrets.CHATWORK_API_TOKEN }}
+        run: |
+          curl -s -X POST -H "X-ChatWorkToken: $CHATWORK_API_TOKEN" \
+            --data-urlencode "body=[info][title]⚠ verify-yearly workflow 自体が失敗[/title]takuzooo-dashboard verify-yearly workflow が失敗しました (Layer 4 の 4 が壊れた = 発火漏れ検知ゼロ化崩壊)。
+Run: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}[/info]" \
+            --data-urlencode "self_unread=1" \
+            "https://api.chatwork.com/v2/rooms/218962687/messages"
