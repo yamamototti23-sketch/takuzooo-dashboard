@@ -25,10 +25,12 @@ jobs:
           python-version: '3.12'
 
       - name: Generate jm-yearly.json
+        # 注: dashboard app (SHOPIFY_CLIENT_ID) は read_all_orders scope 無しで
+        # 60日以内 orders しか取れず 7ヶ月集計不能。customer-master app 経由に切替。
         env:
           SHOPIFY_STORE: ${{ secrets.SHOPIFY_STORE }}
-          SHOPIFY_CLIENT_ID: ${{ secrets.SHOPIFY_CLIENT_ID }}
-          SHOPIFY_CLIENT_SECRET: ${{ secrets.SHOPIFY_CLIENT_SECRET }}
+          SHOPIFY_CLIENT_ID: ${{ secrets.SHOPIFY_CM_CLIENT_ID }}
+          SHOPIFY_CLIENT_SECRET: ${{ secrets.SHOPIFY_CM_CLIENT_SECRET }}
           BASE_MONTHLY_JSON: docs/base_monthly.json
         run: python3 scripts/generate_yearly.py
 
