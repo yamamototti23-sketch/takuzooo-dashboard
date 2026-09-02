@@ -1,21 +1,21 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-09-02T20:43:25+09:00",
+  "updatedAt": "2026-09-03T00:18:02+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 39885646,
-    "orders": 1425,
-    "aov": 27990
+    "sales": 39959346,
+    "orders": 1427,
+    "aov": 28002
   },
   "month": {
-    "salesTotal": 757262,
-    "unitsTotal": 20,
-    "days": 2
+    "salesTotal": 830962,
+    "unitsTotal": 23,
+    "days": 3
   },
   "lastYear": {
-    "salesTotal": 510950,
-    "days": 2
+    "salesTotal": 756910,
+    "days": 3
   },
   "trend": {
     "points": [
@@ -25,7 +25,11 @@
       },
       {
         "date": "2026-09-02",
-        "sales": 379925
+        "sales": 453625
+      },
+      {
+        "date": "2026-09-03",
+        "sales": 0
       }
     ],
     "points_lastyear": [
@@ -36,20 +40,24 @@
       {
         "date": "2025-09-02",
         "sales": 262240
+      },
+      {
+        "date": "2025-09-03",
+        "sales": 245960
       }
     ]
   },
   "daily": {
-    "todayUnits": 4,
-    "yesterdayUnits": 16,
-    "todaySales": 379925,
-    "yesterdaySales": 377337
+    "todayUnits": 0,
+    "yesterdayUnits": 7,
+    "todaySales": 0,
+    "yesterdaySales": 453625
   },
   "top5": [
     {
       "rank": 1,
       "title": "『ネックレス』（Silver925）",
-      "units": 9,
+      "units": 10,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1L4A6061_1_7ca50b37-5a29-4124-955e-90d35a5e89af.jpg?v=1780952166"
     },
@@ -70,7 +78,7 @@
     {
       "rank": 4,
       "title": "いつかは、究極のグレーパンツ~SMARTシリーズ",
-      "units": 1,
+      "units": 2,
       "handle": "graypants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/733edb1e425db1232bf22bd5a0bef49f.jpg?v=1776451631"
     },
