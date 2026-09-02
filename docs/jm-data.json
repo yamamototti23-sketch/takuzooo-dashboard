@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-09-02T15:25:23+09:00",
+  "updatedAt": "2026-09-02T20:43:25+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 39562646,
-    "orders": 1424,
-    "aov": 27783
+    "sales": 39885646,
+    "orders": 1425,
+    "aov": 27990
   },
   "month": {
-    "salesTotal": 434262,
-    "unitsTotal": 19,
+    "salesTotal": 757262,
+    "unitsTotal": 20,
     "days": 2
   },
   "lastYear": {
@@ -25,7 +25,7 @@
       },
       {
         "date": "2026-09-02",
-        "sales": 56925
+        "sales": 379925
       }
     ],
     "points_lastyear": [
@@ -40,9 +40,9 @@
     ]
   },
   "daily": {
-    "todayUnits": 3,
+    "todayUnits": 4,
     "yesterdayUnits": 16,
-    "todaySales": 56925,
+    "todaySales": 379925,
     "yesterdaySales": 377337
   },
   "top5": [
@@ -69,17 +69,17 @@
     },
     {
       "rank": 4,
-      "title": "50年後も着たい「デニムジャケット」（セットアップ）~SMARTシリーズ",
+      "title": "いつかは、究極のグレーパンツ~SMARTシリーズ",
       "units": 1,
-      "handle": "denim-jacket",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/7_cd35d176-3ef3-444c-8dc0-afebb853f82f.jpg?v=1776451631"
+      "handle": "graypants",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/733edb1e425db1232bf22bd5a0bef49f.jpg?v=1776451631"
     },
     {
       "rank": 5,
-      "title": "『\"和\"ブレスレット』(Silver925)",
+      "title": "「黒桟革ショルダーバッグ」（Largeサイズ）",
       "units": 1,
-      "handle": "japanese-bracelet",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/3V7A0359_square_compressed_37a94712-9a5f-4523-b364-0e5416534cb0.jpg?v=1783565273"
+      "handle": "large-black-leather-shoulder-bag",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/44_compressed_f29218c2-0e6c-4086-9ad3-beeac182052d.jpg?v=1786503855"
     }
   ]
 }
