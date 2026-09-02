@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-09-02T10:24:09+09:00",
+  "updatedAt": "2026-09-02T15:25:23+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 39536521,
-    "orders": 1423,
-    "aov": 27784
+    "sales": 39562646,
+    "orders": 1424,
+    "aov": 27783
   },
   "month": {
-    "salesTotal": 408137,
-    "unitsTotal": 18,
+    "salesTotal": 434262,
+    "unitsTotal": 19,
     "days": 2
   },
   "lastYear": {
@@ -25,7 +25,7 @@
       },
       {
         "date": "2026-09-02",
-        "sales": 30800
+        "sales": 56925
       }
     ],
     "points_lastyear": [
@@ -40,9 +40,9 @@
     ]
   },
   "daily": {
-    "todayUnits": 2,
+    "todayUnits": 3,
     "yesterdayUnits": 16,
-    "todaySales": 30800,
+    "todaySales": 56925,
     "yesterdaySales": 377337
   },
   "top5": [
@@ -76,10 +76,10 @@
     },
     {
       "rank": 5,
-      "title": "「黒桟革ショルダーバッグ」（Largeサイズ）",
+      "title": "『\"和\"ブレスレット』(Silver925)",
       "units": 1,
-      "handle": "large-black-leather-shoulder-bag",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/44_compressed_f29218c2-0e6c-4086-9ad3-beeac182052d.jpg?v=1786503855"
+      "handle": "japanese-bracelet",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/3V7A0359_square_compressed_37a94712-9a5f-4523-b364-0e5416534cb0.jpg?v=1783565273"
     }
   ]
 }
