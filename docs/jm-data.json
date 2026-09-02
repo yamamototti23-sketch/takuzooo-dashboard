@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-09-03T00:18:02+09:00",
+  "updatedAt": "2026-09-03T03:56:36+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 39959346,
-    "orders": 1427,
-    "aov": 28002
+    "sales": 40009506,
+    "orders": 1428,
+    "aov": 28018
   },
   "month": {
-    "salesTotal": 830962,
-    "unitsTotal": 23,
+    "salesTotal": 881122,
+    "unitsTotal": 24,
     "days": 3
   },
   "lastYear": {
@@ -29,7 +29,7 @@
       },
       {
         "date": "2026-09-03",
-        "sales": 0
+        "sales": 50160
       }
     ],
     "points_lastyear": [
@@ -48,9 +48,9 @@
     ]
   },
   "daily": {
-    "todayUnits": 0,
+    "todayUnits": 1,
     "yesterdayUnits": 7,
-    "todaySales": 0,
+    "todaySales": 50160,
     "yesterdaySales": 453625
   },
   "top5": [
@@ -84,10 +84,10 @@
     },
     {
       "rank": 5,
-      "title": "「黒桟革ショルダーバッグ」（Largeサイズ）",
-      "units": 1,
-      "handle": "large-black-leather-shoulder-bag",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/44_compressed_f29218c2-0e6c-4086-9ad3-beeac182052d.jpg?v=1786503855"
+      "title": "50年後も着たい「デニムジャケット」（セットアップ）~SMARTシリーズ",
+      "units": 2,
+      "handle": "denim-jacket",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/7_cd35d176-3ef3-444c-8dc0-afebb853f82f.jpg?v=1776451631"
     }
   ]
 }
