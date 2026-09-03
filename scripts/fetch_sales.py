@@ -51,8 +51,8 @@ TOKEN = None
 # transient failure に対する retry 設定 (2026-09-03 追加・恒久)
 # Shopify API 側 or GHA runner ↔ Shopify 間の一時的な接続切断 (Remote end closed
 # 等) を吸収する。正常系は 1回目で return するので副作用ゼロ。
-HTTP_RETRY_MAX = 3
-HTTP_RETRY_BACKOFF = (1.0, 2.0, 4.0)   # 秒。indice = 失敗回数
+HTTP_RETRY_MAX = 5
+HTTP_RETRY_BACKOFF = (1.0, 2.0, 4.0, 8.0, 16.0)   # 秒。indice = 失敗回数 (合計 31s 猶予・26s 障害耐性化)
 HTTP_RETRY_STATUS = {429, 500, 502, 503, 504}   # 429 は Retry-After 準拠 (下記参照)
 HTTP_RETRY_AFTER_CAP = 60.0            # Retry-After 値の上限 (秒・GHA 5min timeout 保護)
 
