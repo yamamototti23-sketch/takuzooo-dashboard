@@ -25,9 +25,13 @@ import sys
 import json
 import base64
 import datetime
+import socket
+import time
+from http.client import RemoteDisconnected, IncompleteRead
 from zoneinfo import ZoneInfo
 import urllib.request
 import urllib.parse
+import urllib.error
 
 API_VERSION = "2026-01"          # publicApiVersions で supported を確認済み（必要なら更新）
 JST = ZoneInfo("Asia/Tokyo")     # Shopify ストアのタイムゾーンに合わせる
@@ -44,6 +48,49 @@ OAUTH_ENDPOINT = f"https://{STORE}/admin/oauth/access_token"
 # main() 冒頭で client_credentials grant により取得して上書きする
 TOKEN = None
 
+# transient failure に対する retry 設定 (2026-09-03 追加・恒久)
+# Shopify API 側 or GHA runner ↔ Shopify 間の一時的な接続切断 (Remote end closed
+# 等) を吸収する。正常系は 1回目で return するので副作用ゼロ。
+HTTP_RETRY_MAX = 3
+HTTP_RETRY_BACKOFF = (1.0, 2.0, 4.0)   # 秒。indice = 失敗回数
+HTTP_RETRY_STATUS = {500, 502, 503, 504}
+
+
+def _urlopen_with_retry(req, timeout=30):
+    """urllib.request.urlopen を transient failure に対して retry する薄いラッパ。
+
+    retry 対象:
+      - urllib.error.URLError (socket 系全般)
+      - http.client.RemoteDisconnected / IncompleteRead
+      - socket.timeout / TimeoutError / ConnectionResetError
+      - urllib.error.HTTPError で status ∈ HTTP_RETRY_STATUS
+
+    retry 対象外 (即 raise):
+      - HTTPError 4xx (認証切れ等・retry しても解決しない)
+      - RuntimeError / ValueError 等の非ネットワーク例外
+
+    正常系は 1回目で return するので既存挙動と等価。retry 発火時は stderr に
+    1行ログを吐いて可視化する (GHA log で追跡可能)。
+    """
+    last_exc = None
+    for attempt in range(HTTP_RETRY_MAX):
+        try:
+            return urllib.request.urlopen(req, timeout=timeout)
+        except urllib.error.HTTPError as e:
+            if e.code not in HTTP_RETRY_STATUS:
+                raise
+            last_exc = e
+        except (urllib.error.URLError, RemoteDisconnected, IncompleteRead,
+                socket.timeout, TimeoutError, ConnectionResetError) as e:
+            last_exc = e
+        if attempt < HTTP_RETRY_MAX - 1:
+            wait = HTTP_RETRY_BACKOFF[attempt]
+            print(f"WARN: transient HTTP failure ({type(last_exc).__name__}: {last_exc}) "
+                  f"retry {attempt + 1}/{HTTP_RETRY_MAX - 1} after {wait}s",
+                  file=sys.stderr)
+            time.sleep(wait)
+    raise last_exc
+
 
 def fetch_access_token():
     """Dev Dashboard アプリの client_id / client_secret から
@@ -56,7 +103,7 @@ def fetch_access_token():
     req = urllib.request.Request(OAUTH_ENDPOINT, data=body, headers={
         "Content-Type": "application/x-www-form-urlencoded",
     })
-    with urllib.request.urlopen(req, timeout=30) as r:
+    with _urlopen_with_retry(req, timeout=30) as r:
         data = json.loads(r.read().decode("utf-8"))
     token = data.get("access_token")
     if not token:
@@ -70,7 +117,7 @@ def gql(query, variables=None):
         "Content-Type": "application/json",
         "X-Shopify-Access-Token": TOKEN,
     })
-    with urllib.request.urlopen(req, timeout=30) as r:
+    with _urlopen_with_retry(req, timeout=30) as r:
         data = json.loads(r.read().decode("utf-8"))
     if "errors" in data and data["errors"]:
         raise RuntimeError(f"GraphQL error: {data['errors']}")
