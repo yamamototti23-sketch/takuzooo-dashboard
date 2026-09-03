@@ -53,7 +53,8 @@ TOKEN = None
 # 等) を吸収する。正常系は 1回目で return するので副作用ゼロ。
 HTTP_RETRY_MAX = 3
 HTTP_RETRY_BACKOFF = (1.0, 2.0, 4.0)   # 秒。indice = 失敗回数
-HTTP_RETRY_STATUS = {500, 502, 503, 504}
+HTTP_RETRY_STATUS = {429, 500, 502, 503, 504}   # 429 は Retry-After 準拠 (下記参照)
+HTTP_RETRY_AFTER_CAP = 60.0            # Retry-After 値の上限 (秒・GHA 5min timeout 保護)
 
 
 def _urlopen_with_retry(req, timeout=30):
@@ -63,10 +64,15 @@ def _urlopen_with_retry(req, timeout=30):
       - urllib.error.URLError (socket 系全般)
       - http.client.RemoteDisconnected / IncompleteRead
       - socket.timeout / TimeoutError / ConnectionResetError
-      - urllib.error.HTTPError で status ∈ HTTP_RETRY_STATUS
+      - urllib.error.HTTPError で status ∈ HTTP_RETRY_STATUS ({429, 500, 502, 503, 504})
+
+    HTTP 429 (rate limit) は Retry-After ヘッダに従う (Shopify GraphQL Admin API
+    が Cost Bucket 満杯時に返す・準拠が正しい待機戦略)。Retry-After なし or
+    parse 失敗時は通常 backoff (1s/2s/4s) にフォールバック。HTTP_RETRY_AFTER_CAP
+    で上限を切って GHA 5min timeout 保護。
 
     retry 対象外 (即 raise):
-      - HTTPError 4xx (認証切れ等・retry しても解決しない)
+      - HTTPError 4xx (401/403/404 等・retry しても解決しない)
       - RuntimeError / ValueError 等の非ネットワーク例外
 
     正常系は 1回目で return するので既存挙動と等価。retry 発火時は stderr に
@@ -80,6 +86,18 @@ def _urlopen_with_retry(req, timeout=30):
             if e.code not in HTTP_RETRY_STATUS:
                 raise
             last_exc = e
+            # HTTP 429 は Retry-After 準拠 (Shopify 側の待機指示に従う)
+            if e.code == 429 and attempt < HTTP_RETRY_MAX - 1:
+                retry_after_raw = e.headers.get("Retry-After") if e.headers else None
+                try:
+                    wait = min(float(retry_after_raw), HTTP_RETRY_AFTER_CAP) if retry_after_raw else HTTP_RETRY_BACKOFF[attempt]
+                    print(f"WARN: HTTP 429 rate limited (Retry-After={retry_after_raw}) "
+                          f"retry {attempt + 1}/{HTTP_RETRY_MAX - 1} after {wait}s",
+                          file=sys.stderr)
+                    time.sleep(wait)
+                    continue   # 通常 backoff スキップして次 attempt へ
+                except (ValueError, TypeError):
+                    pass   # parse 失敗 → 通常 backoff にフォールバック
         except (urllib.error.URLError, RemoteDisconnected, IncompleteRead,
                 socket.timeout, TimeoutError, ConnectionResetError) as e:
             last_exc = e
