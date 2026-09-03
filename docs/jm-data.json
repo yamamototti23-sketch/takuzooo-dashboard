@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-09-03T18:11:17+09:00",
+  "updatedAt": "2026-09-03T22:34:24+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 40055431,
-    "orders": 1430,
-    "aov": 28011
+    "sales": 40123081,
+    "orders": 1433,
+    "aov": 27999
   },
   "month": {
-    "salesTotal": 927047,
-    "unitsTotal": 26,
+    "salesTotal": 994697,
+    "unitsTotal": 29,
     "days": 3
   },
   "lastYear": {
@@ -29,7 +29,7 @@
       },
       {
         "date": "2026-09-03",
-        "sales": 96085
+        "sales": 163735
       }
     ],
     "points_lastyear": [
@@ -48,16 +48,16 @@
     ]
   },
   "daily": {
-    "todayUnits": 3,
+    "todayUnits": 6,
     "yesterdayUnits": 7,
-    "todaySales": 96085,
+    "todaySales": 163735,
     "yesterdaySales": 453625
   },
   "top5": [
     {
       "rank": 1,
       "title": "『ネックレス』（Silver925）",
-      "units": 11,
+      "units": 12,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1L4A6061_1_7ca50b37-5a29-4124-955e-90d35a5e89af.jpg?v=1780952166"
     },
@@ -70,24 +70,24 @@
     },
     {
       "rank": 3,
-      "title": "『ブレスレット』(Silver925)",
-      "units": 2,
-      "handle": "silver-bracelet",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394"
-    },
-    {
-      "rank": 4,
       "title": "いつかは、究極のグレーパンツ~SMARTシリーズ",
       "units": 2,
       "handle": "graypants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/733edb1e425db1232bf22bd5a0bef49f.jpg?v=1776451631"
     },
     {
-      "rank": 5,
+      "rank": 4,
       "title": "50年後も着たい「デニムジャケット」（セットアップ）~SMARTシリーズ",
       "units": 2,
       "handle": "denim-jacket",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/7_cd35d176-3ef3-444c-8dc0-afebb853f82f.jpg?v=1776451631"
+    },
+    {
+      "rank": 5,
+      "title": "『ブレスレット』(Silver925)",
+      "units": 2,
+      "handle": "silver-bracelet",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394"
     }
   ]
 }
