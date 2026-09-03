@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-09-04T02:14:13+09:00",
+  "updatedAt": "2026-09-04T04:50:15+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 40142551,
-    "orders": 1434,
+    "sales": 40170051,
+    "orders": 1435,
     "aov": 27993
   },
   "month": {
-    "salesTotal": 1014167,
-    "unitsTotal": 30,
+    "salesTotal": 1041667,
+    "unitsTotal": 31,
     "days": 4
   },
   "lastYear": {
@@ -33,7 +33,7 @@
       },
       {
         "date": "2026-09-04",
-        "sales": 19470
+        "sales": 46970
       }
     ],
     "points_lastyear": [
@@ -56,9 +56,9 @@
     ]
   },
   "daily": {
-    "todayUnits": 1,
+    "todayUnits": 2,
     "yesterdayUnits": 6,
-    "todaySales": 19470,
+    "todaySales": 46970,
     "yesterdaySales": 163735
   },
   "top5": [
@@ -71,31 +71,31 @@
     },
     {
       "rank": 2,
+      "title": "いつかは、究極のグレーパンツ~SMARTシリーズ",
+      "units": 3,
+      "handle": "graypants",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/733edb1e425db1232bf22bd5a0bef49f.jpg?v=1776451631"
+    },
+    {
+      "rank": 3,
       "title": "『本革ボディーバッグ』（姫路レザー）",
       "units": 3,
       "handle": "stylish-genuine-leather-large-body-bag",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A1554_1_ef495592-e3a6-4e83-8ffe-1f7f917d3092.jpg?v=1783603757"
     },
     {
-      "rank": 3,
-      "title": "いつかは、究極のグレーパンツ~SMARTシリーズ",
-      "units": 2,
-      "handle": "graypants",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/733edb1e425db1232bf22bd5a0bef49f.jpg?v=1776451631"
-    },
-    {
       "rank": 4,
-      "title": "50年後も着たい「デニムジャケット」（セットアップ）~SMARTシリーズ",
-      "units": 2,
-      "handle": "denim-jacket",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/7_cd35d176-3ef3-444c-8dc0-afebb853f82f.jpg?v=1776451631"
-    },
-    {
-      "rank": 5,
       "title": "『ブレスレット』(Silver925)",
       "units": 2,
       "handle": "silver-bracelet",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394"
+    },
+    {
+      "rank": 5,
+      "title": "50年後も着たい「デニムジャケット」（セットアップ）~SMARTシリーズ",
+      "units": 2,
+      "handle": "denim-jacket",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/7_cd35d176-3ef3-444c-8dc0-afebb853f82f.jpg?v=1776451631"
     }
   ]
 }
