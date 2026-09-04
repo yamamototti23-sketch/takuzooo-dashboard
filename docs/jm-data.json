@@ -1,21 +1,21 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-09-04T22:46:19+09:00",
+  "updatedAt": "2026-09-05T02:07:20+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 40451239,
-    "orders": 1442,
-    "aov": 28052
+    "sales": 40465594,
+    "orders": 1443,
+    "aov": 28043
   },
   "month": {
-    "salesTotal": 1322855,
-    "unitsTotal": 42,
-    "days": 4
+    "salesTotal": 1337210,
+    "unitsTotal": 43,
+    "days": 5
   },
   "lastYear": {
-    "salesTotal": 908710,
-    "days": 4
+    "salesTotal": 1088230,
+    "days": 5
   },
   "trend": {
     "points": [
@@ -34,6 +34,10 @@
       {
         "date": "2026-09-04",
         "sales": 328158
+      },
+      {
+        "date": "2026-09-05",
+        "sales": 14355
       }
     ],
     "points_lastyear": [
@@ -52,14 +56,18 @@
       {
         "date": "2025-09-04",
         "sales": 151800
+      },
+      {
+        "date": "2025-09-05",
+        "sales": 179520
       }
     ]
   },
   "daily": {
-    "todayUnits": 13,
-    "yesterdayUnits": 6,
-    "todaySales": 328158,
-    "yesterdaySales": 163735
+    "todayUnits": 1,
+    "yesterdayUnits": 13,
+    "todaySales": 14355,
+    "yesterdaySales": 328158
   },
   "top5": [
     {
@@ -78,17 +86,17 @@
     },
     {
       "rank": 3,
+      "title": "『ブレスレット』(Silver925)",
+      "units": 3,
+      "handle": "silver-bracelet",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394"
+    },
+    {
+      "rank": 4,
       "title": "いつかは、究極のグレーパンツ~SMARTシリーズ",
       "units": 3,
       "handle": "graypants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/733edb1e425db1232bf22bd5a0bef49f.jpg?v=1776451631"
-    },
-    {
-      "rank": 4,
-      "title": "『ブレスレット』(Silver925)",
-      "units": 2,
-      "handle": "silver-bracelet",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394"
     },
     {
       "rank": 5,
