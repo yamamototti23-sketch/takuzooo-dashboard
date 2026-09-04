@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-09-04T09:24:35+09:00",
+  "updatedAt": "2026-09-04T14:06:01+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 40225885,
-    "orders": 1438,
-    "aov": 27973
+    "sales": 40254485,
+    "orders": 1439,
+    "aov": 27974
   },
   "month": {
-    "salesTotal": 1097501,
-    "unitsTotal": 34,
+    "salesTotal": 1126101,
+    "unitsTotal": 36,
     "days": 4
   },
   "lastYear": {
@@ -33,7 +33,7 @@
       },
       {
         "date": "2026-09-04",
-        "sales": 102804
+        "sales": 131404
       }
     ],
     "points_lastyear": [
@@ -56,9 +56,9 @@
     ]
   },
   "daily": {
-    "todayUnits": 5,
+    "todayUnits": 7,
     "yesterdayUnits": 6,
-    "todaySales": 102804,
+    "todaySales": 131404,
     "yesterdaySales": 163735
   },
   "top5": [
@@ -85,17 +85,17 @@
     },
     {
       "rank": 4,
-      "title": "『ブレスレット』(Silver925)",
-      "units": 2,
-      "handle": "silver-bracelet",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394"
-    },
-    {
-      "rank": 5,
       "title": "50年後も着たい「デニムジャケット」（セットアップ）~SMARTシリーズ",
       "units": 2,
       "handle": "denim-jacket",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/7_cd35d176-3ef3-444c-8dc0-afebb853f82f.jpg?v=1776451631"
+    },
+    {
+      "rank": 5,
+      "title": "『ブレスレット』(Silver925)",
+      "units": 2,
+      "handle": "silver-bracelet",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394"
     }
   ]
 }
