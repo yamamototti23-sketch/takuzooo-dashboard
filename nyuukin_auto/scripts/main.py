@@ -30,7 +30,8 @@ DRIVE_NYUUKIN_FOLDER_ID = "1S5XR3Rg1Ae1omEG0_CiAjaTKD_HIeXT-"  # 「入金」
 DROPBOX_NYUUKIN_ROOT = "/たくぞー/契約書/⚫︎入金"
 
 # 通知
-CHATWORK_MYCHAT = 218962687
+CHATWORK_MYCHAT = 218962687      # 失敗時
+CHATWORK_HARA_DM = 444350966     # 成功時 (原様 DM・村上事務所)
 
 # ---- Dropbox helper ----
 _dropbox_token_cache = None
@@ -323,18 +324,18 @@ def store_file(source_name, date_str, filename, content_bytes, dry_run=False):
     return {"dropbox": drop_r, "drive": drive_r}
 
 # ---- Chatwork ----
-def notify_chatwork(body):
+def notify_chatwork(room_id, body):
     if not CHATWORK_API_TOKEN: return
     data = urllib.parse.urlencode({"body": body, "self_unread": 1}).encode()
     req = urllib.request.Request(
-        f"https://api.chatwork.com/v2/rooms/{CHATWORK_MYCHAT}/messages",
+        f"https://api.chatwork.com/v2/rooms/{room_id}/messages",
         data=data,
         headers={"X-ChatWorkToken": CHATWORK_API_TOKEN, "Content-Type": "application/x-www-form-urlencoded"}
     )
     try:
         urllib.request.urlopen(req, timeout=15).read()
     except Exception as e:
-        print(f"[Chatwork通知失敗] {e}", file=sys.stderr)
+        print(f"[Chatwork通知失敗 rid={room_id}] {e}", file=sys.stderr)
 
 # ---- Main ----
 def main():
@@ -393,9 +394,31 @@ def main():
     print(f"\n=== 完了 ===")
     print(f"Shopify: {len(results['shopify'])}件 / Komoju: {len(results['komoju'])}件 / エラー: {len(results['errors'])}件")
 
-    # 失敗時のみ Chatwork 通知 (§ 常駐スキル通知は失敗時のみ 準拠)
-    if results['errors'] and not args.dry_run:
-        notify_chatwork(f"[title]nyuukin-auto 失敗[/title]" + "\n".join(results['errors']))
+    # 通知
+    if args.dry_run:
+        pass  # dry-run 時は通知なし
+    elif results['errors']:
+        # 失敗時 → マイチャット
+        notify_chatwork(CHATWORK_MYCHAT,
+            f"[title]⚠ nyuukin-auto 失敗[/title]\n" + "\n".join(results['errors']) +
+            "\n\n復旧手順: workflow_dispatch で再実行\nhttps://github.com/yamamototti23-sketch/takuzooo-dashboard/actions/workflows/nyuukin_auto.yml"
+        )
+    elif results['shopify'] or results['komoju']:
+        # 成功時 (格納あり) → 原様 DM
+        now_jst = datetime.now(timezone(timedelta(hours=9)))
+        month_str = f"{now_jst.month:02d}"
+        body = "[title]入金明細CSV 週次自動格納 完了[/title]\n"
+        body += f"Google共有ドライブ「入金/{now_jst.year}/{month_str}/」に本日分を格納しました。\n\n"
+        if results['shopify']:
+            body += f"・Shopify Payments: {len(results['shopify'])}件\n"
+            for s in results['shopify']:
+                body += f"   ・{s['file']} ({s['tx_count']}tx)\n"
+        if results['komoju']:
+            body += f"・Komoju: {len(results['komoju'])}件\n"
+            for s in results['komoju']:
+                body += f"   ・{s['file']}\n"
+        body += "\nご確認よろしくお願いいたします。"
+        notify_chatwork(CHATWORK_HARA_DM, body)
 
     return 1 if results['errors'] else 0
 
