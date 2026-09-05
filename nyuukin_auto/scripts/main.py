@@ -168,15 +168,18 @@ def fetch_shopify_payouts(days_lookback=14):
             filtered.append(p)
     return filtered
 
-def fetch_balance_transactions_for_payout(payout_legacy_id):
-    """payout の全 transactions 取得 (pagination)"""
+def fetch_recent_balance_transactions(days_lookback):
+    """直近 N 日の全 balanceTransactions 取得 (associatedPayout で group する用)
+    ⚠ query="payout_id:XXX" filter は効かない (全期間返る) ため lookback で早期 break
+    """
     all_tx = []
     cursor = None
+    cutoff = datetime.now(timezone.utc) - timedelta(days=days_lookback)
     while True:
         after = f', after: "{cursor}"' if cursor else ''
         q = f'''{{
           shopifyPaymentsAccount {{
-            balanceTransactions(first: 250, query: "payout_id:{payout_legacy_id}"{after}) {{
+            balanceTransactions(first: 250, reverse: true{after}) {{
               pageInfo {{ hasNextPage endCursor }}
               edges {{
                 cursor
@@ -191,6 +194,7 @@ def fetch_balance_transactions_for_payout(payout_legacy_id):
                   sourceId
                   sourceOrderTransactionId
                   associatedOrder {{ id }}
+                  associatedPayout {{ id status }}
                 }}
               }}
             }}
@@ -198,11 +202,27 @@ def fetch_balance_transactions_for_payout(payout_legacy_id):
         }}'''
         r = shopify_gql(q)
         conn = r['data']['shopifyPaymentsAccount']['balanceTransactions']
+        older_found = False
         for e in conn['edges']:
-            all_tx.append(e['node'])
-        if not conn['pageInfo']['hasNextPage']: break
+            n = e['node']
+            tdate = datetime.fromisoformat(n['transactionDate'].replace('Z', '+00:00'))
+            if tdate < cutoff:
+                older_found = True
+                continue
+            all_tx.append(n)
+        if older_found or not conn['pageInfo']['hasNextPage']: break
         cursor = conn['pageInfo']['endCursor']
     return all_tx
+
+def group_transactions_by_payout(all_tx):
+    """associatedPayout.id → transactions list"""
+    grouped = {}
+    for tx in all_tx:
+        ap = tx.get('associatedPayout')
+        if not ap: continue
+        pid = ap['id'].split('/')[-1]
+        grouped.setdefault(pid, []).append(tx)
+    return grouped
 
 def build_shopify_csv(payout, transactions):
     """CSV 生成 (日付+金額+手数料の要件充足)"""
@@ -334,14 +354,17 @@ def main():
             print("\n### Shopify Payments ###")
             payouts = fetch_shopify_payouts(days_lookback=args.days_lookback)
             print(f"対象 payouts: {len(payouts)}件")
+            # 直近 balanceTransactions 一括取得 → payout ごとに group
+            all_tx = fetch_recent_balance_transactions(days_lookback=args.days_lookback + 7)  # payout に含まれる古い tx も拾う
+            grouped = group_transactions_by_payout(all_tx)
+            print(f"直近 balanceTransactions: {len(all_tx)}件 / {len(grouped)} payouts に group")
             for p in payouts:
                 pd = date_only(p['issuedAt'])
                 filename = f"Shopify_{pd}.csv"
-                transactions = fetch_balance_transactions_for_payout(p['legacyResourceId'])
-                # type 別内訳 stdout (dry-run 分析用)
+                transactions = grouped.get(p['legacyResourceId'], [])
                 from collections import Counter
                 type_counts = Counter(t['type'] for t in transactions)
-                print(f"    type内訳: {dict(type_counts)}  total={len(transactions)}")
+                print(f"    Payout {pd} type内訳: {dict(type_counts)}  total={len(transactions)}")
                 csv_bytes = build_shopify_csv(p, transactions)
                 r = store_file("Shopify", p['issuedAt'], filename, csv_bytes, dry_run=args.dry_run)
                 results["shopify"].append({"file": filename, "tx_count": len(transactions), "amount": p['net']['amount']})
