@@ -1,21 +1,21 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-09-05T21:04:27+09:00",
+  "updatedAt": "2026-09-06T00:11:31+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 40637766,
-    "orders": 1451,
-    "aov": 28007
+    "sales": 40723861,
+    "orders": 1454,
+    "aov": 28008
   },
   "month": {
-    "salesTotal": 1509382,
-    "unitsTotal": 52,
-    "days": 5
+    "salesTotal": 1595477,
+    "unitsTotal": 55,
+    "days": 6
   },
   "lastYear": {
-    "salesTotal": 1088230,
-    "days": 5
+    "salesTotal": 1339030,
+    "days": 6
   },
   "trend": {
     "points": [
@@ -37,7 +37,11 @@
       },
       {
         "date": "2026-09-05",
-        "sales": 186527
+        "sales": 272622
+      },
+      {
+        "date": "2026-09-06",
+        "sales": 0
       }
     ],
     "points_lastyear": [
@@ -60,14 +64,18 @@
       {
         "date": "2025-09-05",
         "sales": 179520
+      },
+      {
+        "date": "2025-09-06",
+        "sales": 250800
       }
     ]
   },
   "daily": {
-    "todayUnits": 10,
+    "todayUnits": 0,
     "yesterdayUnits": 13,
-    "todaySales": 186527,
-    "yesterdaySales": 328158
+    "todaySales": 0,
+    "yesterdaySales": 272622
   },
   "top5": [
     {
@@ -87,14 +95,14 @@
     {
       "rank": 3,
       "title": "『ブレスレット』(Silver925)",
-      "units": 4,
+      "units": 5,
       "handle": "silver-bracelet",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394"
     },
     {
       "rank": 4,
       "title": "いつかは、究極のグレーパンツ~SMARTシリーズ",
-      "units": 3,
+      "units": 4,
       "handle": "graypants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/733edb1e425db1232bf22bd5a0bef49f.jpg?v=1776451631"
     },
