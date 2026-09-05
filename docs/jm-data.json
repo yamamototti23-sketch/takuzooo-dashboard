@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-09-06T06:41:55+09:00",
+  "updatedAt": "2026-09-06T08:18:51+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 40723861,
-    "orders": 1454,
-    "aov": 28008
+    "sales": 40753561,
+    "orders": 1455,
+    "aov": 28009
   },
   "month": {
-    "salesTotal": 1595477,
-    "unitsTotal": 55,
+    "salesTotal": 1625177,
+    "unitsTotal": 56,
     "days": 6
   },
   "lastYear": {
@@ -41,7 +41,7 @@
       },
       {
         "date": "2026-09-06",
-        "sales": 0
+        "sales": 29700
       }
     ],
     "points_lastyear": [
@@ -72,9 +72,9 @@
     ]
   },
   "daily": {
-    "todayUnits": 0,
+    "todayUnits": 1,
     "yesterdayUnits": 13,
-    "todaySales": 0,
+    "todaySales": 29700,
     "yesterdaySales": 272622
   },
   "top5": [
@@ -108,10 +108,10 @@
     },
     {
       "rank": 5,
-      "title": "『ウエストバッグ』（LWGゴールド認証革）",
+      "title": "「\"サマー\"ジャケット」~SMARTシリーズ",
       "units": 2,
-      "handle": "waist-bag",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/2_5bf138fa-f400-4950-aba5-ab664584fcf9.jpg?v=1774173412"
+      "handle": "summer-casual-jacket",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/20260630__438_2.jpg?v=1783603751"
     }
   ]
 }
