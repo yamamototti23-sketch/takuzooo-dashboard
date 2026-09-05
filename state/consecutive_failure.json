@@ -11,5 +11,18 @@
       "cooldown_until": null,
       "recovered_at": "2026-09-05T15:17:12.402601+09:00"
     }
+  },
+  "takuzooo-dashboard-jm-sales": {
+    "GHA jm-sales": {
+      "consecutive_count": 0,
+      "first_failure_at": null,
+      "last_failure_at": null,
+      "last_error_msg": null,
+      "threshold_N": null,
+      "notified": false,
+      "notify_at": null,
+      "cooldown_until": null,
+      "recovered_at": "2026-09-05T17:36:15.368313+09:00"
+    }
   }
 }
