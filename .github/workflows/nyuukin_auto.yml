@@ -1,0 +1,60 @@
+name: Nyuukin Auto (Shopify Payments + Komoju weekly)
+
+on:
+  schedule:
+    # 副軸: 毎週金曜 01:10 UTC = 10:10 JST (主軸 cron-job.org 10:00 の10分後・fallback)
+    - cron: '10 1 * * 5'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry-run (no writes)'
+        required: false
+        default: 'false'
+        type: choice
+        options: ['false', 'true']
+      source:
+        description: 'shopify | komoju | both'
+        required: false
+        default: 'both'
+        type: choice
+        options: ['both', 'shopify', 'komoju']
+      days_lookback:
+        description: '直近何日分の payout/settlement を対象にするか'
+        required: false
+        default: '14'
+  repository_dispatch:
+    types: [nyuukin_auto_run]
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install deps
+        run: pip install -r nyuukin_auto/scripts/requirements.txt
+
+      - name: Run nyuukin-auto
+        env:
+          SHOPIFY_STORE: ${{ secrets.SHOPIFY_STORE }}
+          SHOPIFY_CLIENT_ID: ${{ secrets.SHOPIFY_CLIENT_ID }}
+          SHOPIFY_CLIENT_SECRET: ${{ secrets.SHOPIFY_CLIENT_SECRET }}
+          KOMOJU_SECRET_KEY: ${{ secrets.KOMOJU_SECRET_KEY }}
+          DROPBOX_APP_KEY: ${{ secrets.DROPBOX_APP_KEY }}
+          DROPBOX_APP_SECRET: ${{ secrets.DROPBOX_APP_SECRET }}
+          DROPBOX_REFRESH_TOKEN: ${{ secrets.DROPBOX_REFRESH_TOKEN }}
+          GOOGLE_DRIVE_TOKEN_JSON: ${{ secrets.GOOGLE_DRIVE_TOKEN_JSON }}
+          CHATWORK_API_TOKEN: ${{ secrets.CHATWORK_API_TOKEN }}
+        run: |
+          DRY_RUN_FLAG=""
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then DRY_RUN_FLAG="--dry-run"; fi
+          SOURCE="${{ github.event.inputs.source }}"
+          if [ -z "$SOURCE" ]; then SOURCE="both"; fi
+          LOOKBACK="${{ github.event.inputs.days_lookback }}"
+          if [ -z "$LOOKBACK" ]; then LOOKBACK="14"; fi
+          python3 nyuukin_auto/scripts/main.py --source "$SOURCE" --days-lookback "$LOOKBACK" $DRY_RUN_FLAG
