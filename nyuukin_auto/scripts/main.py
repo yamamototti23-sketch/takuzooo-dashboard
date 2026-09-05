@@ -338,6 +338,10 @@ def main():
                 pd = date_only(p['issuedAt'])
                 filename = f"Shopify_{pd}.csv"
                 transactions = fetch_balance_transactions_for_payout(p['legacyResourceId'])
+                # type 別内訳 stdout (dry-run 分析用)
+                from collections import Counter
+                type_counts = Counter(t['type'] for t in transactions)
+                print(f"    type内訳: {dict(type_counts)}  total={len(transactions)}")
                 csv_bytes = build_shopify_csv(p, transactions)
                 r = store_file("Shopify", p['issuedAt'], filename, csv_bytes, dry_run=args.dry_run)
                 results["shopify"].append({"file": filename, "tx_count": len(transactions), "amount": p['net']['amount']})
