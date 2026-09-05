@@ -28,15 +28,20 @@ jobs:
           SHOPIFY_STORE: ${{ secrets.SHOPIFY_STORE }}
           SHOPIFY_CLIENT_ID: ${{ secrets.SHOPIFY_CLIENT_ID }}
           SHOPIFY_CLIENT_SECRET: ${{ secrets.SHOPIFY_CLIENT_SECRET }}
+          CHATWORK_API_TOKEN: ${{ secrets.CHATWORK_API_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_RUN_ID: ${{ github.run_id }}
         run: python scripts/fetch_sales.py
 
       - name: Commit if changed
+        if: always()
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/jm-data.json
-          if ! git diff --cached --quiet -- docs/jm-data.json; then
-            git commit -m "chore: update jm-data.json [skip ci]"
+          # data + 連続失敗ゲート state を両方追加 (state 未変更でも silent skip)
+          git add docs/jm-data.json state/consecutive_failure.json 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: update jm-data.json + state [skip ci]"
             # self-healing: retry with rebase on push conflict (max 3 attempts)
             for i in 1 2 3; do
               if git push; then echo "✅ push OK on attempt $i"; break; fi
@@ -44,5 +49,6 @@ jobs:
               git fetch origin main && git rebase origin/main
               sleep $((i * 2))
             done
-            echo "no change in jm-data.json"
+          else
+            echo "no changes"
           fi

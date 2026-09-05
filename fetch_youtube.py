@@ -5,7 +5,52 @@ YouTube Analytics = 期間ごとの正確な視聴・高評価・コメント・
 出力: docs/data.json （GitHub Pages がそのまま配信）
 必要な環境変数: YT_CLIENT_ID / YT_CLIENT_SECRET / YT_REFRESH_TOKEN
 """
-import os, re, json, time, datetime as dt, urllib.request, urllib.parse, urllib.error
+import os, re, sys, json, time, traceback, datetime as dt, urllib.request, urllib.parse, urllib.error
+from pathlib import Path
+
+# ---- 連続失敗ゲート ----
+# CLAUDE.md § 常駐スキル通知は「連続失敗 N 回」で初発火 (2026-09-05) 準拠
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+STATE_DIR = Path(__file__).resolve().parent / "state"
+
+
+def post_error(error_or_msg, stage: str = "GHA update-youtube-data") -> None:
+    """エラー通知 → 連続失敗 N=2 到達で初通知 (30分間隔・60分継続失敗ライン)。"""
+    try:
+        from consecutive_failure_helper import handle_run_result
+        err_str = str(error_or_msg) if not isinstance(error_or_msg, str) else error_or_msg
+        run_url = None
+        if os.environ.get("GITHUB_REPOSITORY") and os.environ.get("GITHUB_RUN_ID"):
+            run_url = f"https://github.com/{os.environ['GITHUB_REPOSITORY']}/actions/runs/{os.environ['GITHUB_RUN_ID']}"
+        handle_run_result(
+            skill_name="takuzooo-dashboard-update-youtube",
+            stage=stage,
+            success=False,
+            error_msg=err_str,
+            threshold_N=2,
+            state_dir=STATE_DIR,
+            chatwork_token=os.environ.get("CHATWORK_API_TOKEN", "").strip() or None,
+            chatwork_room_id=218962687,
+            gha_run_url=run_url,
+        )
+    except Exception as e:
+        print(f"⚠ post_error 失敗 (silent): {e}", file=sys.stderr)
+
+
+def post_success(stage: str = "GHA update-youtube-data") -> None:
+    """成功記録 → 連続失敗カウントリセット + 復旧通知判定。"""
+    try:
+        from consecutive_failure_helper import handle_run_result
+        handle_run_result(
+            skill_name="takuzooo-dashboard-update-youtube",
+            stage=stage,
+            success=True,
+            state_dir=STATE_DIR,
+            chatwork_token=os.environ.get("CHATWORK_API_TOKEN", "").strip() or None,
+            chatwork_room_id=218962687,
+        )
+    except Exception as e:
+        print(f"⚠ post_success 失敗 (silent): {e}", file=sys.stderr)
 
 CLIENT_ID     = os.environ["YT_CLIENT_ID"]
 CLIENT_SECRET = os.environ["YT_CLIENT_SECRET"]
@@ -364,5 +409,16 @@ def main():
     json.dump(out, open(OUT,"w"), ensure_ascii=False)
     print("wrote", OUT, "videos", len(vids), "analytics_days", len(daily))
 
+    # main 実処理完走時のみ post_success (早期 return では呼ばない)
+    post_success(stage="GHA update-youtube-data")
+
+
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except Exception as e:
+        tb = traceback.format_exc()
+        print(f"ERROR: {e}", file=sys.stderr)
+        print(tb, file=sys.stderr)
+        post_error(tb, stage="GHA update-youtube-data")
+        sys.exit(1)

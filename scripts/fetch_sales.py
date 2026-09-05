@@ -27,11 +27,63 @@ import base64
 import datetime
 import socket
 import time
+import traceback
 from http.client import RemoteDisconnected, IncompleteRead
+from pathlib import Path
 from zoneinfo import ZoneInfo
 import urllib.request
 import urllib.parse
 import urllib.error
+
+# ---- 連続失敗ゲート ----
+# CLAUDE.md § 常駐スキル通知は「連続失敗 N 回」で初発火 (2026-09-05) 準拠
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+STATE_DIR = Path(__file__).resolve().parent.parent / "state"
+
+
+def post_error(error_or_msg, stage: str = "GHA jm-sales") -> None:
+    """エラー通知 → 連続失敗 N=2 到達で初通知 (30分間隔・60分継続失敗ライン)。
+
+    - 個別 run 失敗は silent (state 記録のみ・カウント +1)
+    - N=2 回連続失敗到達で初通知 (30分×2=60分継続失敗ライン)
+    - run 成功でカウント完全リセット + 復旧通知
+    """
+    try:
+        from consecutive_failure_helper import handle_run_result
+        err_str = str(error_or_msg) if not isinstance(error_or_msg, str) else error_or_msg
+        run_url = None
+        if os.environ.get("GITHUB_REPOSITORY") and os.environ.get("GITHUB_RUN_ID"):
+            run_url = f"https://github.com/{os.environ['GITHUB_REPOSITORY']}/actions/runs/{os.environ['GITHUB_RUN_ID']}"
+        handle_run_result(
+            skill_name="takuzooo-dashboard-jm-sales",
+            stage=stage,
+            success=False,
+            error_msg=err_str,
+            threshold_N=2,
+            state_dir=STATE_DIR,
+            chatwork_token=os.environ.get("CHATWORK_API_TOKEN", "").strip() or None,
+            chatwork_room_id=218962687,
+            gha_run_url=run_url,
+        )
+    except Exception as e:
+        print(f"⚠ post_error 失敗 (silent): {e}", file=sys.stderr)
+
+
+def post_success(stage: str = "GHA jm-sales") -> None:
+    """成功記録 → 連続失敗カウントリセット + 復旧通知判定。"""
+    try:
+        from consecutive_failure_helper import handle_run_result
+        handle_run_result(
+            skill_name="takuzooo-dashboard-jm-sales",
+            stage=stage,
+            success=True,
+            state_dir=STATE_DIR,
+            chatwork_token=os.environ.get("CHATWORK_API_TOKEN", "").strip() or None,
+            chatwork_room_id=218962687,
+        )
+    except Exception as e:
+        print(f"⚠ post_success 失敗 (silent): {e}", file=sys.stderr)
+
 
 API_VERSION = "2026-01"          # publicApiVersions で supported を確認済み（必要なら更新）
 JST = ZoneInfo("Asia/Tokyo")     # Shopify ストアのタイムゾーンに合わせる
@@ -350,10 +402,16 @@ def main():
           f"本日={out['daily']['todayUnits']}点 / TOP5={len(top5)} / "
           f"昨年比較={len(points_lastyear)}日分")
 
+    # main 実処理完走時のみ post_success (早期 return では呼ばない)
+    post_success(stage="GHA jm-sales")
+
 
 if __name__ == "__main__":
     try:
         main()
     except Exception as e:  # noqa: BLE001
+        tb = traceback.format_exc()
         print(f"ERROR: {e}", file=sys.stderr)
+        print(tb, file=sys.stderr)
+        post_error(tb, stage="GHA jm-sales")
         sys.exit(1)
