@@ -45,15 +45,20 @@ jobs:
           has_payouts = 'read_shopify_payments_payouts' in scopes
           print(f"\nread_shopify_payments_payouts: {'✅ 追加済み' if has_payouts else '❌ 未追加'}")
 
-          # payouts サンプル (scope あれば)
+          # schema introspection で正しい field 名確定
           if has_payouts:
-              q = '{ shopifyPaymentsAccount { payouts(first: 3, reverse: true) { edges { node { id legacyResourceId issuedAt status net { amount currencyCode } summary { chargesGross { amount } chargesFee { amount } refundsGross { amount } refundsFee { amount } adjustmentsGross { amount } adjustmentsFee { amount } } transactions(first: 5) { edges { node { id type amount { amount currencyCode } fee { amount } net { amount } transactionDate sourceOrderTransaction { id ... on OrderTransaction { order { name } } } } } } } } } } }'
-              req3 = urllib.request.Request(
-                  f"https://{store}/admin/api/2026-01/graphql.json",
-                  data=json.dumps({"query": q}).encode(),
-                  headers={"X-Shopify-Access-Token":token,"Content-Type":"application/json"}
-              )
-              rr = json.loads(urllib.request.urlopen(req3).read())
-              print(f"\n=== payouts サンプル (直近3件) ===")
-              print(json.dumps(rr, indent=2, default=str))
+              for tname in ["ShopifyPaymentsAccount", "ShopifyPaymentsPayout", "ShopifyPaymentsPayoutSummary"]:
+                  qi = '{ __type(name: "' + tname + '") { fields { name type { name kind ofType { name kind } } } } }'
+                  req_i = urllib.request.Request(
+                      f"https://{store}/admin/api/2026-01/graphql.json",
+                      data=json.dumps({"query": qi}).encode(),
+                      headers={"X-Shopify-Access-Token":token,"Content-Type":"application/json"}
+                  )
+                  rr = json.loads(urllib.request.urlopen(req_i).read())
+                  fields = rr.get("data", {}).get("__type", {}).get("fields", [])
+                  print(f"\n=== {tname} fields ({len(fields)}) ===")
+                  for f in fields:
+                      t = f.get("type", {})
+                      tn = t.get("name") or (t.get("ofType", {}).get("name") if t.get("ofType") else t.get("kind"))
+                      print(f"  {f['name']}: {tn}")
           PYEOF
