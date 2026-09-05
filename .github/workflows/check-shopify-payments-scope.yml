@@ -45,20 +45,40 @@ jobs:
           has_payouts = 'read_shopify_payments_payouts' in scopes
           print(f"\nread_shopify_payments_payouts: {'✅ 追加済み' if has_payouts else '❌ 未追加'}")
 
-          # schema introspection で正しい field 名確定
-          if has_payouts:
-              for tname in ["ShopifyPaymentsAccount", "ShopifyPaymentsPayout", "ShopifyPaymentsPayoutSummary"]:
-                  qi = '{ __type(name: "' + tname + '") { fields { name type { name kind ofType { name kind } } } } }'
-                  req_i = urllib.request.Request(
-                      f"https://{store}/admin/api/2026-01/graphql.json",
-                      data=json.dumps({"query": qi}).encode(),
-                      headers={"X-Shopify-Access-Token":token,"Content-Type":"application/json"}
-                  )
-                  rr = json.loads(urllib.request.urlopen(req_i).read())
-                  fields = rr.get("data", {}).get("__type", {}).get("fields", [])
-                  print(f"\n=== {tname} fields ({len(fields)}) ===")
-                  for f in fields:
-                      t = f.get("type", {})
-                      tn = t.get("name") or (t.get("ofType", {}).get("name") if t.get("ofType") else t.get("kind"))
-                      print(f"  {f['name']}: {tn}")
+          # 追加 introspection + 実データ sample 取得
+          def gql(query):
+              req = urllib.request.Request(
+                  f"https://{store}/admin/api/2026-01/graphql.json",
+                  data=json.dumps({"query": query}).encode(),
+                  headers={"X-Shopify-Access-Token":token,"Content-Type":"application/json"}
+              )
+              return json.loads(urllib.request.urlopen(req).read())
+
+          # ShopifyPaymentsBalanceTransaction schema
+          for tname in ["ShopifyPaymentsBalanceTransaction"]:
+              qi = '{ __type(name: "' + tname + '") { fields { name type { name kind ofType { name kind } } } } }'
+              rr = gql(qi)
+              fields = rr.get("data", {}).get("__type", {}).get("fields", [])
+              print(f"\n=== {tname} fields ({len(fields)}) ===")
+              for f in fields:
+                  t = f.get("type", {})
+                  tn = t.get("name") or (t.get("ofType", {}).get("name") if t.get("ofType") else t.get("kind"))
+                  print(f"  {f['name']}: {tn}")
+
+          # 直近 payout 1件 + その balanceTransactions
+          print("\n=== 直近 payout 1件 ===")
+          q1 = '{ shopifyPaymentsAccount { payouts(first: 1, reverse: true) { edges { node { id legacyResourceId issuedAt status net { amount currencyCode } summary { chargesGross { amount } chargesFee { amount } refundsFee { amount } refundsFeeGross { amount } adjustmentsGross { amount } adjustmentsFee { amount } } } } } } }'
+          print(json.dumps(gql(q1), indent=2, ensure_ascii=False))
+
+          # payoutId query? balanceTransactions の arguments 確認
+          print("\n=== balanceTransactions arguments ===")
+          qa = '{ __type(name: "ShopifyPaymentsAccount") { fields { name args { name type { name kind ofType { name } } } } } }'
+          rr = gql(qa)
+          for f in rr.get("data", {}).get("__type", {}).get("fields", []):
+              if f['name'] in ('balanceTransactions', 'payouts'):
+                  print(f"  {f['name']}:")
+                  for a in f.get('args', []):
+                      t = a.get('type', {})
+                      tn = t.get('name') or (t.get('ofType', {}).get('name') if t.get('ofType') else t.get('kind'))
+                      print(f"    {a['name']}: {tn}")
           PYEOF
