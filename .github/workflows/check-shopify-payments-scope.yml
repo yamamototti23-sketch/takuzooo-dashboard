@@ -47,7 +47,7 @@ jobs:
 
           # payouts サンプル (scope あれば)
           if has_payouts:
-              q = '{ shopifyPaymentsAccount { payouts(first: 3, sortKey: TRANSACTED_AT, reverse: true) { edges { node { id legacyResourceId issuedAt net { amount currencyCode } summary { chargesGross { amount } chargesFee { amount } } } } } } }'
+              q = '{ shopifyPaymentsAccount { payouts(first: 3, reverse: true) { edges { node { id legacyResourceId issuedAt status net { amount currencyCode } summary { chargesGross { amount } chargesFee { amount } refundsGross { amount } refundsFee { amount } adjustmentsGross { amount } adjustmentsFee { amount } } transactions(first: 5) { edges { node { id type amount { amount currencyCode } fee { amount } net { amount } transactionDate sourceOrderTransaction { id ... on OrderTransaction { order { name } } } } } } } } } } }'
               req3 = urllib.request.Request(
                   f"https://{store}/admin/api/2026-01/graphql.json",
                   data=json.dumps({"query": q}).encode(),
