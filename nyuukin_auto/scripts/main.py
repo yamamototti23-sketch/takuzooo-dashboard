@@ -218,9 +218,10 @@ def group_transactions_by_payout(all_tx):
     """associatedPayout.id → transactions list"""
     grouped = {}
     for tx in all_tx:
-        ap = tx.get('associatedPayout')
-        if not ap: continue
-        pid = ap['id'].split('/')[-1]
+        ap = tx.get('associatedPayout') or {}
+        aid = ap.get('id')
+        if not aid: continue
+        pid = aid.split('/')[-1]
         grouped.setdefault(pid, []).append(tx)
     return grouped
 
