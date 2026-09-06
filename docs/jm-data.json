@@ -1,21 +1,21 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-09-06T23:23:40+09:00",
+  "updatedAt": "2026-09-07T02:20:42+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 41176214,
-    "orders": 1468,
-    "aov": 28049
+    "sales": 41209214,
+    "orders": 1469,
+    "aov": 28053
   },
   "month": {
-    "salesTotal": 2047830,
-    "unitsTotal": 73,
-    "days": 6
+    "salesTotal": 2080830,
+    "unitsTotal": 75,
+    "days": 7
   },
   "lastYear": {
-    "salesTotal": 1339030,
-    "days": 6
+    "salesTotal": 1497430,
+    "days": 7
   },
   "trend": {
     "points": [
@@ -42,6 +42,10 @@
       {
         "date": "2026-09-06",
         "sales": 452353
+      },
+      {
+        "date": "2026-09-07",
+        "sales": 33000
       }
     ],
     "points_lastyear": [
@@ -68,36 +72,40 @@
       {
         "date": "2025-09-06",
         "sales": 250800
+      },
+      {
+        "date": "2025-09-07",
+        "sales": 158400
       }
     ]
   },
   "daily": {
-    "todayUnits": 18,
-    "yesterdayUnits": 13,
-    "todaySales": 452353,
-    "yesterdaySales": 272622
+    "todayUnits": 2,
+    "yesterdayUnits": 18,
+    "todaySales": 33000,
+    "yesterdaySales": 452353
   },
   "top5": [
     {
       "rank": 1,
       "title": "『ネックレス』（Silver925）",
-      "units": 19,
+      "units": 20,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1L4A6061_1_7ca50b37-5a29-4124-955e-90d35a5e89af.jpg?v=1780952166"
     },
     {
       "rank": 2,
+      "title": "『ブレスレット』(Silver925)",
+      "units": 8,
+      "handle": "silver-bracelet",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394"
+    },
+    {
+      "rank": 3,
       "title": "『本革ボディーバッグ』（姫路レザー）",
       "units": 8,
       "handle": "stylish-genuine-leather-large-body-bag",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A1554_1_ef495592-e3a6-4e83-8ffe-1f7f917d3092.jpg?v=1783603757"
-    },
-    {
-      "rank": 3,
-      "title": "『ブレスレット』(Silver925)",
-      "units": 7,
-      "handle": "silver-bracelet",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394"
     },
     {
       "rank": 4,
