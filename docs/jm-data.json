@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-09-06T10:19:52+09:00",
+  "updatedAt": "2026-09-06T15:29:56+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 40772096,
-    "orders": 1456,
-    "aov": 28003
+    "sales": 40799596,
+    "orders": 1457,
+    "aov": 28002
   },
   "month": {
-    "salesTotal": 1643712,
-    "unitsTotal": 57,
+    "salesTotal": 1671212,
+    "unitsTotal": 58,
     "days": 6
   },
   "lastYear": {
@@ -41,7 +41,7 @@
       },
       {
         "date": "2026-09-06",
-        "sales": 48235
+        "sales": 75735
       }
     ],
     "points_lastyear": [
@@ -72,9 +72,9 @@
     ]
   },
   "daily": {
-    "todayUnits": 2,
+    "todayUnits": 3,
     "yesterdayUnits": 13,
-    "todaySales": 48235,
+    "todaySales": 75735,
     "yesterdaySales": 272622
   },
   "top5": [
@@ -108,10 +108,10 @@
     },
     {
       "rank": 5,
-      "title": "「\"サマー\"ジャケット」~SMARTシリーズ",
-      "units": 2,
-      "handle": "summer-casual-jacket",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/20260630__438_2.jpg?v=1783603751"
+      "title": "いつかは、究極の黒パン~SMARTシリーズ",
+      "units": 3,
+      "handle": "the-ultimate-black-pants",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/3V7A2978_1_1_76353fb0-7dd7-4017-bf82-0b1a90ecf3b0.jpg?v=1783603757"
     }
   ]
 }
