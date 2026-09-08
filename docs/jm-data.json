@@ -1,21 +1,21 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-09-08T20:44:21+09:00",
+  "updatedAt": "2026-09-09T00:19:07+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 41350047,
-    "orders": 1479,
-    "aov": 27958
+    "sales": 41450882,
+    "orders": 1483,
+    "aov": 27951
   },
   "month": {
-    "salesTotal": 2221663,
-    "unitsTotal": 86,
-    "days": 8
+    "salesTotal": 2322498,
+    "unitsTotal": 90,
+    "days": 9
   },
   "lastYear": {
-    "salesTotal": 1598190,
-    "days": 8
+    "salesTotal": 1668150,
+    "days": 9
   },
   "trend": {
     "points": [
@@ -49,7 +49,11 @@
       },
       {
         "date": "2026-09-08",
-        "sales": 78815
+        "sales": 179650
+      },
+      {
+        "date": "2026-09-09",
+        "sales": 0
       }
     ],
     "points_lastyear": [
@@ -84,20 +88,24 @@
       {
         "date": "2025-09-08",
         "sales": 100760
+      },
+      {
+        "date": "2025-09-09",
+        "sales": 69960
       }
     ]
   },
   "daily": {
-    "todayUnits": 5,
-    "yesterdayUnits": 8,
-    "todaySales": 78815,
-    "yesterdaySales": 139260
+    "todayUnits": 0,
+    "yesterdayUnits": 9,
+    "todaySales": 0,
+    "yesterdaySales": 179650
   },
   "top5": [
     {
       "rank": 1,
       "title": "『ネックレス』（Silver925）",
-      "units": 24,
+      "units": 26,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1L4A6061_1_7ca50b37-5a29-4124-955e-90d35a5e89af.jpg?v=1780952166"
     },
@@ -117,17 +125,17 @@
     },
     {
       "rank": 4,
+      "title": "『\"和\"ブレスレット』(Silver925)",
+      "units": 5,
+      "handle": "japanese-bracelet",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/3V7A0359_square_compressed_37a94712-9a5f-4523-b364-0e5416534cb0.jpg?v=1783565273"
+    },
+    {
+      "rank": 5,
       "title": "いつかは、究極のグレーパンツ~SMARTシリーズ",
       "units": 4,
       "handle": "graypants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/733edb1e425db1232bf22bd5a0bef49f.jpg?v=1776451631"
-    },
-    {
-      "rank": 5,
-      "title": "『\"和\"ブレスレット』(Silver925)",
-      "units": 4,
-      "handle": "japanese-bracelet",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/3V7A0359_square_compressed_37a94712-9a5f-4523-b364-0e5416534cb0.jpg?v=1783565273"
     }
   ]
 }
