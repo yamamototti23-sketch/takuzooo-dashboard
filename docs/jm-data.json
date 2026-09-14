@@ -1,21 +1,21 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-09-14T23:00:50+09:00",
+  "updatedAt": "2026-09-15T04:20:28+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 42791600,
-    "orders": 1534,
-    "aov": 27895
+    "sales": 42837415,
+    "orders": 1535,
+    "aov": 27907
   },
   "month": {
-    "salesTotal": 3663216,
-    "unitsTotal": 150,
-    "days": 14
+    "salesTotal": 3709031,
+    "unitsTotal": 151,
+    "days": 15
   },
   "lastYear": {
-    "salesTotal": 2517020,
-    "days": 14
+    "salesTotal": 2687520,
+    "days": 15
   },
   "trend": {
     "points": [
@@ -74,6 +74,10 @@
       {
         "date": "2026-09-14",
         "sales": 344556
+      },
+      {
+        "date": "2026-09-15",
+        "sales": 45815
       }
     ],
     "points_lastyear": [
@@ -132,14 +136,18 @@
       {
         "date": "2025-09-14",
         "sales": 123200
+      },
+      {
+        "date": "2025-09-15",
+        "sales": 170500
       }
     ]
   },
   "daily": {
-    "todayUnits": 14,
-    "yesterdayUnits": 12,
-    "todaySales": 344556,
-    "yesterdaySales": 449614
+    "todayUnits": 1,
+    "yesterdayUnits": 14,
+    "todaySales": 45815,
+    "yesterdaySales": 344556
   },
   "top5": [
     {
@@ -172,10 +180,10 @@
     },
     {
       "rank": 5,
-      "title": "いつかは、究極の黒パン~SMARTシリーズ",
+      "title": "『\"和\"ブレスレット』(Silver925)",
       "units": 6,
-      "handle": "the-ultimate-black-pants",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/5d689a44fc3188e82bde8cab5678d9e1.jpg?v=1776451751"
+      "handle": "japanese-bracelet",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/3V7A0359_square_compressed_37a94712-9a5f-4523-b364-0e5416534cb0.jpg?v=1783565273"
     }
   ]
 }
