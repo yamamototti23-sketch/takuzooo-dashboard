@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-09-14T16:05:43+09:00",
+  "updatedAt": "2026-09-14T23:00:50+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 42666516,
-    "orders": 1527,
-    "aov": 27941
+    "sales": 42791600,
+    "orders": 1534,
+    "aov": 27895
   },
   "month": {
-    "salesTotal": 3538132,
-    "unitsTotal": 143,
+    "salesTotal": 3663216,
+    "unitsTotal": 150,
     "days": 14
   },
   "lastYear": {
@@ -69,11 +69,11 @@
       },
       {
         "date": "2026-09-13",
-        "sales": 493856
+        "sales": 449614
       },
       {
         "date": "2026-09-14",
-        "sales": 175230
+        "sales": 344556
       }
     ],
     "points_lastyear": [
@@ -136,23 +136,23 @@
     ]
   },
   "daily": {
-    "todayUnits": 7,
+    "todayUnits": 14,
     "yesterdayUnits": 12,
-    "todaySales": 175230,
-    "yesterdaySales": 493856
+    "todaySales": 344556,
+    "yesterdaySales": 449614
   },
   "top5": [
     {
       "rank": 1,
       "title": "『ネックレス』（Silver925）",
-      "units": 34,
+      "units": 35,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/4_6653c78f-879d-4bc3-84e0-629f226da3e2.png?v=1785261141"
     },
     {
       "rank": 2,
       "title": "『ブレスレット』(Silver925)",
-      "units": 20,
+      "units": 21,
       "handle": "silver-bracelet",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394"
     },
@@ -165,17 +165,17 @@
     },
     {
       "rank": 4,
-      "title": "いつかは、究極のグレーパンツ~SMARTシリーズ",
-      "units": 5,
-      "handle": "graypants",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/733edb1e425db1232bf22bd5a0bef49f.jpg?v=1776451631"
+      "title": "「防水イージーパンツ」~RELAXシリーズ",
+      "units": 7,
+      "handle": "waterproof-easy-pants",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1cf702eef58fa10dff4f56a6541ae1f9.jpg?v=1776451570"
     },
     {
       "rank": 5,
-      "title": "「防水イージーパンツ」~RELAXシリーズ",
-      "units": 5,
-      "handle": "waterproof-easy-pants",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1cf702eef58fa10dff4f56a6541ae1f9.jpg?v=1776451570"
+      "title": "いつかは、究極の黒パン~SMARTシリーズ",
+      "units": 6,
+      "handle": "the-ultimate-black-pants",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/5d689a44fc3188e82bde8cab5678d9e1.jpg?v=1776451751"
     }
   ]
 }
