@@ -22,6 +22,12 @@ on:
         description: '直近何日分の payout/settlement を対象にするか'
         required: false
         default: '14'
+      no_notify:
+        description: '原様DM/マイチャット通知を抑制 (補完実行時など)'
+        required: false
+        default: 'false'
+        type: choice
+        options: ['false', 'true']
   repository_dispatch:
     types: [nyuukin_auto_run]
 
@@ -53,8 +59,10 @@ jobs:
         run: |
           DRY_RUN_FLAG=""
           if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then DRY_RUN_FLAG="--dry-run"; fi
+          NO_NOTIFY_FLAG=""
+          if [ "${{ github.event.inputs.no_notify }}" = "true" ]; then NO_NOTIFY_FLAG="--no-notify"; fi
           SOURCE="${{ github.event.inputs.source }}"
           if [ -z "$SOURCE" ]; then SOURCE="both"; fi
           LOOKBACK="${{ github.event.inputs.days_lookback }}"
           if [ -z "$LOOKBACK" ]; then LOOKBACK="14"; fi
-          python3 nyuukin_auto/scripts/main.py --source "$SOURCE" --days-lookback "$LOOKBACK" $DRY_RUN_FLAG
+          python3 nyuukin_auto/scripts/main.py --source "$SOURCE" --days-lookback "$LOOKBACK" $DRY_RUN_FLAG $NO_NOTIFY_FLAG

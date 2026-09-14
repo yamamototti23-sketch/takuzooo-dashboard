@@ -343,10 +343,11 @@ def main():
     ap.add_argument('--dry-run', action='store_true')
     ap.add_argument('--source', choices=['shopify', 'komoju', 'both'], default='both')
     ap.add_argument('--days-lookback', type=int, default=14, help='何日以内の payout/settlement を対象にするか')
+    ap.add_argument('--no-notify', action='store_true', help='原様DM/マイチャット通知を抑制 (補完実行時など)')
     args = ap.parse_args()
 
     print(f"=== nyuukin-auto 発火 ({datetime.now(timezone(timedelta(hours=9))).isoformat()}) ===")
-    print(f"source={args.source} / dry_run={args.dry_run} / lookback={args.days_lookback}日")
+    print(f"source={args.source} / dry_run={args.dry_run} / lookback={args.days_lookback}日 / no_notify={args.no_notify}")
 
     results = {"shopify": [], "komoju": [], "errors": []}
 
@@ -395,8 +396,8 @@ def main():
     print(f"Shopify: {len(results['shopify'])}件 / Komoju: {len(results['komoju'])}件 / エラー: {len(results['errors'])}件")
 
     # 通知
-    if args.dry_run:
-        pass  # dry-run 時は通知なし
+    if args.dry_run or args.no_notify:
+        pass  # dry-run/no-notify 時は通知なし
     elif results['errors']:
         # 失敗時 → マイチャット
         notify_chatwork(CHATWORK_MYCHAT,
