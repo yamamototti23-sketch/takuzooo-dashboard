@@ -1,21 +1,21 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-09-15T20:42:07+09:00",
+  "updatedAt": "2026-09-16T00:41:23+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 42925525,
-    "orders": 1539,
-    "aov": 27892
+    "sales": 43022050,
+    "orders": 1543,
+    "aov": 27882
   },
   "month": {
-    "salesTotal": 3797141,
-    "unitsTotal": 156,
-    "days": 15
+    "salesTotal": 3893666,
+    "unitsTotal": 161,
+    "days": 16
   },
   "lastYear": {
-    "salesTotal": 2687520,
-    "days": 15
+    "salesTotal": 2744170,
+    "days": 16
   },
   "trend": {
     "points": [
@@ -77,7 +77,11 @@
       },
       {
         "date": "2026-09-15",
-        "sales": 133925
+        "sales": 230450
+      },
+      {
+        "date": "2026-09-16",
+        "sales": 0
       }
     ],
     "points_lastyear": [
@@ -140,14 +144,18 @@
       {
         "date": "2025-09-15",
         "sales": 170500
+      },
+      {
+        "date": "2025-09-16",
+        "sales": 56650
       }
     ]
   },
   "daily": {
-    "todayUnits": 6,
-    "yesterdayUnits": 14,
-    "todaySales": 133925,
-    "yesterdaySales": 344556
+    "todayUnits": 0,
+    "yesterdayUnits": 11,
+    "todaySales": 0,
+    "yesterdaySales": 230450
   },
   "top5": [
     {
@@ -160,7 +168,7 @@
     {
       "rank": 2,
       "title": "『ブレスレット』(Silver925)",
-      "units": 23,
+      "units": 25,
       "handle": "silver-bracelet",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394"
     },
@@ -180,10 +188,10 @@
     },
     {
       "rank": 5,
-      "title": "『\"和\"ブレスレット』(Silver925)",
+      "title": "いつかは、究極のグレーパンツ~SMARTシリーズ",
       "units": 6,
-      "handle": "japanese-bracelet",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/3V7A0359_square_compressed_37a94712-9a5f-4523-b364-0e5416534cb0.jpg?v=1783565273"
+      "handle": "graypants",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/733edb1e425db1232bf22bd5a0bef49f.jpg?v=1776451631"
     }
   ]
 }
