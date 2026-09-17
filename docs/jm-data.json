@@ -1,21 +1,21 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-09-17T19:25:28+09:00",
+  "updatedAt": "2026-09-18T00:18:26+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 43747861,
-    "orders": 1572,
-    "aov": 27829
+    "sales": 44258041,
+    "orders": 1586,
+    "aov": 27905
   },
   "month": {
-    "salesTotal": 4619477,
-    "unitsTotal": 199,
-    "days": 17
+    "salesTotal": 5129657,
+    "unitsTotal": 222,
+    "days": 18
   },
   "lastYear": {
-    "salesTotal": 2837120,
-    "days": 17
+    "salesTotal": 3030720,
+    "days": 18
   },
   "trend": {
     "points": [
@@ -85,7 +85,11 @@
       },
       {
         "date": "2026-09-17",
-        "sales": 168080
+        "sales": 678260
+      },
+      {
+        "date": "2026-09-18",
+        "sales": 0
       }
     ],
     "points_lastyear": [
@@ -156,29 +160,33 @@
       {
         "date": "2025-09-17",
         "sales": 92950
+      },
+      {
+        "date": "2025-09-18",
+        "sales": 193600
       }
     ]
   },
   "daily": {
-    "todayUnits": 8,
-    "yesterdayUnits": 30,
-    "todaySales": 168080,
-    "yesterdaySales": 626745
+    "todayUnits": 0,
+    "yesterdayUnits": 31,
+    "todaySales": 0,
+    "yesterdaySales": 678260
   },
   "top5": [
     {
       "rank": 1,
-      "title": "『ネックレス』（Silver925）",
-      "units": 41,
-      "handle": "silver-necklace",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/4_6653c78f-879d-4bc3-84e0-629f226da3e2.png?v=1785261141"
+      "title": "チェック開襟シャツ~RELAXシリーズ",
+      "units": 42,
+      "handle": "checked-open-collar-shirt",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/20251003_Horie15.jpg?v=1784432407"
     },
     {
       "rank": 2,
-      "title": "チェック開襟シャツ~RELAXシリーズ",
-      "units": 28,
-      "handle": "checked-open-collar-shirt",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/20251003_Horie15.jpg?v=1784432407"
+      "title": "『ネックレス』（Silver925）",
+      "units": 42,
+      "handle": "silver-necklace",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/4_6653c78f-879d-4bc3-84e0-629f226da3e2.png?v=1785261141"
     },
     {
       "rank": 3,
