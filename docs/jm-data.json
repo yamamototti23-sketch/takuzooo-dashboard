@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-09-18T07:12:04+09:00",
+  "updatedAt": "2026-09-18T09:15:59+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 44349148,
-    "orders": 1589,
-    "aov": 27910
+    "sales": 44389298,
+    "orders": 1591,
+    "aov": 27900
   },
   "month": {
-    "salesTotal": 5220764,
-    "unitsTotal": 225,
+    "salesTotal": 5260914,
+    "unitsTotal": 227,
     "days": 18
   },
   "lastYear": {
@@ -89,7 +89,7 @@
       },
       {
         "date": "2026-09-18",
-        "sales": 91107
+        "sales": 131257
       }
     ],
     "points_lastyear": [
@@ -168,16 +168,16 @@
     ]
   },
   "daily": {
-    "todayUnits": 3,
+    "todayUnits": 5,
     "yesterdayUnits": 31,
-    "todaySales": 91107,
+    "todaySales": 131257,
     "yesterdaySales": 678260
   },
   "top5": [
     {
       "rank": 1,
       "title": "チェック開襟シャツ~RELAXシリーズ",
-      "units": 43,
+      "units": 45,
       "handle": "checked-open-collar-shirt",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/20251003_Horie15.jpg?v=1784432407"
     },
