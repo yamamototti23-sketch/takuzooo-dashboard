@@ -1,21 +1,21 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-09-18T22:52:06+09:00",
+  "updatedAt": "2026-09-19T02:40:28+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 44502433,
-    "orders": 1597,
-    "aov": 27866
+    "sales": 44541538,
+    "orders": 1599,
+    "aov": 27856
   },
   "month": {
-    "salesTotal": 5374049,
-    "unitsTotal": 233,
-    "days": 18
+    "salesTotal": 5413154,
+    "unitsTotal": 235,
+    "days": 19
   },
   "lastYear": {
-    "salesTotal": 3030720,
-    "days": 18
+    "salesTotal": 4447535,
+    "days": 19
   },
   "trend": {
     "points": [
@@ -90,6 +90,10 @@
       {
         "date": "2026-09-18",
         "sales": 244392
+      },
+      {
+        "date": "2026-09-19",
+        "sales": 39105
       }
     ],
     "points_lastyear": [
@@ -164,27 +168,31 @@
       {
         "date": "2025-09-18",
         "sales": 193600
+      },
+      {
+        "date": "2025-09-19",
+        "sales": 1416815
       }
     ]
   },
   "daily": {
-    "todayUnits": 11,
-    "yesterdayUnits": 31,
-    "todaySales": 244392,
-    "yesterdaySales": 678260
+    "todayUnits": 2,
+    "yesterdayUnits": 11,
+    "todaySales": 39105,
+    "yesterdaySales": 244392
   },
   "top5": [
     {
       "rank": 1,
       "title": "チェック開襟シャツ~RELAXシリーズ",
-      "units": 48,
+      "units": 49,
       "handle": "checked-open-collar-shirt",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/20251003_Horie15.jpg?v=1784432407"
     },
     {
       "rank": 2,
       "title": "『ネックレス』（Silver925）",
-      "units": 43,
+      "units": 44,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/4_6653c78f-879d-4bc3-84e0-629f226da3e2.png?v=1785261141"
     },
