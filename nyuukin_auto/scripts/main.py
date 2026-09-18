@@ -370,7 +370,11 @@ def main():
                 print(f"    Payout {pd} type内訳: {dict(type_counts)}  total={len(transactions)}")
                 csv_bytes = build_shopify_csv(p, transactions)
                 r = store_file("Shopify", p['issuedAt'], filename, csv_bytes, dry_run=args.dry_run)
-                results["shopify"].append({"file": filename, "tx_count": len(transactions), "amount": p['net']['amount']})
+                uploaded = (not args.dry_run) and (
+                    (isinstance(r.get("dropbox"), dict) and not r["dropbox"].get("skipped", False)) or
+                    (isinstance(r.get("drive"), dict) and not r["drive"].get("skipped", False))
+                )
+                results["shopify"].append({"file": filename, "tx_count": len(transactions), "amount": p['net']['amount'], "uploaded": uploaded})
         except Exception as e:
             print(f"❌ Shopify エラー: {e}", file=sys.stderr)
             results["errors"].append(f"Shopify: {e}")
@@ -386,7 +390,11 @@ def main():
                 filename = f"KOMOJU_{pd}.csv"
                 csv_bytes = download_komoju_csv(s)
                 r = store_file("Komoju", s['cutoff_time'], filename, csv_bytes, dry_run=args.dry_run)
-                results["komoju"].append({"file": filename, "size": len(csv_bytes), "amount": s['transaction_amount_cents']})
+                uploaded = (not args.dry_run) and (
+                    (isinstance(r.get("dropbox"), dict) and not r["dropbox"].get("skipped", False)) or
+                    (isinstance(r.get("drive"), dict) and not r["drive"].get("skipped", False))
+                )
+                results["komoju"].append({"file": filename, "size": len(csv_bytes), "amount": s['transaction_amount_cents'], "uploaded": uploaded})
         except Exception as e:
             print(f"❌ Komoju エラー: {e}", file=sys.stderr)
             results["errors"].append(f"Komoju: {e}")
@@ -404,22 +412,28 @@ def main():
             f"[title]⚠ nyuukin-auto 失敗[/title]\n" + "\n".join(results['errors']) +
             "\n\n復旧手順: workflow_dispatch で再実行\nhttps://github.com/yamamototti23-sketch/takuzooo-dashboard/actions/workflows/nyuukin_auto.yml"
         )
-    elif results['shopify'] or results['komoju']:
-        # 成功時 (格納あり) → 原様 DM
-        now_jst = datetime.now(timezone(timedelta(hours=9)))
-        month_str = f"{now_jst.month:02d}"
-        body = "[title]入金明細CSV 週次自動格納 完了[/title]\n"
-        body += f"Google共有ドライブ「入金/{now_jst.year}/{month_str}/」に本日分を格納しました。\n\n"
-        if results['shopify']:
-            body += f"・Shopify Payments: {len(results['shopify'])}件\n"
-            for s in results['shopify']:
-                body += f"   ・{s['file']} ({s['tx_count']}tx)\n"
-        if results['komoju']:
-            body += f"・Komoju: {len(results['komoju'])}件\n"
-            for s in results['komoju']:
-                body += f"   ・{s['file']}\n"
-        body += "\nご確認よろしくお願いいたします。"
-        notify_chatwork(CHATWORK_HARA_DM, body)
+    else:
+        # 成功時: uploaded 済み CSV のみで判定 (全 skip = 冪等 skip 完了 → silent skip・§ 通知設計の第一原則 準拠)
+        uploaded_shopify = [s for s in results['shopify'] if s.get('uploaded')]
+        uploaded_komoju = [s for s in results['komoju'] if s.get('uploaded')]
+        if uploaded_shopify or uploaded_komoju:
+            # 新規格納あり → 原様 DM
+            now_jst = datetime.now(timezone(timedelta(hours=9)))
+            month_str = f"{now_jst.month:02d}"
+            body = "[title]入金明細CSV 週次自動格納 完了[/title]\n"
+            body += f"Google共有ドライブ「入金/{now_jst.year}/{month_str}/」に本日分を格納しました。\n\n"
+            if uploaded_shopify:
+                body += f"・Shopify Payments: {len(uploaded_shopify)}件\n"
+                for s in uploaded_shopify:
+                    body += f"   ・{s['file']} ({s['tx_count']}tx)\n"
+            if uploaded_komoju:
+                body += f"・Komoju: {len(uploaded_komoju)}件\n"
+                for s in uploaded_komoju:
+                    body += f"   ・{s['file']}\n"
+            body += "\nご確認よろしくお願いいたします。"
+            notify_chatwork(CHATWORK_HARA_DM, body)
+        else:
+            print("[silent] 全 CSV 冪等 skip (uploaded=0件) → 原様通知抑制")
 
     return 1 if results['errors'] else 0
 
