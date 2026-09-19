@@ -1,21 +1,21 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-09-19T22:24:00+09:00",
+  "updatedAt": "2026-09-20T01:48:13+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 46764905,
-    "orders": 1666,
-    "aov": 28070
+    "sales": 46805055,
+    "orders": 1668,
+    "aov": 28061
   },
   "month": {
-    "salesTotal": 7636521,
-    "unitsTotal": 314,
-    "days": 19
+    "salesTotal": 7676671,
+    "unitsTotal": 316,
+    "days": 20
   },
   "lastYear": {
-    "salesTotal": 4447535,
-    "days": 19
+    "salesTotal": 4765435,
+    "days": 20
   },
   "trend": {
     "points": [
@@ -93,7 +93,11 @@
       },
       {
         "date": "2026-09-19",
-        "sales": 2280072
+        "sales": 2320222
+      },
+      {
+        "date": "2026-09-20",
+        "sales": 0
       }
     ],
     "points_lastyear": [
@@ -172,14 +176,18 @@
       {
         "date": "2025-09-19",
         "sales": 1416815
+      },
+      {
+        "date": "2025-09-20",
+        "sales": 317900
       }
     ]
   },
   "daily": {
-    "todayUnits": 81,
-    "yesterdayUnits": 11,
-    "todaySales": 2280072,
-    "yesterdaySales": 226792
+    "todayUnits": 0,
+    "yesterdayUnits": 83,
+    "todaySales": 0,
+    "yesterdaySales": 2320222
   },
   "top5": [
     {
@@ -206,7 +214,7 @@
     {
       "rank": 4,
       "title": "「クロスショルダーバッグ」（デイリーステア）",
-      "units": 24,
+      "units": 26,
       "handle": "cross-shoulder-bag",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/45_compressed_521054b9-9dfb-4bff-a63b-a27ce597cb74.jpg?v=1786503851"
     },
