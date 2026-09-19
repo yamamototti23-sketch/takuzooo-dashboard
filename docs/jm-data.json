@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-09-19T14:04:35+09:00",
+  "updatedAt": "2026-09-19T18:29:12+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 45424233,
-    "orders": 1639,
-    "aov": 27715
+    "sales": 45943065,
+    "orders": 1658,
+    "aov": 27710
   },
   "month": {
-    "salesTotal": 6295849,
-    "unitsTotal": 281,
+    "salesTotal": 6814681,
+    "unitsTotal": 304,
     "days": 19
   },
   "lastYear": {
@@ -89,11 +89,11 @@
       },
       {
         "date": "2026-09-18",
-        "sales": 244392
+        "sales": 226792
       },
       {
         "date": "2026-09-19",
-        "sales": 921800
+        "sales": 1458232
       }
     ],
     "points_lastyear": [
@@ -176,23 +176,23 @@
     ]
   },
   "daily": {
-    "todayUnits": 48,
+    "todayUnits": 71,
     "yesterdayUnits": 11,
-    "todaySales": 921800,
-    "yesterdaySales": 244392
+    "todaySales": 1458232,
+    "yesterdaySales": 226792
   },
   "top5": [
     {
       "rank": 1,
       "title": "チェック開襟シャツ~RELAXシリーズ",
-      "units": 52,
+      "units": 53,
       "handle": "checked-open-collar-shirt",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/20251003_Horie15.jpg?v=1784432407"
     },
     {
       "rank": 2,
       "title": "『ネックレス』（Silver925）",
-      "units": 45,
+      "units": 47,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/4_6653c78f-879d-4bc3-84e0-629f226da3e2.png?v=1785261141"
     },
@@ -206,16 +206,16 @@
     {
       "rank": 4,
       "title": "「クロスショルダーバッグ」（デイリーステア）",
-      "units": 20,
+      "units": 24,
       "handle": "cross-shoulder-bag",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/45_compressed_521054b9-9dfb-4bff-a63b-a27ce597cb74.jpg?v=1786503851"
     },
     {
       "rank": 5,
-      "title": "『本革ボディーバッグ』（姫路レザー）",
-      "units": 14,
-      "handle": "stylish-genuine-leather-large-body-bag",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A1554_1_ef495592-e3a6-4e83-8ffe-1f7f917d3092.jpg?v=1783603757"
+      "title": "【店舗限定】ペイズリーシャツ~RELAXシリーズ",
+      "units": 17,
+      "handle": null,
+      "thumb": null
     }
   ]
 }
