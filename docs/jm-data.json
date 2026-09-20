@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-09-20T16:01:29+09:00",
+  "updatedAt": "2026-09-20T21:20:33+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 47113385,
-    "orders": 1681,
-    "aov": 28027
+    "sales": 47160685,
+    "orders": 1683,
+    "aov": 28022
   },
   "month": {
-    "salesTotal": 7985001,
-    "unitsTotal": 335,
+    "salesTotal": 8032301,
+    "unitsTotal": 337,
     "days": 20
   },
   "lastYear": {
@@ -97,7 +97,7 @@
       },
       {
         "date": "2026-09-20",
-        "sales": 344300
+        "sales": 391600
       }
     ],
     "points_lastyear": [
@@ -184,9 +184,9 @@
     ]
   },
   "daily": {
-    "todayUnits": 19,
+    "todayUnits": 21,
     "yesterdayUnits": 83,
-    "todaySales": 344300,
+    "todaySales": 391600,
     "yesterdaySales": 2284252
   },
   "top5": [
@@ -221,7 +221,7 @@
     {
       "rank": 5,
       "title": "【9月店舗限定】ペイズリーシャツ~RELAXシリーズ",
-      "units": 15,
+      "units": 16,
       "handle": null,
       "thumb": null
     }
