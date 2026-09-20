@@ -1,21 +1,21 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-09-20T21:20:33+09:00",
+  "updatedAt": "2026-09-21T01:29:00+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 47160685,
-    "orders": 1683,
-    "aov": 28022
+    "sales": 47308745,
+    "orders": 1689,
+    "aov": 28010
   },
   "month": {
-    "salesTotal": 8032301,
-    "unitsTotal": 337,
-    "days": 20
+    "salesTotal": 8180361,
+    "unitsTotal": 344,
+    "days": 21
   },
   "lastYear": {
-    "salesTotal": 4765435,
-    "days": 20
+    "salesTotal": 5227995,
+    "days": 21
   },
   "trend": {
     "points": [
@@ -97,7 +97,11 @@
       },
       {
         "date": "2026-09-20",
-        "sales": 391600
+        "sales": 521290
+      },
+      {
+        "date": "2026-09-21",
+        "sales": 18370
       }
     ],
     "points_lastyear": [
@@ -180,14 +184,18 @@
       {
         "date": "2025-09-20",
         "sales": 317900
+      },
+      {
+        "date": "2025-09-21",
+        "sales": 462560
       }
     ]
   },
   "daily": {
-    "todayUnits": 21,
-    "yesterdayUnits": 83,
-    "todaySales": 391600,
-    "yesterdaySales": 2284252
+    "todayUnits": 1,
+    "yesterdayUnits": 27,
+    "todaySales": 18370,
+    "yesterdaySales": 521290
   },
   "top5": [
     {
@@ -200,7 +208,7 @@
     {
       "rank": 2,
       "title": "『ネックレス』（Silver925）",
-      "units": 51,
+      "units": 52,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/4_6653c78f-879d-4bc3-84e0-629f226da3e2.png?v=1785261141"
     },
@@ -214,7 +222,7 @@
     {
       "rank": 4,
       "title": "「クロスショルダーバッグ」（デイリーステア）",
-      "units": 31,
+      "units": 32,
       "handle": "cross-shoulder-bag",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/45_compressed_521054b9-9dfb-4bff-a63b-a27ce597cb74.jpg?v=1786503851"
     },
