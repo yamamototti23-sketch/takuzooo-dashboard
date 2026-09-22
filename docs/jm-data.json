@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-09-22T15:47:01+09:00",
+  "updatedAt": "2026-09-22T21:04:03+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 48115820,
-    "orders": 1711,
-    "aov": 28121
+    "sales": 48290463,
+    "orders": 1718,
+    "aov": 28109
   },
   "month": {
-    "salesTotal": 8987436,
-    "unitsTotal": 368,
+    "salesTotal": 9162079,
+    "unitsTotal": 376,
     "days": 22
   },
   "lastYear": {
@@ -105,7 +105,7 @@
       },
       {
         "date": "2026-09-22",
-        "sales": 458605
+        "sales": 633248
       }
     ],
     "points_lastyear": [
@@ -200,30 +200,30 @@
     ]
   },
   "daily": {
-    "todayUnits": 11,
+    "todayUnits": 19,
     "yesterdayUnits": 14,
-    "todaySales": 458605,
+    "todaySales": 633248,
     "yesterdaySales": 366840
   },
   "top5": [
     {
       "rank": 1,
+      "title": "『ネックレス』（Silver925）",
+      "units": 57,
+      "handle": "silver-necklace",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/4_6653c78f-879d-4bc3-84e0-629f226da3e2.png?v=1785261141"
+    },
+    {
+      "rank": 2,
       "title": "チェック開襟シャツ~RELAXシリーズ",
       "units": 56,
       "handle": "checked-open-collar-shirt",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/20251003_Horie15.jpg?v=1784432407"
     },
     {
-      "rank": 2,
-      "title": "『ネックレス』（Silver925）",
-      "units": 53,
-      "handle": "silver-necklace",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/4_6653c78f-879d-4bc3-84e0-629f226da3e2.png?v=1785261141"
-    },
-    {
       "rank": 3,
       "title": "『ブレスレット』(Silver925)",
-      "units": 41,
+      "units": 42,
       "handle": "silver-bracelet",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394"
     },
