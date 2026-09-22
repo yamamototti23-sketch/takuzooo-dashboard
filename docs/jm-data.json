@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-09-22T10:35:41+09:00",
+  "updatedAt": "2026-09-22T15:47:01+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 47746040,
-    "orders": 1705,
-    "aov": 28004
+    "sales": 48115820,
+    "orders": 1711,
+    "aov": 28121
   },
   "month": {
-    "salesTotal": 8617656,
-    "unitsTotal": 362,
+    "salesTotal": 8987436,
+    "unitsTotal": 368,
     "days": 22
   },
   "lastYear": {
@@ -105,7 +105,7 @@
       },
       {
         "date": "2026-09-22",
-        "sales": 88825
+        "sales": 458605
       }
     ],
     "points_lastyear": [
@@ -200,9 +200,9 @@
     ]
   },
   "daily": {
-    "todayUnits": 5,
+    "todayUnits": 11,
     "yesterdayUnits": 14,
-    "todaySales": 88825,
+    "todaySales": 458605,
     "yesterdaySales": 366840
   },
   "top5": [
@@ -223,14 +223,14 @@
     {
       "rank": 3,
       "title": "『ブレスレット』(Silver925)",
-      "units": 39,
+      "units": 41,
       "handle": "silver-bracelet",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394"
     },
     {
       "rank": 4,
       "title": "「クロスショルダーバッグ」（デイリーステア）",
-      "units": 33,
+      "units": 34,
       "handle": "cross-shoulder-bag",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/45_compressed_521054b9-9dfb-4bff-a63b-a27ce597cb74.jpg?v=1786503851"
     },
