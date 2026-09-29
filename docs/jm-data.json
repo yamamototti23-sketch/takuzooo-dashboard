@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-09-29T14:41:36+09:00",
+  "updatedAt": "2026-09-29T20:34:23+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 51190290,
-    "orders": 1811,
-    "aov": 28266
+    "sales": 51254420,
+    "orders": 1814,
+    "aov": 28255
   },
   "month": {
-    "salesTotal": 12061906,
-    "unitsTotal": 491,
+    "salesTotal": 12126036,
+    "unitsTotal": 494,
     "days": 29
   },
   "lastYear": {
@@ -133,7 +133,7 @@
       },
       {
         "date": "2026-09-29",
-        "sales": 191989
+        "sales": 256119
       }
     ],
     "points_lastyear": [
@@ -256,9 +256,9 @@
     ]
   },
   "daily": {
-    "todayUnits": 8,
+    "todayUnits": 11,
     "yesterdayUnits": 12,
-    "todaySales": 191989,
+    "todaySales": 256119,
     "yesterdaySales": 77960
   },
   "top5": [
@@ -293,7 +293,7 @@
     {
       "rank": 5,
       "title": "『カーゴパンツ』(ビンテージウォッシュ)~RELAXシリーズ",
-      "units": 21,
+      "units": 23,
       "handle": "cargo-pants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/2026-04-25_16.32.19.png?v=1777125277"
     }
