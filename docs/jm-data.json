@@ -1,309 +1,77 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-09-30T21:31:38+09:00",
+  "updatedAt": "2026-10-01T03:07:38+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 51693595,
-    "orders": 1830,
+    "sales": 51749503,
+    "orders": 1832,
     "aov": 28248
   },
   "month": {
-    "salesTotal": 12565211,
-    "unitsTotal": 517,
-    "days": 30
+    "salesTotal": 0,
+    "unitsTotal": 0,
+    "days": 1
   },
   "lastYear": {
-    "salesTotal": 14615696,
-    "days": 30
+    "salesTotal": 201960,
+    "days": 1
   },
   "trend": {
     "points": [
       {
-        "date": "2026-09-01",
-        "sales": 377337
-      },
-      {
-        "date": "2026-09-02",
-        "sales": 453625
-      },
-      {
-        "date": "2026-09-03",
-        "sales": 163735
-      },
-      {
-        "date": "2026-09-04",
-        "sales": 328158
-      },
-      {
-        "date": "2026-09-05",
-        "sales": 272622
-      },
-      {
-        "date": "2026-09-06",
-        "sales": 408111
-      },
-      {
-        "date": "2026-09-07",
-        "sales": 139260
-      },
-      {
-        "date": "2026-09-08",
-        "sales": -92550
-      },
-      {
-        "date": "2026-09-09",
-        "sales": 314078
-      },
-      {
-        "date": "2026-09-10",
-        "sales": -7930
-      },
-      {
-        "date": "2026-09-11",
-        "sales": 264385
-      },
-      {
-        "date": "2026-09-12",
-        "sales": 248215
-      },
-      {
-        "date": "2026-09-13",
-        "sales": 449614
-      },
-      {
-        "date": "2026-09-14",
-        "sales": 344556
-      },
-      {
-        "date": "2026-09-15",
-        "sales": 161436
-      },
-      {
-        "date": "2026-09-16",
-        "sales": 626745
-      },
-      {
-        "date": "2026-09-17",
-        "sales": 678260
-      },
-      {
-        "date": "2026-09-18",
-        "sales": 226792
-      },
-      {
-        "date": "2026-09-19",
-        "sales": 2284252
-      },
-      {
-        "date": "2026-09-20",
-        "sales": 521290
-      },
-      {
-        "date": "2026-09-21",
-        "sales": 366840
-      },
-      {
-        "date": "2026-09-22",
-        "sales": 752291
-      },
-      {
-        "date": "2026-09-23",
-        "sales": 884597
-      },
-      {
-        "date": "2026-09-24",
-        "sales": 201165
-      },
-      {
-        "date": "2026-09-25",
-        "sales": 348288
-      },
-      {
-        "date": "2026-09-26",
-        "sales": 609945
-      },
-      {
-        "date": "2026-09-27",
-        "sales": 466840
-      },
-      {
-        "date": "2026-09-28",
-        "sales": 77960
-      },
-      {
-        "date": "2026-09-29",
-        "sales": 339389
-      },
-      {
-        "date": "2026-09-30",
-        "sales": 355905
+        "date": "2026-10-01",
+        "sales": 0
       }
     ],
     "points_lastyear": [
       {
-        "date": "2025-09-01",
-        "sales": 248710
-      },
-      {
-        "date": "2025-09-02",
-        "sales": 262240
-      },
-      {
-        "date": "2025-09-03",
-        "sales": 245960
-      },
-      {
-        "date": "2025-09-04",
-        "sales": 151800
-      },
-      {
-        "date": "2025-09-05",
-        "sales": 179520
-      },
-      {
-        "date": "2025-09-06",
-        "sales": 250800
-      },
-      {
-        "date": "2025-09-07",
-        "sales": 158400
-      },
-      {
-        "date": "2025-09-08",
-        "sales": 100760
-      },
-      {
-        "date": "2025-09-09",
-        "sales": 69960
-      },
-      {
-        "date": "2025-09-10",
-        "sales": 246950
-      },
-      {
-        "date": "2025-09-11",
-        "sales": 146520
-      },
-      {
-        "date": "2025-09-12",
-        "sales": 204050
-      },
-      {
-        "date": "2025-09-13",
-        "sales": 128150
-      },
-      {
-        "date": "2025-09-14",
-        "sales": 123200
-      },
-      {
-        "date": "2025-09-15",
-        "sales": 170500
-      },
-      {
-        "date": "2025-09-16",
-        "sales": 56650
-      },
-      {
-        "date": "2025-09-17",
-        "sales": 92950
-      },
-      {
-        "date": "2025-09-18",
-        "sales": 193600
-      },
-      {
-        "date": "2025-09-19",
-        "sales": 1416815
-      },
-      {
-        "date": "2025-09-20",
-        "sales": 317900
-      },
-      {
-        "date": "2025-09-21",
-        "sales": 462560
-      },
-      {
-        "date": "2025-09-22",
-        "sales": 361460
-      },
-      {
-        "date": "2025-09-23",
-        "sales": 176665
-      },
-      {
-        "date": "2025-09-24",
-        "sales": 159720
-      },
-      {
-        "date": "2025-09-25",
-        "sales": 265100
-      },
-      {
-        "date": "2025-09-26",
-        "sales": 5727441
-      },
-      {
-        "date": "2025-09-27",
-        "sales": 1337715
-      },
-      {
-        "date": "2025-09-28",
-        "sales": 490710
-      },
-      {
-        "date": "2025-09-29",
-        "sales": 275990
-      },
-      {
-        "date": "2025-09-30",
-        "sales": 592900
+        "date": "2025-10-01",
+        "sales": 201960
       }
     ]
   },
   "daily": {
-    "todayUnits": 18,
-    "yesterdayUnits": 16,
-    "todaySales": 355905,
-    "yesterdaySales": 339389
+    "todayUnits": 0,
+    "yesterdayUnits": 20,
+    "todaySales": 0,
+    "yesterdaySales": 411813
   },
   "top5": [
     {
       "rank": 1,
-      "title": "『ネックレス』（Silver925）",
-      "units": 82,
-      "handle": "silver-necklace",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/4_6653c78f-879d-4bc3-84e0-629f226da3e2.png?v=1785261141"
+      "title": "『三つ折り財布〜パイソン革〜』",
+      "units": 0,
+      "handle": "tri-fold-wallet-python-leather",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/48_compressed_f4b214cd-47af-4532-ba0b-e1bd95cf6f87.jpg?v=1786503854"
     },
     {
       "rank": 2,
-      "title": "チェック開襟シャツ~RELAXシリーズ",
-      "units": 59,
-      "handle": "checked-open-collar-shirt",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/20251003_Horie15.jpg?v=1784432407"
+      "title": "k18『Goldブレスレット』20㎝",
+      "units": 0,
+      "handle": "k18-gold-bracelet-20",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/15d1b1faf6465ac3860452e9da3f9209.jpg?v=1776451691"
     },
     {
       "rank": 3,
-      "title": "『ブレスレット』(Silver925)",
-      "units": 54,
-      "handle": "silver-bracelet",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394"
+      "title": "【廃盤】「紳士ショーツ」長めの\"丈感\"~RELAXシリーズ",
+      "units": 0,
+      "handle": "gentleman-shorts",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/96dfbf8ce0362a20de8ba7ab97350df7.jpg?v=1776451630"
     },
     {
       "rank": 4,
-      "title": "「クロスショルダーバッグ」（デイリーステア）",
-      "units": 39,
-      "handle": "cross-shoulder-bag",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/45_compressed_521054b9-9dfb-4bff-a63b-a27ce597cb74.jpg?v=1786503851"
+      "title": "k18『GOLD(金)ネックレス』50㎝",
+      "units": 0,
+      "handle": "k18-gold-necklace-50",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/50k18.jpg?v=1776451691"
     },
     {
       "rank": 5,
-      "title": "『カーゴパンツ』(ビンテージウォッシュ)~RELAXシリーズ",
-      "units": 25,
-      "handle": "cargo-pants",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/2026-04-25_16.32.19.png?v=1777125277"
+      "title": "「シングルディアレザー」~SMARTシリーズ",
+      "units": 0,
+      "handle": "single-deer-leather",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/20260407__455.jpg?v=1786503918"
     }
   ]
 }
