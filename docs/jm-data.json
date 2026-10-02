@@ -1,21 +1,21 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-10-02T20:21:10+09:00",
+  "updatedAt": "2026-10-03T01:49:20+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 52470996,
-    "orders": 1857,
-    "aov": 28256
+    "sales": 52771901,
+    "orders": 1865,
+    "aov": 28296
   },
   "month": {
-    "salesTotal": 721493,
-    "unitsTotal": 29,
-    "days": 2
+    "salesTotal": 1022398,
+    "unitsTotal": 38,
+    "days": 3
   },
   "lastYear": {
-    "salesTotal": 605880,
-    "days": 2
+    "salesTotal": 747780,
+    "days": 3
   },
   "trend": {
     "points": [
@@ -25,7 +25,11 @@
       },
       {
         "date": "2026-10-02",
-        "sales": 290092
+        "sales": 590997
+      },
+      {
+        "date": "2026-10-03",
+        "sales": 0
       }
     ],
     "points_lastyear": [
@@ -36,50 +40,54 @@
       {
         "date": "2025-10-02",
         "sales": 403920
+      },
+      {
+        "date": "2025-10-03",
+        "sales": 141900
       }
     ]
   },
   "daily": {
-    "todayUnits": 12,
-    "yesterdayUnits": 17,
-    "todaySales": 290092,
-    "yesterdaySales": 431401
+    "todayUnits": 0,
+    "yesterdayUnits": 22,
+    "todaySales": 0,
+    "yesterdaySales": 590997
   },
   "top5": [
     {
       "rank": 1,
+      "title": "黒アウターのための「\"究極\"のグレーパンツ」~SMARTシリーズ",
+      "units": 9,
+      "handle": "graypants",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/733edb1e425db1232bf22bd5a0bef49f.jpg?v=1776451631"
+    },
+    {
+      "rank": 2,
       "title": "『ネックレス』（Silver925）",
       "units": 5,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/4_6653c78f-879d-4bc3-84e0-629f226da3e2.png?v=1785261141"
     },
     {
-      "rank": 2,
+      "rank": 3,
       "title": "『ブレスレット』(Silver925)",
       "units": 4,
       "handle": "silver-bracelet",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394"
     },
     {
-      "rank": 3,
+      "rank": 4,
       "title": "『レイヤードニット』オーガニックコットン~SMARTシリーズ",
       "units": 3,
       "handle": "adult-knit",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1d16aa44369136913b1c5d7a3dc39035_5e247586-4c75-46af-8a48-a6f4e5e6de0e.jpg?v=1776451571"
     },
     {
-      "rank": 4,
-      "title": "黒アウターのための「\"究極\"のグレーパンツ」~SMARTシリーズ",
-      "units": 3,
-      "handle": "graypants",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/733edb1e425db1232bf22bd5a0bef49f.jpg?v=1776451631"
-    },
-    {
       "rank": 5,
-      "title": "「クロスショルダーバッグ」（デイリーステア）",
+      "title": "「防水イージーパンツ」~RELAXシリーズ",
       "units": 2,
-      "handle": "cross-shoulder-bag",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/45_compressed_521054b9-9dfb-4bff-a63b-a27ce597cb74.jpg?v=1786503851"
+      "handle": "waterproof-easy-pants",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1cf702eef58fa10dff4f56a6541ae1f9.jpg?v=1776451570"
     }
   ]
 }
