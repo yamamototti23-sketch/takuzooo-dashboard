@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-10-02T09:14:18+09:00",
+  "updatedAt": "2026-10-02T14:37:13+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 52286031,
-    "orders": 1850,
-    "aov": 28263
+    "sales": 52357971,
+    "orders": 1853,
+    "aov": 28256
   },
   "month": {
-    "salesTotal": 536528,
-    "unitsTotal": 21,
+    "salesTotal": 608468,
+    "unitsTotal": 25,
     "days": 2
   },
   "lastYear": {
@@ -25,7 +25,7 @@
       },
       {
         "date": "2026-10-02",
-        "sales": 105127
+        "sales": 177067
       }
     ],
     "points_lastyear": [
@@ -40,46 +40,46 @@
     ]
   },
   "daily": {
-    "todayUnits": 4,
+    "todayUnits": 8,
     "yesterdayUnits": 17,
-    "todaySales": 105127,
+    "todaySales": 177067,
     "yesterdaySales": 431401
   },
   "top5": [
     {
       "rank": 1,
       "title": "『ネックレス』（Silver925）",
-      "units": 4,
+      "units": 5,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/4_6653c78f-879d-4bc3-84e0-629f226da3e2.png?v=1785261141"
     },
     {
       "rank": 2,
       "title": "『ブレスレット』(Silver925)",
-      "units": 3,
+      "units": 4,
       "handle": "silver-bracelet",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394"
     },
     {
       "rank": 3,
+      "title": "『\"ストライプ\"シャツ』~RELAXシリーズ",
+      "units": 2,
+      "handle": "striped-shirt",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/20260219__74_square_compressed_b358022b-d1f7-4f24-aab3-d29f790cda58.jpg?v=1783561408"
+    },
+    {
+      "rank": 4,
       "title": "『レイヤードニット』オーガニックコットン~SMARTシリーズ",
       "units": 2,
       "handle": "adult-knit",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1d16aa44369136913b1c5d7a3dc39035_5e247586-4c75-46af-8a48-a6f4e5e6de0e.jpg?v=1776451571"
     },
     {
-      "rank": 4,
-      "title": "『\"ストライプ\"シャツ』~RELAXシリーズ",
-      "units": 1,
-      "handle": "striped-shirt",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/20260219__74_square_compressed_b358022b-d1f7-4f24-aab3-d29f790cda58.jpg?v=1783561408"
-    },
-    {
       "rank": 5,
-      "title": "「シワになりにくいシャツ」~RELAXシリーズ",
-      "units": 1,
-      "handle": "wrinkle-resistant-shirts-for-dates",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/f53b4507df2aeec869b93958ccd17a5f.jpg?v=1774151922"
+      "title": "「クロスショルダーバッグ」（デイリーステア）",
+      "units": 2,
+      "handle": "cross-shoulder-bag",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/45_compressed_521054b9-9dfb-4bff-a63b-a27ce597cb74.jpg?v=1786503851"
     }
   ]
 }
