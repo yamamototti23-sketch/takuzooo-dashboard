@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-10-04T14:49:43+09:00",
+  "updatedAt": "2026-10-04T21:19:01+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 53528943,
-    "orders": 1890,
-    "aov": 28322
+    "sales": 53804493,
+    "orders": 1900,
+    "aov": 28318
   },
   "month": {
-    "salesTotal": 1779440,
-    "unitsTotal": 70,
+    "salesTotal": 2054990,
+    "unitsTotal": 82,
     "days": 4
   },
   "lastYear": {
@@ -33,7 +33,7 @@
       },
       {
         "date": "2026-10-04",
-        "sales": 167145
+        "sales": 442695
       }
     ],
     "points_lastyear": [
@@ -56,23 +56,23 @@
     ]
   },
   "daily": {
-    "todayUnits": 8,
+    "todayUnits": 20,
     "yesterdayUnits": 22,
-    "todaySales": 167145,
+    "todaySales": 442695,
     "yesterdaySales": 589897
   },
   "top5": [
     {
       "rank": 1,
       "title": "黒アウターのための「\"究極\"のグレーパンツ」~SMARTシリーズ",
-      "units": 15,
+      "units": 17,
       "handle": "graypants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/733edb1e425db1232bf22bd5a0bef49f.jpg?v=1776451631"
     },
     {
       "rank": 2,
       "title": "『ネックレス』（Silver925）",
-      "units": 11,
+      "units": 15,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/4_6653c78f-879d-4bc3-84e0-629f226da3e2.png?v=1785261141"
     },
@@ -85,15 +85,15 @@
     },
     {
       "rank": 4,
-      "title": "『カーゴパンツ』(ビンテージウォッシュ)~RELAXシリーズ",
+      "title": "「オーガニックロンT（シーアイランド種）」~RELAXシリーズ",
       "units": 5,
-      "handle": "cargo-pants",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/2026-04-25_16.32.19.png?v=1777125277"
+      "handle": "luxury-long-sleeved-t-shirt",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/20260219__4_1_c1a6688b-ab8c-4a82-86a0-86707572aaf0.jpg?v=1783603757"
     },
     {
       "rank": 5,
       "title": "「クロスショルダーバッグ」（デイリーステア）",
-      "units": 4,
+      "units": 5,
       "handle": "cross-shoulder-bag",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/45_compressed_521054b9-9dfb-4bff-a63b-a27ce597cb74.jpg?v=1786503851"
     }
