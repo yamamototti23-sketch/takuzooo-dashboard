@@ -1,21 +1,21 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-10-04T21:19:01+09:00",
+  "updatedAt": "2026-10-05T02:01:58+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 53804493,
-    "orders": 1900,
-    "aov": 28318
+    "sales": 53847613,
+    "orders": 1902,
+    "aov": 28311
   },
   "month": {
-    "salesTotal": 2054990,
-    "unitsTotal": 82,
-    "days": 4
+    "salesTotal": 2098110,
+    "unitsTotal": 84,
+    "days": 5
   },
   "lastYear": {
-    "salesTotal": 1048410,
-    "days": 4
+    "salesTotal": 1223200,
+    "days": 5
   },
   "trend": {
     "points": [
@@ -33,7 +33,11 @@
       },
       {
         "date": "2026-10-04",
-        "sales": 442695
+        "sales": 462165
+      },
+      {
+        "date": "2026-10-05",
+        "sales": 23650
       }
     ],
     "points_lastyear": [
@@ -52,14 +56,18 @@
       {
         "date": "2025-10-04",
         "sales": 300630
+      },
+      {
+        "date": "2025-10-05",
+        "sales": 174790
       }
     ]
   },
   "daily": {
-    "todayUnits": 20,
-    "yesterdayUnits": 22,
-    "todaySales": 442695,
-    "yesterdaySales": 589897
+    "todayUnits": 1,
+    "yesterdayUnits": 21,
+    "todaySales": 23650,
+    "yesterdaySales": 462165
   },
   "top5": [
     {
@@ -72,7 +80,7 @@
     {
       "rank": 2,
       "title": "『ネックレス』（Silver925）",
-      "units": 15,
+      "units": 16,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/4_6653c78f-879d-4bc3-84e0-629f226da3e2.png?v=1785261141"
     },
@@ -85,17 +93,17 @@
     },
     {
       "rank": 4,
-      "title": "「オーガニックロンT（シーアイランド種）」~RELAXシリーズ",
-      "units": 5,
-      "handle": "luxury-long-sleeved-t-shirt",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/20260219__4_1_c1a6688b-ab8c-4a82-86a0-86707572aaf0.jpg?v=1783603757"
-    },
-    {
-      "rank": 5,
       "title": "「クロスショルダーバッグ」（デイリーステア）",
       "units": 5,
       "handle": "cross-shoulder-bag",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/45_compressed_521054b9-9dfb-4bff-a63b-a27ce597cb74.jpg?v=1786503851"
+    },
+    {
+      "rank": 5,
+      "title": "「オーガニックロンT（シーアイランド種）」~RELAXシリーズ",
+      "units": 5,
+      "handle": "luxury-long-sleeved-t-shirt",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/20260219__4_1_c1a6688b-ab8c-4a82-86a0-86707572aaf0.jpg?v=1783603757"
     }
   ]
 }
