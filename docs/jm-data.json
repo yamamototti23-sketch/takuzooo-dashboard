@@ -1,21 +1,21 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-10-05T18:00:59+09:00",
+  "updatedAt": "2026-10-06T03:25:20+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 53899148,
-    "orders": 1904,
-    "aov": 28308
+    "sales": 54168703,
+    "orders": 1915,
+    "aov": 28287
   },
   "month": {
-    "salesTotal": 2149645,
-    "unitsTotal": 86,
-    "days": 5
+    "salesTotal": 2419200,
+    "unitsTotal": 99,
+    "days": 6
   },
   "lastYear": {
-    "salesTotal": 1223200,
-    "days": 5
+    "salesTotal": 1502820,
+    "days": 6
   },
   "trend": {
     "points": [
@@ -37,7 +37,11 @@
       },
       {
         "date": "2026-10-05",
-        "sales": 75185
+        "sales": 344740
+      },
+      {
+        "date": "2026-10-06",
+        "sales": 0
       }
     ],
     "points_lastyear": [
@@ -60,50 +64,54 @@
       {
         "date": "2025-10-05",
         "sales": 174790
+      },
+      {
+        "date": "2025-10-06",
+        "sales": 279620
       }
     ]
   },
   "daily": {
-    "todayUnits": 3,
-    "yesterdayUnits": 21,
-    "todaySales": 75185,
-    "yesterdaySales": 462165
+    "todayUnits": 0,
+    "yesterdayUnits": 16,
+    "todaySales": 0,
+    "yesterdaySales": 344740
   },
   "top5": [
     {
       "rank": 1,
-      "title": "黒アウターのための「\"究極\"のグレーパンツ」~SMARTシリーズ",
-      "units": 17,
-      "handle": "graypants",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/733edb1e425db1232bf22bd5a0bef49f.jpg?v=1776451631"
-    },
-    {
-      "rank": 2,
       "title": "『ネックレス』（Silver925）",
-      "units": 16,
+      "units": 20,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/4_6653c78f-879d-4bc3-84e0-629f226da3e2.png?v=1785261141"
     },
     {
+      "rank": 2,
+      "title": "黒アウターのための「\"究極\"のグレーパンツ」~SMARTシリーズ",
+      "units": 20,
+      "handle": "graypants",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/733edb1e425db1232bf22bd5a0bef49f.jpg?v=1776451631"
+    },
+    {
       "rank": 3,
       "title": "『ブレスレット』(Silver925)",
-      "units": 8,
+      "units": 10,
       "handle": "silver-bracelet",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394"
     },
     {
       "rank": 4,
-      "title": "「クロスショルダーバッグ」（デイリーステア）",
-      "units": 5,
-      "handle": "cross-shoulder-bag",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/45_compressed_521054b9-9dfb-4bff-a63b-a27ce597cb74.jpg?v=1786503851"
+      "title": "『カーゴパンツ』(ビンテージウォッシュ)~RELAXシリーズ",
+      "units": 7,
+      "handle": "cargo-pants",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/2026-04-25_16.32.19.png?v=1777125277"
     },
     {
       "rank": 5,
-      "title": "「オーガニックロンT（シーアイランド種）」~RELAXシリーズ",
-      "units": 5,
-      "handle": "luxury-long-sleeved-t-shirt",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/20260219__4_1_c1a6688b-ab8c-4a82-86a0-86707572aaf0.jpg?v=1783603757"
+      "title": "『\"ストライプ\"シャツ』~RELAXシリーズ",
+      "units": 6,
+      "handle": "striped-shirt",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/20260219__74_square_compressed_b358022b-d1f7-4f24-aab3-d29f790cda58.jpg?v=1783561408"
     }
   ]
 }
