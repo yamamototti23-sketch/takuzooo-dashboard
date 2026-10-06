@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-10-06T03:25:20+09:00",
+  "updatedAt": "2026-10-06T09:20:36+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 54168703,
-    "orders": 1915,
-    "aov": 28287
+    "sales": 54242733,
+    "orders": 1917,
+    "aov": 28296
   },
   "month": {
-    "salesTotal": 2419200,
-    "unitsTotal": 99,
+    "salesTotal": 2493230,
+    "unitsTotal": 102,
     "days": 6
   },
   "lastYear": {
@@ -41,7 +41,7 @@
       },
       {
         "date": "2026-10-06",
-        "sales": 0
+        "sales": 74030
       }
     ],
     "points_lastyear": [
@@ -72,25 +72,25 @@
     ]
   },
   "daily": {
-    "todayUnits": 0,
+    "todayUnits": 3,
     "yesterdayUnits": 16,
-    "todaySales": 0,
+    "todaySales": 74030,
     "yesterdaySales": 344740
   },
   "top5": [
     {
       "rank": 1,
-      "title": "『ネックレス』（Silver925）",
-      "units": 20,
-      "handle": "silver-necklace",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/4_6653c78f-879d-4bc3-84e0-629f226da3e2.png?v=1785261141"
-    },
-    {
-      "rank": 2,
       "title": "黒アウターのための「\"究極\"のグレーパンツ」~SMARTシリーズ",
       "units": 20,
       "handle": "graypants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/733edb1e425db1232bf22bd5a0bef49f.jpg?v=1776451631"
+    },
+    {
+      "rank": 2,
+      "title": "『ネックレス』（Silver925）",
+      "units": 20,
+      "handle": "silver-necklace",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/4_6653c78f-879d-4bc3-84e0-629f226da3e2.png?v=1785261141"
     },
     {
       "rank": 3,
@@ -101,17 +101,17 @@
     },
     {
       "rank": 4,
+      "title": "「オーガニックロンT（シーアイランド種）」~RELAXシリーズ",
+      "units": 7,
+      "handle": "luxury-long-sleeved-t-shirt",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/20260219__4_1_c1a6688b-ab8c-4a82-86a0-86707572aaf0.jpg?v=1783603757"
+    },
+    {
+      "rank": 5,
       "title": "『カーゴパンツ』(ビンテージウォッシュ)~RELAXシリーズ",
       "units": 7,
       "handle": "cargo-pants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/2026-04-25_16.32.19.png?v=1777125277"
-    },
-    {
-      "rank": 5,
-      "title": "『\"ストライプ\"シャツ』~RELAXシリーズ",
-      "units": 6,
-      "handle": "striped-shirt",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/20260219__74_square_compressed_b358022b-d1f7-4f24-aab3-d29f790cda58.jpg?v=1783561408"
     }
   ]
 }
