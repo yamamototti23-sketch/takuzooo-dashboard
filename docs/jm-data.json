@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-10-07T04:31:12+09:00",
+  "updatedAt": "2026-10-07T08:15:05+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 54402338,
-    "orders": 1932,
-    "aov": 28159
+    "sales": 54425328,
+    "orders": 1933,
+    "aov": 28156
   },
   "month": {
-    "salesTotal": 2652835,
-    "unitsTotal": 120,
+    "salesTotal": 2675825,
+    "unitsTotal": 121,
     "days": 7
   },
   "lastYear": {
@@ -45,7 +45,7 @@
       },
       {
         "date": "2026-10-07",
-        "sales": 0
+        "sales": 22990
       }
     ],
     "points_lastyear": [
@@ -80,9 +80,9 @@
     ]
   },
   "daily": {
-    "todayUnits": 0,
+    "todayUnits": 1,
     "yesterdayUnits": 21,
-    "todaySales": 0,
+    "todaySales": 22990,
     "yesterdaySales": 555935
   },
   "top5": [
@@ -109,17 +109,17 @@
     },
     {
       "rank": 4,
+      "title": "『カーゴパンツ』(ビンテージウォッシュ)~RELAXシリーズ",
+      "units": 9,
+      "handle": "cargo-pants",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/2026-04-25_16.32.19.png?v=1777125277"
+    },
+    {
+      "rank": 5,
       "title": "「オーガニックロンT（シーアイランド種）」~RELAXシリーズ",
       "units": 9,
       "handle": "luxury-long-sleeved-t-shirt",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/20260219__4_1_c1a6688b-ab8c-4a82-86a0-86707572aaf0.jpg?v=1783603757"
-    },
-    {
-      "rank": 5,
-      "title": "『カーゴパンツ』(ビンテージウォッシュ)~RELAXシリーズ",
-      "units": 8,
-      "handle": "cargo-pants",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/2026-04-25_16.32.19.png?v=1777125277"
     }
   ]
 }
