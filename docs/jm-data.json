@@ -1,21 +1,21 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-10-08T16:58:26+09:00",
+  "updatedAt": "2026-10-09T00:34:30+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 54773451,
-    "orders": 1942,
-    "aov": 28205
+    "sales": 54955391,
+    "orders": 1949,
+    "aov": 28197
   },
   "month": {
-    "salesTotal": 3023948,
-    "unitsTotal": 132,
-    "days": 8
+    "salesTotal": 3205888,
+    "unitsTotal": 141,
+    "days": 9
   },
   "lastYear": {
-    "salesTotal": 2142580,
-    "days": 8
+    "salesTotal": 2453440,
+    "days": 9
   },
   "trend": {
     "points": [
@@ -49,7 +49,11 @@
       },
       {
         "date": "2026-10-08",
-        "sales": 35200
+        "sales": 217140
+      },
+      {
+        "date": "2026-10-09",
+        "sales": 0
       }
     ],
     "points_lastyear": [
@@ -84,20 +88,24 @@
       {
         "date": "2025-10-08",
         "sales": 282920
+      },
+      {
+        "date": "2025-10-09",
+        "sales": 310860
       }
     ]
   },
   "daily": {
-    "todayUnits": 2,
-    "yesterdayUnits": 10,
-    "todaySales": 35200,
-    "yesterdaySales": 335913
+    "todayUnits": 0,
+    "yesterdayUnits": 11,
+    "todaySales": 0,
+    "yesterdaySales": 217140
   },
   "top5": [
     {
       "rank": 1,
       "title": "『ネックレス』（Silver925）",
-      "units": 25,
+      "units": 26,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/4_6653c78f-879d-4bc3-84e0-629f226da3e2.png?v=1785261141"
     },
@@ -118,7 +126,7 @@
     {
       "rank": 4,
       "title": "『カーゴパンツ』(ビンテージウォッシュ)~RELAXシリーズ",
-      "units": 10,
+      "units": 12,
       "handle": "cargo-pants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/2026-04-25_16.32.19.png?v=1777125277"
     },
