@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-10-09T16:22:33+09:00",
+  "updatedAt": "2026-10-09T23:40:02+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 55193156,
-    "orders": 1954,
-    "aov": 28246
+    "sales": 55408316,
+    "orders": 1961,
+    "aov": 28255
   },
   "month": {
-    "salesTotal": 3443653,
-    "unitsTotal": 150,
+    "salesTotal": 3658813,
+    "unitsTotal": 158,
     "days": 9
   },
   "lastYear": {
@@ -53,7 +53,7 @@
       },
       {
         "date": "2026-10-09",
-        "sales": 237765
+        "sales": 452925
       }
     ],
     "points_lastyear": [
@@ -96,9 +96,9 @@
     ]
   },
   "daily": {
-    "todayUnits": 9,
+    "todayUnits": 17,
     "yesterdayUnits": 11,
-    "todaySales": 237765,
+    "todaySales": 452925,
     "yesterdaySales": 217140
   },
   "top5": [
@@ -118,24 +118,24 @@
     },
     {
       "rank": 3,
+      "title": "「防水イージーパンツ」~RELAXシリーズ",
+      "units": 15,
+      "handle": "waterproof-easy-pants",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1cf702eef58fa10dff4f56a6541ae1f9.jpg?v=1776451570"
+    },
+    {
+      "rank": 4,
       "title": "『ブレスレット』(Silver925)",
-      "units": 13,
+      "units": 14,
       "handle": "silver-bracelet",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394"
     },
     {
-      "rank": 4,
+      "rank": 5,
       "title": "『カーゴパンツ』(ビンテージウォッシュ)~RELAXシリーズ",
-      "units": 12,
+      "units": 13,
       "handle": "cargo-pants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/2026-04-25_16.32.19.png?v=1777125277"
-    },
-    {
-      "rank": 5,
-      "title": "「オーガニックロンT（シーアイランド種）」~RELAXシリーズ",
-      "units": 11,
-      "handle": "luxury-long-sleeved-t-shirt",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/20260219__4_1_c1a6688b-ab8c-4a82-86a0-86707572aaf0.jpg?v=1783603757"
     }
   ]
 }
