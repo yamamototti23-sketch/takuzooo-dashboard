@@ -1,21 +1,21 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-10-09T23:40:02+09:00",
+  "updatedAt": "2026-10-10T04:46:07+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 55408316,
-    "orders": 1961,
-    "aov": 28255
+    "sales": 55452151,
+    "orders": 1963,
+    "aov": 28249
   },
   "month": {
-    "salesTotal": 3658813,
-    "unitsTotal": 158,
-    "days": 9
+    "salesTotal": 3702648,
+    "unitsTotal": 160,
+    "days": 10
   },
   "lastYear": {
-    "salesTotal": 2453440,
-    "days": 9
+    "salesTotal": 2770460,
+    "days": 10
   },
   "trend": {
     "points": [
@@ -54,6 +54,10 @@
       {
         "date": "2026-10-09",
         "sales": 452925
+      },
+      {
+        "date": "2026-10-10",
+        "sales": 43835
       }
     ],
     "points_lastyear": [
@@ -92,20 +96,24 @@
       {
         "date": "2025-10-09",
         "sales": 310860
+      },
+      {
+        "date": "2025-10-10",
+        "sales": 317020
       }
     ]
   },
   "daily": {
-    "todayUnits": 17,
-    "yesterdayUnits": 11,
-    "todaySales": 452925,
-    "yesterdaySales": 217140
+    "todayUnits": 2,
+    "yesterdayUnits": 17,
+    "todaySales": 43835,
+    "yesterdaySales": 452925
   },
   "top5": [
     {
       "rank": 1,
       "title": "『ネックレス』（Silver925）",
-      "units": 27,
+      "units": 28,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/4_6653c78f-879d-4bc3-84e0-629f226da3e2.png?v=1785261141"
     },
@@ -119,7 +127,7 @@
     {
       "rank": 3,
       "title": "「防水イージーパンツ」~RELAXシリーズ",
-      "units": 15,
+      "units": 16,
       "handle": "waterproof-easy-pants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1cf702eef58fa10dff4f56a6541ae1f9.jpg?v=1776451570"
     },
