@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-10-10T04:46:07+09:00",
+  "updatedAt": "2026-10-10T08:33:08+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 55452151,
-    "orders": 1963,
-    "aov": 28249
+    "sales": 55475141,
+    "orders": 1964,
+    "aov": 28246
   },
   "month": {
-    "salesTotal": 3702648,
-    "unitsTotal": 160,
+    "salesTotal": 3725638,
+    "unitsTotal": 161,
     "days": 10
   },
   "lastYear": {
@@ -57,7 +57,7 @@
       },
       {
         "date": "2026-10-10",
-        "sales": 43835
+        "sales": 66825
       }
     ],
     "points_lastyear": [
@@ -104,9 +104,9 @@
     ]
   },
   "daily": {
-    "todayUnits": 2,
+    "todayUnits": 3,
     "yesterdayUnits": 17,
-    "todaySales": 43835,
+    "todaySales": 66825,
     "yesterdaySales": 452925
   },
   "top5": [
@@ -133,17 +133,17 @@
     },
     {
       "rank": 4,
+      "title": "『カーゴパンツ』(ビンテージウォッシュ)~RELAXシリーズ",
+      "units": 14,
+      "handle": "cargo-pants",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/2026-04-25_16.32.19.png?v=1777125277"
+    },
+    {
+      "rank": 5,
       "title": "『ブレスレット』(Silver925)",
       "units": 14,
       "handle": "silver-bracelet",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394"
-    },
-    {
-      "rank": 5,
-      "title": "『カーゴパンツ』(ビンテージウォッシュ)~RELAXシリーズ",
-      "units": 13,
-      "handle": "cargo-pants",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/2026-04-25_16.32.19.png?v=1777125277"
     }
   ]
 }
