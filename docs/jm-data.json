@@ -1,21 +1,21 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-10-10T18:04:09+09:00",
+  "updatedAt": "2026-10-11T00:21:34+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 55575516,
-    "orders": 1969,
-    "aov": 28225
+    "sales": 55766971,
+    "orders": 1977,
+    "aov": 28208
   },
   "month": {
-    "salesTotal": 3826013,
-    "unitsTotal": 166,
-    "days": 10
+    "salesTotal": 4017468,
+    "unitsTotal": 175,
+    "days": 11
   },
   "lastYear": {
-    "salesTotal": 2770460,
-    "days": 10
+    "salesTotal": 2936560,
+    "days": 11
   },
   "trend": {
     "points": [
@@ -57,7 +57,11 @@
       },
       {
         "date": "2026-10-10",
-        "sales": 167200
+        "sales": 358655
+      },
+      {
+        "date": "2026-10-11",
+        "sales": 0
       }
     ],
     "points_lastyear": [
@@ -100,48 +104,52 @@
       {
         "date": "2025-10-10",
         "sales": 317020
+      },
+      {
+        "date": "2025-10-11",
+        "sales": 166100
       }
     ]
   },
   "daily": {
-    "todayUnits": 8,
+    "todayUnits": 0,
     "yesterdayUnits": 17,
-    "todaySales": 167200,
-    "yesterdaySales": 452925
+    "todaySales": 0,
+    "yesterdaySales": 358655
   },
   "top5": [
     {
       "rank": 1,
       "title": "『ネックレス』（Silver925）",
-      "units": 30,
+      "units": 31,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/4_6653c78f-879d-4bc3-84e0-629f226da3e2.png?v=1785261141"
     },
     {
       "rank": 2,
       "title": "黒アウターのための「\"究極\"のグレーパンツ」~SMARTシリーズ",
-      "units": 23,
+      "units": 24,
       "handle": "graypants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/733edb1e425db1232bf22bd5a0bef49f.jpg?v=1776451631"
     },
     {
       "rank": 3,
       "title": "「防水イージーパンツ」~RELAXシリーズ",
-      "units": 17,
+      "units": 20,
       "handle": "waterproof-easy-pants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1cf702eef58fa10dff4f56a6541ae1f9.jpg?v=1776451570"
     },
     {
       "rank": 4,
       "title": "『カーゴパンツ』(ビンテージウォッシュ)~RELAXシリーズ",
-      "units": 15,
+      "units": 16,
       "handle": "cargo-pants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/2026-04-25_16.32.19.png?v=1777125277"
     },
     {
       "rank": 5,
       "title": "『ブレスレット』(Silver925)",
-      "units": 15,
+      "units": 16,
       "handle": "silver-bracelet",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394"
     }
