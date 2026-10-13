@@ -1,21 +1,21 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-10-13T17:26:24+09:00",
+  "updatedAt": "2026-10-14T01:26:37+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 56795761,
-    "orders": 2017,
-    "aov": 28159
+    "sales": 57071779,
+    "orders": 2027,
+    "aov": 28156
   },
   "month": {
-    "salesTotal": 5046258,
-    "unitsTotal": 224,
-    "days": 13
+    "salesTotal": 5322276,
+    "unitsTotal": 235,
+    "days": 14
   },
   "lastYear": {
-    "salesTotal": 3466215,
-    "days": 13
+    "salesTotal": 3769265,
+    "days": 14
   },
   "trend": {
     "points": [
@@ -69,7 +69,11 @@
       },
       {
         "date": "2026-10-13",
-        "sales": 132835
+        "sales": 408853
+      },
+      {
+        "date": "2026-10-14",
+        "sales": 0
       }
     ],
     "points_lastyear": [
@@ -124,20 +128,24 @@
       {
         "date": "2025-10-13",
         "sales": 170500
+      },
+      {
+        "date": "2025-10-14",
+        "sales": 303050
       }
     ]
   },
   "daily": {
-    "todayUnits": 7,
-    "yesterdayUnits": 19,
-    "todaySales": 132835,
-    "yesterdaySales": 340785
+    "todayUnits": 0,
+    "yesterdayUnits": 18,
+    "todaySales": 0,
+    "yesterdaySales": 408853
   },
   "top5": [
     {
       "rank": 1,
       "title": "『ネックレス』（Silver925）",
-      "units": 36,
+      "units": 37,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/4_6653c78f-879d-4bc3-84e0-629f226da3e2.png?v=1785261141"
     },
@@ -151,14 +159,14 @@
     {
       "rank": 3,
       "title": "「防水イージーパンツ」~RELAXシリーズ",
-      "units": 27,
+      "units": 29,
       "handle": "waterproof-easy-pants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1cf702eef58fa10dff4f56a6541ae1f9.jpg?v=1776451570"
     },
     {
       "rank": 4,
       "title": "『ブレスレット』(Silver925)",
-      "units": 20,
+      "units": 21,
       "handle": "silver-bracelet",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394"
     },
