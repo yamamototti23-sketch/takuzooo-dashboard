@@ -1,21 +1,21 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-10-14T19:36:26+09:00",
+  "updatedAt": "2026-10-15T00:29:17+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 57141134,
-    "orders": 2032,
-    "aov": 28121
+    "sales": 57424310,
+    "orders": 2041,
+    "aov": 28135
   },
   "month": {
-    "salesTotal": 5391631,
-    "unitsTotal": 240,
-    "days": 14
+    "salesTotal": 5674807,
+    "unitsTotal": 252,
+    "days": 15
   },
   "lastYear": {
-    "salesTotal": 3769265,
-    "days": 14
+    "salesTotal": 4070665,
+    "days": 15
   },
   "trend": {
     "points": [
@@ -73,7 +73,11 @@
       },
       {
         "date": "2026-10-14",
-        "sales": 117040
+        "sales": 372826
+      },
+      {
+        "date": "2026-10-15",
+        "sales": 27390
       }
     ],
     "points_lastyear": [
@@ -132,48 +136,52 @@
       {
         "date": "2025-10-14",
         "sales": 303050
+      },
+      {
+        "date": "2025-10-15",
+        "sales": 301400
       }
     ]
   },
   "daily": {
-    "todayUnits": 5,
-    "yesterdayUnits": 18,
-    "todaySales": 117040,
-    "yesterdaySales": 361168
+    "todayUnits": 1,
+    "yesterdayUnits": 16,
+    "todaySales": 27390,
+    "yesterdaySales": 372826
   },
   "top5": [
     {
       "rank": 1,
       "title": "『ネックレス』（Silver925）",
-      "units": 38,
+      "units": 39,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/4_6653c78f-879d-4bc3-84e0-629f226da3e2.png?v=1785261141"
     },
     {
       "rank": 2,
+      "title": "「防水イージーパンツ」~RELAXシリーズ",
+      "units": 31,
+      "handle": "waterproof-easy-pants",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1cf702eef58fa10dff4f56a6541ae1f9.jpg?v=1776451570"
+    },
+    {
+      "rank": 3,
       "title": "黒アウターのための「\"究極\"のグレーパンツ」~SMARTシリーズ",
       "units": 30,
       "handle": "graypants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/733edb1e425db1232bf22bd5a0bef49f.jpg?v=1776451631"
     },
     {
-      "rank": 3,
-      "title": "「防水イージーパンツ」~RELAXシリーズ",
-      "units": 30,
-      "handle": "waterproof-easy-pants",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1cf702eef58fa10dff4f56a6541ae1f9.jpg?v=1776451570"
-    },
-    {
       "rank": 4,
       "title": "『ブレスレット』(Silver925)",
-      "units": 21,
+      "units": 22,
       "handle": "silver-bracelet",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394"
     },
     {
       "rank": 5,
       "title": "『カーゴパンツ』(ビンテージウォッシュ)~RELAXシリーズ",
-      "units": 17,
+      "units": 19,
       "handle": "cargo-pants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/2026-04-25_16.32.19.png?v=1777125277"
     }
