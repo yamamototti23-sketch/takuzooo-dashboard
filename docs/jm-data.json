@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-10-14T14:24:06+09:00",
+  "updatedAt": "2026-10-14T19:36:26+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 57068864,
-    "orders": 2029,
-    "aov": 28127
+    "sales": 57141134,
+    "orders": 2032,
+    "aov": 28121
   },
   "month": {
-    "salesTotal": 5319361,
-    "unitsTotal": 237,
+    "salesTotal": 5391631,
+    "unitsTotal": 240,
     "days": 14
   },
   "lastYear": {
@@ -73,7 +73,7 @@
       },
       {
         "date": "2026-10-14",
-        "sales": 44770
+        "sales": 117040
       }
     ],
     "points_lastyear": [
@@ -136,30 +136,30 @@
     ]
   },
   "daily": {
-    "todayUnits": 2,
+    "todayUnits": 5,
     "yesterdayUnits": 18,
-    "todaySales": 44770,
+    "todaySales": 117040,
     "yesterdaySales": 361168
   },
   "top5": [
     {
       "rank": 1,
       "title": "『ネックレス』（Silver925）",
-      "units": 37,
+      "units": 38,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/4_6653c78f-879d-4bc3-84e0-629f226da3e2.png?v=1785261141"
     },
     {
       "rank": 2,
       "title": "黒アウターのための「\"究極\"のグレーパンツ」~SMARTシリーズ",
-      "units": 29,
+      "units": 30,
       "handle": "graypants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/733edb1e425db1232bf22bd5a0bef49f.jpg?v=1776451631"
     },
     {
       "rank": 3,
       "title": "「防水イージーパンツ」~RELAXシリーズ",
-      "units": 29,
+      "units": 30,
       "handle": "waterproof-easy-pants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1cf702eef58fa10dff4f56a6541ae1f9.jpg?v=1776451570"
     },
