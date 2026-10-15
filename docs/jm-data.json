@@ -1,21 +1,21 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-10-15T20:25:21+09:00",
+  "updatedAt": "2026-10-16T00:43:31+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 57355575,
-    "orders": 2050,
-    "aov": 27978
+    "sales": 57539825,
+    "orders": 2057,
+    "aov": 27973
   },
   "month": {
-    "salesTotal": 5606072,
-    "unitsTotal": 263,
-    "days": 15
+    "salesTotal": 5790322,
+    "unitsTotal": 273,
+    "days": 16
   },
   "lastYear": {
-    "salesTotal": 4070665,
-    "days": 15
+    "salesTotal": 4204865,
+    "days": 16
   },
   "trend": {
     "points": [
@@ -77,7 +77,11 @@
       },
       {
         "date": "2026-10-15",
-        "sales": 281655
+        "sales": 431365
+      },
+      {
+        "date": "2026-10-16",
+        "sales": 34540
       }
     ],
     "points_lastyear": [
@@ -140,41 +144,45 @@
       {
         "date": "2025-10-15",
         "sales": 301400
+      },
+      {
+        "date": "2025-10-16",
+        "sales": 134200
       }
     ]
   },
   "daily": {
-    "todayUnits": 12,
-    "yesterdayUnits": 16,
-    "todaySales": 281655,
-    "yesterdaySales": 49826
+    "todayUnits": 2,
+    "yesterdayUnits": 20,
+    "todaySales": 34540,
+    "yesterdaySales": 431365
   },
   "top5": [
     {
       "rank": 1,
       "title": "『ネックレス』（Silver925）",
-      "units": 40,
+      "units": 42,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/4_6653c78f-879d-4bc3-84e0-629f226da3e2.png?v=1785261141"
     },
     {
       "rank": 2,
       "title": "「防水イージーパンツ」~RELAXシリーズ",
-      "units": 31,
+      "units": 32,
       "handle": "waterproof-easy-pants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1cf702eef58fa10dff4f56a6541ae1f9.jpg?v=1776451570"
     },
     {
       "rank": 3,
       "title": "黒アウターのための「\"究極\"のグレーパンツ」~SMARTシリーズ",
-      "units": 31,
+      "units": 32,
       "handle": "graypants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/733edb1e425db1232bf22bd5a0bef49f.jpg?v=1776451631"
     },
     {
       "rank": 4,
       "title": "『ブレスレット』(Silver925)",
-      "units": 23,
+      "units": 24,
       "handle": "silver-bracelet",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394"
     },
