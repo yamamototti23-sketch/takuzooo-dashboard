@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-10-16T18:46:50+09:00",
+  "updatedAt": "2026-10-16T23:19:19+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 57846194,
-    "orders": 2069,
-    "aov": 27959
+    "sales": 57996454,
+    "orders": 2077,
+    "aov": 27923
   },
   "month": {
-    "salesTotal": 6096691,
-    "unitsTotal": 286,
+    "salesTotal": 6246951,
+    "unitsTotal": 294,
     "days": 16
   },
   "lastYear": {
@@ -81,7 +81,7 @@
       },
       {
         "date": "2026-10-16",
-        "sales": 393195
+        "sales": 543455
       }
     ],
     "points_lastyear": [
@@ -152,37 +152,37 @@
     ]
   },
   "daily": {
-    "todayUnits": 15,
+    "todayUnits": 23,
     "yesterdayUnits": 20,
-    "todaySales": 393195,
+    "todaySales": 543455,
     "yesterdaySales": 379079
   },
   "top5": [
     {
       "rank": 1,
       "title": "『ネックレス』（Silver925）",
-      "units": 43,
+      "units": 44,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/4_6653c78f-879d-4bc3-84e0-629f226da3e2.png?v=1785261141"
     },
     {
       "rank": 2,
+      "title": "「防水イージーパンツ」~RELAXシリーズ",
+      "units": 34,
+      "handle": "waterproof-easy-pants",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1cf702eef58fa10dff4f56a6541ae1f9.jpg?v=1776451570"
+    },
+    {
+      "rank": 3,
       "title": "黒アウターのための「\"究極\"のグレーパンツ」~SMARTシリーズ",
       "units": 33,
       "handle": "graypants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/733edb1e425db1232bf22bd5a0bef49f.jpg?v=1776451631"
     },
     {
-      "rank": 3,
-      "title": "「防水イージーパンツ」~RELAXシリーズ",
-      "units": 33,
-      "handle": "waterproof-easy-pants",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1cf702eef58fa10dff4f56a6541ae1f9.jpg?v=1776451570"
-    },
-    {
       "rank": 4,
       "title": "『ブレスレット』(Silver925)",
-      "units": 24,
+      "units": 25,
       "handle": "silver-bracelet",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394"
     },
