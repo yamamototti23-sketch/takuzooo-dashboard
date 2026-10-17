@@ -1,21 +1,21 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-10-17T21:57:29+09:00",
+  "updatedAt": "2026-10-18T01:23:41+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 58610194,
-    "orders": 2101,
-    "aov": 27896
+    "sales": 58749586,
+    "orders": 2107,
+    "aov": 27883
   },
   "month": {
-    "salesTotal": 6860691,
-    "unitsTotal": 323,
-    "days": 17
+    "salesTotal": 7000083,
+    "unitsTotal": 331,
+    "days": 18
   },
   "lastYear": {
-    "salesTotal": 4381965,
-    "days": 17
+    "salesTotal": 4468095,
+    "days": 18
   },
   "trend": {
     "points": [
@@ -85,7 +85,11 @@
       },
       {
         "date": "2026-10-17",
-        "sales": 613740
+        "sales": 715160
+      },
+      {
+        "date": "2026-10-18",
+        "sales": 37972
       }
     ],
     "points_lastyear": [
@@ -156,14 +160,18 @@
       {
         "date": "2025-10-17",
         "sales": 177100
+      },
+      {
+        "date": "2025-10-18",
+        "sales": 86130
       }
     ]
   },
   "daily": {
-    "todayUnits": 29,
-    "yesterdayUnits": 23,
-    "todaySales": 613740,
-    "yesterdaySales": 543455
+    "todayUnits": 2,
+    "yesterdayUnits": 35,
+    "todaySales": 37972,
+    "yesterdaySales": 715160
   },
   "top5": [
     {
@@ -189,17 +197,17 @@
     },
     {
       "rank": 4,
+      "title": "『本革ボディーバッグ』（姫路レザー）",
+      "units": 27,
+      "handle": "stylish-genuine-leather-large-body-bag",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A1554_1_ef495592-e3a6-4e83-8ffe-1f7f917d3092.jpg?v=1783603757"
+    },
+    {
+      "rank": 5,
       "title": "『ブレスレット』(Silver925)",
       "units": 25,
       "handle": "silver-bracelet",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1_5167d950-7d92-4c15-bd2d-b6172f488532.jpg?v=1779610394"
-    },
-    {
-      "rank": 5,
-      "title": "『本革ボディーバッグ』（姫路レザー）",
-      "units": 23,
-      "handle": "stylish-genuine-leather-large-body-bag",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A1554_1_ef495592-e3a6-4e83-8ffe-1f7f917d3092.jpg?v=1783603757"
     }
   ]
 }
