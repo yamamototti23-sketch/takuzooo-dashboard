@@ -57,6 +57,39 @@ jobs:
           YEARLY_LAG_MONTHS: "2"  # 新税理士 (原様) のラグ短縮確定後は "1" に変更
         run: python3 scripts/generate_yearly.py
 
+      - name: Sync refreshed tokens back to GitHub Secrets
+        # 恒久対策 (2026-10-19 事故起点): freee refresh token は rotating 仕様で、
+        # lib_freee が /tmp/freee.env に書き戻した新 token を Secret にも反映しないと
+        # 次回 run 時に旧 token から再 refresh を試み、ローカル freee-accounting スキル
+        # 側で先に refresh されていた場合 HTTP 401 で失敗する (経路競合)。
+        # 新規発行 freee OAuth アプリ (client_id=825046424280243・プライベート・2026-10-19)
+        # で経路分離済みのため、本 step で書き戻せば rotating token を回し続けられる。
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.SECRETS_WRITE_PAT }}
+        run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo "⚠ SECRETS_WRITE_PAT 未設定 → token 書き戻しスキップ"
+            exit 0
+          fi
+          if [ ! -f /tmp/freee.env ]; then
+            echo "⚠ /tmp/freee.env が存在しない → skip"
+            exit 0
+          fi
+          NEW_AT=$(grep '^FREEE_ACCESS_TOKEN=' /tmp/freee.env | cut -d= -f2-)
+          NEW_RT=$(grep '^FREEE_REFRESH_TOKEN=' /tmp/freee.env | cut -d= -f2-)
+          if [ -z "$NEW_AT" ] || [ -z "$NEW_RT" ]; then
+            echo "⚠ /tmp/freee.env に token が空 → skip"
+            exit 0
+          fi
+          # 旧 Secret 値と比較して差分がある時だけ更新 (無駄な audit log 削減)
+          OLD_AT_HASH=$(gh secret list --repo ${{ github.repository }} --json name,updatedAt --jq '.[] | select(.name=="FREEE_ACCESS_TOKEN") | .updatedAt')
+          NEW_AT_HASH=$(echo -n "$NEW_AT" | shasum | cut -d' ' -f1)
+          echo "FREEE_ACCESS_TOKEN hash: $NEW_AT_HASH (prev updated: $OLD_AT_HASH)"
+          echo -n "$NEW_AT" | gh secret set FREEE_ACCESS_TOKEN --repo ${{ github.repository }}
+          echo -n "$NEW_RT" | gh secret set FREEE_REFRESH_TOKEN --repo ${{ github.repository }}
+          echo "✅ freee token 書き戻し完了 (next run uses rotated tokens)"
+
       - name: Cleanup freee .env (secret 漏洩防止)
         if: always()
         run: rm -f /tmp/freee.env
