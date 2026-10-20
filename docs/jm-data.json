@@ -1,16 +1,16 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-10-20T08:48:50+09:00",
+  "updatedAt": "2026-10-20T09:56:09+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 60015230,
-    "orders": 2152,
+    "sales": 60042730,
+    "orders": 2153,
     "aov": 27888
   },
   "month": {
-    "salesTotal": 8265727,
-    "unitsTotal": 388,
+    "salesTotal": 8293227,
+    "unitsTotal": 389,
     "days": 20
   },
   "lastYear": {
@@ -97,7 +97,7 @@
       },
       {
         "date": "2026-10-20",
-        "sales": 15730
+        "sales": 43230
       }
     ],
     "points_lastyear": [
@@ -184,9 +184,9 @@
     ]
   },
   "daily": {
-    "todayUnits": 1,
+    "todayUnits": 2,
     "yesterdayUnits": 20,
-    "todaySales": 15730,
+    "todaySales": 43230,
     "yesterdaySales": 431074
   },
   "top5": [
@@ -199,17 +199,17 @@
     },
     {
       "rank": 2,
+      "title": "黒アウターのための「\"究極\"のグレーパンツ」~SMARTシリーズ",
+      "units": 44,
+      "handle": "graypants",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/733edb1e425db1232bf22bd5a0bef49f.jpg?v=1776451631"
+    },
+    {
+      "rank": 3,
       "title": "「防水イージーパンツ」~RELAXシリーズ",
       "units": 43,
       "handle": "waterproof-easy-pants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1cf702eef58fa10dff4f56a6541ae1f9.jpg?v=1776451570"
-    },
-    {
-      "rank": 3,
-      "title": "黒アウターのための「\"究極\"のグレーパンツ」~SMARTシリーズ",
-      "units": 43,
-      "handle": "graypants",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/733edb1e425db1232bf22bd5a0bef49f.jpg?v=1776451631"
     },
     {
       "rank": 4,
