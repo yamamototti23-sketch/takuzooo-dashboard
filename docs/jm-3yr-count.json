@@ -1,6 +1,6 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-10-20T14:25:10+09:00",
+  "updatedAt": "2026-10-20T14:27:23+09:00",
   "metric": "orders",
   "unit": "count",
   "note": "BASE+Shopify 合算・月次注文件数 (件数カウント・lineItems数量ではない)・直近3年ローリング",
