@@ -159,15 +159,15 @@
       <div class="big-row">
         <div class="big-cell">
           <div class="lbl">本日</div>
-          <div class="val num"><span id="todayUnits"></span><small>点</small></div>
+          <div class="val num"><span id="todayUnits"></span><small>件</small></div>
         </div>
         <div class="big-cell sub">
           <div class="lbl">昨日</div>
-          <div class="val num"><span id="ydayUnits"></span><small>点</small></div>
+          <div class="val num"><span id="ydayUnits"></span><small>件</small></div>
         </div>
       </div>
       <div id="unitsDelta"></div>
-      <div class="cum">今月累計 <b class="num" id="monthUnits"></b> 点</div>
+      <div class="cum">今月累計 <b class="num" id="monthUnits"></b> 件 <span id="remainUnits" style="color:var(--mut); margin-left:10px"></span></div>
     </div>
 
     <div class="panel">
@@ -268,18 +268,35 @@ function render(){
     kpi('🎫','var(--gold)','平均客単価', yen(d.term.aov), '今期 AOV') +
     kpi('📈','var(--plum)','平均1日売上', yen(avgDaily), '今月 1日あたり');
 
-  // daily numbers
-  document.getElementById('todayUnits').textContent = full(d.daily.todayUnits);
-  document.getElementById('ydayUnits').textContent  = full(d.daily.yesterdayUnits);
-  document.getElementById('monthUnits').textContent = full(d.month.unitsTotal);
+  // daily numbers (販売点数パネル = 注文件数ベース・2026-10-20 統一)
+  const todayOrders  = (d.daily.todayOrders  != null) ? d.daily.todayOrders  : d.daily.todayUnits;
+  const ydayOrders   = (d.daily.yesterdayOrders != null) ? d.daily.yesterdayOrders : d.daily.yesterdayUnits;
+  const monthOrders  = (d.month.ordersTotal != null) ? d.month.ordersTotal : d.month.unitsTotal;
+  document.getElementById('todayUnits').textContent = full(todayOrders);
+  document.getElementById('ydayUnits').textContent  = full(ydayOrders);
+  document.getElementById('monthUnits').textContent = full(monthOrders);
   document.getElementById('todaySales').innerHTML   = yenSm(d.daily.todaySales);
   document.getElementById('ydaySales').innerHTML    = yenSm(d.daily.yesterdaySales);
   document.getElementById('monthSales').textContent = yen(d.month.salesTotal);
 
-  const diff = d.daily.todayUnits - d.daily.yesterdayUnits;
+  // 残 X 件 = 昨年同月の総件数 - 今月累計件数 (2026-10-20 追加)
+  const lyMonthOrders = (d.lastYear && d.lastYear.ordersTotalFullMonth) || 0;
+  const remain = lyMonthOrders - monthOrders;
+  const remainEl = document.getElementById('remainUnits');
+  if (lyMonthOrders > 0) {
+    if (remain > 0) {
+      remainEl.innerHTML = `(昨年同月まで残 <b style="color:var(--red)">${full(remain)}</b> 件)`;
+    } else {
+      remainEl.innerHTML = `(昨年同月を <b style="color:var(--green)">${full(-remain)}</b> 件超過 ✓)`;
+    }
+  } else {
+    remainEl.textContent = '';
+  }
+
+  const diff = todayOrders - ydayOrders;
   const de = document.getElementById('unitsDelta');
-  if(diff===0){ de.innerHTML=`<span class="delta">±0 点（昨日と同じ）</span>`; }
-  else{ const up=diff>0; de.innerHTML=`<span class="delta ${up?'up':'down'}">${up?'▲':'▼'} ${Math.abs(diff)}点 ${up?'増':'減'}（前日比）</span>`; }
+  if(diff===0){ de.innerHTML=`<span class="delta">±0 件（昨日と同じ）</span>`; }
+  else{ const up=diff>0; de.innerHTML=`<span class="delta ${up?'up':'down'}">${up?'▲':'▼'} ${Math.abs(diff)}件 ${up?'増':'減'}（前日比）</span>`; }
 
   renderChart(d.trend.points, d.trend.points_lastyear || []);
   renderRanking(d.top5);

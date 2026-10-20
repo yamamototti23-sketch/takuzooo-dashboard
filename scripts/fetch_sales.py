@@ -328,15 +328,36 @@ def main():
     points_lastyear = build_points_lastyear(points, base_data)
     lastyear_sales_total = sum(p["sales"] for p in points_lastyear)
 
-    # --- 今月の販売点数合計 ---
+    # --- 今月の販売点数合計 (既存・商品数量ベース・互換性のため維持) ---
     mu = shopifyql(f"FROM inventory SHOW inventory_units_sold SINCE {iso(month_start)} UNTIL today")
     month_units_total = intval(mu[0]["inventory_units_sold"]) if mu else 0
 
-    # --- 本日／昨日 の販売点数・売上 ---
+    # --- 今月の注文件数合計 (2026-10-20 追加・販売点数パネル件数化のため) ---
+    mo = shopifyql(f"FROM sales SHOW orders SINCE {iso(month_start)} UNTIL today")
+    month_orders_total = intval(mo[0]["orders"]) if mo else 0
+
+    # --- 本日／昨日 の販売点数・注文件数・売上 ---
     units_by_day = {day_of(r): intval(r.get("inventory_units_sold"))
                     for r in shopifyql(f"FROM inventory SHOW inventory_units_sold TIMESERIES day SINCE {iso(yesterday)} UNTIL today")}
     sales_by_day = {day_of(r): money(r.get("total_sales"))
                     for r in shopifyql(f"FROM sales SHOW total_sales TIMESERIES day SINCE {iso(yesterday)} UNTIL today")}
+    orders_by_day = {day_of(r): intval(r.get("orders"))
+                     for r in shopifyql(f"FROM sales SHOW orders TIMESERIES day SINCE {iso(yesterday)} UNTIL today")}
+
+    # --- 昨年同月 月全体の総注文件数 (jm-3yr-count.json から参照・2026-10-20 追加) ---
+    # 「残 X 件」= 昨年同月総件数 - 今月累計件数 を dashboard で計算するためのデータ源
+    lastyear_month_orders_full = 0
+    try:
+        count_json_path = os.environ.get("JM_3YR_COUNT_JSON", "docs/jm-3yr-count.json")
+        if os.path.exists(count_json_path):
+            with open(count_json_path, encoding="utf-8") as f:
+                count_d = json.load(f)
+            ly_year_str = str(today.year - 1)
+            ly_month_str = str(today.month)
+            if ly_year_str in count_d.get("data", {}) and ly_month_str in count_d["data"][ly_year_str]:
+                lastyear_month_orders_full = int(count_d["data"][ly_year_str][ly_month_str] or 0)
+    except Exception as e:
+        print(f"[warn] lastyear month orders load failed: {e}", file=sys.stderr)
 
     # --- 今月の人気アイテム TOP5（販売点数） ---
     top_rows = shopifyql(
@@ -379,13 +400,18 @@ def main():
         "term": {"sinceLabel": f"{fy_start.month}/{fy_start.day}〜",
                  "sales": term_sales, "orders": term_orders, "aov": aov},
         "month": {"salesTotal": month_sales_total,
-                  "unitsTotal": month_units_total, "days": today.day},
+                  "unitsTotal": month_units_total,
+                  "ordersTotal": month_orders_total,  # 2026-10-20 追加 (販売点数パネル件数化)
+                  "days": today.day},
         "lastYear": {"salesTotal": lastyear_sales_total,
-                     "days": len(points_lastyear)},
+                     "days": len(points_lastyear),
+                     "ordersTotalFullMonth": lastyear_month_orders_full},  # 2026-10-20 追加 (「残 X 件」計算用)
         "trend": {"points": points, "points_lastyear": points_lastyear},
         "daily": {
             "todayUnits": units_by_day.get(today_s, 0),
             "yesterdayUnits": units_by_day.get(yday_s, 0),
+            "todayOrders": orders_by_day.get(today_s, 0),  # 2026-10-20 追加
+            "yesterdayOrders": orders_by_day.get(yday_s, 0),  # 2026-10-20 追加
             "todaySales": sales_by_day.get(today_s, 0),
             "yesterdaySales": sales_by_day.get(yday_s, 0),
         },
