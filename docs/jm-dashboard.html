@@ -167,7 +167,9 @@
         </div>
       </div>
       <div id="unitsDelta"></div>
-      <div class="cum">今月累計 <b class="num" id="monthUnits"></b> 件 <span id="remainUnits" style="color:var(--mut); margin-left:10px"></span></div>
+      <div class="cum">今月累計 <b class="num" id="monthUnits"></b> 件
+        <div id="remainUnits" style="color:var(--mut); font-size:36px; font-weight:700; margin-top:10px; line-height:1.1"></div>
+      </div>
     </div>
 
     <div class="panel">
@@ -285,9 +287,9 @@ function render(){
   const remainEl = document.getElementById('remainUnits');
   if (lyMonthOrders > 0) {
     if (remain > 0) {
-      remainEl.innerHTML = `(昨年同月まで残 <b style="color:var(--red)">${full(remain)}</b> 件)`;
+      remainEl.innerHTML = `(昨年同月まで残 <b style="color:var(--red); font-size:60px; font-weight:800">${full(remain)}</b> 件)`;
     } else {
-      remainEl.innerHTML = `(昨年同月を <b style="color:var(--green)">${full(-remain)}</b> 件超過 ✓)`;
+      remainEl.innerHTML = `(昨年同月を <b style="color:var(--green); font-size:60px; font-weight:800">${full(-remain)}</b> 件超過 ✓)`;
     }
   } else {
     remainEl.textContent = '';
