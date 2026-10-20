@@ -52,11 +52,13 @@
   const JSON_URL = './jm-3yr-count.json';
   const REFRESH_MS = 60 * 1000; // 60秒ごとに再フェッチ
 
-  // 案2 カラーパレット (信号機型・赤強調) ─ 金額版と完全同一
+  // 案2 カラーパレット (信号機型・赤強調) ─ 個数版はスケール差対応で alpha 調整
+  // (金額版と違い 3年とも月平均 440-470件 と近接するため太い赤線が過去を覆う問題あり)
+  // 対応: 今年 alpha 1.0→0.85 (重なり部分で過去が透ける) + 過去 0.30→0.45 (単独見やすく)
   const PALETTE = {
-    current: { color: '#E63946', width: 7.0, alpha: 1.00, pointRadius: 9, dash: []    , labelSize: 15 },
-    prev1:   { color: '#F4A261', width: 1.5, alpha: 0.30, pointRadius: 3, dash: [6, 4], labelSize: 10 },
-    prev2:   { color: '#B0B0B0', width: 1.5, alpha: 0.30, pointRadius: 2, dash: [3, 3], labelSize: 9  },
+    current: { color: '#E63946', width: 7.0, alpha: 0.85, pointRadius: 9, dash: []    , labelSize: 15 },
+    prev1:   { color: '#F4A261', width: 1.5, alpha: 0.45, pointRadius: 3, dash: [6, 4], labelSize: 10 },
+    prev2:   { color: '#B0B0B0', width: 1.5, alpha: 0.45, pointRadius: 2, dash: [3, 3], labelSize: 9  },
   };
 
   const MONTH_LABELS = ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'];
