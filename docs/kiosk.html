@@ -24,6 +24,7 @@
   <iframe id="f1" referrerpolicy="no-referrer"></iframe>
   <iframe id="f2" referrerpolicy="no-referrer"></iframe>
   <iframe id="f3" referrerpolicy="no-referrer"></iframe>
+  <iframe id="f4" referrerpolicy="no-referrer"></iframe>
 </div>
 <script>
   /* ====== 設定（ここだけ触ればOK） ====== */
@@ -34,6 +35,7 @@
     { name:'Japan Made屋',      url:'./jm-dashboard.html',                                        lock:false },
     { name:'年計 (移動年計)',    url:'./jm-yearly.html',                                            lock:false },
     { name:'月間売上 3年比較',   url:'./jm-3yr-amount.html',                                        lock:false },
+    { name:'月間販売個数 3年比較', url:'./jm-3yr-count.html',                                         lock:false },
   ];
   /* ===================================== */
 
@@ -42,6 +44,7 @@
     document.getElementById('f1'),
     document.getElementById('f2'),
     document.getElementById('f3'),
+    document.getElementById('f4'),
   ];
   const label=document.getElementById('label');
   let cur=0;
@@ -79,7 +82,7 @@
     load(i); // 表示するたびに最新データで読み直し（lock付きなら再固定）
   }
 
-  load(0); load(1); load(2); load(3);
+  load(0); load(1); load(2); load(3); load(4);
   label.textContent=SLIDES[0].name;
   setInterval(()=>show((cur+1)%SLIDES.length), INTERVAL);
 </script>

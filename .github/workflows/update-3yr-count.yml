@@ -1,0 +1,65 @@
+name: Update 3yr count (daily)
+
+on:
+  schedule:
+    # 毎日 20:05 UTC = 05:05 JST (金額版 05:00 と1分ずらして API 競合回避)
+    - cron: '5 20 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: update-3yr-count
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Generate jm-3yr-count.json
+        env:
+          SHOPIFY_STORE: ${{ secrets.SHOPIFY_STORE }}
+          SHOPIFY_CLIENT_ID: ${{ secrets.SHOPIFY_CM_CLIENT_ID }}
+          SHOPIFY_CLIENT_SECRET: ${{ secrets.SHOPIFY_CM_CLIENT_SECRET }}
+          BASE_MONTHLY_JSON: docs/base_monthly.json
+          OUT_PATH_3YR_COUNT: docs/jm-3yr-count.json
+        run: python3 scripts/generate_3yr_count.py
+
+      - name: Commit if changed
+        id: commit
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/jm-3yr-count.json
+          if git diff --cached --quiet -- docs/jm-3yr-count.json; then
+            echo "no change in jm-3yr-count.json"
+          else
+            git commit -m "chore(3yr-count): daily update $(date -u +%Y-%m-%d) [skip ci]"
+            for i in 1 2 3; do
+              if git push; then echo "push OK on attempt $i"; break; fi
+              echo "push failed on attempt $i, rebasing origin/main..."
+              git fetch origin main && git rebase origin/main
+              sleep $((i * 2))
+            done
+          fi
+
+      # 成功時 silent (CLAUDE.md § 通知設計の第一原則 準拠)
+      - name: Notify failure (Chatwork マイチャット)
+        if: failure()
+        env:
+          CHATWORK_API_TOKEN: ${{ secrets.CHATWORK_API_TOKEN }}
+          REPO: ${{ github.repository }}
+          RUN_ID: ${{ github.run_id }}
+        run: |
+          curl -s -X POST -H "X-ChatWorkToken: $CHATWORK_API_TOKEN" \
+            --data-urlencode "body=[info][title]⚠ kiosk 3年比較個数 日次更新 失敗[/title]takuzooo-dashboard update-3yr-count workflow が失敗しました。%0ARun: https://github.com/${REPO}/actions/runs/${RUN_ID}%0A手動発火: https://github.com/${REPO}/actions/workflows/update-3yr-count.yml[/info]" \
+            --data-urlencode "self_unread=1" \
+            "https://api.chatwork.com/v2/rooms/218962687/messages"
