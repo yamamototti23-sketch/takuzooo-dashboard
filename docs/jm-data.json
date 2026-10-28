@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-10-28T10:48:27+09:00",
+  "updatedAt": "2026-10-28T11:25:33+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 64107120,
-    "orders": 2293,
-    "aov": 27958
+    "sales": 64210410,
+    "orders": 2295,
+    "aov": 27978
   },
   "month": {
-    "salesTotal": 12357617,
-    "unitsTotal": 548,
-    "ordersTotal": 461,
+    "salesTotal": 12460907,
+    "unitsTotal": 552,
+    "ordersTotal": 463,
     "days": 28
   },
   "lastYear": {
@@ -131,7 +131,7 @@
       },
       {
         "date": "2026-10-28",
-        "sales": 79233
+        "sales": 182523
       }
     ],
     "points_lastyear": [
@@ -252,9 +252,9 @@
   "daily": {
     "todayUnits": 0,
     "yesterdayUnits": 16,
-    "todayOrders": 3,
+    "todayOrders": 5,
     "yesterdayOrders": 14,
-    "todaySales": 79233,
+    "todaySales": 182523,
     "yesterdaySales": 496074
   },
   "top5": [
@@ -275,14 +275,14 @@
     {
       "rank": 3,
       "title": "『本革ボディーバッグ』（姫路レザー）",
-      "units": 60,
+      "units": 61,
       "handle": "stylish-genuine-leather-large-body-bag",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A1554_1_ef495592-e3a6-4e83-8ffe-1f7f917d3092.jpg?v=1783603757"
     },
     {
       "rank": 4,
       "title": "黒アウターのための「\"究極\"のグレーパンツ」~SMARTシリーズ",
-      "units": 51,
+      "units": 52,
       "handle": "graypants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/733edb1e425db1232bf22bd5a0bef49f.jpg?v=1776451631"
     },
