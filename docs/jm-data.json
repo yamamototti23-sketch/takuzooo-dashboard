@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-10-30T08:19:02+09:00",
+  "updatedAt": "2026-10-30T08:48:25+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 65683013,
-    "orders": 2334,
-    "aov": 28142
+    "sales": 65708313,
+    "orders": 2335,
+    "aov": 28141
   },
   "month": {
-    "salesTotal": 13933510,
-    "unitsTotal": 598,
-    "ordersTotal": 502,
+    "salesTotal": 13958810,
+    "unitsTotal": 599,
+    "ordersTotal": 503,
     "days": 30
   },
   "lastYear": {
@@ -139,7 +139,7 @@
       },
       {
         "date": "2026-10-30",
-        "sales": 291225
+        "sales": 316525
       }
     ],
     "points_lastyear": [
@@ -268,9 +268,9 @@
   "daily": {
     "todayUnits": 0,
     "yesterdayUnits": 22,
-    "todayOrders": 8,
+    "todayOrders": 9,
     "yesterdayOrders": 17,
-    "todaySales": 291225,
+    "todaySales": 316525,
     "yesterdaySales": 732985
   },
   "top5": [
@@ -284,7 +284,7 @@
     {
       "rank": 2,
       "title": "「防水イージーパンツ」~RELAXシリーズ",
-      "units": 68,
+      "units": 69,
       "handle": "waterproof-easy-pants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1cf702eef58fa10dff4f56a6541ae1f9.jpg?v=1776451570"
     },
