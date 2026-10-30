@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-10-30T19:48:20+09:00",
+  "updatedAt": "2026-10-30T20:18:35+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 65949153,
-    "orders": 2342,
-    "aov": 28159
+    "sales": 66217322,
+    "orders": 2347,
+    "aov": 28214
   },
   "month": {
-    "salesTotal": 14199650,
-    "unitsTotal": 607,
-    "ordersTotal": 510,
+    "salesTotal": 14467819,
+    "unitsTotal": 613,
+    "ordersTotal": 515,
     "days": 30
   },
   "lastYear": {
@@ -139,7 +139,7 @@
       },
       {
         "date": "2026-10-30",
-        "sales": 601365
+        "sales": 869534
       }
     ],
     "points_lastyear": [
@@ -268,9 +268,9 @@
   "daily": {
     "todayUnits": 0,
     "yesterdayUnits": 22,
-    "todayOrders": 16,
+    "todayOrders": 21,
     "yesterdayOrders": 17,
-    "todaySales": 601365,
+    "todaySales": 869534,
     "yesterdaySales": 688985
   },
   "top5": [
@@ -298,7 +298,7 @@
     {
       "rank": 4,
       "title": "黒アウターのための「\"究極\"のグレーパンツ」~SMARTシリーズ",
-      "units": 56,
+      "units": 57,
       "handle": "graypants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/733edb1e425db1232bf22bd5a0bef49f.jpg?v=1776451631"
     },
