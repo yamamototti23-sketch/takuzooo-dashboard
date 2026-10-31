@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-01T00:18:28+09:00",
+  "updatedAt": "2026-11-01T00:48:18+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 67360058,
-    "orders": 2381,
-    "aov": 28291
+    "sales": 67379528,
+    "orders": 2382,
+    "aov": 28287
   },
   "month": {
-    "salesTotal": 25300,
-    "unitsTotal": 1,
-    "ordersTotal": 1,
+    "salesTotal": 44770,
+    "unitsTotal": 2,
+    "ordersTotal": 2,
     "days": 1
   },
   "lastYear": {
@@ -23,7 +23,7 @@
     "points": [
       {
         "date": "2026-11-01",
-        "sales": 25300
+        "sales": 44770
       }
     ],
     "points_lastyear": [
@@ -36,9 +36,9 @@
   "daily": {
     "todayUnits": 0,
     "yesterdayUnits": 0,
-    "todayOrders": 1,
+    "todayOrders": 2,
     "yesterdayOrders": 23,
-    "todaySales": 25300,
+    "todaySales": 44770,
     "yesterdaySales": 809766
   },
   "top5": [
@@ -51,31 +51,31 @@
     },
     {
       "rank": 2,
-      "title": "k18『Goldブレスレット』20㎝",
-      "units": 0,
-      "handle": "k18-gold-bracelet-20",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/15d1b1faf6465ac3860452e9da3f9209.jpg?v=1776451691"
+      "title": "『ネックレス』（Silver925）",
+      "units": 1,
+      "handle": "silver-necklace",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/e2006cc75c8a0ecfe3467ee75b508af8.jpg?v=1776451870"
     },
     {
       "rank": 3,
-      "title": "「シングルディアレザー」~SMARTシリーズ",
-      "units": 0,
-      "handle": "single-deer-leather",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/20260407__455.jpg?v=1786503918"
-    },
-    {
-      "rank": 4,
-      "title": "【2027/9】「コーデュロイ」ブルゾン~SMARTシリーズ",
-      "units": 0,
-      "handle": "corduroy-blouson",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/20250611_Osaka_29.jpg?v=1776451466"
-    },
-    {
-      "rank": 5,
       "title": "【廃盤】「紳士ショーツ」長めの\"丈感\"~RELAXシリーズ",
       "units": 0,
       "handle": "gentleman-shorts",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/96dfbf8ce0362a20de8ba7ab97350df7.jpg?v=1776451630"
+    },
+    {
+      "rank": 4,
+      "title": "『カバーオール』(ワンウォッシュ加工)~SMARTシリーズ",
+      "units": 0,
+      "handle": "one-wash-processed-coveralls",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/a6477f69fa6793d9b9f3a9f1e8a6adab.jpg?v=1776451571"
+    },
+    {
+      "rank": 5,
+      "title": "k18『Goldブレスレット』20㎝",
+      "units": 0,
+      "handle": "k18-gold-bracelet-20",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/15d1b1faf6465ac3860452e9da3f9209.jpg?v=1776451691"
     }
   ]
 }
