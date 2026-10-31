@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-01T02:18:16+09:00",
+  "updatedAt": "2026-11-01T02:48:12+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 67404828,
-    "orders": 2383,
-    "aov": 28286
+    "sales": 67453448,
+    "orders": 2384,
+    "aov": 28294
   },
   "month": {
-    "salesTotal": 70070,
-    "unitsTotal": 3,
-    "ordersTotal": 3,
+    "salesTotal": 118690,
+    "unitsTotal": 4,
+    "ordersTotal": 4,
     "days": 1
   },
   "lastYear": {
@@ -23,7 +23,7 @@
     "points": [
       {
         "date": "2026-11-01",
-        "sales": 70070
+        "sales": 118690
       }
     ],
     "points_lastyear": [
@@ -36,9 +36,9 @@
   "daily": {
     "todayUnits": 0,
     "yesterdayUnits": 0,
-    "todayOrders": 3,
+    "todayOrders": 4,
     "yesterdayOrders": 23,
-    "todaySales": 70070,
+    "todaySales": 118690,
     "yesterdaySales": 809766
   },
   "top5": [
@@ -58,17 +58,17 @@
     },
     {
       "rank": 3,
+      "title": "『中綿ジャケット』(タクムARジャケット)~SMARTシリーズ",
+      "units": 1,
+      "handle": "takumu-ar-jacket",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/61_compressed_6eac1e7c-a216-4300-a845-736a26a929e3.jpg?v=1786503859"
+    },
+    {
+      "rank": 4,
       "title": "【廃盤】「紳士ショーツ」長めの\"丈感\"~RELAXシリーズ",
       "units": 0,
       "handle": "gentleman-shorts",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/96dfbf8ce0362a20de8ba7ab97350df7.jpg?v=1776451630"
-    },
-    {
-      "rank": 4,
-      "title": "『カバーオール』(ワンウォッシュ加工)~SMARTシリーズ",
-      "units": 0,
-      "handle": "one-wash-processed-coveralls",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/a6477f69fa6793d9b9f3a9f1e8a6adab.jpg?v=1776451571"
     },
     {
       "rank": 5,
