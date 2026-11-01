@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-01T18:18:34+09:00",
+  "updatedAt": "2026-11-01T18:48:33+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 67716029,
-    "orders": 2392,
-    "aov": 28309
+    "sales": 67740229,
+    "orders": 2393,
+    "aov": 28308
   },
   "month": {
-    "salesTotal": 381271,
-    "unitsTotal": 12,
-    "ordersTotal": 12,
+    "salesTotal": 405471,
+    "unitsTotal": 13,
+    "ordersTotal": 13,
     "days": 1
   },
   "lastYear": {
@@ -23,7 +23,7 @@
     "points": [
       {
         "date": "2026-11-01",
-        "sales": 381271
+        "sales": 405471
       }
     ],
     "points_lastyear": [
@@ -36,9 +36,9 @@
   "daily": {
     "todayUnits": 0,
     "yesterdayUnits": 0,
-    "todayOrders": 12,
+    "todayOrders": 13,
     "yesterdayOrders": 23,
-    "todaySales": 381271,
+    "todaySales": 405471,
     "yesterdaySales": 809766
   },
   "top5": [
@@ -72,10 +72,10 @@
     },
     {
       "rank": 5,
-      "title": "『本革ボディーバッグ』（姫路レザー）",
+      "title": "『カーゴパンツ』(ビンテージウォッシュ)~RELAXシリーズ",
       "units": 1,
-      "handle": "stylish-genuine-leather-large-body-bag",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A1554_1_ef495592-e3a6-4e83-8ffe-1f7f917d3092.jpg?v=1783603757"
+      "handle": "cargo-pants",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/2026-04-25_16.32.19.png?v=1777125277"
     }
   ]
 }
