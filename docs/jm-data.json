@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-01T21:21:45+09:00",
+  "updatedAt": "2026-11-01T21:48:21+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 68028121,
-    "orders": 2400,
-    "aov": 28345
+    "sales": 68095276,
+    "orders": 2403,
+    "aov": 28338
   },
   "month": {
-    "salesTotal": 693363,
-    "unitsTotal": 20,
-    "ordersTotal": 20,
+    "salesTotal": 760518,
+    "unitsTotal": 23,
+    "ordersTotal": 23,
     "days": 1
   },
   "lastYear": {
@@ -23,7 +23,7 @@
     "points": [
       {
         "date": "2026-11-01",
-        "sales": 693363
+        "sales": 760518
       }
     ],
     "points_lastyear": [
@@ -36,9 +36,9 @@
   "daily": {
     "todayUnits": 0,
     "yesterdayUnits": 0,
-    "todayOrders": 20,
+    "todayOrders": 23,
     "yesterdayOrders": 23,
-    "todaySales": 693363,
+    "todaySales": 760518,
     "yesterdaySales": 809766
   },
   "top5": [
@@ -51,29 +51,29 @@
     },
     {
       "rank": 2,
+      "title": "いつかは、究極の黒パン~SMARTシリーズ",
+      "units": 4,
+      "handle": "the-ultimate-black-pants",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/5d689a44fc3188e82bde8cab5678d9e1.jpg?v=1776451751"
+    },
+    {
+      "rank": 3,
       "title": "『ネックレス』（Silver925）",
       "units": 4,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/e2006cc75c8a0ecfe3467ee75b508af8.jpg?v=1776451870"
     },
     {
-      "rank": 3,
-      "title": "いつかは、究極の黒パン~SMARTシリーズ",
-      "units": 3,
-      "handle": "the-ultimate-black-pants",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/5d689a44fc3188e82bde8cab5678d9e1.jpg?v=1776451751"
-    },
-    {
       "rank": 4,
       "title": "「防水イージーパンツ」~RELAXシリーズ",
-      "units": 2,
+      "units": 3,
       "handle": "waterproof-easy-pants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1cf702eef58fa10dff4f56a6541ae1f9.jpg?v=1776451570"
     },
     {
       "rank": 5,
       "title": "『本革ボディーバッグ』（姫路レザー）",
-      "units": 2,
+      "units": 3,
       "handle": "stylish-genuine-leather-large-body-bag",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A1554_1_ef495592-e3a6-4e83-8ffe-1f7f917d3092.jpg?v=1783603757"
     }
