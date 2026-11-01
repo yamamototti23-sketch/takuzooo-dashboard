@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-01T20:48:02+09:00",
+  "updatedAt": "2026-11-01T21:21:45+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 67813049,
-    "orders": 2396,
-    "aov": 28303
+    "sales": 68028121,
+    "orders": 2400,
+    "aov": 28345
   },
   "month": {
-    "salesTotal": 478291,
-    "unitsTotal": 16,
-    "ordersTotal": 16,
+    "salesTotal": 693363,
+    "unitsTotal": 20,
+    "ordersTotal": 20,
     "days": 1
   },
   "lastYear": {
@@ -23,7 +23,7 @@
     "points": [
       {
         "date": "2026-11-01",
-        "sales": 478291
+        "sales": 693363
       }
     ],
     "points_lastyear": [
@@ -36,32 +36,32 @@
   "daily": {
     "todayUnits": 0,
     "yesterdayUnits": 0,
-    "todayOrders": 16,
+    "todayOrders": 20,
     "yesterdayOrders": 23,
-    "todaySales": 478291,
+    "todaySales": 693363,
     "yesterdaySales": 809766
   },
   "top5": [
     {
       "rank": 1,
       "title": "『中綿ジャケット』(タクムARジャケット)~SMARTシリーズ",
-      "units": 4,
+      "units": 5,
       "handle": "takumu-ar-jacket",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/61_compressed_6eac1e7c-a216-4300-a845-736a26a929e3.jpg?v=1786503859"
     },
     {
       "rank": 2,
+      "title": "『ネックレス』（Silver925）",
+      "units": 4,
+      "handle": "silver-necklace",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/e2006cc75c8a0ecfe3467ee75b508af8.jpg?v=1776451870"
+    },
+    {
+      "rank": 3,
       "title": "いつかは、究極の黒パン~SMARTシリーズ",
       "units": 3,
       "handle": "the-ultimate-black-pants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/5d689a44fc3188e82bde8cab5678d9e1.jpg?v=1776451751"
-    },
-    {
-      "rank": 3,
-      "title": "『ネックレス』（Silver925）",
-      "units": 3,
-      "handle": "silver-necklace",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/e2006cc75c8a0ecfe3467ee75b508af8.jpg?v=1776451870"
     },
     {
       "rank": 4,
@@ -73,7 +73,7 @@
     {
       "rank": 5,
       "title": "『本革ボディーバッグ』（姫路レザー）",
-      "units": 1,
+      "units": 2,
       "handle": "stylish-genuine-leather-large-body-bag",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A1554_1_ef495592-e3a6-4e83-8ffe-1f7f917d3092.jpg?v=1783603757"
     }
