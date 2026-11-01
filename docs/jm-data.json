@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-01T15:24:33+09:00",
+  "updatedAt": "2026-11-01T15:47:56+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 67605457,
-    "orders": 2388,
+    "sales": 67632957,
+    "orders": 2389,
     "aov": 28310
   },
   "month": {
-    "salesTotal": 270699,
-    "unitsTotal": 8,
-    "ordersTotal": 8,
+    "salesTotal": 298199,
+    "unitsTotal": 9,
+    "ordersTotal": 9,
     "days": 1
   },
   "lastYear": {
@@ -23,7 +23,7 @@
     "points": [
       {
         "date": "2026-11-01",
-        "sales": 270699
+        "sales": 298199
       }
     ],
     "points_lastyear": [
@@ -36,9 +36,9 @@
   "daily": {
     "todayUnits": 0,
     "yesterdayUnits": 0,
-    "todayOrders": 8,
+    "todayOrders": 9,
     "yesterdayOrders": 23,
-    "todaySales": 270699,
+    "todaySales": 298199,
     "yesterdaySales": 809766
   },
   "top5": [
@@ -58,17 +58,17 @@
     },
     {
       "rank": 3,
+      "title": "いつかは、究極の黒パン~SMARTシリーズ",
+      "units": 2,
+      "handle": "the-ultimate-black-pants",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/5d689a44fc3188e82bde8cab5678d9e1.jpg?v=1776451751"
+    },
+    {
+      "rank": 4,
       "title": "『ブルーデニムシャツ』(ユーズド加工)~SMARTシリーズ",
       "units": 1,
       "handle": "blue-denim-shirt",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/8_ffca628b-99ea-4ca0-8f0b-e3c7471a5bce.jpg?v=1776451571"
-    },
-    {
-      "rank": 4,
-      "title": "いつかは、究極の黒パン~SMARTシリーズ",
-      "units": 1,
-      "handle": "the-ultimate-black-pants",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/5d689a44fc3188e82bde8cab5678d9e1.jpg?v=1776451751"
     },
     {
       "rank": 5,
