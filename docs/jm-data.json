@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-01T22:48:02+09:00",
+  "updatedAt": "2026-11-01T23:18:10+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 68122776,
-    "orders": 2404,
-    "aov": 28337
+    "sales": 68201701,
+    "orders": 2407,
+    "aov": 28335
   },
   "month": {
-    "salesTotal": 788018,
-    "unitsTotal": 24,
-    "ordersTotal": 24,
+    "salesTotal": 866943,
+    "unitsTotal": 27,
+    "ordersTotal": 27,
     "days": 1
   },
   "lastYear": {
@@ -23,7 +23,7 @@
     "points": [
       {
         "date": "2026-11-01",
-        "sales": 788018
+        "sales": 866943
       }
     ],
     "points_lastyear": [
@@ -36,16 +36,16 @@
   "daily": {
     "todayUnits": 0,
     "yesterdayUnits": 0,
-    "todayOrders": 24,
+    "todayOrders": 27,
     "yesterdayOrders": 23,
-    "todaySales": 788018,
+    "todaySales": 866943,
     "yesterdaySales": 809766
   },
   "top5": [
     {
       "rank": 1,
       "title": "いつかは、究極の黒パン~SMARTシリーズ",
-      "units": 5,
+      "units": 6,
       "handle": "the-ultimate-black-pants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/5d689a44fc3188e82bde8cab5678d9e1.jpg?v=1776451751"
     },
@@ -58,17 +58,17 @@
     },
     {
       "rank": 3,
+      "title": "「防水イージーパンツ」~RELAXシリーズ",
+      "units": 4,
+      "handle": "waterproof-easy-pants",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1cf702eef58fa10dff4f56a6541ae1f9.jpg?v=1776451570"
+    },
+    {
+      "rank": 4,
       "title": "『ネックレス』（Silver925）",
       "units": 4,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/e2006cc75c8a0ecfe3467ee75b508af8.jpg?v=1776451870"
-    },
-    {
-      "rank": 4,
-      "title": "「防水イージーパンツ」~RELAXシリーズ",
-      "units": 3,
-      "handle": "waterproof-easy-pants",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1cf702eef58fa10dff4f56a6541ae1f9.jpg?v=1776451570"
     },
     {
       "rank": 5,
