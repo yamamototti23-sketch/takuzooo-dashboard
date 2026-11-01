@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-01T15:47:56+09:00",
+  "updatedAt": "2026-11-01T16:18:23+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 67632957,
-    "orders": 2389,
-    "aov": 28310
+    "sales": 67647939,
+    "orders": 2390,
+    "aov": 28305
   },
   "month": {
-    "salesTotal": 298199,
-    "unitsTotal": 9,
-    "ordersTotal": 9,
+    "salesTotal": 313181,
+    "unitsTotal": 10,
+    "ordersTotal": 10,
     "days": 1
   },
   "lastYear": {
@@ -23,7 +23,7 @@
     "points": [
       {
         "date": "2026-11-01",
-        "sales": 298199
+        "sales": 313181
       }
     ],
     "points_lastyear": [
@@ -36,9 +36,9 @@
   "daily": {
     "todayUnits": 0,
     "yesterdayUnits": 0,
-    "todayOrders": 9,
+    "todayOrders": 10,
     "yesterdayOrders": 23,
-    "todaySales": 298199,
+    "todaySales": 313181,
     "yesterdaySales": 809766
   },
   "top5": [
@@ -65,10 +65,10 @@
     },
     {
       "rank": 4,
-      "title": "『ブルーデニムシャツ』(ユーズド加工)~SMARTシリーズ",
+      "title": "『本革ボディーバッグ』（姫路レザー）",
       "units": 1,
-      "handle": "blue-denim-shirt",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/8_ffca628b-99ea-4ca0-8f0b-e3c7471a5bce.jpg?v=1776451571"
+      "handle": "stylish-genuine-leather-large-body-bag",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A1554_1_ef495592-e3a6-4e83-8ffe-1f7f917d3092.jpg?v=1783603757"
     },
     {
       "rank": 5,
