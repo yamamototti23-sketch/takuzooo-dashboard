@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-01T22:18:06+09:00",
+  "updatedAt": "2026-11-01T22:48:02+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 68095276,
-    "orders": 2403,
-    "aov": 28338
+    "sales": 68122776,
+    "orders": 2404,
+    "aov": 28337
   },
   "month": {
-    "salesTotal": 760518,
-    "unitsTotal": 23,
-    "ordersTotal": 23,
+    "salesTotal": 788018,
+    "unitsTotal": 24,
+    "ordersTotal": 24,
     "days": 1
   },
   "lastYear": {
@@ -23,7 +23,7 @@
     "points": [
       {
         "date": "2026-11-01",
-        "sales": 760518
+        "sales": 788018
       }
     ],
     "points_lastyear": [
@@ -36,25 +36,25 @@
   "daily": {
     "todayUnits": 0,
     "yesterdayUnits": 0,
-    "todayOrders": 23,
+    "todayOrders": 24,
     "yesterdayOrders": 23,
-    "todaySales": 760518,
+    "todaySales": 788018,
     "yesterdaySales": 809766
   },
   "top5": [
     {
       "rank": 1,
+      "title": "いつかは、究極の黒パン~SMARTシリーズ",
+      "units": 5,
+      "handle": "the-ultimate-black-pants",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/5d689a44fc3188e82bde8cab5678d9e1.jpg?v=1776451751"
+    },
+    {
+      "rank": 2,
       "title": "『中綿ジャケット』(タクムARジャケット)~SMARTシリーズ",
       "units": 5,
       "handle": "takumu-ar-jacket",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/61_compressed_6eac1e7c-a216-4300-a845-736a26a929e3.jpg?v=1786503859"
-    },
-    {
-      "rank": 2,
-      "title": "いつかは、究極の黒パン~SMARTシリーズ",
-      "units": 4,
-      "handle": "the-ultimate-black-pants",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/5d689a44fc3188e82bde8cab5678d9e1.jpg?v=1776451751"
     },
     {
       "rank": 3,
