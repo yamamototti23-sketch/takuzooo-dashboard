@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-01T19:48:16+09:00",
+  "updatedAt": "2026-11-01T20:18:11+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 67740229,
-    "orders": 2393,
-    "aov": 28308
+    "sales": 67793579,
+    "orders": 2395,
+    "aov": 28306
   },
   "month": {
-    "salesTotal": 405471,
-    "unitsTotal": 13,
-    "ordersTotal": 13,
+    "salesTotal": 458821,
+    "unitsTotal": 15,
+    "ordersTotal": 15,
     "days": 1
   },
   "lastYear": {
@@ -23,7 +23,7 @@
     "points": [
       {
         "date": "2026-11-01",
-        "sales": 405471
+        "sales": 458821
       }
     ],
     "points_lastyear": [
@@ -36,9 +36,9 @@
   "daily": {
     "todayUnits": 0,
     "yesterdayUnits": 0,
-    "todayOrders": 13,
+    "todayOrders": 15,
     "yesterdayOrders": 23,
-    "todaySales": 405471,
+    "todaySales": 458821,
     "yesterdaySales": 809766
   },
   "top5": [
@@ -51,31 +51,31 @@
     },
     {
       "rank": 2,
+      "title": "いつかは、究極の黒パン~SMARTシリーズ",
+      "units": 3,
+      "handle": "the-ultimate-black-pants",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/5d689a44fc3188e82bde8cab5678d9e1.jpg?v=1776451751"
+    },
+    {
+      "rank": 3,
       "title": "「防水イージーパンツ」~RELAXシリーズ",
       "units": 2,
       "handle": "waterproof-easy-pants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1cf702eef58fa10dff4f56a6541ae1f9.jpg?v=1776451570"
     },
     {
-      "rank": 3,
+      "rank": 4,
       "title": "『ネックレス』（Silver925）",
       "units": 2,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/e2006cc75c8a0ecfe3467ee75b508af8.jpg?v=1776451870"
     },
     {
-      "rank": 4,
-      "title": "いつかは、究極の黒パン~SMARTシリーズ",
-      "units": 2,
-      "handle": "the-ultimate-black-pants",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/5d689a44fc3188e82bde8cab5678d9e1.jpg?v=1776451751"
-    },
-    {
       "rank": 5,
-      "title": "『カーゴパンツ』(ビンテージウォッシュ)~RELAXシリーズ",
+      "title": "「\"COOL\"イージーパンツ」~RELAXシリーズ",
       "units": 1,
-      "handle": "cargo-pants",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/2026-04-25_16.32.19.png?v=1777125277"
+      "handle": "cool-material-easy-pants",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/a54cbdbd0433c15cd65b962f12f7afff.jpg?v=1773756986"
     }
   ]
 }
