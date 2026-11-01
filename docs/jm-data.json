@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-01T20:18:11+09:00",
+  "updatedAt": "2026-11-01T20:48:02+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 67793579,
-    "orders": 2395,
-    "aov": 28306
+    "sales": 67813049,
+    "orders": 2396,
+    "aov": 28303
   },
   "month": {
-    "salesTotal": 458821,
-    "unitsTotal": 15,
-    "ordersTotal": 15,
+    "salesTotal": 478291,
+    "unitsTotal": 16,
+    "ordersTotal": 16,
     "days": 1
   },
   "lastYear": {
@@ -23,7 +23,7 @@
     "points": [
       {
         "date": "2026-11-01",
-        "sales": 458821
+        "sales": 478291
       }
     ],
     "points_lastyear": [
@@ -36,9 +36,9 @@
   "daily": {
     "todayUnits": 0,
     "yesterdayUnits": 0,
-    "todayOrders": 15,
+    "todayOrders": 16,
     "yesterdayOrders": 23,
-    "todaySales": 458821,
+    "todaySales": 478291,
     "yesterdaySales": 809766
   },
   "top5": [
@@ -58,24 +58,24 @@
     },
     {
       "rank": 3,
+      "title": "『ネックレス』（Silver925）",
+      "units": 3,
+      "handle": "silver-necklace",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/e2006cc75c8a0ecfe3467ee75b508af8.jpg?v=1776451870"
+    },
+    {
+      "rank": 4,
       "title": "「防水イージーパンツ」~RELAXシリーズ",
       "units": 2,
       "handle": "waterproof-easy-pants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1cf702eef58fa10dff4f56a6541ae1f9.jpg?v=1776451570"
     },
     {
-      "rank": 4,
-      "title": "『ネックレス』（Silver925）",
-      "units": 2,
-      "handle": "silver-necklace",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/e2006cc75c8a0ecfe3467ee75b508af8.jpg?v=1776451870"
-    },
-    {
       "rank": 5,
-      "title": "「\"COOL\"イージーパンツ」~RELAXシリーズ",
+      "title": "『本革ボディーバッグ』（姫路レザー）",
       "units": 1,
-      "handle": "cool-material-easy-pants",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/a54cbdbd0433c15cd65b962f12f7afff.jpg?v=1773756986"
+      "handle": "stylish-genuine-leather-large-body-bag",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A1554_1_ef495592-e3a6-4e83-8ffe-1f7f917d3092.jpg?v=1783603757"
     }
   ]
 }
