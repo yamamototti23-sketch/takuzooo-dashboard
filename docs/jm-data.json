@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-02T12:48:38+09:00",
+  "updatedAt": "2026-11-02T13:20:50+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 68361861,
-    "orders": 2413,
-    "aov": 28331
+    "sales": 68434175,
+    "orders": 2414,
+    "aov": 28349
   },
   "month": {
-    "salesTotal": 1027103,
-    "unitsTotal": 33,
-    "ordersTotal": 33,
+    "salesTotal": 1099417,
+    "unitsTotal": 35,
+    "ordersTotal": 34,
     "days": 2
   },
   "lastYear": {
@@ -27,7 +27,7 @@
       },
       {
         "date": "2026-11-02",
-        "sales": 132660
+        "sales": 204974
       }
     ],
     "points_lastyear": [
@@ -44,16 +44,16 @@
   "daily": {
     "todayUnits": 0,
     "yesterdayUnits": 28,
-    "todayOrders": 5,
+    "todayOrders": 6,
     "yesterdayOrders": 28,
-    "todaySales": 132660,
+    "todaySales": 204974,
     "yesterdaySales": 894443
   },
   "top5": [
     {
       "rank": 1,
       "title": "『中綿ジャケット』(タクムARジャケット)~SMARTシリーズ",
-      "units": 6,
+      "units": 7,
       "handle": "takumu-ar-jacket",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/61_compressed_6eac1e7c-a216-4300-a845-736a26a929e3.jpg?v=1786503859"
     },
@@ -81,7 +81,7 @@
     {
       "rank": 5,
       "title": "黒アウターのための「\"究極\"のグレーパンツ」~SMARTシリーズ",
-      "units": 4,
+      "units": 5,
       "handle": "graypants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/733edb1e425db1232bf22bd5a0bef49f.jpg?v=1776451631"
     }
