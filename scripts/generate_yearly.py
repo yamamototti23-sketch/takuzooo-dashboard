@@ -59,6 +59,12 @@ FREEE_FY_RANGES = [
     (2026, [(6, 5)]),  # end_month は下記 main() で今日基準に動的計算
 ]
 
+# 当月 partial 対応 (2026-11-03 追加・税理士原様が日々仕訳登録してくれるため)
+# 1=有効 → 当月分 (1日〜昨日) の売上/利益を partial として rolling 計算は null のまま
+#           単月値のみ months[] に追加・hero 期別累計に加算
+# 0=無効 → 従来通り end_ym (前月末 or 前々月末) まで固定
+INCLUDE_PARTIAL_CURRENT_MONTH = os.environ.get("INCLUDE_PARTIAL_CURRENT_MONTH", "0") == "1"
+
 
 def aggregate_base_monthly():
     """BASE 月次売上 dict {YYYY-MM: sales_int} を返す。
@@ -123,11 +129,15 @@ def fetch_shopify_token():
     return json.loads(urllib.request.urlopen(req, timeout=30).read())["access_token"]
 
 
-def aggregate_shopify_monthly(start_ym: str, end_ym: str):
+def aggregate_shopify_monthly(start_ym: str, end_ym: str, end_date: str = None):
     """Shopify orders → 月次売上 dict {YYYY-MM: sales_int}
 
     start_ym / end_ym は YYYY-MM 形式 (両端含む)。
     currentTotalPriceSet (返金反映後・税込) を SUM。
+
+    end_date (YYYY-MM-DD) 指定時 (2026-11-03 追加・partial 対応):
+      当月の途中日まで集計したい時に使用。end_ym の月末日ではなく end_date で絞る。
+      例: end_ym="2026-11", end_date="2026-11-02" → 11/1-11/2 分だけ集計。
     """
     store = os.environ["SHOPIFY_STORE"].strip()
     token = fetch_shopify_token()
@@ -144,17 +154,21 @@ def aggregate_shopify_monthly(start_ym: str, end_ym: str):
             raise RuntimeError(f"GraphQL error: {r['errors']}")
         return r["data"]
 
-    # end_ym の月末日を算出
-    end_year, end_month = map(int, end_ym.split("-"))
-    if end_month == 12:
-        end_last_day = 31
+    # end 日付の決定: end_date 明示 > end_ym の月末日
+    if end_date:
+        end_boundary = end_date
     else:
-        first_next = datetime.date(end_year, end_month + 1, 1)
-        end_last_day = (first_next - datetime.timedelta(days=1)).day
+        end_year, end_month = map(int, end_ym.split("-"))
+        if end_month == 12:
+            end_last_day = 31
+        else:
+            first_next = datetime.date(end_year, end_month + 1, 1)
+            end_last_day = (first_next - datetime.timedelta(days=1)).day
+        end_boundary = f"{end_ym}-{end_last_day:02d}"
 
     query_str = (
         f"created_at:>={start_ym}-01 "
-        f"created_at:<={end_ym}-{end_last_day:02d} "
+        f"created_at:<={end_boundary} "
         "AND financial_status:paid,partially_paid,partially_refunded,refunded"
     )
 
@@ -231,7 +245,7 @@ def calc_rolling_12m_with_null(months_list, monthly_dict, min_data_ym: str):
     return rolling
 
 
-def aggregate_freee_profit(end_ym: str) -> dict:
+def aggregate_freee_profit(end_ym: str, partial_end_date: str = None) -> tuple:
     """freee trial_pl API から 2023-06〜end_ym の月次経常利益 dict を返す。
 
     重要仕様 (2026-09-01 発見):
@@ -243,19 +257,27 @@ def aggregate_freee_profit(end_ym: str) -> dict:
       2) 単月 = 当月累計 − 前月累計 (期首月 6月は累計そのまま=期首単月)
 
     lib_freee.py (FreeeClient) 経由。取得失敗時は空 dict を返す (fail-soft)。
+
+    partial_end_date (YYYY-MM-DD) 指定時 (2026-11-03 追加・原様の日次仕訳反映):
+      当月分の期首〜partial_end_date 累計を取得し、
+      partial_profit = partial_cum - 前月末累計 を算出。
+      返り値 2つめの dict に {"ym":"2026-11","end_date":"2026-11-02","monthly_profit":...} を格納。
+
+    Returns:
+      (monthly_dict, partial_info or None)
     """
     try:
         sys.path.insert(0, FREEE_LIB_PATH)
         from lib_freee import FreeeClient  # type: ignore
     except Exception as e:
         print(f"[freee] lib import failed: {e} (skip profit)", file=sys.stderr)
-        return {}
+        return {}, None
 
     try:
         c = FreeeClient()
     except Exception as e:
         print(f"[freee] client init failed: {e} (skip profit)", file=sys.stderr)
-        return {}
+        return {}, None
 
     end_y, end_m = map(int, end_ym.split("-"))
 
@@ -307,7 +329,59 @@ def aggregate_freee_profit(end_ym: str) -> dict:
                     # 前月データ欠損 → 単月抽出不能 → skip
                     print(f"[freee] {ym} skip: prev_ym {prev_ym} missing", file=sys.stderr)
     print(f"[freee] {len(monthly)} months collected (単月・差分計算後)", file=sys.stderr)
-    return monthly
+
+    # Phase 3: 当月 partial (2026-11-03 追加・原様の日次仕訳反映)
+    partial_info = None
+    if partial_end_date:
+        try:
+            p_y, p_m, p_d = map(int, partial_end_date.split("-"))
+            current_ym = f"{p_y:04d}-{p_m:02d}"
+            fy = p_y if p_m >= 6 else p_y - 1
+            term_start = f"{fy:04d}-06-01"
+            # 当月累計 (期首〜昨日・start_date/end_date で日次指定・fiscal_year と排他)
+            endpoint = (
+                f"/reports/trial_pl?company_id={c.company_id}"
+                f"&start_date={term_start}&end_date={partial_end_date}"
+            )
+            res = c._request("GET", endpoint)
+            bs = res["trial_pl"]["balances"]
+            eig = next(
+                (b for b in bs if b.get("account_category_name") == "経常損益金額"),
+                None,
+            )
+            if eig is not None:
+                partial_cum = int(eig.get("closing_balance") or 0)
+                # 前月末累計 = 当月単月 = 差分
+                if p_m == 6:
+                    # 期首月 = partial 累計そのまま = 当月単月
+                    partial_profit = partial_cum
+                else:
+                    prev_m = p_m - 1 if p_m > 1 else 12
+                    prev_cal_y = p_y if p_m > 1 else p_y - 1
+                    prev_ym = f"{prev_cal_y:04d}-{prev_m:02d}"
+                    prev_cum = cum_by_ym.get(prev_ym)
+                    if prev_cum is None:
+                        print(
+                            f"[freee] partial skip: prev_ym {prev_ym} missing in cum_by_ym",
+                            file=sys.stderr,
+                        )
+                        partial_profit = None
+                    else:
+                        partial_profit = partial_cum - prev_cum
+                if partial_profit is not None:
+                    partial_info = {
+                        "ym": current_ym,
+                        "end_date": partial_end_date,
+                        "monthly_profit": partial_profit,
+                    }
+                    print(
+                        f"[freee] partial {current_ym} (〜{partial_end_date}): ¥{partial_profit:,}",
+                        file=sys.stderr,
+                    )
+        except Exception as e:
+            print(f"[freee] partial fetch skip: {e}", file=sys.stderr)
+
+    return monthly, partial_info
 
 
 def prev_year_month(ym: str) -> str:
@@ -320,14 +394,30 @@ def main():
     today = now.date()
 
     # 最新月 = 今日から YEARLY_LAG_MONTHS ヶ月前の月末
-    # 現行 (旧税理士 UAO・2026-08-31 終了) = ラグ 2ヶ月 (前々月まで確定)
-    # 新税理士 (原様・2026-09-01 開始) = 将来 1ヶ月に短縮予定
-    #   → YEARLY_LAG_MONTHS=1 に変更するだけで前月末対応可能
+    # 旧 (UAO・2026-08-31 終了) = ラグ 2ヶ月
+    # 新 (原様・2026-09-01 開始・毎日仕訳登録) = ラグ 1ヶ月
+    # さらに INCLUDE_PARTIAL_CURRENT_MONTH=1 で当月分 (昨日まで) を partial として追加
     lag_months = int(os.environ.get("YEARLY_LAG_MONTHS", "2"))
     target = today.replace(day=1)
     for _ in range(lag_months):
         target = (target - datetime.timedelta(days=1)).replace(day=1)
     end_ym = f"{target.year:04d}-{target.month:02d}"
+
+    # 当月 partial 情報 (INCLUDE_PARTIAL_CURRENT_MONTH=1 の時のみ使用)
+    partial_end_date = None
+    partial_current_ym = None
+    if INCLUDE_PARTIAL_CURRENT_MONTH:
+        yesterday = today - datetime.timedelta(days=1)
+        partial_end_date = yesterday.isoformat()
+        partial_current_ym = f"{yesterday.year:04d}-{yesterday.month:02d}"
+        # 昨日が前月の最終日 (月の1日実行) なら partial 不要 (end_ym 側で確定)
+        if partial_current_ym == end_ym:
+            print(
+                f"[main] partial skip: yesterday={partial_end_date} is in end_ym={end_ym}",
+                file=sys.stderr,
+            )
+            partial_end_date = None
+            partial_current_ym = None
 
     # BASE 全期間 + Shopify 開始月推定
     print("[1/3] BASE 集計中...", file=sys.stderr)
@@ -335,8 +425,13 @@ def main():
     print(f"  BASE: {len(base_monthly)} months (¥{sum(base_monthly.values()):,})",
           file=sys.stderr)
 
-    print(f"[2/3] Shopify 集計中 (2026-02〜{end_ym})...", file=sys.stderr)
-    shopify_monthly = aggregate_shopify_monthly("2026-02", end_ym)
+    # Shopify 集計範囲: end_ym まで + partial があれば当月まで
+    shopify_end_ym = partial_current_ym if partial_current_ym else end_ym
+    print(f"[2/3] Shopify 集計中 (2026-02〜{shopify_end_ym}, partial_end={partial_end_date})...",
+          file=sys.stderr)
+    shopify_monthly = aggregate_shopify_monthly(
+        "2026-02", shopify_end_ym, end_date=partial_end_date
+    )
     print(f"  Shopify: {len(shopify_monthly)} months (¥{sum(shopify_monthly.values()):,})",
           file=sys.stderr)
 
@@ -344,48 +439,78 @@ def main():
     print("[3/3] 合算 + rolling 12M 計算...", file=sys.stderr)
     all_months = set(base_monthly) | set(shopify_monthly)
     start_ym = min(all_months)  # "2021-05"
-    months_list = month_range(start_ym, end_ym)
+    # months_list の末尾: partial があれば当月まで含める (rolling は null で描画)
+    months_list_end = partial_current_ym if partial_current_ym else end_ym
+    months_list = month_range(start_ym, months_list_end)
 
     monthly_sales = {}
     for ym in months_list:
         monthly_sales[ym] = base_monthly.get(ym, 0) + shopify_monthly.get(ym, 0)
 
     rolling = calc_rolling_12m(months_list, monthly_sales)
+    # 当月 partial は rolling 定義 (12ヶ月末合計) から外す
+    if partial_current_ym and partial_current_ym in rolling:
+        rolling[partial_current_ym] = None
 
-    # --- freee 営業利益 (2023-06〜先月) 統合 ---
-    print("[3.5/3] freee 営業利益 集計中 (2023-06〜先月)...", file=sys.stderr)
-    profit_monthly = aggregate_freee_profit(end_ym)
+    # --- freee 営業利益 (2023-06〜end_ym + 当月 partial) 統合 ---
+    print(f"[3.5/3] freee 営業利益 集計中 (2023-06〜{end_ym}" +
+          (f" + partial 当月〜{partial_end_date}" if partial_end_date else "") + ")...",
+          file=sys.stderr)
+    profit_monthly, partial_profit_info = aggregate_freee_profit(
+        end_ym, partial_end_date=partial_end_date
+    )
+    # 当月 partial を profit_monthly に merge (rolling 12M は未計算のまま)
+    if partial_profit_info:
+        profit_monthly[partial_profit_info["ym"]] = partial_profit_info["monthly_profit"]
+
     # rolling 12M profit (freee 未登録の 2023-05 以前を含む window は None)
     rolling_profit = calc_rolling_12m_with_null(months_list, profit_monthly, "2023-06")
+    # 当月 partial は rolling 定義から外す
+    if partial_current_ym and partial_current_ym in rolling_profit:
+        rolling_profit[partial_current_ym] = None
 
     # 前年同月の rolling を紐付け
     months_out = []
     for ym in months_list:
         r_current = rolling[ym]
         r_prev = rolling.get(prev_year_month(ym))
-        months_out.append({
+        is_partial = (ym == partial_current_ym)
+        entry = {
             "month": ym,
             "monthly_sales": monthly_sales[ym],
             "rolling12m": r_current,
             "rolling12m_prev": r_prev,
             "monthly_profit": profit_monthly.get(ym),
             "rolling12m_profit": rolling_profit.get(ym),
-        })
+        }
+        if is_partial:
+            entry["is_partial"] = True
+            entry["partial_end_date"] = partial_end_date
+        months_out.append(entry)
 
-    # 最新月の YoY%
+    # 最新月の YoY% (rolling 12M・partial 月は rolling null なので end_ym 月で計算)
     latest = months_out[-1]
-    if latest["rolling12m"] and latest["rolling12m_prev"]:
+    latest_for_yoy = latest
+    if latest.get("is_partial"):
+        # partial 月の rolling は null → 1つ前 (end_ym 月) を使う
+        for m in reversed(months_out[:-1]):
+            if m["rolling12m"] is not None:
+                latest_for_yoy = m
+                break
+    if latest_for_yoy["rolling12m"] and latest_for_yoy["rolling12m_prev"]:
         yoy_pct = round(
-            (latest["rolling12m"] - latest["rolling12m_prev"]) / latest["rolling12m_prev"] * 100,
+            (latest_for_yoy["rolling12m"] - latest_for_yoy["rolling12m_prev"])
+            / latest_for_yoy["rolling12m_prev"] * 100,
             1,
         )
     else:
         yoy_pct = None
 
     # --- 期別累計 (hero 表示用・6月始まり期・売上+営業利益) ---
-    # 前々月が今期内 (6月以降) → 今期の 6月〜前々月 累計
-    # 前々月が前期内 (5月以前) → 前期通期 (前年6月〜当年5月) 累計
-    end_y, end_m = map(int, end_ym.split("-"))
+    # partial 月があれば term_end_ym = 当月 (期首〜昨日まで)
+    # なければ従来通り end_ym (前月末) まで
+    hero_end_ym = partial_current_ym if partial_current_ym else end_ym
+    end_y, end_m = map(int, hero_end_ym.split("-"))
     if end_m >= 6:
         term_start_y = end_y
         term_label = "今期"
@@ -393,7 +518,7 @@ def main():
         term_start_y = end_y - 1
         term_label = "前期"
     term_start_ym = f"{term_start_y:04d}-06"
-    term_end_ym = end_ym
+    term_end_ym = hero_end_ym
 
     # 今期 range と前年同期 range (同月数)
     term_months = [m for m in months_list if term_start_ym <= m <= term_end_ym]
@@ -428,7 +553,7 @@ def main():
     out = {
         "shop": SHOP_NAME,
         "updatedAt": now.replace(microsecond=0).isoformat(),
-        "definition": "移動年計 (rolling 12M) = 当該月末の直近12ヶ月合計。売上=BASE+Shopify、営業利益=freee (2023-06〜)。",
+        "definition": "移動年計 (rolling 12M) = 当該月末の直近12ヶ月合計。売上=BASE+Shopify、営業利益=freee (2023-06〜)。当月は partial (期首〜昨日累計)。",
         "months": months_out,
         "latest": {
             "month": latest["month"],
@@ -437,7 +562,10 @@ def main():
             "yoy_pct": yoy_pct,
             "rolling12m_profit": latest.get("rolling12m_profit"),
             "monthly_profit": latest.get("monthly_profit"),
-            # 期別累計 (hero 用・今期 or 前期通期)
+            # partial 月フラグ (当月途中なら true・UI で点線表示)
+            "is_partial": latest.get("is_partial", False),
+            "partial_end_date": latest.get("partial_end_date"),
+            # 期別累計 (hero 用・今期 or 前期通期・partial 月があれば昨日まで)
             "term_label": term_label,
             "term_start_month": term_start_ym,
             "term_end_month": term_end_ym,
@@ -459,7 +587,14 @@ def main():
 
     print(f"\n✓ wrote {OUT_PATH}", file=sys.stderr)
     print(f"  期間: {months_list[0]} 〜 {months_list[-1]} ({len(months_list)}ヶ月)", file=sys.stderr)
-    print(f"  最新 rolling12m: ¥{latest['rolling12m']:,}", file=sys.stderr)
+    if latest.get("is_partial"):
+        print(f"  最新月: {latest['month']} partial (〜{latest.get('partial_end_date')})"
+              f" 売上¥{latest['monthly_sales']:,} 利益¥{(latest.get('monthly_profit') or 0):,}",
+              file=sys.stderr)
+        print(f"  rolling12m 基準月: {latest_for_yoy['month']} ¥{(latest_for_yoy['rolling12m'] or 0):,}",
+              file=sys.stderr)
+    else:
+        print(f"  最新 rolling12m: ¥{(latest['rolling12m'] or 0):,}", file=sys.stderr)
     if yoy_pct is not None:
         print(f"  前年同月比: {yoy_pct:+.1f}%", file=sys.stderr)
 

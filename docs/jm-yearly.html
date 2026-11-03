@@ -111,7 +111,7 @@
     <canvas id="chart"></canvas>
   </div>
 
-  <div class="footer">BASE (2021-05〜2026-04) + Shopify (2026-02〜) 合算</div>
+  <div class="footer">BASE (2021-05〜2026-04) + Shopify (2026-02〜) 合算・<span style="color:#fbbf24;">黄点+点線=当月途中値 (昨日まで累計・partial)</span></div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
@@ -137,9 +137,14 @@
       const L = data.latest;
       const parseYm = (ym) => { const [y, m] = ym.split("-"); return `${parseInt(y)}/${parseInt(m)}`; };
 
-      // Top label: "今期 2026/6〜2026/7 累計"
+      // Top label: "今期 2026/6〜2026/7 累計" (partial 月なら 〜11/2 等日付併記)
+      const parseYmd = (d) => { const [y, mm, dd] = d.split("-"); return `${parseInt(mm)}/${parseInt(dd)}`; };
+      const termEndLabel = (L.is_partial && L.partial_end_date)
+        ? `${parseYm(L.term_start_month)}〜${parseYmd(L.partial_end_date)}`
+        : `${parseYm(L.term_start_month)}〜${parseYm(L.term_end_month)}`;
+      const partialTag = L.is_partial ? ` <small style="color:#fbbf24;font-weight:400;">(途中値)</small>` : "";
       document.getElementById("term-label").innerHTML =
-        `${L.term_label} <span id="term-range">${parseYm(L.term_start_month)}〜${parseYm(L.term_end_month)}</span> 累計`;
+        `${L.term_label} <span id="term-range">${termEndLabel}</span> 累計${partialTag}`;
 
       // 売上
       document.getElementById("latest-value").textContent = yen(L.term_sales_sum);
@@ -186,6 +191,8 @@
       const rolling = months.map(m => m.rolling12m);
       const rollingPrev = months.map(m => m.rolling12m_prev);
       const monthlyProfit = months.map(m => m.monthly_profit);  // 単月経常利益 (freee 2023-06〜のみ有効)
+      // partial 月 (当月途中値) のインデックス (最後の点を点線描画するため)
+      const partialIdx = months.findIndex(m => m.is_partial);
 
       const ctx = document.getElementById("chart").getContext("2d");
       new Chart(ctx, {
@@ -226,8 +233,15 @@
               backgroundColor: "rgba(239, 68, 68, 0.05)",
               borderWidth: 2.5,
               tension: 0.25,
-              pointRadius: 0,
+              pointRadius: (ctx) => (partialIdx >= 0 && ctx.dataIndex === partialIdx) ? 5 : 0,
+              pointBackgroundColor: (ctx) => (partialIdx >= 0 && ctx.dataIndex === partialIdx) ? "#fbbf24" : "#ef4444",
+              pointBorderColor: (ctx) => (partialIdx >= 0 && ctx.dataIndex === partialIdx) ? "#fbbf24" : "#ef4444",
               pointHoverRadius: 5,
+              // 最後のセグメント (前月→当月 partial) だけ点線化
+              segment: {
+                borderDash: (ctx) => (partialIdx >= 0 && ctx.p1DataIndex === partialIdx) ? [8, 4] : undefined,
+                borderColor: (ctx) => (partialIdx >= 0 && ctx.p1DataIndex === partialIdx) ? "#fbbf24" : "#ef4444",
+              },
               fill: false,
               spanGaps: false,
               yAxisID: "y1",
@@ -252,7 +266,13 @@
               bodyColor: "#eee",
               padding: 10,
               callbacks: {
-                label: (ctx) => ctx.dataset.label + ": " + yen(ctx.parsed.y),
+                label: (ctx) => {
+                  let s = ctx.dataset.label + ": " + yen(ctx.parsed.y);
+                  if (partialIdx >= 0 && ctx.dataIndex === partialIdx && months[partialIdx]?.partial_end_date) {
+                    s += " (〜" + parseYmd(months[partialIdx].partial_end_date) + " 途中値)";
+                  }
+                  return s;
+                },
               },
             },
           },

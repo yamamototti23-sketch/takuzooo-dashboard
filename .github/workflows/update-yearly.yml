@@ -1,10 +1,11 @@
-name: Update yearly (rolling 12M) monthly
+name: Update yearly (rolling 12M) daily
 
 on:
   schedule:
-    # 毎月1日 00:00 UTC = 09:00 JST
-    - cron: '0 0 1 * *'
-  workflow_dispatch:  # 手動発火可 (発火漏れ復旧用)
+    # 毎日 21:00 UTC = 06:00 JST
+    # 2026-11-03 変更: 月1 → 毎日 (原様が毎日仕訳登録してくれるため当月分 partial 反映)
+    - cron: '0 21 * * *'
+  workflow_dispatch:  # 手動発火可
 
 concurrency:
   group: update-yearly
@@ -54,7 +55,8 @@ jobs:
           BASE_MONTHLY_JSON: docs/base_monthly.json
           FREEE_LIB_PATH: scripts  # takuzooo-dashboard 内 scripts/lib_freee.py を使用
           FREEE_ENV_PATH: /tmp/freee.env
-          YEARLY_LAG_MONTHS: "2"  # 新税理士 (原様) のラグ短縮確定後は "1" に変更
+          YEARLY_LAG_MONTHS: "1"  # 原様が毎日仕訳登録 (2026-09-01〜) → 前月末まで月次集計
+          INCLUDE_PARTIAL_CURRENT_MONTH: "1"  # 当月分 (期首〜昨日) を partial 単月値として追加
         run: python3 scripts/generate_yearly.py
 
       - name: Sync refreshed tokens back to GitHub Secrets
@@ -103,7 +105,7 @@ jobs:
           if git diff --cached --quiet -- docs/jm-yearly.json; then
             echo "no change in jm-yearly.json"
           else
-            git commit -m "chore(yearly): monthly update $(date -u +%Y-%m) [skip ci]"
+            git commit -m "chore(yearly): daily update $(date -u +%Y-%m-%d) [skip ci]"
             for i in 1 2 3; do
               if git push; then echo "push OK on attempt $i"; break; fi
               echo "push failed on attempt $i, rebasing origin/main..."
@@ -112,11 +114,9 @@ jobs:
             done
           fi
 
-      - name: Notify success (Chatwork マイチャット・月次可視化)
-        if: success()
-        env:
-          CHATWORK_API_TOKEN: ${{ secrets.CHATWORK_API_TOKEN }}
-        run: python3 scripts/notify_yearly_success.py
+      # 成功通知は silent (2026-11-03 日次化で § 通知設計の第一原則 準拠)
+      # notify_yearly_success.py 自体は残置・月1サマリ等 将来再利用可
+      # 必要なら if: github.event.schedule == '0 21 1 * *' で月1発火に再開可能
 
       - name: Notify failure (Chatwork マイチャット・即修復依頼)
         if: failure()
@@ -126,6 +126,6 @@ jobs:
           RUN_ID: ${{ github.run_id }}
         run: |
           curl -s -X POST -H "X-ChatWorkToken: $CHATWORK_API_TOKEN" \
-            --data-urlencode "body=[info][title]⚠ 年計 月次更新 失敗[/title]takuzooo-dashboard update-yearly workflow が失敗しました。%0ARun: https://github.com/${REPO}/actions/runs/${RUN_ID}%0A月1回発火のため次回まで見逃すと1ヶ月遅延。即座に手動対応してください。%0A手動発火: https://github.com/${REPO}/actions/workflows/update-yearly.yml[/info]" \
+            --data-urlencode "body=[info][title]⚠ 年計 日次更新 失敗[/title]takuzooo-dashboard update-yearly workflow が失敗しました。%0ARun: https://github.com/${REPO}/actions/runs/${RUN_ID}%0A毎日 06:00 JST 発火。連続失敗で kiosk の年計表示が stale 化。%0A手動発火: https://github.com/${REPO}/actions/workflows/update-yearly.yml[/info]" \
             --data-urlencode "self_unread=1" \
             "https://api.chatwork.com/v2/rooms/218962687/messages"
