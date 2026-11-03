@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-03T09:51:01+09:00",
+  "updatedAt": "2026-11-03T10:18:26+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 68808098,
-    "orders": 2427,
+    "sales": 68835598,
+    "orders": 2428,
     "aov": 28351
   },
   "month": {
-    "salesTotal": 1473340,
-    "unitsTotal": 49,
-    "ordersTotal": 47,
+    "salesTotal": 1500840,
+    "unitsTotal": 50,
+    "ordersTotal": 48,
     "days": 3
   },
   "lastYear": {
@@ -31,7 +31,7 @@
       },
       {
         "date": "2026-11-03",
-        "sales": 92400
+        "sales": 119900
       }
     ],
     "points_lastyear": [
@@ -52,16 +52,16 @@
   "daily": {
     "todayUnits": 0,
     "yesterdayUnits": 17,
-    "todayOrders": 4,
+    "todayOrders": 5,
     "yesterdayOrders": 15,
-    "todaySales": 92400,
+    "todaySales": 119900,
     "yesterdaySales": 486497
   },
   "top5": [
     {
       "rank": 1,
       "title": "いつかは、究極の黒パン~SMARTシリーズ",
-      "units": 9,
+      "units": 10,
       "handle": "the-ultimate-black-pants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/5d689a44fc3188e82bde8cab5678d9e1.jpg?v=1776451751"
     },
