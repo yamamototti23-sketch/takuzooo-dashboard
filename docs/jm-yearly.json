@@ -1,7 +1,7 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-01T12:18:01+09:00",
-  "definition": "移動年計 (rolling 12M) = 当該月末の直近12ヶ月合計。売上=BASE+Shopify、営業利益=freee (2023-06〜)。",
+  "updatedAt": "2026-11-03T09:32:58+09:00",
+  "definition": "移動年計 (rolling 12M) = 当該月末の直近12ヶ月合計。売上=BASE+Shopify、営業利益=freee (2023-06〜)。当月は partial (期首〜昨日累計)。",
   "months": [
     {
       "month": "2021-05",
@@ -517,29 +517,49 @@
     },
     {
       "month": "2026-09",
-      "monthly_sales": 12257238,
-      "rolling12m": 199808953,
+      "monthly_sales": 12333944,
+      "rolling12m": 199885659,
       "rolling12m_prev": 170259298,
-      "monthly_profit": -11983449,
-      "rolling12m_profit": 12368436
+      "monthly_profit": -12467823,
+      "rolling12m_profit": 11884062
+    },
+    {
+      "month": "2026-10",
+      "monthly_sales": 16686364,
+      "rolling12m": 204965720,
+      "rolling12m_prev": 170592721,
+      "monthly_profit": -76750454,
+      "rolling12m_profit": -59883313
+    },
+    {
+      "month": "2026-11",
+      "monthly_sales": 1167441,
+      "rolling12m": null,
+      "rolling12m_prev": 172759619,
+      "monthly_profit": -157967,
+      "rolling12m_profit": null,
+      "is_partial": true,
+      "partial_end_date": "2026-11-02"
     }
   ],
   "latest": {
-    "month": "2026-09",
-    "rolling12m": 199808953,
-    "rolling12m_prev": 170259298,
-    "yoy_pct": 17.4,
-    "rolling12m_profit": 12368436,
-    "monthly_profit": -11983449,
+    "month": "2026-11",
+    "rolling12m": null,
+    "rolling12m_prev": 172759619,
+    "yoy_pct": 20.1,
+    "rolling12m_profit": null,
+    "monthly_profit": -157967,
+    "is_partial": true,
+    "partial_end_date": "2026-11-02",
     "term_label": "今期",
     "term_start_month": "2026-06",
-    "term_end_month": "2026-09",
-    "term_sales_sum": 50722477,
-    "term_profit_sum": -19086470,
+    "term_end_month": "2026-11",
+    "term_sales_sum": 68652988,
+    "term_profit_sum": -96479265,
     "term_prev_start_month": "2025-06",
-    "term_prev_end_month": "2025-09",
-    "term_prev_sales_sum": 59347539,
-    "term_prev_profit_sum": -5861401,
-    "term_yoy_pct": -14.5
+    "term_prev_end_month": "2025-11",
+    "term_prev_sales_sum": 90061140,
+    "term_prev_profit_sum": -20036277,
+    "term_yoy_pct": -23.8
   }
 }
