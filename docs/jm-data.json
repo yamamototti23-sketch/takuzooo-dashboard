@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-03T14:18:31+09:00",
+  "updatedAt": "2026-11-03T14:48:25+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 68772238,
-    "orders": 2431,
-    "aov": 28290
+    "sales": 68863318,
+    "orders": 2432,
+    "aov": 28316
   },
   "month": {
-    "salesTotal": 1437480,
-    "unitsTotal": 53,
-    "ordersTotal": 51,
+    "salesTotal": 1528560,
+    "unitsTotal": 56,
+    "ordersTotal": 52,
     "days": 3
   },
   "lastYear": {
@@ -31,7 +31,7 @@
       },
       {
         "date": "2026-11-03",
-        "sales": 184580
+        "sales": 275660
       }
     ],
     "points_lastyear": [
@@ -52,9 +52,9 @@
   "daily": {
     "todayUnits": 0,
     "yesterdayUnits": 17,
-    "todayOrders": 8,
+    "todayOrders": 9,
     "yesterdayOrders": 15,
-    "todaySales": 184580,
+    "todaySales": 275660,
     "yesterdaySales": 455697
   },
   "top5": [
@@ -67,31 +67,31 @@
     },
     {
       "rank": 2,
+      "title": "『中綿ジャケット』(タクムARジャケット)~SMARTシリーズ",
+      "units": 9,
+      "handle": "takumu-ar-jacket",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/61_compressed_6eac1e7c-a216-4300-a845-736a26a929e3.jpg?v=1786503859"
+    },
+    {
+      "rank": 3,
       "title": "『ネックレス』（Silver925）",
       "units": 9,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/e2006cc75c8a0ecfe3467ee75b508af8.jpg?v=1776451870"
     },
     {
-      "rank": 3,
-      "title": "『中綿ジャケット』(タクムARジャケット)~SMARTシリーズ",
-      "units": 8,
-      "handle": "takumu-ar-jacket",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/61_compressed_6eac1e7c-a216-4300-a845-736a26a929e3.jpg?v=1786503859"
-    },
-    {
       "rank": 4,
-      "title": "「防水イージーパンツ」~RELAXシリーズ",
-      "units": 6,
-      "handle": "waterproof-easy-pants",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1cf702eef58fa10dff4f56a6541ae1f9.jpg?v=1776451570"
+      "title": "『本革ボディーバッグ』（姫路レザー）",
+      "units": 7,
+      "handle": "stylish-genuine-leather-large-body-bag",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A1554_1_ef495592-e3a6-4e83-8ffe-1f7f917d3092.jpg?v=1783603757"
     },
     {
       "rank": 5,
-      "title": "『本革ボディーバッグ』（姫路レザー）",
+      "title": "黒アウターのための「\"究極\"のグレーパンツ」~SMARTシリーズ",
       "units": 6,
-      "handle": "stylish-genuine-leather-large-body-bag",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A1554_1_ef495592-e3a6-4e83-8ffe-1f7f917d3092.jpg?v=1783603757"
+      "handle": "graypants",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/733edb1e425db1232bf22bd5a0bef49f.jpg?v=1776451631"
     }
   ]
 }
