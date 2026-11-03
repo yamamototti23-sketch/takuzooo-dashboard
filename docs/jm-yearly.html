@@ -182,7 +182,7 @@
       }
 
       // Chart data — 直近 CHART_MONTHS ヶ月を表示 (最新月から遡り)
-      const CHART_MONTHS = 36;
+      const CHART_MONTHS = 24;
       const months = data.months.slice(-CHART_MONTHS);
       const labels = months.map(m => {
         const [y, mm] = m.month.split("-");
