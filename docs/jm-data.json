@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-03T23:18:52+09:00",
+  "updatedAt": "2026-11-03T23:48:20+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 69153223,
-    "orders": 2438,
-    "aov": 28365
+    "sales": 69171758,
+    "orders": 2439,
+    "aov": 28361
   },
   "month": {
-    "salesTotal": 1818465,
-    "unitsTotal": 65,
-    "ordersTotal": 58,
+    "salesTotal": 1837000,
+    "unitsTotal": 66,
+    "ordersTotal": 59,
     "days": 3
   },
   "lastYear": {
@@ -31,7 +31,7 @@
       },
       {
         "date": "2026-11-03",
-        "sales": 565565
+        "sales": 584100
       }
     ],
     "points_lastyear": [
@@ -52,25 +52,25 @@
   "daily": {
     "todayUnits": 0,
     "yesterdayUnits": 17,
-    "todayOrders": 15,
+    "todayOrders": 16,
     "yesterdayOrders": 15,
-    "todaySales": 565565,
+    "todaySales": 584100,
     "yesterdaySales": 455697
   },
   "top5": [
     {
       "rank": 1,
+      "title": "『ネックレス』（Silver925）",
+      "units": 11,
+      "handle": "silver-necklace",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/e2006cc75c8a0ecfe3467ee75b508af8.jpg?v=1776451870"
+    },
+    {
+      "rank": 2,
       "title": "いつかは、究極の黒パン~SMARTシリーズ",
       "units": 11,
       "handle": "the-ultimate-black-pants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/5d689a44fc3188e82bde8cab5678d9e1.jpg?v=1776451751"
-    },
-    {
-      "rank": 2,
-      "title": "『ネックレス』（Silver925）",
-      "units": 10,
-      "handle": "silver-necklace",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/e2006cc75c8a0ecfe3467ee75b508af8.jpg?v=1776451870"
     },
     {
       "rank": 3,
