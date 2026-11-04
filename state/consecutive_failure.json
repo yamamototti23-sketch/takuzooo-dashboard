@@ -1,15 +1,15 @@
 {
   "takuzooo-dashboard-update-youtube": {
     "GHA update-youtube-data": {
-      "consecutive_count": 0,
-      "first_failure_at": null,
-      "last_failure_at": null,
-      "last_error_msg": null,
-      "threshold_N": null,
+      "consecutive_count": 1,
+      "first_failure_at": "2026-11-04T14:14:39.238978+09:00",
+      "last_failure_at": "2026-11-04T14:14:39.238978+09:00",
+      "last_error_msg": "Traceback (most recent call last):\n  File \"/home/runner/work/takuzooo-dashboard/takuzooo-dashboard/fetch_youtube.py\", line 418, in <module>\n    main()\n  File \"/home/runner/work/takuzooo-dashboard/takuzooo-dashboard/fetch_youtube.py\", line 250, in main\n    r = data_api(token, \"playlistItems\", part=\"contentDetails\", playlistId=uploads, maxResults=50,\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/takuzooo-dashboard/takuz",
+      "threshold_N": 2,
       "notified": false,
       "notify_at": null,
       "cooldown_until": null,
-      "recovered_at": "2026-11-04T13:40:29.059701+09:00"
+      "recovered_at": null
     }
   },
   "takuzooo-dashboard-jm-sales": {
