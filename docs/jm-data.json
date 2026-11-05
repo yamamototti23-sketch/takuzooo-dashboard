@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-05T23:19:17+09:00",
+  "updatedAt": "2026-11-05T23:48:07+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 70919987,
-    "orders": 2482,
-    "aov": 28574
+    "sales": 70993247,
+    "orders": 2483,
+    "aov": 28592
   },
   "month": {
-    "salesTotal": 3585229,
-    "unitsTotal": 117,
-    "ordersTotal": 102,
+    "salesTotal": 3658489,
+    "unitsTotal": 119,
+    "ordersTotal": 103,
     "days": 5
   },
   "lastYear": {
@@ -39,7 +39,7 @@
       },
       {
         "date": "2026-11-05",
-        "sales": 1174687
+        "sales": 1247947
       }
     ],
     "points_lastyear": [
@@ -68,9 +68,9 @@
   "daily": {
     "todayUnits": 0,
     "yesterdayUnits": 22,
-    "todayOrders": 25,
+    "todayOrders": 26,
     "yesterdayOrders": 18,
-    "todaySales": 1174687,
+    "todaySales": 1247947,
     "yesterdaySales": 573542
   },
   "top5": [
@@ -104,10 +104,10 @@
     },
     {
       "rank": 5,
-      "title": "『レイヤードニット』オーガニックコットン~SMARTシリーズ",
+      "title": "『\"ポーラテック\"フリース』~RELAXシリーズ",
       "units": 9,
-      "handle": "adult-knit",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1d16aa44369136913b1c5d7a3dc39035_5e247586-4c75-46af-8a48-a6f4e5e6de0e.jpg?v=1776451571"
+      "handle": "enjoy-the-fluffy-comfort-of-fleece",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1686f80dde80eccaffe5c11e6472fa14_f0557de7-ead3-4f01-ac11-eefa417a164c.jpg?v=1776449445"
     }
   ]
 }
