@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-07T03:21:26+09:00",
+  "updatedAt": "2026-11-07T03:48:21+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 72012557,
-    "orders": 2512,
-    "aov": 28667
+    "sales": 72028287,
+    "orders": 2513,
+    "aov": 28662
   },
   "month": {
-    "salesTotal": 4677799,
-    "unitsTotal": 153,
-    "ordersTotal": 132,
+    "salesTotal": 4693529,
+    "unitsTotal": 154,
+    "ordersTotal": 133,
     "days": 7
   },
   "lastYear": {
@@ -47,7 +47,7 @@
       },
       {
         "date": "2026-11-07",
-        "sales": 67430
+        "sales": 83160
       }
     ],
     "points_lastyear": [
@@ -82,11 +82,11 @@
     ]
   },
   "daily": {
-    "todayUnits": 2,
+    "todayUnits": 3,
     "yesterdayUnits": 32,
-    "todayOrders": 2,
+    "todayOrders": 3,
     "yesterdayOrders": 27,
-    "todaySales": 67430,
+    "todaySales": 83160,
     "yesterdaySales": 951880
   },
   "top5": [
@@ -120,10 +120,10 @@
     },
     {
       "rank": 5,
-      "title": "『レイヤードニット』オーガニックコットン~SMARTシリーズ",
+      "title": "『本革ボディーバッグ』（姫路レザー）",
       "units": 14,
-      "handle": "adult-knit",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1d16aa44369136913b1c5d7a3dc39035_5e247586-4c75-46af-8a48-a6f4e5e6de0e.jpg?v=1776451571"
+      "handle": "stylish-genuine-leather-large-body-bag",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A1554_1_ef495592-e3a6-4e83-8ffe-1f7f917d3092.jpg?v=1783603757"
     }
   ]
 }
