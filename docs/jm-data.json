@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-07T23:18:26+09:00",
+  "updatedAt": "2026-11-07T23:48:29+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 72647002,
-    "orders": 2531,
-    "aov": 28703
+    "sales": 72685832,
+    "orders": 2532,
+    "aov": 28707
   },
   "month": {
-    "salesTotal": 5312244,
-    "unitsTotal": 173,
-    "ordersTotal": 151,
+    "salesTotal": 5351074,
+    "unitsTotal": 174,
+    "ordersTotal": 152,
     "days": 7
   },
   "lastYear": {
@@ -47,7 +47,7 @@
       },
       {
         "date": "2026-11-07",
-        "sales": 701875
+        "sales": 740705
       }
     ],
     "points_lastyear": [
@@ -82,11 +82,11 @@
     ]
   },
   "daily": {
-    "todayUnits": 22,
+    "todayUnits": 23,
     "yesterdayUnits": 32,
-    "todayOrders": 21,
+    "todayOrders": 22,
     "yesterdayOrders": 27,
-    "todaySales": 701875,
+    "todaySales": 740705,
     "yesterdaySales": 951880
   },
   "top5": [
@@ -107,7 +107,7 @@
     {
       "rank": 3,
       "title": "『レイヤードニット』オーガニックコットン~SMARTシリーズ",
-      "units": 18,
+      "units": 19,
       "handle": "adult-knit",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1d16aa44369136913b1c5d7a3dc39035_5e247586-4c75-46af-8a48-a6f4e5e6de0e.jpg?v=1776451571"
     },
