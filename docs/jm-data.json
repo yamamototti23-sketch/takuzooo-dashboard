@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-07T19:48:23+09:00",
+  "updatedAt": "2026-11-07T20:18:18+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 72383678,
-    "orders": 2524,
-    "aov": 28678
+    "sales": 72445977,
+    "orders": 2526,
+    "aov": 28680
   },
   "month": {
-    "salesTotal": 5048920,
-    "unitsTotal": 165,
-    "ordersTotal": 144,
+    "salesTotal": 5111219,
+    "unitsTotal": 167,
+    "ordersTotal": 146,
     "days": 7
   },
   "lastYear": {
@@ -47,7 +47,7 @@
       },
       {
         "date": "2026-11-07",
-        "sales": 438551
+        "sales": 500850
       }
     ],
     "points_lastyear": [
@@ -82,11 +82,11 @@
     ]
   },
   "daily": {
-    "todayUnits": 14,
+    "todayUnits": 16,
     "yesterdayUnits": 32,
-    "todayOrders": 14,
+    "todayOrders": 16,
     "yesterdayOrders": 27,
-    "todaySales": 438551,
+    "todaySales": 500850,
     "yesterdaySales": 951880
   },
   "top5": [
@@ -107,23 +107,23 @@
     {
       "rank": 3,
       "title": "いつかは、究極の黒パン~SMARTシリーズ",
-      "units": 17,
+      "units": 18,
       "handle": "the-ultimate-black-pants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/5d689a44fc3188e82bde8cab5678d9e1.jpg?v=1776451751"
     },
     {
       "rank": 4,
+      "title": "『\"ポーラテック\"フリース』~RELAXシリーズ",
+      "units": 16,
+      "handle": "enjoy-the-fluffy-comfort-of-fleece",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1686f80dde80eccaffe5c11e6472fa14_f0557de7-ead3-4f01-ac11-eefa417a164c.jpg?v=1776449445"
+    },
+    {
+      "rank": 5,
       "title": "『本革ボディーバッグ』（姫路レザー）",
       "units": 15,
       "handle": "stylish-genuine-leather-large-body-bag",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A1554_1_ef495592-e3a6-4e83-8ffe-1f7f917d3092.jpg?v=1783603757"
-    },
-    {
-      "rank": 5,
-      "title": "『\"ポーラテック\"フリース』~RELAXシリーズ",
-      "units": 15,
-      "handle": "enjoy-the-fluffy-comfort-of-fleece",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1686f80dde80eccaffe5c11e6472fa14_f0557de7-ead3-4f01-ac11-eefa417a164c.jpg?v=1776449445"
     }
   ]
 }
