@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-07T20:48:02+09:00",
+  "updatedAt": "2026-11-07T21:21:50+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 72484807,
-    "orders": 2527,
-    "aov": 28684
+    "sales": 72562467,
+    "orders": 2528,
+    "aov": 28704
   },
   "month": {
-    "salesTotal": 5150049,
-    "unitsTotal": 168,
-    "ordersTotal": 147,
+    "salesTotal": 5227709,
+    "unitsTotal": 170,
+    "ordersTotal": 148,
     "days": 7
   },
   "lastYear": {
@@ -47,7 +47,7 @@
       },
       {
         "date": "2026-11-07",
-        "sales": 539680
+        "sales": 617340
       }
     ],
     "points_lastyear": [
@@ -82,11 +82,11 @@
     ]
   },
   "daily": {
-    "todayUnits": 17,
+    "todayUnits": 19,
     "yesterdayUnits": 32,
-    "todayOrders": 17,
+    "todayOrders": 18,
     "yesterdayOrders": 27,
-    "todaySales": 539680,
+    "todaySales": 617340,
     "yesterdaySales": 951880
   },
   "top5": [
@@ -106,24 +106,24 @@
     },
     {
       "rank": 3,
+      "title": "『レイヤードニット』オーガニックコットン~SMARTシリーズ",
+      "units": 18,
+      "handle": "adult-knit",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1d16aa44369136913b1c5d7a3dc39035_5e247586-4c75-46af-8a48-a6f4e5e6de0e.jpg?v=1776451571"
+    },
+    {
+      "rank": 4,
       "title": "いつかは、究極の黒パン~SMARTシリーズ",
       "units": 18,
       "handle": "the-ultimate-black-pants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/5d689a44fc3188e82bde8cab5678d9e1.jpg?v=1776451751"
     },
     {
-      "rank": 4,
+      "rank": 5,
       "title": "『\"ポーラテック\"フリース』~RELAXシリーズ",
       "units": 16,
       "handle": "enjoy-the-fluffy-comfort-of-fleece",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1686f80dde80eccaffe5c11e6472fa14_f0557de7-ead3-4f01-ac11-eefa417a164c.jpg?v=1776449445"
-    },
-    {
-      "rank": 5,
-      "title": "『レイヤードニット』オーガニックコットン~SMARTシリーズ",
-      "units": 16,
-      "handle": "adult-knit",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1d16aa44369136913b1c5d7a3dc39035_5e247586-4c75-46af-8a48-a6f4e5e6de0e.jpg?v=1776451571"
     }
   ]
 }
