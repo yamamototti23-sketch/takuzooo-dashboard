@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-07T17:48:09+09:00",
+  "updatedAt": "2026-11-07T18:18:37+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 72348478,
-    "orders": 2522,
-    "aov": 28687
+    "sales": 72364208,
+    "orders": 2523,
+    "aov": 28682
   },
   "month": {
-    "salesTotal": 5013720,
-    "unitsTotal": 163,
-    "ordersTotal": 142,
+    "salesTotal": 5029450,
+    "unitsTotal": 164,
+    "ordersTotal": 143,
     "days": 7
   },
   "lastYear": {
@@ -47,7 +47,7 @@
       },
       {
         "date": "2026-11-07",
-        "sales": 403351
+        "sales": 419081
       }
     ],
     "points_lastyear": [
@@ -82,11 +82,11 @@
     ]
   },
   "daily": {
-    "todayUnits": 12,
+    "todayUnits": 13,
     "yesterdayUnits": 32,
-    "todayOrders": 12,
+    "todayOrders": 13,
     "yesterdayOrders": 27,
-    "todaySales": 403351,
+    "todaySales": 419081,
     "yesterdaySales": 951880
   },
   "top5": [
@@ -113,17 +113,17 @@
     },
     {
       "rank": 4,
+      "title": "『本革ボディーバッグ』（姫路レザー）",
+      "units": 15,
+      "handle": "stylish-genuine-leather-large-body-bag",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A1554_1_ef495592-e3a6-4e83-8ffe-1f7f917d3092.jpg?v=1783603757"
+    },
+    {
+      "rank": 5,
       "title": "『\"ポーラテック\"フリース』~RELAXシリーズ",
       "units": 15,
       "handle": "enjoy-the-fluffy-comfort-of-fleece",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1686f80dde80eccaffe5c11e6472fa14_f0557de7-ead3-4f01-ac11-eefa417a164c.jpg?v=1776449445"
-    },
-    {
-      "rank": 5,
-      "title": "『レイヤードニット』オーガニックコットン~SMARTシリーズ",
-      "units": 15,
-      "handle": "adult-knit",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1d16aa44369136913b1c5d7a3dc39035_5e247586-4c75-46af-8a48-a6f4e5e6de0e.jpg?v=1776451571"
     }
   ]
 }
