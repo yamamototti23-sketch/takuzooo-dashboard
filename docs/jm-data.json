@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-07T11:20:53+09:00",
+  "updatedAt": "2026-11-07T11:48:14+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 72192957,
-    "orders": 2517,
-    "aov": 28682
+    "sales": 72265777,
+    "orders": 2519,
+    "aov": 28688
   },
   "month": {
-    "salesTotal": 4858199,
-    "unitsTotal": 158,
-    "ordersTotal": 137,
+    "salesTotal": 4931019,
+    "unitsTotal": 160,
+    "ordersTotal": 139,
     "days": 7
   },
   "lastYear": {
@@ -47,7 +47,7 @@
       },
       {
         "date": "2026-11-07",
-        "sales": 247830
+        "sales": 320650
       }
     ],
     "points_lastyear": [
@@ -82,27 +82,27 @@
     ]
   },
   "daily": {
-    "todayUnits": 7,
+    "todayUnits": 9,
     "yesterdayUnits": 32,
-    "todayOrders": 7,
+    "todayOrders": 9,
     "yesterdayOrders": 27,
-    "todaySales": 247830,
+    "todaySales": 320650,
     "yesterdaySales": 951880
   },
   "top5": [
     {
       "rank": 1,
+      "title": "『中綿ジャケット』(タクムARジャケット)~SMARTシリーズ",
+      "units": 20,
+      "handle": "takumu-ar-jacket",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/61_compressed_6eac1e7c-a216-4300-a845-736a26a929e3.jpg?v=1786503859"
+    },
+    {
+      "rank": 2,
       "title": "『ネックレス』（Silver925）",
       "units": 19,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/e2006cc75c8a0ecfe3467ee75b508af8.jpg?v=1776451870"
-    },
-    {
-      "rank": 2,
-      "title": "『中綿ジャケット』(タクムARジャケット)~SMARTシリーズ",
-      "units": 19,
-      "handle": "takumu-ar-jacket",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/61_compressed_6eac1e7c-a216-4300-a845-736a26a929e3.jpg?v=1786503859"
     },
     {
       "rank": 3,
