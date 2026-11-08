@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-08T23:18:13+09:00",
+  "updatedAt": "2026-11-08T23:48:21+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 73610121,
-    "orders": 2556,
-    "aov": 28799
+    "sales": 73646751,
+    "orders": 2557,
+    "aov": 28802
   },
   "month": {
-    "salesTotal": 6275363,
-    "unitsTotal": 202,
-    "ordersTotal": 176,
+    "salesTotal": 6311993,
+    "unitsTotal": 203,
+    "ordersTotal": 177,
     "days": 8
   },
   "lastYear": {
@@ -51,7 +51,7 @@
       },
       {
         "date": "2026-11-08",
-        "sales": 904819
+        "sales": 941449
       }
     ],
     "points_lastyear": [
@@ -90,11 +90,11 @@
     ]
   },
   "daily": {
-    "todayUnits": 27,
+    "todayUnits": 28,
     "yesterdayUnits": 24,
-    "todayOrders": 23,
+    "todayOrders": 24,
     "yesterdayOrders": 23,
-    "todaySales": 904819,
+    "todaySales": 941449,
     "yesterdaySales": 760175
   },
   "top5": [
@@ -107,24 +107,24 @@
     },
     {
       "rank": 2,
-      "title": "『本革ボディーバッグ』（姫路レザー）",
-      "units": 21,
-      "handle": "stylish-genuine-leather-large-body-bag",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A1554_1_ef495592-e3a6-4e83-8ffe-1f7f917d3092.jpg?v=1783603757"
-    },
-    {
-      "rank": 3,
       "title": "『\"ポーラテック\"フリース』~RELAXシリーズ",
-      "units": 21,
+      "units": 22,
       "handle": "enjoy-the-fluffy-comfort-of-fleece",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1686f80dde80eccaffe5c11e6472fa14_f0557de7-ead3-4f01-ac11-eefa417a164c.jpg?v=1776449445"
     },
     {
-      "rank": 4,
+      "rank": 3,
       "title": "いつかは、究極の黒パン~SMARTシリーズ",
       "units": 21,
       "handle": "the-ultimate-black-pants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/5d689a44fc3188e82bde8cab5678d9e1.jpg?v=1776451751"
+    },
+    {
+      "rank": 4,
+      "title": "『本革ボディーバッグ』（姫路レザー）",
+      "units": 21,
+      "handle": "stylish-genuine-leather-large-body-bag",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A1554_1_ef495592-e3a6-4e83-8ffe-1f7f917d3092.jpg?v=1783603757"
     },
     {
       "rank": 5,
