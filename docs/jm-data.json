@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-08T10:48:25+09:00",
+  "updatedAt": "2026-11-08T11:22:02+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 72892294,
-    "orders": 2539,
-    "aov": 28709
+    "sales": 72993054,
+    "orders": 2541,
+    "aov": 28726
   },
   "month": {
-    "salesTotal": 5557536,
-    "unitsTotal": 183,
-    "ordersTotal": 159,
+    "salesTotal": 5658296,
+    "unitsTotal": 186,
+    "ordersTotal": 161,
     "days": 8
   },
   "lastYear": {
@@ -51,7 +51,7 @@
       },
       {
         "date": "2026-11-08",
-        "sales": 186992
+        "sales": 287752
       }
     ],
     "points_lastyear": [
@@ -90,11 +90,11 @@
     ]
   },
   "daily": {
-    "todayUnits": 8,
+    "todayUnits": 11,
     "yesterdayUnits": 24,
-    "todayOrders": 6,
+    "todayOrders": 8,
     "yesterdayOrders": 23,
-    "todaySales": 186992,
+    "todaySales": 287752,
     "yesterdaySales": 760175
   },
   "top5": [
@@ -114,10 +114,10 @@
     },
     {
       "rank": 3,
-      "title": "『レイヤードニット』オーガニックコットン~SMARTシリーズ",
-      "units": 19,
-      "handle": "adult-knit",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1d16aa44369136913b1c5d7a3dc39035_5e247586-4c75-46af-8a48-a6f4e5e6de0e.jpg?v=1776451571"
+      "title": "『\"ポーラテック\"フリース』~RELAXシリーズ",
+      "units": 20,
+      "handle": "enjoy-the-fluffy-comfort-of-fleece",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1686f80dde80eccaffe5c11e6472fa14_f0557de7-ead3-4f01-ac11-eefa417a164c.jpg?v=1776449445"
     },
     {
       "rank": 4,
@@ -128,10 +128,10 @@
     },
     {
       "rank": 5,
-      "title": "『\"ポーラテック\"フリース』~RELAXシリーズ",
-      "units": 18,
-      "handle": "enjoy-the-fluffy-comfort-of-fleece",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1686f80dde80eccaffe5c11e6472fa14_f0557de7-ead3-4f01-ac11-eefa417a164c.jpg?v=1776449445"
+      "title": "『レイヤードニット』オーガニックコットン~SMARTシリーズ",
+      "units": 19,
+      "handle": "adult-knit",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1d16aa44369136913b1c5d7a3dc39035_5e247586-4c75-46af-8a48-a6f4e5e6de0e.jpg?v=1776451571"
     }
   ]
 }
