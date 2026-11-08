@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-08T17:20:04+09:00",
+  "updatedAt": "2026-11-08T17:48:11+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 73285071,
-    "orders": 2545,
-    "aov": 28796
+    "sales": 73340071,
+    "orders": 2546,
+    "aov": 28806
   },
   "month": {
-    "salesTotal": 5950313,
-    "unitsTotal": 190,
-    "ordersTotal": 165,
+    "salesTotal": 6005313,
+    "unitsTotal": 192,
+    "ordersTotal": 166,
     "days": 8
   },
   "lastYear": {
@@ -51,7 +51,7 @@
       },
       {
         "date": "2026-11-08",
-        "sales": 579769
+        "sales": 634769
       }
     ],
     "points_lastyear": [
@@ -90,11 +90,11 @@
     ]
   },
   "daily": {
-    "todayUnits": 15,
+    "todayUnits": 17,
     "yesterdayUnits": 24,
-    "todayOrders": 12,
+    "todayOrders": 13,
     "yesterdayOrders": 23,
-    "todaySales": 579769,
+    "todaySales": 634769,
     "yesterdaySales": 760175
   },
   "top5": [
@@ -107,10 +107,10 @@
     },
     {
       "rank": 2,
-      "title": "『中綿ジャケット』(タクムARジャケット)~SMARTシリーズ",
-      "units": 20,
-      "handle": "takumu-ar-jacket",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/61_compressed_6eac1e7c-a216-4300-a845-736a26a929e3.jpg?v=1786503859"
+      "title": "いつかは、究極の黒パン~SMARTシリーズ",
+      "units": 21,
+      "handle": "the-ultimate-black-pants",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/5d689a44fc3188e82bde8cab5678d9e1.jpg?v=1776451751"
     },
     {
       "rank": 3,
@@ -128,10 +128,10 @@
     },
     {
       "rank": 5,
-      "title": "いつかは、究極の黒パン~SMARTシリーズ",
+      "title": "『中綿ジャケット』(タクムARジャケット)~SMARTシリーズ",
       "units": 20,
-      "handle": "the-ultimate-black-pants",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/5d689a44fc3188e82bde8cab5678d9e1.jpg?v=1776451751"
+      "handle": "takumu-ar-jacket",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/61_compressed_6eac1e7c-a216-4300-a845-736a26a929e3.jpg?v=1786503859"
     }
   ]
 }
