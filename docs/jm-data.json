@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-09T06:18:33+09:00",
+  "updatedAt": "2026-11-09T06:48:35+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 73708940,
-    "orders": 2559,
-    "aov": 28804
+    "sales": 73814870,
+    "orders": 2561,
+    "aov": 28823
   },
   "month": {
-    "salesTotal": 6374182,
-    "unitsTotal": 205,
-    "ordersTotal": 179,
+    "salesTotal": 6480112,
+    "unitsTotal": 208,
+    "ordersTotal": 181,
     "days": 9
   },
   "lastYear": {
@@ -55,7 +55,7 @@
       },
       {
         "date": "2026-11-09",
-        "sales": 62189
+        "sales": 168119
       }
     ],
     "points_lastyear": [
@@ -98,11 +98,11 @@
     ]
   },
   "daily": {
-    "todayUnits": 2,
+    "todayUnits": 5,
     "yesterdayUnits": 28,
-    "todayOrders": 2,
+    "todayOrders": 4,
     "yesterdayOrders": 24,
-    "todaySales": 62189,
+    "todaySales": 168119,
     "yesterdaySales": 941449
   },
   "top5": [
@@ -115,31 +115,31 @@
     },
     {
       "rank": 2,
+      "title": "いつかは、究極の黒パン~SMARTシリーズ",
+      "units": 22,
+      "handle": "the-ultimate-black-pants",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/5d689a44fc3188e82bde8cab5678d9e1.jpg?v=1776451751"
+    },
+    {
+      "rank": 3,
       "title": "『\"ポーラテック\"フリース』~RELAXシリーズ",
       "units": 22,
       "handle": "enjoy-the-fluffy-comfort-of-fleece",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1686f80dde80eccaffe5c11e6472fa14_f0557de7-ead3-4f01-ac11-eefa417a164c.jpg?v=1776449445"
     },
     {
-      "rank": 3,
-      "title": "いつかは、究極の黒パン~SMARTシリーズ",
+      "rank": 4,
+      "title": "『レイヤードニット』オーガニックコットン~SMARTシリーズ",
       "units": 21,
-      "handle": "the-ultimate-black-pants",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/5d689a44fc3188e82bde8cab5678d9e1.jpg?v=1776451751"
+      "handle": "adult-knit",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1d16aa44369136913b1c5d7a3dc39035_5e247586-4c75-46af-8a48-a6f4e5e6de0e.jpg?v=1776451571"
     },
     {
-      "rank": 4,
+      "rank": 5,
       "title": "『本革ボディーバッグ』（姫路レザー）",
       "units": 21,
       "handle": "stylish-genuine-leather-large-body-bag",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A1554_1_ef495592-e3a6-4e83-8ffe-1f7f917d3092.jpg?v=1783603757"
-    },
-    {
-      "rank": 5,
-      "title": "『中綿ジャケット』(タクムARジャケット)~SMARTシリーズ",
-      "units": 20,
-      "handle": "takumu-ar-jacket",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/61_compressed_6eac1e7c-a216-4300-a845-736a26a929e3.jpg?v=1786503859"
     }
   ]
 }
