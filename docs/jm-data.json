@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-08T18:48:42+09:00",
+  "updatedAt": "2026-11-08T19:18:10+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 73359541,
-    "orders": 2547,
-    "aov": 28802
+    "sales": 73412341,
+    "orders": 2548,
+    "aov": 28812
   },
   "month": {
-    "salesTotal": 6024783,
-    "unitsTotal": 193,
-    "ordersTotal": 167,
+    "salesTotal": 6077583,
+    "unitsTotal": 194,
+    "ordersTotal": 168,
     "days": 8
   },
   "lastYear": {
@@ -51,7 +51,7 @@
       },
       {
         "date": "2026-11-08",
-        "sales": 654239
+        "sales": 707039
       }
     ],
     "points_lastyear": [
@@ -90,11 +90,11 @@
     ]
   },
   "daily": {
-    "todayUnits": 18,
+    "todayUnits": 19,
     "yesterdayUnits": 24,
-    "todayOrders": 14,
+    "todayOrders": 15,
     "yesterdayOrders": 23,
-    "todaySales": 654239,
+    "todaySales": 707039,
     "yesterdaySales": 760175
   },
   "top5": [
@@ -114,24 +114,24 @@
     },
     {
       "rank": 3,
+      "title": "『中綿ジャケット』(タクムARジャケット)~SMARTシリーズ",
+      "units": 20,
+      "handle": "takumu-ar-jacket",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/61_compressed_6eac1e7c-a216-4300-a845-736a26a929e3.jpg?v=1786503859"
+    },
+    {
+      "rank": 4,
       "title": "『本革ボディーバッグ』（姫路レザー）",
       "units": 20,
       "handle": "stylish-genuine-leather-large-body-bag",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A1554_1_ef495592-e3a6-4e83-8ffe-1f7f917d3092.jpg?v=1783603757"
     },
     {
-      "rank": 4,
+      "rank": 5,
       "title": "『\"ポーラテック\"フリース』~RELAXシリーズ",
       "units": 20,
       "handle": "enjoy-the-fluffy-comfort-of-fleece",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1686f80dde80eccaffe5c11e6472fa14_f0557de7-ead3-4f01-ac11-eefa417a164c.jpg?v=1776449445"
-    },
-    {
-      "rank": 5,
-      "title": "『中綿ジャケット』(タクムARジャケット)~SMARTシリーズ",
-      "units": 20,
-      "handle": "takumu-ar-jacket",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/61_compressed_6eac1e7c-a216-4300-a845-736a26a929e3.jpg?v=1786503859"
     }
   ]
 }
