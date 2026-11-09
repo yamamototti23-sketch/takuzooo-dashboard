@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-09T09:53:45+09:00",
+  "updatedAt": "2026-11-09T10:19:09+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 73839070,
-    "orders": 2562,
-    "aov": 28821
+    "sales": 73863105,
+    "orders": 2563,
+    "aov": 28819
   },
   "month": {
-    "salesTotal": 6504312,
-    "unitsTotal": 209,
-    "ordersTotal": 182,
+    "salesTotal": 6528347,
+    "unitsTotal": 210,
+    "ordersTotal": 183,
     "days": 9
   },
   "lastYear": {
@@ -55,7 +55,7 @@
       },
       {
         "date": "2026-11-09",
-        "sales": 192319
+        "sales": 216354
       }
     ],
     "points_lastyear": [
@@ -98,11 +98,11 @@
     ]
   },
   "daily": {
-    "todayUnits": 6,
+    "todayUnits": 7,
     "yesterdayUnits": 28,
-    "todayOrders": 5,
+    "todayOrders": 6,
     "yesterdayOrders": 24,
-    "todaySales": 192319,
+    "todaySales": 216354,
     "yesterdaySales": 941449
   },
   "top5": [
@@ -129,17 +129,17 @@
     },
     {
       "rank": 4,
-      "title": "『レイヤードニット』オーガニックコットン~SMARTシリーズ",
-      "units": 21,
-      "handle": "adult-knit",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1d16aa44369136913b1c5d7a3dc39035_5e247586-4c75-46af-8a48-a6f4e5e6de0e.jpg?v=1776451571"
-    },
-    {
-      "rank": 5,
       "title": "『本革ボディーバッグ』（姫路レザー）",
       "units": 21,
       "handle": "stylish-genuine-leather-large-body-bag",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A1554_1_ef495592-e3a6-4e83-8ffe-1f7f917d3092.jpg?v=1783603757"
+    },
+    {
+      "rank": 5,
+      "title": "『レイヤードニット』オーガニックコットン~SMARTシリーズ",
+      "units": 21,
+      "handle": "adult-knit",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1d16aa44369136913b1c5d7a3dc39035_5e247586-4c75-46af-8a48-a6f4e5e6de0e.jpg?v=1776451571"
     }
   ]
 }
