@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-09T21:24:31+09:00",
+  "updatedAt": "2026-11-09T21:48:23+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 74105089,
-    "orders": 2572,
-    "aov": 28812
+    "sales": 74143919,
+    "orders": 2573,
+    "aov": 28816
   },
   "month": {
-    "salesTotal": 6770331,
-    "unitsTotal": 220,
-    "ordersTotal": 192,
+    "salesTotal": 6809161,
+    "unitsTotal": 221,
+    "ordersTotal": 193,
     "days": 9
   },
   "lastYear": {
@@ -55,7 +55,7 @@
       },
       {
         "date": "2026-11-09",
-        "sales": 458338
+        "sales": 497168
       }
     ],
     "points_lastyear": [
@@ -98,11 +98,11 @@
     ]
   },
   "daily": {
-    "todayUnits": 17,
+    "todayUnits": 18,
     "yesterdayUnits": 28,
-    "todayOrders": 15,
+    "todayOrders": 16,
     "yesterdayOrders": 24,
-    "todaySales": 458338,
+    "todaySales": 497168,
     "yesterdaySales": 941449
   },
   "top5": [
@@ -122,17 +122,17 @@
     },
     {
       "rank": 3,
+      "title": "『レイヤードニット』オーガニックコットン~SMARTシリーズ",
+      "units": 22,
+      "handle": "adult-knit",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1d16aa44369136913b1c5d7a3dc39035_5e247586-4c75-46af-8a48-a6f4e5e6de0e.jpg?v=1776451571"
+    },
+    {
+      "rank": 4,
       "title": "いつかは、究極の黒パン~SMARTシリーズ",
       "units": 22,
       "handle": "the-ultimate-black-pants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/5d689a44fc3188e82bde8cab5678d9e1.jpg?v=1776451751"
-    },
-    {
-      "rank": 4,
-      "title": "『レイヤードニット』オーガニックコットン~SMARTシリーズ",
-      "units": 21,
-      "handle": "adult-knit",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1d16aa44369136913b1c5d7a3dc39035_5e247586-4c75-46af-8a48-a6f4e5e6de0e.jpg?v=1776451571"
     },
     {
       "rank": 5,
