@@ -1,22 +1,22 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-09T23:48:07+09:00",
+  "updatedAt": "2026-11-10T00:18:41+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 74259584,
-    "orders": 2576,
-    "aov": 28827
+    "sales": 74313924,
+    "orders": 2578,
+    "aov": 28826
   },
   "month": {
-    "salesTotal": 6924826,
-    "unitsTotal": 225,
-    "ordersTotal": 196,
-    "days": 9
+    "salesTotal": 6979166,
+    "unitsTotal": 227,
+    "ordersTotal": 198,
+    "days": 10
   },
   "lastYear": {
-    "salesTotal": 2605355,
-    "days": 9,
+    "salesTotal": 2945040,
+    "days": 10,
     "ordersTotalFullMonth": 480
   },
   "trend": {
@@ -55,7 +55,11 @@
       },
       {
         "date": "2026-11-09",
-        "sales": 612833
+        "sales": 638958
+      },
+      {
+        "date": "2026-11-10",
+        "sales": 28215
       }
     ],
     "points_lastyear": [
@@ -94,16 +98,20 @@
       {
         "date": "2025-11-09",
         "sales": 341550
+      },
+      {
+        "date": "2025-11-10",
+        "sales": 339685
       }
     ]
   },
   "daily": {
-    "todayUnits": 22,
-    "yesterdayUnits": 28,
-    "todayOrders": 19,
-    "yesterdayOrders": 24,
-    "todaySales": 612833,
-    "yesterdaySales": 941449
+    "todayUnits": 1,
+    "yesterdayUnits": 23,
+    "todayOrders": 1,
+    "yesterdayOrders": 20,
+    "todaySales": 28215,
+    "yesterdaySales": 638958
   },
   "top5": [
     {
@@ -123,7 +131,7 @@
     {
       "rank": 3,
       "title": "いつかは、究極の黒パン~SMARTシリーズ",
-      "units": 23,
+      "units": 24,
       "handle": "the-ultimate-black-pants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/5d689a44fc3188e82bde8cab5678d9e1.jpg?v=1776451751"
     },
