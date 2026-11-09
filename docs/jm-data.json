@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-09T12:48:29+09:00",
+  "updatedAt": "2026-11-09T13:21:32+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 73863105,
-    "orders": 2563,
-    "aov": 28819
+    "sales": 73897904,
+    "orders": 2564,
+    "aov": 28821
   },
   "month": {
-    "salesTotal": 6528347,
-    "unitsTotal": 210,
-    "ordersTotal": 183,
+    "salesTotal": 6563146,
+    "unitsTotal": 211,
+    "ordersTotal": 184,
     "days": 9
   },
   "lastYear": {
@@ -55,7 +55,7 @@
       },
       {
         "date": "2026-11-09",
-        "sales": 216354
+        "sales": 251153
       }
     ],
     "points_lastyear": [
@@ -98,11 +98,11 @@
     ]
   },
   "daily": {
-    "todayUnits": 7,
+    "todayUnits": 8,
     "yesterdayUnits": 28,
-    "todayOrders": 6,
+    "todayOrders": 7,
     "yesterdayOrders": 24,
-    "todaySales": 216354,
+    "todaySales": 251153,
     "yesterdaySales": 941449
   },
   "top5": [
@@ -115,17 +115,17 @@
     },
     {
       "rank": 2,
+      "title": "『\"ポーラテック\"フリース』~RELAXシリーズ",
+      "units": 23,
+      "handle": "enjoy-the-fluffy-comfort-of-fleece",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1686f80dde80eccaffe5c11e6472fa14_f0557de7-ead3-4f01-ac11-eefa417a164c.jpg?v=1776449445"
+    },
+    {
+      "rank": 3,
       "title": "いつかは、究極の黒パン~SMARTシリーズ",
       "units": 22,
       "handle": "the-ultimate-black-pants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/5d689a44fc3188e82bde8cab5678d9e1.jpg?v=1776451751"
-    },
-    {
-      "rank": 3,
-      "title": "『\"ポーラテック\"フリース』~RELAXシリーズ",
-      "units": 22,
-      "handle": "enjoy-the-fluffy-comfort-of-fleece",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1686f80dde80eccaffe5c11e6472fa14_f0557de7-ead3-4f01-ac11-eefa417a164c.jpg?v=1776449445"
     },
     {
       "rank": 4,
