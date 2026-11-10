@@ -1,22 +1,22 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-10T23:48:00+09:00",
+  "updatedAt": "2026-11-11T00:18:38+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 74423297,
-    "orders": 2588,
-    "aov": 28757
+    "sales": 74679707,
+    "orders": 2591,
+    "aov": 28823
   },
   "month": {
-    "salesTotal": 7088539,
-    "unitsTotal": 241,
-    "ordersTotal": 208,
-    "days": 10
+    "salesTotal": 7344949,
+    "unitsTotal": 247,
+    "ordersTotal": 211,
+    "days": 11
   },
   "lastYear": {
-    "salesTotal": 2945040,
-    "days": 10,
+    "salesTotal": 3067470,
+    "days": 11,
     "ordersTotalFullMonth": 480
   },
   "trend": {
@@ -59,7 +59,11 @@
       },
       {
         "date": "2026-11-10",
-        "sales": 445170
+        "sales": 589050
+      },
+      {
+        "date": "2026-11-11",
+        "sales": 112530
       }
     ],
     "points_lastyear": [
@@ -102,43 +106,47 @@
       {
         "date": "2025-11-10",
         "sales": 339685
+      },
+      {
+        "date": "2025-11-11",
+        "sales": 122430
       }
     ]
   },
   "daily": {
-    "todayUnits": 15,
-    "yesterdayUnits": 23,
-    "todayOrders": 11,
-    "yesterdayOrders": 20,
-    "todaySales": 445170,
-    "yesterdaySales": 331376
+    "todayUnits": 4,
+    "yesterdayUnits": 17,
+    "todayOrders": 2,
+    "yesterdayOrders": 12,
+    "todaySales": 112530,
+    "yesterdaySales": 589050
   },
   "top5": [
     {
       "rank": 1,
       "title": "『ネックレス』（Silver925）",
-      "units": 30,
+      "units": 31,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/e2006cc75c8a0ecfe3467ee75b508af8.jpg?v=1776451870"
     },
     {
       "rank": 2,
-      "title": "いつかは、究極の黒パン~SMARTシリーズ",
-      "units": 25,
-      "handle": "the-ultimate-black-pants",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/5d689a44fc3188e82bde8cab5678d9e1.jpg?v=1776451751"
-    },
-    {
-      "rank": 3,
       "title": "『\"ポーラテック\"フリース』~RELAXシリーズ",
       "units": 25,
       "handle": "enjoy-the-fluffy-comfort-of-fleece",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1686f80dde80eccaffe5c11e6472fa14_f0557de7-ead3-4f01-ac11-eefa417a164c.jpg?v=1776449445"
     },
     {
+      "rank": 3,
+      "title": "いつかは、究極の黒パン~SMARTシリーズ",
+      "units": 25,
+      "handle": "the-ultimate-black-pants",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/5d689a44fc3188e82bde8cab5678d9e1.jpg?v=1776451751"
+    },
+    {
       "rank": 4,
       "title": "『レイヤードニット』オーガニックコットン~SMARTシリーズ",
-      "units": 23,
+      "units": 24,
       "handle": "adult-knit",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1d16aa44369136913b1c5d7a3dc39035_5e247586-4c75-46af-8a48-a6f4e5e6de0e.jpg?v=1776451571"
     },
