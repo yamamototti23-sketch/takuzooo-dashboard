@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-11T07:17:57+09:00",
+  "updatedAt": "2026-11-11T07:48:21+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 74679707,
-    "orders": 2591,
-    "aov": 28823
+    "sales": 74728327,
+    "orders": 2592,
+    "aov": 28830
   },
   "month": {
-    "salesTotal": 7344949,
-    "unitsTotal": 247,
-    "ordersTotal": 211,
+    "salesTotal": 7393569,
+    "unitsTotal": 248,
+    "ordersTotal": 212,
     "days": 11
   },
   "lastYear": {
@@ -63,7 +63,7 @@
       },
       {
         "date": "2026-11-11",
-        "sales": 112530
+        "sales": 161150
       }
     ],
     "points_lastyear": [
@@ -114,11 +114,11 @@
     ]
   },
   "daily": {
-    "todayUnits": 4,
+    "todayUnits": 5,
     "yesterdayUnits": 17,
-    "todayOrders": 2,
+    "todayOrders": 3,
     "yesterdayOrders": 12,
-    "todaySales": 112530,
+    "todaySales": 161150,
     "yesterdaySales": 589050
   },
   "top5": [
@@ -152,10 +152,10 @@
     },
     {
       "rank": 5,
-      "title": "『本革ボディーバッグ』（姫路レザー）",
-      "units": 22,
-      "handle": "stylish-genuine-leather-large-body-bag",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A1554_1_ef495592-e3a6-4e83-8ffe-1f7f917d3092.jpg?v=1783603757"
+      "title": "『中綿ジャケット』(タクムARジャケット)~SMARTシリーズ",
+      "units": 23,
+      "handle": "takumu-ar-jacket",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/61_compressed_6eac1e7c-a216-4300-a845-736a26a929e3.jpg?v=1786503859"
     }
   ]
 }
