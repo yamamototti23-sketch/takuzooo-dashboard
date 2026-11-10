@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-10T15:48:24+09:00",
+  "updatedAt": "2026-11-10T16:18:38+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 74215067,
-    "orders": 2584,
-    "aov": 28721
+    "sales": 74286567,
+    "orders": 2585,
+    "aov": 28738
   },
   "month": {
-    "salesTotal": 6880309,
-    "unitsTotal": 234,
-    "ordersTotal": 204,
+    "salesTotal": 6951809,
+    "unitsTotal": 237,
+    "ordersTotal": 205,
     "days": 10
   },
   "lastYear": {
@@ -59,7 +59,7 @@
       },
       {
         "date": "2026-11-10",
-        "sales": 236940
+        "sales": 308440
       }
     ],
     "points_lastyear": [
@@ -106,11 +106,11 @@
     ]
   },
   "daily": {
-    "todayUnits": 8,
+    "todayUnits": 11,
     "yesterdayUnits": 23,
-    "todayOrders": 7,
+    "todayOrders": 8,
     "yesterdayOrders": 20,
-    "todaySales": 236940,
+    "todaySales": 308440,
     "yesterdaySales": 331376
   },
   "top5": [
@@ -144,10 +144,10 @@
     },
     {
       "rank": 5,
-      "title": "『中綿ジャケット』(タクムARジャケット)~SMARTシリーズ",
+      "title": "『レイヤードニット』オーガニックコットン~SMARTシリーズ",
       "units": 22,
-      "handle": "takumu-ar-jacket",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/61_compressed_6eac1e7c-a216-4300-a845-736a26a929e3.jpg?v=1786503859"
+      "handle": "adult-knit",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1d16aa44369136913b1c5d7a3dc39035_5e247586-4c75-46af-8a48-a6f4e5e6de0e.jpg?v=1776451571"
     }
   ]
 }
