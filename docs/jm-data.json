@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-12T16:19:22+09:00",
+  "updatedAt": "2026-11-12T16:48:05+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 75340517,
-    "orders": 2611,
-    "aov": 28855
+    "sales": 75389137,
+    "orders": 2612,
+    "aov": 28863
   },
   "month": {
-    "salesTotal": 8005759,
-    "unitsTotal": 268,
-    "ordersTotal": 231,
+    "salesTotal": 8054379,
+    "unitsTotal": 269,
+    "ordersTotal": 232,
     "days": 12
   },
   "lastYear": {
@@ -67,7 +67,7 @@
       },
       {
         "date": "2026-11-12",
-        "sales": 417637
+        "sales": 466257
       }
     ],
     "points_lastyear": [
@@ -122,11 +122,11 @@
     ]
   },
   "daily": {
-    "todayUnits": 10,
+    "todayUnits": 11,
     "yesterdayUnits": 15,
-    "todayOrders": 9,
+    "todayOrders": 10,
     "yesterdayOrders": 13,
-    "todaySales": 417637,
+    "todaySales": 466257,
     "yesterdaySales": 399593
   },
   "top5": [
@@ -140,7 +140,7 @@
     {
       "rank": 2,
       "title": "『中綿ジャケット』(タクムARジャケット)~SMARTシリーズ",
-      "units": 27,
+      "units": 28,
       "handle": "takumu-ar-jacket",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/61_compressed_6eac1e7c-a216-4300-a845-736a26a929e3.jpg?v=1786503859"
     },
