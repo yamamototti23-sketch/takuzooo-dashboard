@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-12T12:20:53+09:00",
+  "updatedAt": "2026-11-12T12:48:09+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 75210508,
-    "orders": 2607,
-    "aov": 28849
+    "sales": 75259128,
+    "orders": 2608,
+    "aov": 28857
   },
   "month": {
-    "salesTotal": 7875750,
-    "unitsTotal": 264,
-    "ordersTotal": 227,
+    "salesTotal": 7924370,
+    "unitsTotal": 265,
+    "ordersTotal": 228,
     "days": 12
   },
   "lastYear": {
@@ -67,7 +67,7 @@
       },
       {
         "date": "2026-11-12",
-        "sales": 287628
+        "sales": 336248
       }
     ],
     "points_lastyear": [
@@ -122,11 +122,11 @@
     ]
   },
   "daily": {
-    "todayUnits": 6,
+    "todayUnits": 7,
     "yesterdayUnits": 15,
-    "todayOrders": 5,
+    "todayOrders": 6,
     "yesterdayOrders": 13,
-    "todaySales": 287628,
+    "todaySales": 336248,
     "yesterdaySales": 399593
   },
   "top5": [
@@ -139,24 +139,24 @@
     },
     {
       "rank": 2,
+      "title": "『中綿ジャケット』(タクムARジャケット)~SMARTシリーズ",
+      "units": 26,
+      "handle": "takumu-ar-jacket",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/61_compressed_6eac1e7c-a216-4300-a845-736a26a929e3.jpg?v=1786503859"
+    },
+    {
+      "rank": 3,
       "title": "『\"ポーラテック\"フリース』~RELAXシリーズ",
       "units": 26,
       "handle": "enjoy-the-fluffy-comfort-of-fleece",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1686f80dde80eccaffe5c11e6472fa14_f0557de7-ead3-4f01-ac11-eefa417a164c.jpg?v=1776449445"
     },
     {
-      "rank": 3,
+      "rank": 4,
       "title": "いつかは、究極の黒パン~SMARTシリーズ",
       "units": 26,
       "handle": "the-ultimate-black-pants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/5d689a44fc3188e82bde8cab5678d9e1.jpg?v=1776451751"
-    },
-    {
-      "rank": 4,
-      "title": "『中綿ジャケット』(タクムARジャケット)~SMARTシリーズ",
-      "units": 25,
-      "handle": "takumu-ar-jacket",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/61_compressed_6eac1e7c-a216-4300-a845-736a26a929e3.jpg?v=1786503859"
     },
     {
       "rank": 5,
