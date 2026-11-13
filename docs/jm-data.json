@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-14T07:48:21+09:00",
+  "updatedAt": "2026-11-14T08:18:29+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 76527011,
-    "orders": 2643,
-    "aov": 28955
+    "sales": 76567293,
+    "orders": 2645,
+    "aov": 28948
   },
   "month": {
-    "salesTotal": 9192253,
-    "unitsTotal": 301,
-    "ordersTotal": 263,
+    "salesTotal": 9232535,
+    "unitsTotal": 303,
+    "ordersTotal": 265,
     "days": 14
   },
   "lastYear": {
@@ -75,7 +75,7 @@
       },
       {
         "date": "2026-11-14",
-        "sales": 36889
+        "sales": 77171
       }
     ],
     "points_lastyear": [
@@ -138,11 +138,11 @@
     ]
   },
   "daily": {
-    "todayUnits": 1,
+    "todayUnits": 3,
     "yesterdayUnits": 24,
-    "todayOrders": 1,
+    "todayOrders": 3,
     "yesterdayOrders": 23,
-    "todaySales": 36889,
+    "todaySales": 77171,
     "yesterdaySales": 717030
   },
   "top5": [
@@ -170,16 +170,16 @@
     {
       "rank": 4,
       "title": "「防水イージーパンツ」~RELAXシリーズ",
-      "units": 27,
+      "units": 28,
       "handle": "waterproof-easy-pants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1cf702eef58fa10dff4f56a6541ae1f9.jpg?v=1776451570"
     },
     {
       "rank": 5,
-      "title": "いつかは、究極の黒パン~SMARTシリーズ",
-      "units": 26,
-      "handle": "the-ultimate-black-pants",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/5d689a44fc3188e82bde8cab5678d9e1.jpg?v=1776451751"
+      "title": "『本革ボディーバッグ』（姫路レザー）",
+      "units": 27,
+      "handle": "stylish-genuine-leather-large-body-bag",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A1554_1_ef495592-e3a6-4e83-8ffe-1f7f917d3092.jpg?v=1783603757"
     }
   ]
 }
