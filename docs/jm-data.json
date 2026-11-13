@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-13T20:48:09+09:00",
+  "updatedAt": "2026-11-13T21:23:59+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 76193177,
-    "orders": 2633,
-    "aov": 28938
+    "sales": 76255107,
+    "orders": 2635,
+    "aov": 28939
   },
   "month": {
-    "salesTotal": 8858419,
-    "unitsTotal": 290,
-    "ordersTotal": 253,
+    "salesTotal": 8920349,
+    "unitsTotal": 292,
+    "ordersTotal": 255,
     "days": 13
   },
   "lastYear": {
@@ -71,7 +71,7 @@
       },
       {
         "date": "2026-11-13",
-        "sales": 420085
+        "sales": 482015
       }
     ],
     "points_lastyear": [
@@ -130,11 +130,11 @@
     ]
   },
   "daily": {
-    "todayUnits": 14,
+    "todayUnits": 16,
     "yesterdayUnits": 18,
-    "todayOrders": 14,
+    "todayOrders": 16,
     "yesterdayOrders": 17,
-    "todaySales": 420085,
+    "todaySales": 482015,
     "yesterdaySales": 850212
   },
   "top5": [
@@ -147,24 +147,24 @@
     },
     {
       "rank": 2,
+      "title": "『\"ポーラテック\"フリース』~RELAXシリーズ",
+      "units": 30,
+      "handle": "enjoy-the-fluffy-comfort-of-fleece",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1686f80dde80eccaffe5c11e6472fa14_f0557de7-ead3-4f01-ac11-eefa417a164c.jpg?v=1776449445"
+    },
+    {
+      "rank": 3,
       "title": "『中綿ジャケット』(タクムARジャケット)~SMARTシリーズ",
       "units": 30,
       "handle": "takumu-ar-jacket",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/61_compressed_6eac1e7c-a216-4300-a845-736a26a929e3.jpg?v=1786503859"
     },
     {
-      "rank": 3,
-      "title": "『\"ポーラテック\"フリース』~RELAXシリーズ",
-      "units": 29,
-      "handle": "enjoy-the-fluffy-comfort-of-fleece",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1686f80dde80eccaffe5c11e6472fa14_f0557de7-ead3-4f01-ac11-eefa417a164c.jpg?v=1776449445"
-    },
-    {
       "rank": 4,
-      "title": "『本革ボディーバッグ』（姫路レザー）",
+      "title": "「防水イージーパンツ」~RELAXシリーズ",
       "units": 26,
-      "handle": "stylish-genuine-leather-large-body-bag",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A1554_1_ef495592-e3a6-4e83-8ffe-1f7f917d3092.jpg?v=1783603757"
+      "handle": "waterproof-easy-pants",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1cf702eef58fa10dff4f56a6541ae1f9.jpg?v=1776451570"
     },
     {
       "rank": 5,
