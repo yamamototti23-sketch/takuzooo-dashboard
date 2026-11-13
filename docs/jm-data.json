@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-13T14:18:29+09:00",
+  "updatedAt": "2026-11-13T14:48:24+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 75873962,
-    "orders": 2623,
-    "aov": 28926
+    "sales": 75911692,
+    "orders": 2625,
+    "aov": 28919
   },
   "month": {
-    "salesTotal": 8539204,
-    "unitsTotal": 280,
-    "ordersTotal": 243,
+    "salesTotal": 8576934,
+    "unitsTotal": 282,
+    "ordersTotal": 245,
     "days": 13
   },
   "lastYear": {
@@ -71,7 +71,7 @@
       },
       {
         "date": "2026-11-13",
-        "sales": 100870
+        "sales": 138600
       }
     ],
     "points_lastyear": [
@@ -130,11 +130,11 @@
     ]
   },
   "daily": {
-    "todayUnits": 4,
+    "todayUnits": 6,
     "yesterdayUnits": 18,
-    "todayOrders": 4,
+    "todayOrders": 6,
     "yesterdayOrders": 17,
-    "todaySales": 100870,
+    "todaySales": 138600,
     "yesterdaySales": 850212
   },
   "top5": [
@@ -161,17 +161,17 @@
     },
     {
       "rank": 4,
+      "title": "『本革ボディーバッグ』（姫路レザー）",
+      "units": 26,
+      "handle": "stylish-genuine-leather-large-body-bag",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A1554_1_ef495592-e3a6-4e83-8ffe-1f7f917d3092.jpg?v=1783603757"
+    },
+    {
+      "rank": 5,
       "title": "いつかは、究極の黒パン~SMARTシリーズ",
       "units": 26,
       "handle": "the-ultimate-black-pants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/5d689a44fc3188e82bde8cab5678d9e1.jpg?v=1776451751"
-    },
-    {
-      "rank": 5,
-      "title": "『本革ボディーバッグ』（姫路レザー）",
-      "units": 25,
-      "handle": "stylish-genuine-leather-large-body-bag",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A1554_1_ef495592-e3a6-4e83-8ffe-1f7f917d3092.jpg?v=1783603757"
     }
   ]
 }
