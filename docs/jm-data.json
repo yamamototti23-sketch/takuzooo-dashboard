@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-13T20:18:18+09:00",
+  "updatedAt": "2026-11-13T20:48:09+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 76138908,
-    "orders": 2631,
-    "aov": 28939
+    "sales": 76193177,
+    "orders": 2633,
+    "aov": 28938
   },
   "month": {
-    "salesTotal": 8804150,
-    "unitsTotal": 288,
-    "ordersTotal": 251,
+    "salesTotal": 8858419,
+    "unitsTotal": 290,
+    "ordersTotal": 253,
     "days": 13
   },
   "lastYear": {
@@ -71,7 +71,7 @@
       },
       {
         "date": "2026-11-13",
-        "sales": 365816
+        "sales": 420085
       }
     ],
     "points_lastyear": [
@@ -130,18 +130,18 @@
     ]
   },
   "daily": {
-    "todayUnits": 12,
+    "todayUnits": 14,
     "yesterdayUnits": 18,
-    "todayOrders": 12,
+    "todayOrders": 14,
     "yesterdayOrders": 17,
-    "todaySales": 365816,
+    "todaySales": 420085,
     "yesterdaySales": 850212
   },
   "top5": [
     {
       "rank": 1,
       "title": "『ネックレス』（Silver925）",
-      "units": 37,
+      "units": 38,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/e2006cc75c8a0ecfe3467ee75b508af8.jpg?v=1776451870"
     },
@@ -155,7 +155,7 @@
     {
       "rank": 3,
       "title": "『\"ポーラテック\"フリース』~RELAXシリーズ",
-      "units": 28,
+      "units": 29,
       "handle": "enjoy-the-fluffy-comfort-of-fleece",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1686f80dde80eccaffe5c11e6472fa14_f0557de7-ead3-4f01-ac11-eefa417a164c.jpg?v=1776449445"
     },
