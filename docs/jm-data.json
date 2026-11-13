@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-13T21:48:09+09:00",
+  "updatedAt": "2026-11-13T22:18:38+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 76324737,
-    "orders": 2637,
-    "aov": 28944
+    "sales": 76409987,
+    "orders": 2639,
+    "aov": 28954
   },
   "month": {
-    "salesTotal": 8989979,
-    "unitsTotal": 295,
-    "ordersTotal": 257,
+    "salesTotal": 9075229,
+    "unitsTotal": 297,
+    "ordersTotal": 259,
     "days": 13
   },
   "lastYear": {
@@ -71,7 +71,7 @@
       },
       {
         "date": "2026-11-13",
-        "sales": 551645
+        "sales": 636895
       }
     ],
     "points_lastyear": [
@@ -130,11 +130,11 @@
     ]
   },
   "daily": {
-    "todayUnits": 19,
+    "todayUnits": 21,
     "yesterdayUnits": 18,
-    "todayOrders": 18,
+    "todayOrders": 20,
     "yesterdayOrders": 17,
-    "todaySales": 551645,
+    "todaySales": 636895,
     "yesterdaySales": 850212
   },
   "top5": [
@@ -148,14 +148,14 @@
     {
       "rank": 2,
       "title": "『\"ポーラテック\"フリース』~RELAXシリーズ",
-      "units": 31,
+      "units": 32,
       "handle": "enjoy-the-fluffy-comfort-of-fleece",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1686f80dde80eccaffe5c11e6472fa14_f0557de7-ead3-4f01-ac11-eefa417a164c.jpg?v=1776449445"
     },
     {
       "rank": 3,
       "title": "『中綿ジャケット』(タクムARジャケット)~SMARTシリーズ",
-      "units": 30,
+      "units": 31,
       "handle": "takumu-ar-jacket",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/61_compressed_6eac1e7c-a216-4300-a845-736a26a929e3.jpg?v=1786503859"
     },
