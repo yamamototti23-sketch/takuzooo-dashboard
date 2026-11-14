@@ -28,11 +28,11 @@
 </div>
 <script>
   /* ====== 設定（ここだけ触ればOK） ====== */
-  const INTERVAL    = 7000;       // 切替間隔（ミリ秒）= 7秒
+  const DEFAULT_INTERVAL = 7000;  // 切替間隔デフォルト（ミリ秒）= 7秒
   const LOCK_PERIOD = '1ヶ月';     // YouTube側を固定する期間。'1週間''2週間''1ヶ月''3ヶ月''6ヶ月''1年''全期間'
   const SLIDES = [
-    { name:'YouTube',          url:'https://yamamototti23-sketch.github.io/takuzooo-dashboard/', lock:true  },
-    { name:'Japan Made屋',      url:'./jm-dashboard.html',                                        lock:false },
+    { name:'YouTube',          url:'https://yamamototti23-sketch.github.io/takuzooo-dashboard/', lock:true,  duration:10000 },
+    { name:'Japan Made屋',      url:'./jm-dashboard.html',                                        lock:false, duration:10000 },
     { name:'年計 (移動年計)',    url:'./jm-yearly.html',                                            lock:false },
     { name:'月間売上 3年比較',   url:'./jm-3yr-amount.html',                                        lock:false },
     { name:'月間販売個数 3年比較', url:'./jm-3yr-count.html',                                         lock:false },
@@ -84,7 +84,11 @@
 
   load(0); load(1); load(2); load(3); load(4);
   label.textContent=SLIDES[0].name;
-  setInterval(()=>show((cur+1)%SLIDES.length), INTERVAL);
+  function scheduleNext(){
+    const ms = SLIDES[cur].duration || DEFAULT_INTERVAL;
+    setTimeout(()=>{ show((cur+1)%SLIDES.length); scheduleNext(); }, ms);
+  }
+  scheduleNext();
 </script>
 </body>
 </html>
