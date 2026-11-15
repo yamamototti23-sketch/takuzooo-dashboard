@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-15T18:48:13+09:00",
+  "updatedAt": "2026-11-15T19:18:28+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 77379125,
-    "orders": 2676,
-    "aov": 28916
+    "sales": 77406625,
+    "orders": 2677,
+    "aov": 28915
   },
   "month": {
-    "salesTotal": 10044367,
-    "unitsTotal": 335,
-    "ordersTotal": 296,
+    "salesTotal": 10071867,
+    "unitsTotal": 336,
+    "ordersTotal": 297,
     "days": 15
   },
   "lastYear": {
@@ -79,7 +79,7 @@
       },
       {
         "date": "2026-11-15",
-        "sales": 554261
+        "sales": 581761
       }
     ],
     "points_lastyear": [
@@ -146,11 +146,11 @@
     ]
   },
   "daily": {
-    "todayUnits": 18,
+    "todayUnits": 19,
     "yesterdayUnits": 17,
-    "todayOrders": 18,
+    "todayOrders": 19,
     "yesterdayOrders": 16,
-    "todaySales": 554261,
+    "todaySales": 581761,
     "yesterdaySales": 334742
   },
   "top5": [
@@ -170,17 +170,17 @@
     },
     {
       "rank": 3,
-      "title": "『本革ボディーバッグ』（姫路レザー）",
-      "units": 32,
-      "handle": "stylish-genuine-leather-large-body-bag",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A1554_1_ef495592-e3a6-4e83-8ffe-1f7f917d3092.jpg?v=1783603757"
-    },
-    {
-      "rank": 4,
       "title": "「防水イージーパンツ」~RELAXシリーズ",
       "units": 32,
       "handle": "waterproof-easy-pants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1cf702eef58fa10dff4f56a6541ae1f9.jpg?v=1776451570"
+    },
+    {
+      "rank": 4,
+      "title": "『本革ボディーバッグ』（姫路レザー）",
+      "units": 32,
+      "handle": "stylish-genuine-leather-large-body-bag",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A1554_1_ef495592-e3a6-4e83-8ffe-1f7f917d3092.jpg?v=1783603757"
     },
     {
       "rank": 5,
