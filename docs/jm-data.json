@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-15T22:48:18+09:00",
+  "updatedAt": "2026-11-15T23:18:16+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 77443255,
-    "orders": 2678,
-    "aov": 28918
+    "sales": 77517819,
+    "orders": 2680,
+    "aov": 28925
   },
   "month": {
-    "salesTotal": 10108497,
-    "unitsTotal": 337,
-    "ordersTotal": 298,
+    "salesTotal": 10183061,
+    "unitsTotal": 340,
+    "ordersTotal": 300,
     "days": 15
   },
   "lastYear": {
@@ -79,7 +79,7 @@
       },
       {
         "date": "2026-11-15",
-        "sales": 618391
+        "sales": 692955
       }
     ],
     "points_lastyear": [
@@ -146,11 +146,11 @@
     ]
   },
   "daily": {
-    "todayUnits": 20,
+    "todayUnits": 23,
     "yesterdayUnits": 17,
-    "todayOrders": 20,
+    "todayOrders": 22,
     "yesterdayOrders": 16,
-    "todaySales": 618391,
+    "todaySales": 692955,
     "yesterdaySales": 334742
   },
   "top5": [
@@ -164,21 +164,21 @@
     {
       "rank": 2,
       "title": "『\"ポーラテック\"フリース』~RELAXシリーズ",
-      "units": 35,
+      "units": 36,
       "handle": "enjoy-the-fluffy-comfort-of-fleece",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1686f80dde80eccaffe5c11e6472fa14_f0557de7-ead3-4f01-ac11-eefa417a164c.jpg?v=1776449445"
     },
     {
       "rank": 3,
       "title": "「防水イージーパンツ」~RELAXシリーズ",
-      "units": 32,
+      "units": 33,
       "handle": "waterproof-easy-pants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1cf702eef58fa10dff4f56a6541ae1f9.jpg?v=1776451570"
     },
     {
       "rank": 4,
       "title": "『本革ボディーバッグ』（姫路レザー）",
-      "units": 32,
+      "units": 33,
       "handle": "stylish-genuine-leather-large-body-bag",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A1554_1_ef495592-e3a6-4e83-8ffe-1f7f917d3092.jpg?v=1783603757"
     },
