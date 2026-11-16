@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-16T19:53:56+09:00",
+  "updatedAt": "2026-11-16T20:22:47+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 78454987,
-    "orders": 2700,
-    "aov": 29057
+    "sales": 78573897,
+    "orders": 2703,
+    "aov": 29069
   },
   "month": {
-    "salesTotal": 11120229,
-    "unitsTotal": 365,
-    "ordersTotal": 320,
+    "salesTotal": 11239139,
+    "unitsTotal": 369,
+    "ordersTotal": 323,
     "days": 16
   },
   "lastYear": {
@@ -83,7 +83,7 @@
       },
       {
         "date": "2026-11-16",
-        "sales": 937168
+        "sales": 1056078
       }
     ],
     "points_lastyear": [
@@ -154,39 +154,39 @@
     ]
   },
   "daily": {
-    "todayUnits": 25,
+    "todayUnits": 29,
     "yesterdayUnits": 23,
-    "todayOrders": 20,
+    "todayOrders": 23,
     "yesterdayOrders": 22,
-    "todaySales": 937168,
+    "todaySales": 1056078,
     "yesterdaySales": 692955
   },
   "top5": [
     {
       "rank": 1,
       "title": "『ネックレス』（Silver925）",
-      "units": 52,
+      "units": 53,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/e2006cc75c8a0ecfe3467ee75b508af8.jpg?v=1776451870"
     },
     {
       "rank": 2,
       "title": "『\"ポーラテック\"フリース』~RELAXシリーズ",
-      "units": 37,
+      "units": 38,
       "handle": "enjoy-the-fluffy-comfort-of-fleece",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1686f80dde80eccaffe5c11e6472fa14_f0557de7-ead3-4f01-ac11-eefa417a164c.jpg?v=1776449445"
     },
     {
       "rank": 3,
       "title": "『中綿ジャケット』(タクムARジャケット)~SMARTシリーズ",
-      "units": 34,
+      "units": 35,
       "handle": "takumu-ar-jacket",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/61_compressed_6eac1e7c-a216-4300-a845-736a26a929e3.jpg?v=1786503859"
     },
     {
       "rank": 4,
       "title": "『本革ボディーバッグ』（姫路レザー）",
-      "units": 34,
+      "units": 35,
       "handle": "stylish-genuine-leather-large-body-bag",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A1554_1_ef495592-e3a6-4e83-8ffe-1f7f917d3092.jpg?v=1783603757"
     },
