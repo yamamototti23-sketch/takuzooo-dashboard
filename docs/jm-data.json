@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-17T21:24:09+09:00",
+  "updatedAt": "2026-11-17T21:48:30+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 78914285,
-    "orders": 2721,
-    "aov": 29002
+    "sales": 78939585,
+    "orders": 2722,
+    "aov": 29001
   },
   "month": {
-    "salesTotal": 11579527,
-    "unitsTotal": 389,
-    "ordersTotal": 341,
+    "salesTotal": 11604827,
+    "unitsTotal": 390,
+    "ordersTotal": 342,
     "days": 17
   },
   "lastYear": {
@@ -87,7 +87,7 @@
       },
       {
         "date": "2026-11-17",
-        "sales": 642378
+        "sales": 667678
       }
     ],
     "points_lastyear": [
@@ -162,11 +162,11 @@
     ]
   },
   "daily": {
-    "todayUnits": 16,
+    "todayUnits": 17,
     "yesterdayUnits": 33,
-    "todayOrders": 15,
+    "todayOrders": 16,
     "yesterdayOrders": 26,
-    "todaySales": 642378,
+    "todaySales": 667678,
     "yesterdaySales": 754088
   },
   "top5": [
@@ -186,17 +186,17 @@
     },
     {
       "rank": 3,
+      "title": "「防水イージーパンツ」~RELAXシリーズ",
+      "units": 37,
+      "handle": "waterproof-easy-pants",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1cf702eef58fa10dff4f56a6541ae1f9.jpg?v=1776451570"
+    },
+    {
+      "rank": 4,
       "title": "『中綿ジャケット』(タクムARジャケット)~SMARTシリーズ",
       "units": 36,
       "handle": "takumu-ar-jacket",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/61_compressed_6eac1e7c-a216-4300-a845-736a26a929e3.jpg?v=1786503859"
-    },
-    {
-      "rank": 4,
-      "title": "「防水イージーパンツ」~RELAXシリーズ",
-      "units": 36,
-      "handle": "waterproof-easy-pants",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1cf702eef58fa10dff4f56a6541ae1f9.jpg?v=1776451570"
     },
     {
       "rank": 5,
