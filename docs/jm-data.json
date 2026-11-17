@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-17T08:48:07+09:00",
+  "updatedAt": "2026-11-17T09:38:25+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 78744727,
-    "orders": 2709,
-    "aov": 29068
+    "sales": 78758697,
+    "orders": 2710,
+    "aov": 29062
   },
   "month": {
-    "salesTotal": 11409969,
-    "unitsTotal": 376,
-    "ordersTotal": 329,
+    "salesTotal": 11423939,
+    "unitsTotal": 378,
+    "ordersTotal": 330,
     "days": 17
   },
   "lastYear": {
@@ -83,11 +83,11 @@
       },
       {
         "date": "2026-11-16",
-        "sales": 1146608
+        "sales": 1108988
       },
       {
         "date": "2026-11-17",
-        "sales": 80300
+        "sales": 131890
       }
     ],
     "points_lastyear": [
@@ -162,12 +162,12 @@
     ]
   },
   "daily": {
-    "todayUnits": 3,
+    "todayUnits": 5,
     "yesterdayUnits": 33,
-    "todayOrders": 3,
+    "todayOrders": 4,
     "yesterdayOrders": 26,
-    "todaySales": 80300,
-    "yesterdaySales": 1146608
+    "todaySales": 131890,
+    "yesterdaySales": 1108988
   },
   "top5": [
     {
@@ -180,23 +180,23 @@
     {
       "rank": 2,
       "title": "『\"ポーラテック\"フリース』~RELAXシリーズ",
-      "units": 39,
+      "units": 40,
       "handle": "enjoy-the-fluffy-comfort-of-fleece",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1686f80dde80eccaffe5c11e6472fa14_f0557de7-ead3-4f01-ac11-eefa417a164c.jpg?v=1776449445"
     },
     {
       "rank": 3,
+      "title": "『本革ボディーバッグ』（姫路レザー）",
+      "units": 36,
+      "handle": "stylish-genuine-leather-large-body-bag",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A1554_1_ef495592-e3a6-4e83-8ffe-1f7f917d3092.jpg?v=1783603757"
+    },
+    {
+      "rank": 4,
       "title": "『中綿ジャケット』(タクムARジャケット)~SMARTシリーズ",
       "units": 35,
       "handle": "takumu-ar-jacket",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/61_compressed_6eac1e7c-a216-4300-a845-736a26a929e3.jpg?v=1786503859"
-    },
-    {
-      "rank": 4,
-      "title": "『本革ボディーバッグ』（姫路レザー）",
-      "units": 35,
-      "handle": "stylish-genuine-leather-large-body-bag",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A1554_1_ef495592-e3a6-4e83-8ffe-1f7f917d3092.jpg?v=1783603757"
     },
     {
       "rank": 5,
