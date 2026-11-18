@@ -1,22 +1,22 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-18T23:20:59+09:00",
+  "updatedAt": "2026-11-19T00:20:19+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 79697501,
-    "orders": 2745,
-    "aov": 29034
+    "sales": 79902327,
+    "orders": 2748,
+    "aov": 29077
   },
   "month": {
-    "salesTotal": 12362743,
-    "unitsTotal": 414,
-    "ordersTotal": 365,
-    "days": 18
+    "salesTotal": 12567569,
+    "unitsTotal": 420,
+    "ordersTotal": 368,
+    "days": 19
   },
   "lastYear": {
-    "salesTotal": 4792055,
-    "days": 18,
+    "salesTotal": 5006445,
+    "days": 19,
     "ordersTotalFullMonth": 480
   },
   "trend": {
@@ -91,7 +91,11 @@
       },
       {
         "date": "2026-11-18",
-        "sales": 709862
+        "sales": 914688
+      },
+      {
+        "date": "2026-11-19",
+        "sales": 0
       }
     ],
     "points_lastyear": [
@@ -166,22 +170,26 @@
       {
         "date": "2025-11-18",
         "sales": 391715
+      },
+      {
+        "date": "2025-11-19",
+        "sales": 214390
       }
     ]
   },
   "daily": {
-    "todayUnits": 21,
-    "yesterdayUnits": 20,
-    "todayOrders": 21,
-    "yesterdayOrders": 18,
-    "todaySales": 709862,
-    "yesterdaySales": 715732
+    "todayUnits": 0,
+    "yesterdayUnits": 27,
+    "todayOrders": 0,
+    "yesterdayOrders": 24,
+    "todaySales": 0,
+    "yesterdaySales": 914688
   },
   "top5": [
     {
       "rank": 1,
       "title": "『ネックレス』（Silver925）",
-      "units": 56,
+      "units": 57,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/e2006cc75c8a0ecfe3467ee75b508af8.jpg?v=1776451870"
     },
@@ -194,17 +202,17 @@
     },
     {
       "rank": 3,
-      "title": "『本革ボディーバッグ』（姫路レザー）",
-      "units": 40,
-      "handle": "stylish-genuine-leather-large-body-bag",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A1554_1_ef495592-e3a6-4e83-8ffe-1f7f917d3092.jpg?v=1783603757"
-    },
-    {
-      "rank": 4,
       "title": "「防水イージーパンツ」~RELAXシリーズ",
       "units": 40,
       "handle": "waterproof-easy-pants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1cf702eef58fa10dff4f56a6541ae1f9.jpg?v=1776451570"
+    },
+    {
+      "rank": 4,
+      "title": "『本革ボディーバッグ』（姫路レザー）",
+      "units": 40,
+      "handle": "stylish-genuine-leather-large-body-bag",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A1554_1_ef495592-e3a6-4e83-8ffe-1f7f917d3092.jpg?v=1783603757"
     },
     {
       "rank": 5,
