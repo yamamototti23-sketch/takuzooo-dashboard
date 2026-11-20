@@ -8,8 +8,15 @@ consecutive_failure_helper.py
 - 時間ベース判定は禁止 (回数ベース一択)
 - 初通知後は 30分 cool-down 継続適用
 
+通知先送り (絶対恒久・2026-09-18 たくぞう明示追加・§ 通知は最低限 実装レベル):
+- N >= 2 スキル: N 到達時点は pending_notify=True で silent・N+1 到達 (未復旧継続) で初通知
+- N == 1 スキル (発火1回 daily/weekly/monthly): 現行通り 1回失敗で即通知 (検知遅延回避)
+- pending 段階での success は全 silent (無駄通知ゼロ化)
+- 一過性 N 回失敗+自動復旧パターンを構造的に silent 化
+
 参照:
 - CLAUDE.md § 常駐スキル通知は「連続失敗 N 回」で初発火・個別 run 失敗は silent (2026-09-05)
+- CLAUDE.md § 通知は最低限 (2026-09-16) / § 通知設計の第一原則 (2026-09-14)
 - memory feedback_notification_essence_final_failure_only.md
 - vault philosophy_notification_final_failure_only_20260905.md
 
@@ -82,7 +89,7 @@ def _save_state(state_dir: Path, state: dict) -> None:
 
 def _get_entry(state: dict, skill_name: str, stage: str) -> dict:
     """state から skill/stage エントリを取得 (なければ初期化)"""
-    return state.setdefault(skill_name, {}).setdefault(stage, {
+    entry = state.setdefault(skill_name, {}).setdefault(stage, {
         "consecutive_count": 0,
         "first_failure_at": None,
         "last_failure_at": None,
@@ -92,7 +99,13 @@ def _get_entry(state: dict, skill_name: str, stage: str) -> dict:
         "notify_at": None,
         "cooldown_until": None,
         "recovered_at": None,
+        "pending_notify": False,
+        "pending_notify_at": None,
     })
+    # 既存 state に pending_notify が無い場合は後方互換で追加
+    entry.setdefault("pending_notify", False)
+    entry.setdefault("pending_notify_at", None)
+    return entry
 
 
 def record_failure(
@@ -128,24 +141,46 @@ def record_failure(
         should_notify = False
         reason = f"連続失敗 {count}/{threshold_N} (閾値未達・silent)"
     elif count == threshold_N:
-        should_notify = True
-        reason = f"連続失敗 {count}/{threshold_N} 到達・初通知"
-        entry["notified"] = True
-        entry["notify_at"] = now
-        cd_until = _parse_iso(now) + datetime.timedelta(minutes=COOLDOWN_MINUTES)
-        entry["cooldown_until"] = cd_until.isoformat()
-    else:
-        cooldown_until = entry.get("cooldown_until")
-        now_dt = _parse_iso(now)
-        if cooldown_until and now_dt < _parse_iso(cooldown_until):
-            should_notify = False
-            reason = f"連続失敗 {count}/{threshold_N} 継続・cool-down中 (次回可 {cooldown_until})"
-        else:
+        # 通知先送りロジック (2026-09-18):
+        # - N == 1 スキル (発火1回) は検知遅延回避のため現行通り即通知
+        # - N >= 2 スキル (高頻度) は pending_notify=True で silent・次 run 未復旧で昇格通知
+        if threshold_N == 1:
             should_notify = True
-            reason = f"連続失敗 {count}/{threshold_N} 継続・cool-down 超過で追加通知"
+            reason = f"連続失敗 {count}/{threshold_N} 到達・初通知 (N=1 発火1回スキル)"
+            entry["notified"] = True
             entry["notify_at"] = now
+            cd_until = _parse_iso(now) + datetime.timedelta(minutes=COOLDOWN_MINUTES)
+            entry["cooldown_until"] = cd_until.isoformat()
+        else:
+            should_notify = False
+            reason = f"連続失敗 {count}/{threshold_N} 到達・pending_notify (次 run 未復旧で昇格通知・silent)"
+            entry["pending_notify"] = True
+            entry["pending_notify_at"] = now
+    else:
+        # count > threshold_N
+        pending = entry.get("pending_notify", False)
+        already_notified = entry.get("notified", False)
+        now_dt = _parse_iso(now)
+        if pending and not already_notified:
+            # pending → 昇格通知 (N+1 到達・未復旧確定で初通知)
+            should_notify = True
+            reason = f"連続失敗 {count}/{threshold_N} 未復旧継続・pending 昇格で初通知"
+            entry["notified"] = True
+            entry["notify_at"] = now
+            entry["pending_notify"] = False
             cd_until = now_dt + datetime.timedelta(minutes=COOLDOWN_MINUTES)
             entry["cooldown_until"] = cd_until.isoformat()
+        else:
+            cooldown_until = entry.get("cooldown_until")
+            if cooldown_until and now_dt < _parse_iso(cooldown_until):
+                should_notify = False
+                reason = f"連続失敗 {count}/{threshold_N} 継続・cool-down中 (次回可 {cooldown_until})"
+            else:
+                should_notify = True
+                reason = f"連続失敗 {count}/{threshold_N} 継続・cool-down 超過で追加通知"
+                entry["notify_at"] = now
+                cd_until = now_dt + datetime.timedelta(minutes=COOLDOWN_MINUTES)
+                entry["cooldown_until"] = cd_until.isoformat()
 
     _save_state(state_dir, state)
     return should_notify, reason
@@ -168,6 +203,7 @@ def record_success(
     entry = _get_entry(state, skill_name, stage)
 
     was_notified = entry.get("notified", False)
+    was_pending = entry.get("pending_notify", False)
     prev_count = entry.get("consecutive_count", 0)
     first_failure_at = entry.get("first_failure_at")
 
@@ -179,10 +215,14 @@ def record_success(
     entry["notified"] = False
     entry["notify_at"] = None
     entry["cooldown_until"] = None
+    entry["pending_notify"] = False
+    entry["pending_notify_at"] = None
     entry["recovered_at"] = _now_jst()
 
     _save_state(state_dir, state)
 
+    # pending 段階での復旧は完全 silent (無駄通知ゼロ化・2026-09-18)
+    # 実通知飛んだ状態からの復旧のみ復旧通知
     if was_notified and prev_count > 0:
         body = (
             f"[info][title]✅ {skill_name} 復旧[/title]\n"
@@ -422,4 +462,100 @@ if __name__ == "__main__":
         assert should_notify_rec is True
         assert prev_count == 1
 
-        print("\n✅ 全ケース合格")
+        # ケース5 (2026-09-18): N=2 pending_notify 先送り + 一過性復旧で silent
+        print("\n=== ケース5: N=2 で 2回失敗→pending→成功→完全silent (無駄通知ゼロ) ===")
+        state_dir5 = Path(tempfile.mkdtemp())
+        # 1回目失敗
+        r1 = handle_run_result(
+            skill_name="test-pending-silent",
+            stage="run",
+            success=False,
+            error_msg="transient err 1",
+            threshold_N=2,
+            state_dir=state_dir5,
+        )
+        print(f"  失敗1回目: notified={r1['notified']}, reason={r1['reason']}")
+        assert r1["notified"] is False
+        # 2回目失敗 (N 到達) → pending・通知しない
+        r2 = handle_run_result(
+            skill_name="test-pending-silent",
+            stage="run",
+            success=False,
+            error_msg="transient err 2",
+            threshold_N=2,
+            state_dir=state_dir5,
+        )
+        print(f"  失敗2回目 (N到達): notified={r2['notified']}, reason={r2['reason']}")
+        assert r2["notified"] is False, f"N到達で即通知は禁止: {r2}"
+        summary = get_state_summary("test-pending-silent", "run", state_dir5)
+        assert summary["pending_notify"] is True, f"pending_notify=True 期待: {summary}"
+        assert summary["notified"] is False, f"notified=False 期待: {summary}"
+        # 3回目成功 → 完全 silent (pending 破棄・復旧通知なし)
+        r3 = handle_run_result(
+            skill_name="test-pending-silent",
+            stage="run",
+            success=True,
+            state_dir=state_dir5,
+        )
+        print(f"  成功3回目: notified={r3['notified']}, reason={r3['reason']}")
+        assert r3["notified"] is False, f"pending段階からの復旧は silent 必須: {r3}"
+        summary = get_state_summary("test-pending-silent", "run", state_dir5)
+        assert summary["pending_notify"] is False
+        assert summary["consecutive_count"] == 0
+
+        # ケース6 (2026-09-18): N=2 で 3回連続失敗 → 3回目 (N+1) で昇格通知
+        print("\n=== ケース6: N=2 で 3回連続失敗 → 3回目で昇格通知 ===")
+        state_dir6 = Path(tempfile.mkdtemp())
+        r1 = handle_run_result(
+            skill_name="test-escalate",
+            stage="run",
+            success=False,
+            error_msg="err1",
+            threshold_N=2,
+            state_dir=state_dir6,
+        )
+        print(f"  失敗1回目: notified={r1['notified']}")
+        assert r1["notified"] is False
+        r2 = handle_run_result(
+            skill_name="test-escalate",
+            stage="run",
+            success=False,
+            error_msg="err2",
+            threshold_N=2,
+            state_dir=state_dir6,
+        )
+        print(f"  失敗2回目 (pending): notified={r2['notified']}, reason={r2['reason']}")
+        assert r2["notified"] is False
+        summary = get_state_summary("test-escalate", "run", state_dir6)
+        assert summary["pending_notify"] is True
+        # 3回目失敗 → 昇格判定 (chatwork_token=None なので実送信はしないが should_notify=True になる)
+        should_notify, reason = record_failure(
+            skill_name="test-escalate",
+            stage="run",
+            error_msg="err3",
+            threshold_N=2,
+            state_dir=state_dir6,
+        )
+        print(f"  失敗3回目 (N+1・未復旧確定): should_notify={should_notify}, reason={reason}")
+        assert should_notify is True, f"3回目で昇格通知必須: {reason}"
+        summary = get_state_summary("test-escalate", "run", state_dir6)
+        assert summary["notified"] is True
+        assert summary["pending_notify"] is False
+
+        # ケース7 (2026-09-18): N=1 スキル (発火1回) は現行通り即通知維持
+        print("\n=== ケース7: N=1 (発火1回スキル) は現行通り即通知 ===")
+        state_dir7 = Path(tempfile.mkdtemp())
+        should_notify, reason = record_failure(
+            skill_name="test-n1-immediate",
+            stage="run",
+            error_msg="err",
+            threshold_N=1,
+            state_dir=state_dir7,
+        )
+        print(f"  失敗1回目 (N=1): should_notify={should_notify}, reason={reason}")
+        assert should_notify is True, f"N=1 は即通知必須: {reason}"
+        summary = get_state_summary("test-n1-immediate", "run", state_dir7)
+        assert summary["notified"] is True
+        assert summary["pending_notify"] is False, f"N=1 で pending は禁止: {summary}"
+
+        print("\n✅ 全7ケース合格 (2026-09-18 案B pending_notify 先送りロジック含む)")
