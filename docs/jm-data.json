@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-21T22:20:03+09:00",
+  "updatedAt": "2026-11-21T23:19:59+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 84968963,
-    "orders": 2855,
-    "aov": 29761
+    "sales": 85063354,
+    "orders": 2859,
+    "aov": 29753
   },
   "month": {
-    "salesTotal": 17634205,
-    "unitsTotal": 545,
-    "ordersTotal": 475,
+    "salesTotal": 17728596,
+    "unitsTotal": 549,
+    "ordersTotal": 479,
     "days": 21
   },
   "lastYear": {
@@ -103,7 +103,7 @@
       },
       {
         "date": "2026-11-21",
-        "sales": 2999032
+        "sales": 3093423
       }
     ],
     "points_lastyear": [
@@ -194,11 +194,11 @@
     ]
   },
   "daily": {
-    "todayUnits": 71,
+    "todayUnits": 75,
     "yesterdayUnits": 27,
-    "todayOrders": 59,
+    "todayOrders": 63,
     "yesterdayOrders": 25,
-    "todaySales": 2999032,
+    "todaySales": 3093423,
     "yesterdaySales": 1259891
   },
   "top5": [
@@ -212,14 +212,14 @@
     {
       "rank": 2,
       "title": "『\"ポーラテック\"フリース』~RELAXシリーズ",
-      "units": 55,
+      "units": 56,
       "handle": "enjoy-the-fluffy-comfort-of-fleece",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1686f80dde80eccaffe5c11e6472fa14_f0557de7-ead3-4f01-ac11-eefa417a164c.jpg?v=1776449445"
     },
     {
       "rank": 3,
       "title": "「防水イージーパンツ」~RELAXシリーズ",
-      "units": 46,
+      "units": 47,
       "handle": "waterproof-easy-pants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1cf702eef58fa10dff4f56a6541ae1f9.jpg?v=1776451570"
     },
