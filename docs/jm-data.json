@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-21T15:26:37+09:00",
+  "updatedAt": "2026-11-21T16:20:09+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 83924358,
-    "orders": 2839,
-    "aov": 29561
+    "sales": 84023287,
+    "orders": 2842,
+    "aov": 29565
   },
   "month": {
-    "salesTotal": 16589600,
-    "unitsTotal": 528,
-    "ordersTotal": 459,
+    "salesTotal": 16688529,
+    "unitsTotal": 531,
+    "ordersTotal": 462,
     "days": 21
   },
   "lastYear": {
@@ -103,7 +103,7 @@
       },
       {
         "date": "2026-11-21",
-        "sales": 1954427
+        "sales": 2053356
       }
     ],
     "points_lastyear": [
@@ -194,11 +194,11 @@
     ]
   },
   "daily": {
-    "todayUnits": 54,
+    "todayUnits": 57,
     "yesterdayUnits": 27,
-    "todayOrders": 43,
+    "todayOrders": 46,
     "yesterdayOrders": 25,
-    "todaySales": 1954427,
+    "todaySales": 2053356,
     "yesterdaySales": 1259891
   },
   "top5": [
@@ -212,7 +212,7 @@
     {
       "rank": 2,
       "title": "『\"ポーラテック\"フリース』~RELAXシリーズ",
-      "units": 52,
+      "units": 54,
       "handle": "enjoy-the-fluffy-comfort-of-fleece",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1686f80dde80eccaffe5c11e6472fa14_f0557de7-ead3-4f01-ac11-eefa417a164c.jpg?v=1776449445"
     },
@@ -225,17 +225,17 @@
     },
     {
       "rank": 4,
+      "title": "黒アウターのための「\"究極\"のグレーパンツ」~SMARTシリーズ",
+      "units": 44,
+      "handle": "graypants",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/733edb1e425db1232bf22bd5a0bef49f.jpg?v=1776451631"
+    },
+    {
+      "rank": 5,
       "title": "「防水イージーパンツ」~RELAXシリーズ",
       "units": 44,
       "handle": "waterproof-easy-pants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1cf702eef58fa10dff4f56a6541ae1f9.jpg?v=1776451570"
-    },
-    {
-      "rank": 5,
-      "title": "黒アウターのための「\"究極\"のグレーパンツ」~SMARTシリーズ",
-      "units": 43,
-      "handle": "graypants",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/733edb1e425db1232bf22bd5a0bef49f.jpg?v=1776451631"
     }
   ]
 }
