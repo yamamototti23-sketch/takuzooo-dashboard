@@ -8,11 +8,12 @@ consecutive_failure_helper.py
 - 時間ベース判定は禁止 (回数ベース一択)
 - 初通知後は 30分 cool-down 継続適用
 
-通知先送り (絶対恒久・2026-09-18 たくぞう明示追加・§ 通知は最低限 実装レベル):
-- N >= 2 スキル: N 到達時点は pending_notify=True で silent・N+1 到達 (未復旧継続) で初通知
+通知先送り+復旧通知発火 (絶対恒久・2026-09-18 pending 導入 → 2026-11-21 たくぞう明示改修):
+- N >= 2 スキル: N 到達時点は pending_notify=True で silent (失敗通知なし)・N+1 到達 (未復旧継続) で初通知
 - N == 1 スキル (発火1回 daily/weekly/monthly): 現行通り 1回失敗で即通知 (検知遅延回避)
-- pending 段階での success は全 silent (無駄通知ゼロ化)
-- 一過性 N 回失敗+自動復旧パターンを構造的に silent 化
+- **N 到達 (pending) 経験後 or 実通知経験からの復旧 → 復旧通知発火 (2026-11-21 たくぞう明示)**
+- 1回のみ失敗 (N 未到達) で復旧 → silent 維持
+- 一過性 N 回失敗+自動復旧パターンは「失敗通知なし + 復旧通知のみ」で可視化
 
 参照:
 - CLAUDE.md § 常駐スキル通知は「連続失敗 N 回」で初発火・個別 run 失敗は silent (2026-09-05)
@@ -221,9 +222,10 @@ def record_success(
 
     _save_state(state_dir, state)
 
-    # pending 段階での復旧は完全 silent (無駄通知ゼロ化・2026-09-18)
-    # 実通知飛んだ状態からの復旧のみ復旧通知
-    if was_notified and prev_count > 0:
+    # N 到達 (pending) 経験後 or 実通知経験からの復旧 → 復旧通知発火 (2026-11-21 たくぞう明示)
+    # 1回のみ失敗 (N 未到達) で復旧 → silent 維持
+    # pending のみの状態でも「2回目失敗 (N 到達) した後に復旧した時に通知が来る」設計
+    if (was_notified or was_pending) and prev_count > 0:
         body = (
             f"[info][title]✅ {skill_name} 復旧[/title]\n"
             f"stage: {stage}\n"
@@ -462,8 +464,8 @@ if __name__ == "__main__":
         assert should_notify_rec is True
         assert prev_count == 1
 
-        # ケース5 (2026-09-18): N=2 pending_notify 先送り + 一過性復旧で silent
-        print("\n=== ケース5: N=2 で 2回失敗→pending→成功→完全silent (無駄通知ゼロ) ===")
+        # ケース5 (2026-11-21 たくぞう明示改修): N=2 pending→復旧で復旧通知発火
+        print("\n=== ケース5: N=2 で 2回失敗→pending→成功→復旧通知発火 (2026-11-21 改修) ===")
         state_dir5 = Path(tempfile.mkdtemp())
         # 1回目失敗
         r1 = handle_run_result(
@@ -490,15 +492,14 @@ if __name__ == "__main__":
         summary = get_state_summary("test-pending-silent", "run", state_dir5)
         assert summary["pending_notify"] is True, f"pending_notify=True 期待: {summary}"
         assert summary["notified"] is False, f"notified=False 期待: {summary}"
-        # 3回目成功 → 完全 silent (pending 破棄・復旧通知なし)
-        r3 = handle_run_result(
-            skill_name="test-pending-silent",
-            stage="run",
-            success=True,
-            state_dir=state_dir5,
+        # 3回目成功 → 復旧通知発火 (2026-11-21 改修・N 到達経験後の復旧は通知)
+        # chatwork_token なしで呼ぶと should_notify=True でも notified=False になるため record_success で直接判定
+        should_notify_rec5, rec_body5, prev_count5, _ = record_success(
+            "test-pending-silent", "run", state_dir5,
         )
-        print(f"  成功3回目: notified={r3['notified']}, reason={r3['reason']}")
-        assert r3["notified"] is False, f"pending段階からの復旧は silent 必須: {r3}"
+        print(f"  成功3回目: should_notify_recovery={should_notify_rec5}, prev_count={prev_count5}")
+        assert should_notify_rec5 is True, f"pending段階 (N 到達) 後の復旧は通知必須 (2026-11-21): should_notify={should_notify_rec5}"
+        assert prev_count5 == 2
         summary = get_state_summary("test-pending-silent", "run", state_dir5)
         assert summary["pending_notify"] is False
         assert summary["consecutive_count"] == 0
@@ -558,4 +559,4 @@ if __name__ == "__main__":
         assert summary["notified"] is True
         assert summary["pending_notify"] is False, f"N=1 で pending は禁止: {summary}"
 
-        print("\n✅ 全7ケース合格 (2026-09-18 案B pending_notify 先送りロジック含む)")
+        print("\n✅ 全7ケース合格 (2026-11-21 pending→復旧で復旧通知発火 改修含む)")
