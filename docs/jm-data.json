@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-21T10:19:58+09:00",
+  "updatedAt": "2026-11-21T11:23:42+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 82175301,
-    "orders": 2801,
-    "aov": 29338
+    "sales": 82459596,
+    "orders": 2808,
+    "aov": 29366
   },
   "month": {
-    "salesTotal": 14840543,
-    "unitsTotal": 482,
-    "ordersTotal": 421,
+    "salesTotal": 15124838,
+    "unitsTotal": 489,
+    "ordersTotal": 428,
     "days": 21
   },
   "lastYear": {
@@ -103,7 +103,7 @@
       },
       {
         "date": "2026-11-21",
-        "sales": 205370
+        "sales": 489665
       }
     ],
     "points_lastyear": [
@@ -194,18 +194,18 @@
     ]
   },
   "daily": {
-    "todayUnits": 8,
+    "todayUnits": 15,
     "yesterdayUnits": 27,
-    "todayOrders": 5,
+    "todayOrders": 12,
     "yesterdayOrders": 25,
-    "todaySales": 205370,
+    "todaySales": 489665,
     "yesterdaySales": 1259891
   },
   "top5": [
     {
       "rank": 1,
       "title": "『ネックレス』（Silver925）",
-      "units": 60,
+      "units": 61,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/e2006cc75c8a0ecfe3467ee75b508af8.jpg?v=1776451870"
     },
@@ -232,10 +232,10 @@
     },
     {
       "rank": 5,
-      "title": "『中綿ジャケット』(タクムARジャケット)~SMARTシリーズ",
-      "units": 38,
-      "handle": "takumu-ar-jacket",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/61_compressed_6eac1e7c-a216-4300-a845-736a26a929e3.jpg?v=1786503859"
+      "title": "黒アウターのための「\"究極\"のグレーパンツ」~SMARTシリーズ",
+      "units": 39,
+      "handle": "graypants",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/733edb1e425db1232bf22bd5a0bef49f.jpg?v=1776451631"
     }
   ]
 }
