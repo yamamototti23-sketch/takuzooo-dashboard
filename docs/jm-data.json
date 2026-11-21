@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-21T14:20:21+09:00",
+  "updatedAt": "2026-11-21T15:26:37+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 83718108,
-    "orders": 2832,
+    "sales": 83924358,
+    "orders": 2839,
     "aov": 29561
   },
   "month": {
-    "salesTotal": 16383350,
-    "unitsTotal": 516,
-    "ordersTotal": 452,
+    "salesTotal": 16589600,
+    "unitsTotal": 528,
+    "ordersTotal": 459,
     "days": 21
   },
   "lastYear": {
@@ -103,7 +103,7 @@
       },
       {
         "date": "2026-11-21",
-        "sales": 1748177
+        "sales": 1954427
       }
     ],
     "points_lastyear": [
@@ -194,11 +194,11 @@
     ]
   },
   "daily": {
-    "todayUnits": 42,
+    "todayUnits": 54,
     "yesterdayUnits": 27,
-    "todayOrders": 36,
+    "todayOrders": 43,
     "yesterdayOrders": 25,
-    "todaySales": 1748177,
+    "todaySales": 1954427,
     "yesterdaySales": 1259891
   },
   "top5": [
@@ -212,30 +212,30 @@
     {
       "rank": 2,
       "title": "『\"ポーラテック\"フリース』~RELAXシリーズ",
-      "units": 51,
+      "units": 52,
       "handle": "enjoy-the-fluffy-comfort-of-fleece",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1686f80dde80eccaffe5c11e6472fa14_f0557de7-ead3-4f01-ac11-eefa417a164c.jpg?v=1776449445"
     },
     {
       "rank": 3,
       "title": "『本革ボディーバッグ』（姫路レザー）",
-      "units": 43,
+      "units": 44,
       "handle": "stylish-genuine-leather-large-body-bag",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A1554_1_ef495592-e3a6-4e83-8ffe-1f7f917d3092.jpg?v=1783603757"
     },
     {
       "rank": 4,
+      "title": "「防水イージーパンツ」~RELAXシリーズ",
+      "units": 44,
+      "handle": "waterproof-easy-pants",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1cf702eef58fa10dff4f56a6541ae1f9.jpg?v=1776451570"
+    },
+    {
+      "rank": 5,
       "title": "黒アウターのための「\"究極\"のグレーパンツ」~SMARTシリーズ",
       "units": 43,
       "handle": "graypants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/733edb1e425db1232bf22bd5a0bef49f.jpg?v=1776451631"
-    },
-    {
-      "rank": 5,
-      "title": "「防水イージーパンツ」~RELAXシリーズ",
-      "units": 42,
-      "handle": "waterproof-easy-pants",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1cf702eef58fa10dff4f56a6541ae1f9.jpg?v=1776451570"
     }
   ]
 }
