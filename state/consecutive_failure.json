@@ -1,15 +1,15 @@
 {
   "takuzooo-dashboard-update-youtube": {
     "GHA update-youtube-data": {
-      "consecutive_count": 0,
-      "first_failure_at": null,
-      "last_failure_at": null,
-      "last_error_msg": null,
+      "consecutive_count": 1,
+      "first_failure_at": "2026-11-21T16:40:42.982045+09:00",
+      "last_failure_at": "2026-11-21T16:40:42.982045+09:00",
+      "last_error_msg": "Traceback (most recent call last):\n  File \"/home/runner/work/takuzooo-dashboard/takuzooo-dashboard/fetch_youtube.py\", line 418, in <module>\n    main()\n  File \"/home/runner/work/takuzooo-dashboard/takuzooo-dashboard/fetch_youtube.py\", line 389, in main\n    raise RuntimeError(\"No confirmed-public long video found (all filtered out)\")\nRuntimeError: No confirmed-public long video found (all filtered out)\n",
       "threshold_N": 2,
       "notified": false,
       "notify_at": null,
       "cooldown_until": null,
-      "recovered_at": "2026-11-21T16:13:37.426928+09:00",
+      "recovered_at": null,
       "pending_notify": false,
       "pending_notify_at": null
     }
