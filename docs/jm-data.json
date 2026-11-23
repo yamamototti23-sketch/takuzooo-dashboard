@@ -1,22 +1,22 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-23T23:22:24+09:00",
+  "updatedAt": "2026-11-24T00:20:56+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 87103129,
-    "orders": 2923,
-    "aov": 29799
+    "sales": 87167479,
+    "orders": 2925,
+    "aov": 29801
   },
   "month": {
-    "salesTotal": 19768371,
-    "unitsTotal": 622,
-    "ordersTotal": 543,
-    "days": 23
+    "salesTotal": 19832721,
+    "unitsTotal": 624,
+    "ordersTotal": 545,
+    "days": 24
   },
   "lastYear": {
-    "salesTotal": 12553938,
-    "days": 23,
+    "salesTotal": 13616060,
+    "days": 24,
     "ordersTotalFullMonth": 480
   },
   "trend": {
@@ -111,7 +111,11 @@
       },
       {
         "date": "2026-11-23",
-        "sales": 826220
+        "sales": 890570
+      },
+      {
+        "date": "2026-11-24",
+        "sales": 0
       }
     ],
     "points_lastyear": [
@@ -206,16 +210,20 @@
       {
         "date": "2025-11-23",
         "sales": 1042085
+      },
+      {
+        "date": "2025-11-24",
+        "sales": 1062122
       }
     ]
   },
   "daily": {
-    "todayUnits": 23,
-    "yesterdayUnits": 47,
-    "todayOrders": 22,
-    "yesterdayOrders": 40,
-    "todaySales": 826220,
-    "yesterdaySales": 1159820
+    "todayUnits": 0,
+    "yesterdayUnits": 25,
+    "todayOrders": 0,
+    "yesterdayOrders": 24,
+    "todaySales": 0,
+    "yesterdaySales": 890570
   },
   "top5": [
     {
@@ -242,7 +250,7 @@
     {
       "rank": 4,
       "title": "『本革ボディーバッグ』（姫路レザー）",
-      "units": 48,
+      "units": 49,
       "handle": "stylish-genuine-leather-large-body-bag",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A1554_1_ef495592-e3a6-4e83-8ffe-1f7f917d3092.jpg?v=1783603757"
     },
