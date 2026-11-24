@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-24T21:27:27+09:00",
+  "updatedAt": "2026-11-24T22:20:28+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 87395729,
-    "orders": 2934,
-    "aov": 29787
+    "sales": 87442699,
+    "orders": 2936,
+    "aov": 29783
   },
   "month": {
-    "salesTotal": 20060971,
-    "unitsTotal": 636,
-    "ordersTotal": 554,
+    "salesTotal": 20107941,
+    "unitsTotal": 638,
+    "ordersTotal": 556,
     "days": 24
   },
   "lastYear": {
@@ -115,7 +115,7 @@
       },
       {
         "date": "2026-11-24",
-        "sales": 253121
+        "sales": 300091
       }
     ],
     "points_lastyear": [
@@ -218,18 +218,18 @@
     ]
   },
   "daily": {
-    "todayUnits": 12,
+    "todayUnits": 14,
     "yesterdayUnits": 25,
-    "todayOrders": 9,
+    "todayOrders": 11,
     "yesterdayOrders": 24,
-    "todaySales": 253121,
+    "todaySales": 300091,
     "yesterdaySales": 865699
   },
   "top5": [
     {
       "rank": 1,
       "title": "『ネックレス』（Silver925）",
-      "units": 73,
+      "units": 74,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/e2006cc75c8a0ecfe3467ee75b508af8.jpg?v=1776451870"
     },
@@ -257,7 +257,7 @@
     {
       "rank": 5,
       "title": "黒アウターのための「\"究極\"のグレーパンツ」~SMARTシリーズ",
-      "units": 48,
+      "units": 49,
       "handle": "graypants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/733edb1e425db1232bf22bd5a0bef49f.jpg?v=1776451631"
     }
