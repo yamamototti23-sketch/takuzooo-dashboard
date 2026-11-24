@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-24T13:22:47+09:00",
+  "updatedAt": "2026-11-24T14:21:34+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 87254423,
-    "orders": 2929,
-    "aov": 29790
+    "sales": 87288083,
+    "orders": 2930,
+    "aov": 29791
   },
   "month": {
-    "salesTotal": 19919665,
-    "unitsTotal": 630,
-    "ordersTotal": 549,
+    "salesTotal": 19953325,
+    "unitsTotal": 632,
+    "ordersTotal": 550,
     "days": 24
   },
   "lastYear": {
@@ -115,7 +115,7 @@
       },
       {
         "date": "2026-11-24",
-        "sales": 111815
+        "sales": 145475
       }
     ],
     "points_lastyear": [
@@ -218,18 +218,18 @@
     ]
   },
   "daily": {
-    "todayUnits": 6,
+    "todayUnits": 8,
     "yesterdayUnits": 25,
-    "todayOrders": 4,
+    "todayOrders": 5,
     "yesterdayOrders": 24,
-    "todaySales": 111815,
+    "todaySales": 145475,
     "yesterdaySales": 865699
   },
   "top5": [
     {
       "rank": 1,
       "title": "『ネックレス』（Silver925）",
-      "units": 72,
+      "units": 73,
       "handle": "silver-necklace",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/e2006cc75c8a0ecfe3467ee75b508af8.jpg?v=1776451870"
     },
@@ -250,7 +250,7 @@
     {
       "rank": 4,
       "title": "『本革ボディーバッグ』（姫路レザー）",
-      "units": 49,
+      "units": 50,
       "handle": "stylish-genuine-leather-large-body-bag",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A1554_1_ef495592-e3a6-4e83-8ffe-1f7f917d3092.jpg?v=1783603757"
     },
