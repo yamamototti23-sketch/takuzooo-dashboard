@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-26T07:20:08+09:00",
+  "updatedAt": "2026-11-26T08:19:32+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 88008341,
-    "orders": 2956,
-    "aov": 29773
+    "sales": 88063836,
+    "orders": 2959,
+    "aov": 29761
   },
   "month": {
-    "salesTotal": 20673583,
-    "unitsTotal": 663,
-    "ordersTotal": 576,
+    "salesTotal": 20729078,
+    "unitsTotal": 666,
+    "ordersTotal": 579,
     "days": 26
   },
   "lastYear": {
@@ -123,7 +123,7 @@
       },
       {
         "date": "2026-11-26",
-        "sales": 122045
+        "sales": 177540
       }
     ],
     "points_lastyear": [
@@ -234,11 +234,11 @@
     ]
   },
   "daily": {
-    "todayUnits": 6,
+    "todayUnits": 9,
     "yesterdayUnits": 19,
-    "todayOrders": 4,
+    "todayOrders": 7,
     "yesterdayOrders": 16,
-    "todaySales": 122045,
+    "todaySales": 177540,
     "yesterdaySales": 598697
   },
   "top5": [
@@ -259,23 +259,23 @@
     {
       "rank": 3,
       "title": "「防水イージーパンツ」~RELAXシリーズ",
-      "units": 57,
+      "units": 58,
       "handle": "waterproof-easy-pants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1cf702eef58fa10dff4f56a6541ae1f9.jpg?v=1776451570"
     },
     {
       "rank": 4,
+      "title": "『本革ボディーバッグ』（姫路レザー）",
+      "units": 53,
+      "handle": "stylish-genuine-leather-large-body-bag",
+      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A1554_1_ef495592-e3a6-4e83-8ffe-1f7f917d3092.jpg?v=1783603757"
+    },
+    {
+      "rank": 5,
       "title": "黒アウターのための「\"究極\"のグレーパンツ」~SMARTシリーズ",
       "units": 53,
       "handle": "graypants",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/733edb1e425db1232bf22bd5a0bef49f.jpg?v=1776451631"
-    },
-    {
-      "rank": 5,
-      "title": "『本革ボディーバッグ』（姫路レザー）",
-      "units": 51,
-      "handle": "stylish-genuine-leather-large-body-bag",
-      "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/M3A1554_1_ef495592-e3a6-4e83-8ffe-1f7f917d3092.jpg?v=1783603757"
     }
   ]
 }
