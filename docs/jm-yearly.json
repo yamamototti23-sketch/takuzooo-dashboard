@@ -1,6 +1,6 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-27T06:01:42+09:00",
+  "updatedAt": "2026-11-28T06:01:47+09:00",
   "definition": "移動年計 (rolling 12M) = 当該月末の直近12ヶ月合計。売上=BASE+Shopify、営業利益=freee (2023-06〜)。当月は partial (期首〜昨日累計)。",
   "months": [
     {
@@ -504,42 +504,42 @@
       "monthly_sales": 15035588,
       "rolling12m": 206690660,
       "rolling12m_prev": 162967384,
-      "monthly_profit": 1728127,
-      "rolling12m_profit": 29946465
+      "monthly_profit": 1730006,
+      "rolling12m_profit": 29948344
     },
     {
       "month": "2026-08",
       "monthly_sales": 9036387,
       "rolling12m": 203398777,
       "rolling12m_prev": 165022774,
-      "monthly_profit": -3483173,
-      "rolling12m_profit": 24533130
+      "monthly_profit": -3482991,
+      "rolling12m_profit": 24535191
     },
     {
       "month": "2026-09",
       "monthly_sales": 12315574,
       "rolling12m": 199781017,
       "rolling12m_prev": 170259298,
-      "monthly_profit": -3210196,
-      "rolling12m_profit": 22390410
+      "monthly_profit": -3210109,
+      "rolling12m_profit": 22392558
     },
     {
       "month": "2026-10",
       "monthly_sales": 16374514,
       "rolling12m": 204549228,
       "rolling12m_prev": 170592721,
-      "monthly_profit": -4923045,
-      "rolling12m_profit": 22450444
+      "monthly_profit": -4922937,
+      "rolling12m_profit": 22452700
     },
     {
       "month": "2026-11",
-      "monthly_sales": 21686294,
+      "monthly_sales": 22139054,
       "rolling12m": null,
       "rolling12m_prev": 172759619,
-      "monthly_profit": 5772692,
+      "monthly_profit": 7885740,
       "rolling12m_profit": null,
       "is_partial": true,
-      "partial_end_date": "2026-11-26"
+      "partial_end_date": "2026-11-27"
     }
   ],
   "latest": {
@@ -548,18 +548,18 @@
     "rolling12m_prev": 172759619,
     "yoy_pct": 19.9,
     "rolling12m_profit": null,
-    "monthly_profit": 5772692,
+    "monthly_profit": 7885740,
     "is_partial": true,
-    "partial_end_date": "2026-11-26",
+    "partial_end_date": "2026-11-27",
     "term_label": "今期",
     "term_start_month": "2026-06",
     "term_end_month": "2026-11",
-    "term_sales_sum": 88841621,
-    "term_profit_sum": -8214849,
+    "term_sales_sum": 89294381,
+    "term_profit_sum": -6099545,
     "term_prev_start_month": "2025-06",
     "term_prev_end_month": "2025-11",
     "term_prev_sales_sum": 90061140,
     "term_prev_profit_sum": -20036277,
-    "term_yoy_pct": -1.4
+    "term_yoy_pct": -0.9
   }
 }
