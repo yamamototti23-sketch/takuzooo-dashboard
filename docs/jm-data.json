@@ -1,17 +1,17 @@
 {
   "shop": "Japan Made屋",
-  "updatedAt": "2026-11-27T14:21:42+09:00",
+  "updatedAt": "2026-11-27T15:30:39+09:00",
   "refreshMinutes": 60,
   "term": {
     "sinceLabel": "6/1〜",
-    "sales": 88980900,
-    "orders": 2989,
-    "aov": 29769
+    "sales": 89017530,
+    "orders": 2990,
+    "aov": 29772
   },
   "month": {
-    "salesTotal": 21646142,
-    "unitsTotal": 700,
-    "ordersTotal": 609,
+    "salesTotal": 21682772,
+    "unitsTotal": 701,
+    "ordersTotal": 610,
     "days": 27
   },
   "lastYear": {
@@ -127,7 +127,7 @@
       },
       {
         "date": "2026-11-27",
-        "sales": 290950
+        "sales": 327580
       }
     ],
     "points_lastyear": [
@@ -242,11 +242,11 @@
     ]
   },
   "daily": {
-    "todayUnits": 11,
+    "todayUnits": 12,
     "yesterdayUnits": 32,
-    "todayOrders": 10,
+    "todayOrders": 11,
     "yesterdayOrders": 27,
-    "todaySales": 290950,
+    "todaySales": 327580,
     "yesterdaySales": 852274
   },
   "top5": [
@@ -260,7 +260,7 @@
     {
       "rank": 2,
       "title": "『\"ポーラテック\"フリース』~RELAXシリーズ",
-      "units": 65,
+      "units": 66,
       "handle": "enjoy-the-fluffy-comfort-of-fleece",
       "thumb": "https://cdn.shopify.com/s/files/1/0712/3805/8283/files/1686f80dde80eccaffe5c11e6472fa14_f0557de7-ead3-4f01-ac11-eefa417a164c.jpg?v=1776449445"
     },
